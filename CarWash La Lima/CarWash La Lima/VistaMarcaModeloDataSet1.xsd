@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VistaMarcaModeloDataSet1" targetNamespace="http://tempuri.org/VistaMarcaModeloDataSet1.xsd" xmlns:mstns="http://tempuri.org/VistaMarcaModeloDataSet1.xsd" xmlns="http://tempuri.org/VistaMarcaModeloDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CarWashLaLimaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarWashLaLimaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CarWash_La_Lima.My.MySettings.GlobalReference.Default.CarWashLaLimaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaMarcaModeloTableAdapter" GeneratorDataComponentClassName="VistaMarcaModeloTableAdapter" Name="VistaMarcaModelo" UserDataComponentName="VistaMarcaModeloTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CarWashLaLimaConnectionString (MySettings)" DbObjectName="CarWashLaLima.dbo.VistaMarcaModelo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ModeloID, Marca, Modelo, AnioModelo FROM dbo.VistaMarcaModelo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ModeloID" DataSetColumn="ModeloID" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="AnioModelo" DataSetColumn="AnioModelo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VistaMarcaModeloDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VistaMarcaModeloDataSet1" msprop:Generator_UserDSName="VistaMarcaModeloDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaMarcaModelo" msprop:Generator_TableClassName="VistaMarcaModeloDataTable" msprop:Generator_TableVarName="tableVistaMarcaModelo" msprop:Generator_TablePropName="VistaMarcaModelo" msprop:Generator_RowDeletingName="VistaMarcaModeloRowDeleting" msprop:Generator_RowChangingName="VistaMarcaModeloRowChanging" msprop:Generator_RowEvHandlerName="VistaMarcaModeloRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaMarcaModeloRowDeleted" msprop:Generator_UserTableName="VistaMarcaModelo" msprop:Generator_RowChangedName="VistaMarcaModeloRowChanged" msprop:Generator_RowEvArgName="VistaMarcaModeloRowChangeEvent" msprop:Generator_RowClassName="VistaMarcaModeloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ModeloID" msprop:Generator_ColumnVarNameInTable="columnModeloID" msprop:Generator_ColumnPropNameInRow="ModeloID" msprop:Generator_ColumnPropNameInTable="ModeloIDColumn" msprop:Generator_UserColumnName="ModeloID" type="xs:int" />
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AnioModelo" msprop:Generator_ColumnVarNameInTable="columnAnioModelo" msprop:Generator_ColumnPropNameInRow="AnioModelo" msprop:Generator_ColumnPropNameInTable="AnioModeloColumn" msprop:Generator_UserColumnName="AnioModelo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VistaMarcaModelo" />
+      <xs:field xpath="mstns:ModeloID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
