@@ -56,3 +56,36 @@ C:\Users\Kevin M\Desktop\KEVIN MARTINEZ\UNICAH\VII PERIODO - 2021\DESARROLLO DE 
 C:\Users\Kevin M\Desktop\KEVIN MARTINEZ\UNICAH\VII PERIODO - 2021\DESARROLLO DE SOFTWARE\II PARCIAL\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmMarcas.resources
 C:\Users\Kevin M\Desktop\KEVIN MARTINEZ\UNICAH\VII PERIODO - 2021\DESARROLLO DE SOFTWARE\II PARCIAL\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmModelos.resources
 C:\Users\Kevin M\Desktop\KEVIN MARTINEZ\UNICAH\VII PERIODO - 2021\DESARROLLO DE SOFTWARE\II PARCIAL\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmTipo.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.exe.config
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.exe
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.pdb
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.xml
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbprojAssemblyReference.cache
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.CLIENTES.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarCliente.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarEmpleado.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEmpleado.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoEmpleado.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmColores.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmMarcas.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmModelos.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmTipo.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmUsuarios.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarVehiculo.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoVehiculo.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEstadisticas.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmFacturar.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogin.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoCliente.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmPrincipal.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.Resources.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmVehiculo.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.GenerateResource.cache
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.CoreCompileInputs.cache
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.CopyComplete
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.exe
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.xml
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb

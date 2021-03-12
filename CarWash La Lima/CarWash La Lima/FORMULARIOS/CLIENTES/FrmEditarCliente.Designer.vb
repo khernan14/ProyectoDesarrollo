@@ -24,7 +24,6 @@ Partial Class FrmEditarCliente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEditarCliente))
         Me.pnlTituleBar = New System.Windows.Forms.Panel()
-        Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
         Me.mzButtonWindows2 = New BWCMM.MZButtonWindows()
         Me.lblTitleChildForm = New System.Windows.Forms.Label()
         Me.iconCurrentChildForm = New FontAwesome.Sharp.IconPictureBox()
@@ -48,7 +47,6 @@ Partial Class FrmEditarCliente
         'pnlTituleBar
         '
         Me.pnlTituleBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.pnlTituleBar.Controls.Add(Me.MzButtonWindows1)
         Me.pnlTituleBar.Controls.Add(Me.mzButtonWindows2)
         Me.pnlTituleBar.Controls.Add(Me.lblTitleChildForm)
         Me.pnlTituleBar.Controls.Add(Me.iconCurrentChildForm)
@@ -57,20 +55,6 @@ Partial Class FrmEditarCliente
         Me.pnlTituleBar.Name = "pnlTituleBar"
         Me.pnlTituleBar.Size = New System.Drawing.Size(870, 51)
         Me.pnlTituleBar.TabIndex = 106
-        '
-        'MzButtonWindows1
-        '
-        Me.MzButtonWindows1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MzButtonWindows1.BackgroundImage = CType(resources.GetObject("MzButtonWindows1.BackgroundImage"), System.Drawing.Image)
-        Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(830, 0)
-        Me.MzButtonWindows1.Name = "MzButtonWindows1"
-        Me.MzButtonWindows1.ParentControl = Me
-        Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
-        Me.MzButtonWindows1.TabIndex = 2
-        Me.MzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Close
         '
         'mzButtonWindows2
         '
@@ -279,7 +263,6 @@ Partial Class FrmEditarCliente
     Private WithEvents mzButtonWindows2 As BWCMM.MZButtonWindows
     Private WithEvents lblTitleChildForm As Label
     Private WithEvents iconCurrentChildForm As FontAwesome.Sharp.IconPictureBox
-    Friend WithEvents MzButtonWindows1 As BWCMM.MZButtonWindows
     Private WithEvents label11 As Label
     Private WithEvents label5 As Label
     Public WithEvents txtid As TextBox

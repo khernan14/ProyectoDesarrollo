@@ -31,26 +31,26 @@ Partial Class FrmEmpleado
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.dgEmpleados = New System.Windows.Forms.DataGridView()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadosDataSet1 = New CarWash_La_Lima.EmpleadosDataSet1()
-        Me.EmpleadosDataSet = New CarWash_La_Lima.EmpleadosDataSet()
-        Me.EmpleadosDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadoTableAdapter = New CarWash_La_Lima.EmpleadosDataSet1TableAdapters.EmpleadoTableAdapter()
-        Me.VistaEmpleadosPuestosDataSet1 = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1()
-        Me.VistaEmpleadosPuestosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaEmpleadosPuestosTableAdapter = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1TableAdapters.VistaEmpleadosPuestosTableAdapter()
         Me.EmpleadoIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidoEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionPuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VistaEmpleadosPuestosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaEmpleadosPuestosDataSet1 = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadosDataSet1 = New CarWash_La_Lima.EmpleadosDataSet1()
+        Me.EmpleadosDataSet = New CarWash_La_Lima.EmpleadosDataSet()
+        Me.EmpleadosDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EmpleadoTableAdapter = New CarWash_La_Lima.EmpleadosDataSet1TableAdapters.EmpleadoTableAdapter()
+        Me.VistaEmpleadosPuestosTableAdapter = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1TableAdapters.VistaEmpleadosPuestosTableAdapter()
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaEmpleadosPuestosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaEmpleadosPuestosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -171,44 +171,6 @@ Partial Class FrmEmpleado
         Me.dgEmpleados.Size = New System.Drawing.Size(670, 377)
         Me.dgEmpleados.TabIndex = 21
         '
-        'EmpleadoBindingSource
-        '
-        Me.EmpleadoBindingSource.DataMember = "Empleado"
-        Me.EmpleadoBindingSource.DataSource = Me.EmpleadosDataSet1
-        '
-        'EmpleadosDataSet1
-        '
-        Me.EmpleadosDataSet1.DataSetName = "EmpleadosDataSet1"
-        Me.EmpleadosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmpleadosDataSet
-        '
-        Me.EmpleadosDataSet.DataSetName = "EmpleadosDataSet"
-        Me.EmpleadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmpleadosDataSetBindingSource
-        '
-        Me.EmpleadosDataSetBindingSource.DataSource = Me.EmpleadosDataSet
-        Me.EmpleadosDataSetBindingSource.Position = 0
-        '
-        'EmpleadoTableAdapter
-        '
-        Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'VistaEmpleadosPuestosDataSet1
-        '
-        Me.VistaEmpleadosPuestosDataSet1.DataSetName = "VistaEmpleadosPuestosDataSet1"
-        Me.VistaEmpleadosPuestosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaEmpleadosPuestosBindingSource
-        '
-        Me.VistaEmpleadosPuestosBindingSource.DataMember = "VistaEmpleadosPuestos"
-        Me.VistaEmpleadosPuestosBindingSource.DataSource = Me.VistaEmpleadosPuestosDataSet1
-        '
-        'VistaEmpleadosPuestosTableAdapter
-        '
-        Me.VistaEmpleadosPuestosTableAdapter.ClearBeforeFill = True
-        '
         'EmpleadoIDDataGridViewTextBoxColumn
         '
         Me.EmpleadoIDDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoID"
@@ -244,6 +206,44 @@ Partial Class FrmEmpleado
         Me.DescripcionPuestoDataGridViewTextBoxColumn.Name = "DescripcionPuestoDataGridViewTextBoxColumn"
         Me.DescripcionPuestoDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'VistaEmpleadosPuestosBindingSource
+        '
+        Me.VistaEmpleadosPuestosBindingSource.DataMember = "VistaEmpleadosPuestos"
+        Me.VistaEmpleadosPuestosBindingSource.DataSource = Me.VistaEmpleadosPuestosDataSet1
+        '
+        'VistaEmpleadosPuestosDataSet1
+        '
+        Me.VistaEmpleadosPuestosDataSet1.DataSetName = "VistaEmpleadosPuestosDataSet1"
+        Me.VistaEmpleadosPuestosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmpleadoBindingSource
+        '
+        Me.EmpleadoBindingSource.DataMember = "Empleado"
+        Me.EmpleadoBindingSource.DataSource = Me.EmpleadosDataSet1
+        '
+        'EmpleadosDataSet1
+        '
+        Me.EmpleadosDataSet1.DataSetName = "EmpleadosDataSet1"
+        Me.EmpleadosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmpleadosDataSet
+        '
+        Me.EmpleadosDataSet.DataSetName = "EmpleadosDataSet"
+        Me.EmpleadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmpleadosDataSetBindingSource
+        '
+        Me.EmpleadosDataSetBindingSource.DataSource = Me.EmpleadosDataSet
+        Me.EmpleadosDataSetBindingSource.Position = 0
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'VistaEmpleadosPuestosTableAdapter
+        '
+        Me.VistaEmpleadosPuestosTableAdapter.ClearBeforeFill = True
+        '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -257,14 +257,14 @@ Partial Class FrmEmpleado
         Me.Controls.Add(Me.dgEmpleados)
         Me.Name = "FrmEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "FrmEmpleado"
+        Me.Text = "EMPLEADOS"
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaEmpleadosPuestosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaEmpleadosPuestosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

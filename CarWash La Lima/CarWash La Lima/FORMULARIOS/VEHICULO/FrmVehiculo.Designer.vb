@@ -31,23 +31,23 @@ Partial Class FrmVehiculo
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.dgVehiculos = New System.Windows.Forms.DataGridView()
-        Me.VehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VehiculosDataSet1 = New CarWash_La_Lima.VehiculosDataSet1()
-        Me.VistaVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaVehiculoSet1 = New CarWash_La_Lima.VistaVehiculoSet1()
-        Me.VistaVehiculoTableAdapter = New CarWash_La_Lima.VistaVehiculoSet1TableAdapters.VistaVehiculoTableAdapter()
-        Me.VehiculoTableAdapter = New CarWash_La_Lima.VehiculosDataSet1TableAdapters.VehiculoTableAdapter()
         Me.NumPlacaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ModeloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AnioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MarcaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipovehiculoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VistaVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaVehiculoSet1 = New CarWash_La_Lima.VistaVehiculoSet1()
+        Me.VehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VehiculosDataSet1 = New CarWash_La_Lima.VehiculosDataSet1()
+        Me.VistaVehiculoTableAdapter = New CarWash_La_Lima.VistaVehiculoSet1TableAdapters.VistaVehiculoTableAdapter()
+        Me.VehiculoTableAdapter = New CarWash_La_Lima.VehiculosDataSet1TableAdapters.VehiculoTableAdapter()
         CType(Me.dgVehiculos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VehiculosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaVehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaVehiculoSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VehiculosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -168,34 +168,6 @@ Partial Class FrmVehiculo
         Me.dgVehiculos.Size = New System.Drawing.Size(670, 377)
         Me.dgVehiculos.TabIndex = 26
         '
-        'VehiculoBindingSource
-        '
-        Me.VehiculoBindingSource.DataMember = "Vehiculo"
-        Me.VehiculoBindingSource.DataSource = Me.VehiculosDataSet1
-        '
-        'VehiculosDataSet1
-        '
-        Me.VehiculosDataSet1.DataSetName = "VehiculosDataSet1"
-        Me.VehiculosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaVehiculoBindingSource
-        '
-        Me.VistaVehiculoBindingSource.DataMember = "VistaVehiculo"
-        Me.VistaVehiculoBindingSource.DataSource = Me.VistaVehiculoSet1
-        '
-        'VistaVehiculoSet1
-        '
-        Me.VistaVehiculoSet1.DataSetName = "VistaVehiculoSet1"
-        Me.VistaVehiculoSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaVehiculoTableAdapter
-        '
-        Me.VistaVehiculoTableAdapter.ClearBeforeFill = True
-        '
-        'VehiculoTableAdapter
-        '
-        Me.VehiculoTableAdapter.ClearBeforeFill = True
-        '
         'NumPlacaDataGridViewTextBoxColumn
         '
         Me.NumPlacaDataGridViewTextBoxColumn.DataPropertyName = "NumPlaca"
@@ -238,6 +210,34 @@ Partial Class FrmVehiculo
         Me.TipovehiculoDataGridViewTextBoxColumn.Name = "TipovehiculoDataGridViewTextBoxColumn"
         Me.TipovehiculoDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'VistaVehiculoBindingSource
+        '
+        Me.VistaVehiculoBindingSource.DataMember = "VistaVehiculo"
+        Me.VistaVehiculoBindingSource.DataSource = Me.VistaVehiculoSet1
+        '
+        'VistaVehiculoSet1
+        '
+        Me.VistaVehiculoSet1.DataSetName = "VistaVehiculoSet1"
+        Me.VistaVehiculoSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VehiculoBindingSource
+        '
+        Me.VehiculoBindingSource.DataMember = "Vehiculo"
+        Me.VehiculoBindingSource.DataSource = Me.VehiculosDataSet1
+        '
+        'VehiculosDataSet1
+        '
+        Me.VehiculosDataSet1.DataSetName = "VehiculosDataSet1"
+        Me.VehiculosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VistaVehiculoTableAdapter
+        '
+        Me.VistaVehiculoTableAdapter.ClearBeforeFill = True
+        '
+        'VehiculoTableAdapter
+        '
+        Me.VehiculoTableAdapter.ClearBeforeFill = True
+        '
         'FrmVehiculo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -251,12 +251,12 @@ Partial Class FrmVehiculo
         Me.Controls.Add(Me.dgVehiculos)
         Me.Name = "FrmVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "FrmVehiculo"
+        Me.Text = "VEHICULOS"
         CType(Me.dgVehiculos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VehiculosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaVehiculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaVehiculoSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VehiculosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
