@@ -230,7 +230,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmLogin"
-        Me.Opacity = 0.85R
+        Me.Opacity = 0.9R
         Me.Text = "FrmLogin"
         Me.BarraTitulo.ResumeLayout(False)
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
