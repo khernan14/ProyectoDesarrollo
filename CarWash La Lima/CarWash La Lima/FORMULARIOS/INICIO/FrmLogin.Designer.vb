@@ -91,7 +91,7 @@ Partial Class FrmLogin
         '
         'txtPassword
         '
-        Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
@@ -103,7 +103,7 @@ Partial Class FrmLogin
         '
         'txtUsuario
         '
-        Me.txtUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.txtUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.ForeColor = System.Drawing.Color.DimGray
@@ -154,7 +154,7 @@ Partial Class FrmLogin
         '
         'btnMostrarOcultar
         '
-        Me.btnMostrarOcultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnMostrarOcultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.btnMostrarOcultar.FlatAppearance.BorderSize = 0
         Me.btnMostrarOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMostrarOcultar.IconChar = FontAwesome.Sharp.IconChar.Eye
@@ -169,7 +169,7 @@ Partial Class FrmLogin
         '
         'btnOcultar
         '
-        Me.btnOcultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnOcultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.btnOcultar.FlatAppearance.BorderSize = 0
         Me.btnOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOcultar.IconChar = FontAwesome.Sharp.IconChar.EyeSlash
@@ -203,6 +203,7 @@ Partial Class FrmLogin
         '
         'pictureBox1
         '
+        Me.pictureBox1.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
         Me.pictureBox1.Location = New System.Drawing.Point(111, 113)
         Me.pictureBox1.Name = "pictureBox1"
         Me.pictureBox1.Size = New System.Drawing.Size(210, 164)
@@ -214,7 +215,7 @@ Partial Class FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(430, 680)
         Me.Controls.Add(Me.btnMostrarOcultar)
         Me.Controls.Add(Me.pictureBox1)
