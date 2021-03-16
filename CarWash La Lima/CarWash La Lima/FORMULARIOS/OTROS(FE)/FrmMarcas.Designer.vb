@@ -196,6 +196,7 @@ Partial Class FrmMarcas
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgMarcas.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgMarcas.Size = New System.Drawing.Size(582, 377)
         Me.dgMarcas.TabIndex = 204
         '

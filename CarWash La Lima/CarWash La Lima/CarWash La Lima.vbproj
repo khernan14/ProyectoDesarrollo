@@ -246,10 +246,10 @@
     <Compile Include="FORMULARIOS\VEHICULO\FrmNuevoVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmEstadisticas.Designer.vb">
-      <DependentUpon>FrmEstadisticas.vb</DependentUpon>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmHistorialFactura.Designer.vb">
+      <DependentUpon>FrmHistorialFactura.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmEstadisticas.vb">
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmHistorialFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturar.Designer.vb">
@@ -378,6 +378,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaModelo1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmClientes.resx">
@@ -416,8 +421,8 @@
     <EmbeddedResource Include="FORMULARIOS\VEHICULO\FrmNuevoVehiculo.resx">
       <DependentUpon>FrmNuevoVehiculo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmEstadisticas.resx">
-      <DependentUpon>FrmEstadisticas.vb</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmHistorialFactura.resx">
+      <DependentUpon>FrmHistorialFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmFacturar.resx">
       <DependentUpon>FrmFacturar.vb</DependentUpon>
@@ -804,6 +809,17 @@
     </None>
     <None Include="CONEXIONES DATASET%27S\VistaModelo1.xss">
       <DependentUpon>VistaModelo1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xsc">
+      <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaUsuariosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xss">
+      <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

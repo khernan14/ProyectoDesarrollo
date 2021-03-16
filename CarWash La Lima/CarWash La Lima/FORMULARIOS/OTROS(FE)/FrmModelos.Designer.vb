@@ -39,6 +39,12 @@ Partial Class FrmModelos
         Me.label1 = New System.Windows.Forms.Label()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.dgModelos = New System.Windows.Forms.DataGridView()
+        Me.ModeloIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MarcaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ModeloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AnioModeloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VistaMarcaModeloBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaMarcaModeloDataSet1 = New CarWash_La_Lima.VistaMarcaModeloDataSet1()
         Me.ModeloVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ModelosVDataSet1 = New CarWash_La_Lima.ModelosVDataSet1()
         Me.cmbMarca = New System.Windows.Forms.ComboBox()
@@ -46,20 +52,14 @@ Partial Class FrmModelos
         Me.MarcasDataSet1 = New CarWash_La_Lima.MarcasDataSet1()
         Me.MarcasVehiculosTableAdapter = New CarWash_La_Lima.MarcasDataSet1TableAdapters.MarcasVehiculosTableAdapter()
         Me.ModeloVehiculoTableAdapter = New CarWash_La_Lima.ModelosVDataSet1TableAdapters.ModeloVehiculoTableAdapter()
-        Me.VistaMarcaModeloDataSet1 = New CarWash_La_Lima.VistaMarcaModeloDataSet1()
-        Me.VistaMarcaModeloBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaMarcaModeloTableAdapter = New CarWash_La_Lima.VistaMarcaModeloDataSet1TableAdapters.VistaMarcaModeloTableAdapter()
-        Me.ModeloIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MarcaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ModeloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AnioModeloDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgModelos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaMarcaModeloBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaMarcaModeloDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ModeloVehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ModelosVDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcasVehiculosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcasDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaMarcaModeloDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaMarcaModeloBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label11
@@ -242,8 +242,47 @@ Partial Class FrmModelos
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgModelos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgModelos.Size = New System.Drawing.Size(582, 377)
         Me.dgModelos.TabIndex = 189
+        '
+        'ModeloIDDataGridViewTextBoxColumn
+        '
+        Me.ModeloIDDataGridViewTextBoxColumn.DataPropertyName = "ModeloID"
+        Me.ModeloIDDataGridViewTextBoxColumn.HeaderText = "ModeloID"
+        Me.ModeloIDDataGridViewTextBoxColumn.Name = "ModeloIDDataGridViewTextBoxColumn"
+        Me.ModeloIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MarcaDataGridViewTextBoxColumn
+        '
+        Me.MarcaDataGridViewTextBoxColumn.DataPropertyName = "Marca"
+        Me.MarcaDataGridViewTextBoxColumn.HeaderText = "Marca"
+        Me.MarcaDataGridViewTextBoxColumn.Name = "MarcaDataGridViewTextBoxColumn"
+        Me.MarcaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ModeloDataGridViewTextBoxColumn
+        '
+        Me.ModeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo"
+        Me.ModeloDataGridViewTextBoxColumn.HeaderText = "Modelo"
+        Me.ModeloDataGridViewTextBoxColumn.Name = "ModeloDataGridViewTextBoxColumn"
+        Me.ModeloDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'AnioModeloDataGridViewTextBoxColumn
+        '
+        Me.AnioModeloDataGridViewTextBoxColumn.DataPropertyName = "AnioModelo"
+        Me.AnioModeloDataGridViewTextBoxColumn.HeaderText = "AnioModelo"
+        Me.AnioModeloDataGridViewTextBoxColumn.Name = "AnioModeloDataGridViewTextBoxColumn"
+        Me.AnioModeloDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VistaMarcaModeloBindingSource
+        '
+        Me.VistaMarcaModeloBindingSource.DataMember = "VistaMarcaModelo"
+        Me.VistaMarcaModeloBindingSource.DataSource = Me.VistaMarcaModeloDataSet1
+        '
+        'VistaMarcaModeloDataSet1
+        '
+        Me.VistaMarcaModeloDataSet1.DataSetName = "VistaMarcaModeloDataSet1"
+        Me.VistaMarcaModeloDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ModeloVehiculoBindingSource
         '
@@ -284,47 +323,9 @@ Partial Class FrmModelos
         '
         Me.ModeloVehiculoTableAdapter.ClearBeforeFill = True
         '
-        'VistaMarcaModeloDataSet1
-        '
-        Me.VistaMarcaModeloDataSet1.DataSetName = "VistaMarcaModeloDataSet1"
-        Me.VistaMarcaModeloDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaMarcaModeloBindingSource
-        '
-        Me.VistaMarcaModeloBindingSource.DataMember = "VistaMarcaModelo"
-        Me.VistaMarcaModeloBindingSource.DataSource = Me.VistaMarcaModeloDataSet1
-        '
         'VistaMarcaModeloTableAdapter
         '
         Me.VistaMarcaModeloTableAdapter.ClearBeforeFill = True
-        '
-        'ModeloIDDataGridViewTextBoxColumn
-        '
-        Me.ModeloIDDataGridViewTextBoxColumn.DataPropertyName = "ModeloID"
-        Me.ModeloIDDataGridViewTextBoxColumn.HeaderText = "ModeloID"
-        Me.ModeloIDDataGridViewTextBoxColumn.Name = "ModeloIDDataGridViewTextBoxColumn"
-        Me.ModeloIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MarcaDataGridViewTextBoxColumn
-        '
-        Me.MarcaDataGridViewTextBoxColumn.DataPropertyName = "Marca"
-        Me.MarcaDataGridViewTextBoxColumn.HeaderText = "Marca"
-        Me.MarcaDataGridViewTextBoxColumn.Name = "MarcaDataGridViewTextBoxColumn"
-        Me.MarcaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ModeloDataGridViewTextBoxColumn
-        '
-        Me.ModeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo"
-        Me.ModeloDataGridViewTextBoxColumn.HeaderText = "Modelo"
-        Me.ModeloDataGridViewTextBoxColumn.Name = "ModeloDataGridViewTextBoxColumn"
-        Me.ModeloDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AnioModeloDataGridViewTextBoxColumn
-        '
-        Me.AnioModeloDataGridViewTextBoxColumn.DataPropertyName = "AnioModelo"
-        Me.AnioModeloDataGridViewTextBoxColumn.HeaderText = "AnioModelo"
-        Me.AnioModeloDataGridViewTextBoxColumn.Name = "AnioModeloDataGridViewTextBoxColumn"
-        Me.AnioModeloDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FrmModelos
         '
@@ -350,12 +351,12 @@ Partial Class FrmModelos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "MODELOS"
         CType(Me.dgModelos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaMarcaModeloBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaMarcaModeloDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ModeloVehiculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ModelosVDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcasVehiculosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcasDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaMarcaModeloDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaMarcaModeloBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

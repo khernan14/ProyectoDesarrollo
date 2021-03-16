@@ -196,6 +196,7 @@ Partial Class FrmTipo
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgTipoV.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgTipoV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgTipoV.Size = New System.Drawing.Size(582, 377)
         Me.dgTipoV.TabIndex = 189
         '

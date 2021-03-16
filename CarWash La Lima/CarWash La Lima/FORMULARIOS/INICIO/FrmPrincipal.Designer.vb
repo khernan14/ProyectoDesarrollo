@@ -42,7 +42,7 @@ Partial Class FrmPrincipal
         Me.btnColor = New FontAwesome.Sharp.IconButton()
         Me.btnUsuarios = New FontAwesome.Sharp.IconButton()
         Me.btnOpciones = New FontAwesome.Sharp.IconButton()
-        Me.btnEstadisticas = New FontAwesome.Sharp.IconButton()
+        Me.btnHistorial = New FontAwesome.Sharp.IconButton()
         Me.btnEmpleados = New FontAwesome.Sharp.IconButton()
         Me.btnVehiculos = New FontAwesome.Sharp.IconButton()
         Me.btnClientes = New FontAwesome.Sharp.IconButton()
@@ -216,11 +216,12 @@ Partial Class FrmPrincipal
         '
         'panelMenu
         '
+        Me.panelMenu.AutoScroll = True
         Me.panelMenu.AutoScrollMinSize = New System.Drawing.Size(50, 50)
         Me.panelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.panelMenu.Controls.Add(Me.pnlSubMenu)
         Me.panelMenu.Controls.Add(Me.btnOpciones)
-        Me.panelMenu.Controls.Add(Me.btnEstadisticas)
+        Me.panelMenu.Controls.Add(Me.btnHistorial)
         Me.panelMenu.Controls.Add(Me.btnEmpleados)
         Me.panelMenu.Controls.Add(Me.btnVehiculos)
         Me.panelMenu.Controls.Add(Me.btnClientes)
@@ -365,25 +366,25 @@ Partial Class FrmPrincipal
         Me.btnOpciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnOpciones.UseVisualStyleBackColor = True
         '
-        'btnEstadisticas
+        'btnHistorial
         '
-        Me.btnEstadisticas.FlatAppearance.BorderSize = 0
-        Me.btnEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEstadisticas.ForeColor = System.Drawing.Color.Gainsboro
-        Me.btnEstadisticas.IconChar = FontAwesome.Sharp.IconChar.ChartLine
-        Me.btnEstadisticas.IconColor = System.Drawing.Color.Gainsboro
-        Me.btnEstadisticas.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEstadisticas.IconSize = 32
-        Me.btnEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEstadisticas.Location = New System.Drawing.Point(3, 420)
-        Me.btnEstadisticas.Name = "btnEstadisticas"
-        Me.btnEstadisticas.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
-        Me.btnEstadisticas.Size = New System.Drawing.Size(220, 60)
-        Me.btnEstadisticas.TabIndex = 22
-        Me.btnEstadisticas.Text = "ESTADISTICAS"
-        Me.btnEstadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEstadisticas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnEstadisticas.UseVisualStyleBackColor = True
+        Me.btnHistorial.FlatAppearance.BorderSize = 0
+        Me.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHistorial.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnHistorial.IconChar = FontAwesome.Sharp.IconChar.ChartLine
+        Me.btnHistorial.IconColor = System.Drawing.Color.Gainsboro
+        Me.btnHistorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnHistorial.IconSize = 32
+        Me.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHistorial.Location = New System.Drawing.Point(3, 420)
+        Me.btnHistorial.Name = "btnHistorial"
+        Me.btnHistorial.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
+        Me.btnHistorial.Size = New System.Drawing.Size(220, 60)
+        Me.btnHistorial.TabIndex = 22
+        Me.btnHistorial.Text = "HISTORIAL"
+        Me.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHistorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnHistorial.UseVisualStyleBackColor = True
         '
         'btnEmpleados
         '
@@ -531,7 +532,7 @@ Partial Class FrmPrincipal
     Private WithEvents panelTitleBar As Panel
     Private WithEvents panelMenu As Panel
     Private WithEvents imgHome As PictureBox
-    Friend WithEvents btnEstadisticas As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnHistorial As FontAwesome.Sharp.IconButton
     Friend WithEvents btnEmpleados As FontAwesome.Sharp.IconButton
     Friend WithEvents btnVehiculos As FontAwesome.Sharp.IconButton
     Friend WithEvents btnClientes As FontAwesome.Sharp.IconButton

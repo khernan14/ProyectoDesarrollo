@@ -76,7 +76,6 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La 
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmUsuarios.resources
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarVehiculo.resources
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoVehiculo.resources
-C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEstadisticas.resources
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmFacturar.resources
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogin.resources
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoCliente.resources
@@ -89,3 +88,4 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La 
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.exe
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.xml
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmHistorialFactura.resources

@@ -29,12 +29,6 @@ Partial Class FrmUsuarios
         Me.label1 = New System.Windows.Forms.Label()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.dgUsuarios = New System.Windows.Forms.DataGridView()
-        Me.UsuarioIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpleadoIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ContraseñaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaCreacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuariosDataSet1 = New CarWash_La_Lima.UsuariosDataSet1()
         Me.label11 = New System.Windows.Forms.Label()
@@ -56,11 +50,22 @@ Partial Class FrmUsuarios
         Me.EmpleadosEUDataSet1 = New CarWash_La_Lima.EmpleadosEUDataSet1()
         Me.EmpleadoTableAdapter = New CarWash_La_Lima.EmpleadosEUDataSet1TableAdapters.EmpleadoTableAdapter()
         Me.DateTime1 = New System.Windows.Forms.DateTimePicker()
+        Me.VistaUsuariosDataSet1 = New CarWash_La_Lima.VistaUsuariosDataSet1()
+        Me.VistaUsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaUsuariosTableAdapter = New CarWash_La_Lima.VistaUsuariosDataSet1TableAdapters.VistaUsuariosTableAdapter()
+        Me.UsuarioIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContraseñaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaCreacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosEUDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaUsuariosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaUsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -110,8 +115,8 @@ Partial Class FrmUsuarios
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgUsuarios.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgUsuarios.ColumnHeadersHeight = 30
-        Me.dgUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsuarioIDDataGridViewTextBoxColumn, Me.EmpleadoIDDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.ContraseñaDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.FechaCreacionDataGridViewTextBoxColumn})
-        Me.dgUsuarios.DataSource = Me.UsuarioBindingSource
+        Me.dgUsuarios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsuarioIDDataGridViewTextBoxColumn, Me.NombreEmpleadoDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.ContraseñaDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.FechaCreacionDataGridViewTextBoxColumn})
+        Me.dgUsuarios.DataSource = Me.VistaUsuariosBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -134,50 +139,9 @@ Partial Class FrmUsuarios
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgUsuarios.Size = New System.Drawing.Size(582, 377)
         Me.dgUsuarios.TabIndex = 26
-        '
-        'UsuarioIDDataGridViewTextBoxColumn
-        '
-        Me.UsuarioIDDataGridViewTextBoxColumn.DataPropertyName = "UsuarioID"
-        Me.UsuarioIDDataGridViewTextBoxColumn.HeaderText = "UsuarioID"
-        Me.UsuarioIDDataGridViewTextBoxColumn.Name = "UsuarioIDDataGridViewTextBoxColumn"
-        Me.UsuarioIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmpleadoIDDataGridViewTextBoxColumn
-        '
-        Me.EmpleadoIDDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoID"
-        Me.EmpleadoIDDataGridViewTextBoxColumn.HeaderText = "EmpleadoID"
-        Me.EmpleadoIDDataGridViewTextBoxColumn.Name = "EmpleadoIDDataGridViewTextBoxColumn"
-        Me.EmpleadoIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'UsuarioDataGridViewTextBoxColumn
-        '
-        Me.UsuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario"
-        Me.UsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
-        Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
-        Me.UsuarioDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ContraseñaDataGridViewTextBoxColumn
-        '
-        Me.ContraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña"
-        Me.ContraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña"
-        Me.ContraseñaDataGridViewTextBoxColumn.Name = "ContraseñaDataGridViewTextBoxColumn"
-        Me.ContraseñaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EstadoDataGridViewTextBoxColumn
-        '
-        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
-        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
-        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
-        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'FechaCreacionDataGridViewTextBoxColumn
-        '
-        Me.FechaCreacionDataGridViewTextBoxColumn.DataPropertyName = "FechaCreacion"
-        Me.FechaCreacionDataGridViewTextBoxColumn.HeaderText = "FechaCreacion"
-        Me.FechaCreacionDataGridViewTextBoxColumn.Name = "FechaCreacionDataGridViewTextBoxColumn"
-        Me.FechaCreacionDataGridViewTextBoxColumn.ReadOnly = True
         '
         'UsuarioBindingSource
         '
@@ -364,6 +328,62 @@ Partial Class FrmUsuarios
         Me.DateTime1.Size = New System.Drawing.Size(244, 20)
         Me.DateTime1.TabIndex = 189
         '
+        'VistaUsuariosDataSet1
+        '
+        Me.VistaUsuariosDataSet1.DataSetName = "VistaUsuariosDataSet1"
+        Me.VistaUsuariosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VistaUsuariosBindingSource
+        '
+        Me.VistaUsuariosBindingSource.DataMember = "VistaUsuarios"
+        Me.VistaUsuariosBindingSource.DataSource = Me.VistaUsuariosDataSet1
+        '
+        'VistaUsuariosTableAdapter
+        '
+        Me.VistaUsuariosTableAdapter.ClearBeforeFill = True
+        '
+        'UsuarioIDDataGridViewTextBoxColumn
+        '
+        Me.UsuarioIDDataGridViewTextBoxColumn.DataPropertyName = "UsuarioID"
+        Me.UsuarioIDDataGridViewTextBoxColumn.HeaderText = "UsuarioID"
+        Me.UsuarioIDDataGridViewTextBoxColumn.Name = "UsuarioIDDataGridViewTextBoxColumn"
+        Me.UsuarioIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "NombreEmpleado"
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.HeaderText = "NombreEmpleado"
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.Name = "NombreEmpleadoDataGridViewTextBoxColumn"
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UsuarioDataGridViewTextBoxColumn
+        '
+        Me.UsuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario"
+        Me.UsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
+        Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
+        Me.UsuarioDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ContraseñaDataGridViewTextBoxColumn
+        '
+        Me.ContraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña"
+        Me.ContraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña"
+        Me.ContraseñaDataGridViewTextBoxColumn.Name = "ContraseñaDataGridViewTextBoxColumn"
+        Me.ContraseñaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        Me.EstadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FechaCreacionDataGridViewTextBoxColumn
+        '
+        Me.FechaCreacionDataGridViewTextBoxColumn.DataPropertyName = "FechaCreacion"
+        Me.FechaCreacionDataGridViewTextBoxColumn.HeaderText = "FechaCreacion"
+        Me.FechaCreacionDataGridViewTextBoxColumn.Name = "FechaCreacionDataGridViewTextBoxColumn"
+        Me.FechaCreacionDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -396,6 +416,8 @@ Partial Class FrmUsuarios
         CType(Me.UsuariosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosEUDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaUsuariosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaUsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -420,15 +442,18 @@ Partial Class FrmUsuarios
     Friend WithEvents UsuariosDataSet1 As UsuariosDataSet1
     Friend WithEvents UsuarioBindingSource As BindingSource
     Friend WithEvents UsuarioTableAdapter As UsuariosDataSet1TableAdapters.UsuarioTableAdapter
-    Friend WithEvents UsuarioIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmpleadoIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ContraseñaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaCreacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents cmbEmpleado As ComboBox
     Friend WithEvents EmpleadosEUDataSet1 As EmpleadosEUDataSet1
     Friend WithEvents EmpleadoBindingSource As BindingSource
     Friend WithEvents EmpleadoTableAdapter As EmpleadosEUDataSet1TableAdapters.EmpleadoTableAdapter
     Friend WithEvents DateTime1 As DateTimePicker
+    Friend WithEvents VistaUsuariosDataSet1 As VistaUsuariosDataSet1
+    Friend WithEvents VistaUsuariosBindingSource As BindingSource
+    Friend WithEvents VistaUsuariosTableAdapter As VistaUsuariosDataSet1TableAdapters.VistaUsuariosTableAdapter
+    Friend WithEvents UsuarioIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombreEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ContraseñaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaCreacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

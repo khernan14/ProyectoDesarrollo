@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VistaUsuariosDataSet1" targetNamespace="http://tempuri.org/VistaUsuariosDataSet1.xsd" xmlns:mstns="http://tempuri.org/VistaUsuariosDataSet1.xsd" xmlns="http://tempuri.org/VistaUsuariosDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CarWashLaLimaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarWashLaLimaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CarWash_La_Lima.My.MySettings.GlobalReference.Default.CarWashLaLimaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaUsuariosTableAdapter" GeneratorDataComponentClassName="VistaUsuariosTableAdapter" Name="VistaUsuarios" UserDataComponentName="VistaUsuariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CarWashLaLimaConnectionString (MySettings)" DbObjectName="CarWashLaLima.dbo.VistaUsuarios" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT UsuarioID, NombreEmpleado, Usuario, Contraseña, Estado, FechaCreacion FROM dbo.VistaUsuarios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UsuarioID" DataSetColumn="UsuarioID" />
+              <Mapping SourceColumn="NombreEmpleado" DataSetColumn="NombreEmpleado" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="Contraseña" DataSetColumn="Contraseña" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="FechaCreacion" DataSetColumn="FechaCreacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VistaUsuariosDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VistaUsuariosDataSet1" msprop:Generator_UserDSName="VistaUsuariosDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaUsuarios" msprop:Generator_TableClassName="VistaUsuariosDataTable" msprop:Generator_TableVarName="tableVistaUsuarios" msprop:Generator_TablePropName="VistaUsuarios" msprop:Generator_RowDeletingName="VistaUsuariosRowDeleting" msprop:Generator_RowChangingName="VistaUsuariosRowChanging" msprop:Generator_RowEvHandlerName="VistaUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaUsuariosRowDeleted" msprop:Generator_UserTableName="VistaUsuarios" msprop:Generator_RowChangedName="VistaUsuariosRowChanged" msprop:Generator_RowEvArgName="VistaUsuariosRowChangeEvent" msprop:Generator_RowClassName="VistaUsuariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UsuarioID" msprop:Generator_ColumnVarNameInTable="columnUsuarioID" msprop:Generator_ColumnPropNameInRow="UsuarioID" msprop:Generator_ColumnPropNameInTable="UsuarioIDColumn" msprop:Generator_UserColumnName="UsuarioID" type="xs:int" />
+              <xs:element name="NombreEmpleado" msprop:Generator_ColumnVarNameInTable="columnNombreEmpleado" msprop:Generator_ColumnPropNameInRow="NombreEmpleado" msprop:Generator_ColumnPropNameInTable="NombreEmpleadoColumn" msprop:Generator_UserColumnName="NombreEmpleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contraseña" msprop:Generator_ColumnVarNameInTable="columnContraseña" msprop:Generator_ColumnPropNameInRow="Contraseña" msprop:Generator_ColumnPropNameInTable="ContraseñaColumn" msprop:Generator_UserColumnName="Contraseña" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaCreacion" msprop:Generator_ColumnVarNameInTable="columnFechaCreacion" msprop:Generator_ColumnPropNameInRow="FechaCreacion" msprop:Generator_ColumnPropNameInTable="FechaCreacionColumn" msprop:Generator_UserColumnName="FechaCreacion" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VistaUsuarios" />
+      <xs:field xpath="mstns:UsuarioID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

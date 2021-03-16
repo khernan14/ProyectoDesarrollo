@@ -105,9 +105,9 @@ Public Class FrmPrincipal
         ActivateButton(sender, RGBColors.color4)
         OpenChildForm(New FrmEmpleado)
     End Sub
-    Private Sub btnMarketing_Click(sender As Object, e As EventArgs) Handles btnEstadisticas.Click
+    Private Sub btnMarketing_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
         ActivateButton(sender, RGBColors.color5)
-        OpenChildForm(New FrmEstadisticas)
+        OpenChildForm(New FrmHistorialFactura)
     End Sub
     'Private Sub btnSetting_Click(sender As Object, e As EventArgs) Handles btnSetting.Click
     '    ActivateButton(sender, RGBColors.color6)

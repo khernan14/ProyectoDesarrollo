@@ -168,6 +168,7 @@ Partial Class FrmEmpleado
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgEmpleados.Size = New System.Drawing.Size(670, 377)
         Me.dgEmpleados.TabIndex = 21
         '

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmEstadisticas
+Partial Class FrmHistorialFactura
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -27,9 +27,6 @@ Partial Class FrmEstadisticas
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgHistoricos = New System.Windows.Forms.DataGridView()
-        Me.FacturaHistoricosDataSet1 = New CarWash_La_Lima.FacturaHistoricosDataSet1()
-        Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHistoricosDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FacturaIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaFacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,9 +35,12 @@ Partial Class FrmEstadisticas
         Me.NumPlacaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FacturaHistoricosDataSet1 = New CarWash_La_Lima.FacturaHistoricosDataSet1()
+        Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHistoricosDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgHistoricos
@@ -86,20 +86,6 @@ Partial Class FrmEstadisticas
         Me.dgHistoricos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgHistoricos.Size = New System.Drawing.Size(821, 377)
         Me.dgHistoricos.TabIndex = 27
-        '
-        'FacturaHistoricosDataSet1
-        '
-        Me.FacturaHistoricosDataSet1.DataSetName = "FacturaHistoricosDataSet1"
-        Me.FacturaHistoricosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FacturasHistoricosBindingSource
-        '
-        Me.FacturasHistoricosBindingSource.DataMember = "Facturas-Historicos"
-        Me.FacturasHistoricosBindingSource.DataSource = Me.FacturaHistoricosDataSet1
-        '
-        'Facturas_HistoricosTableAdapter
-        '
-        Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -157,6 +143,20 @@ Partial Class FrmEstadisticas
         Me.TotalPagoDataGridViewTextBoxColumn.Name = "TotalPagoDataGridViewTextBoxColumn"
         Me.TotalPagoDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'FacturasHistoricosBindingSource
+        '
+        Me.FacturasHistoricosBindingSource.DataMember = "Facturas-Historicos"
+        Me.FacturasHistoricosBindingSource.DataSource = Me.FacturaHistoricosDataSet1
+        '
+        'FacturaHistoricosDataSet1
+        '
+        Me.FacturaHistoricosDataSet1.DataSetName = "FacturaHistoricosDataSet1"
+        Me.FacturaHistoricosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Facturas_HistoricosTableAdapter
+        '
+        Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
+        '
         'FrmEstadisticas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -165,10 +165,10 @@ Partial Class FrmEstadisticas
         Me.ClientSize = New System.Drawing.Size(870, 457)
         Me.Controls.Add(Me.dgHistoricos)
         Me.Name = "FrmEstadisticas"
-        Me.Text = "ESTADISTICAS"
+        Me.Text = "HISTORIAL DE LAVADOS"
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

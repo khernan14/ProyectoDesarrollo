@@ -164,6 +164,7 @@ Partial Class CLIENTES
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgClientes.Size = New System.Drawing.Size(670, 377)
         Me.dgClientes.TabIndex = 16
         '
