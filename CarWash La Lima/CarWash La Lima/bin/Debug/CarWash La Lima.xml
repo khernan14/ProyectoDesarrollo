@@ -32,6 +32,11 @@ CarWash La Lima
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:CarWash_La_Lima.My.Resources.Resources.USER">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:CarWash_La_Lima.ClienteDataSet1">
 <summary>
 Represents a strongly typed in-memory cache of data.

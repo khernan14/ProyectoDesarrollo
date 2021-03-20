@@ -89,3 +89,12 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La 
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.xml
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmHistorialFactura.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.dll
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.dll
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.pdb
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.xml
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.pdb
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.xml
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Support.dll
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Support.pdb
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Support.xml

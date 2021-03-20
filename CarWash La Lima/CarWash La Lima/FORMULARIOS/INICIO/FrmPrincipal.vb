@@ -1,10 +1,14 @@
 ﻿Imports System.Runtime.InteropServices
 Imports FontAwesome.Sharp
+Imports Support
 
 Public Class FrmPrincipal
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultar()
+        'lblName.Text = ActiveUser.NombreEmpleado + ", " + ActiveUser.ApellidoEmpleado
+        lblUsers.Text = ActiveUser.Usuario
+        'lblCargo.Text = ActiveUser.Puesto
     End Sub
 
     'Fields'
@@ -126,7 +130,10 @@ Public Class FrmPrincipal
     End Sub
     'Close-Maximize-Minimize'
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Application.Exit()
+        If MessageBox.Show("¿Esta seguro que desea cerrar la aplicacion?", "Advertencia", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
     Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
         If WindowState = FormWindowState.Normal Then
@@ -186,6 +193,13 @@ Public Class FrmPrincipal
     Private Sub btnMarcas_Click(sender As Object, e As EventArgs) Handles btnMarcas.Click
         OpenChildForm(New FrmMarcas)
         ocultar()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        If MessageBox.Show("¿Desea cerrar sesion?", "Advertencia", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 End Class
 

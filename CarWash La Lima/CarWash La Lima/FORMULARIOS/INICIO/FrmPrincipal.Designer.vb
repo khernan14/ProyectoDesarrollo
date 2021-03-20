@@ -28,9 +28,9 @@ Partial Class FrmPrincipal
         Me.btnMinimize = New FontAwesome.Sharp.IconPictureBox()
         Me.btnMaximize = New FontAwesome.Sharp.IconPictureBox()
         Me.btnSalir = New FontAwesome.Sharp.IconPictureBox()
-        Me.label5 = New System.Windows.Forms.Label()
-        Me.label4 = New System.Windows.Forms.Label()
-        Me.label3 = New System.Windows.Forms.Label()
+        Me.lblCargo = New System.Windows.Forms.Label()
+        Me.lblUsers = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.pictureBox7 = New System.Windows.Forms.PictureBox()
         Me.mzButtonWindows2 = New BWCMM.MZButtonWindows()
         Me.iconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
@@ -41,6 +41,7 @@ Partial Class FrmPrincipal
         Me.btnModelos = New FontAwesome.Sharp.IconButton()
         Me.btnColor = New FontAwesome.Sharp.IconButton()
         Me.btnUsuarios = New FontAwesome.Sharp.IconButton()
+        Me.btnLogout = New FontAwesome.Sharp.IconButton()
         Me.btnOpciones = New FontAwesome.Sharp.IconButton()
         Me.btnHistorial = New FontAwesome.Sharp.IconButton()
         Me.btnEmpleados = New FontAwesome.Sharp.IconButton()
@@ -80,9 +81,9 @@ Partial Class FrmPrincipal
         Me.panelTitleBar.Controls.Add(Me.btnMinimize)
         Me.panelTitleBar.Controls.Add(Me.btnMaximize)
         Me.panelTitleBar.Controls.Add(Me.btnSalir)
-        Me.panelTitleBar.Controls.Add(Me.label5)
-        Me.panelTitleBar.Controls.Add(Me.label4)
-        Me.panelTitleBar.Controls.Add(Me.label3)
+        Me.panelTitleBar.Controls.Add(Me.lblCargo)
+        Me.panelTitleBar.Controls.Add(Me.lblUsers)
+        Me.panelTitleBar.Controls.Add(Me.lblName)
         Me.panelTitleBar.Controls.Add(Me.pictureBox7)
         Me.panelTitleBar.Controls.Add(Me.mzButtonWindows2)
         Me.panelTitleBar.Controls.Add(Me.lblFormTitle)
@@ -141,46 +142,47 @@ Partial Class FrmPrincipal
         Me.btnSalir.TabIndex = 22
         Me.btnSalir.TabStop = False
         '
-        'label5
+        'lblCargo
         '
-        Me.label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.label5.AutoSize = True
-        Me.label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label5.ForeColor = System.Drawing.Color.LightGray
-        Me.label5.Location = New System.Drawing.Point(841, 45)
-        Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(45, 16)
-        Me.label5.TabIndex = 21
-        Me.label5.Text = "Cargo"
+        Me.lblCargo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblCargo.AutoSize = True
+        Me.lblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCargo.ForeColor = System.Drawing.Color.LightGray
+        Me.lblCargo.Location = New System.Drawing.Point(735, 47)
+        Me.lblCargo.Name = "lblCargo"
+        Me.lblCargo.Size = New System.Drawing.Size(45, 16)
+        Me.lblCargo.TabIndex = 21
+        Me.lblCargo.Text = "Cargo"
         '
-        'label4
+        'lblUsers
         '
-        Me.label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.label4.AutoSize = True
-        Me.label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label4.ForeColor = System.Drawing.Color.LightGray
-        Me.label4.Location = New System.Drawing.Point(841, 27)
-        Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(97, 16)
-        Me.label4.TabIndex = 20
-        Me.label4.Text = "Apellidos User"
+        Me.lblUsers.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblUsers.AutoSize = True
+        Me.lblUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsers.ForeColor = System.Drawing.Color.LightGray
+        Me.lblUsers.Location = New System.Drawing.Point(735, 29)
+        Me.lblUsers.Name = "lblUsers"
+        Me.lblUsers.Size = New System.Drawing.Size(55, 16)
+        Me.lblUsers.TabIndex = 20
+        Me.lblUsers.Text = "Usuario"
         '
-        'label3
+        'lblName
         '
-        Me.label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.label3.AutoSize = True
-        Me.label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label3.ForeColor = System.Drawing.Color.LightGray
-        Me.label3.Location = New System.Drawing.Point(841, 9)
-        Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(67, 16)
-        Me.label3.TabIndex = 19
-        Me.label3.Text = "Nombres "
+        Me.lblName.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.LightGray
+        Me.lblName.Location = New System.Drawing.Point(735, 11)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(67, 16)
+        Me.lblName.TabIndex = 19
+        Me.lblName.Text = "Nombres "
         '
         'pictureBox7
         '
         Me.pictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pictureBox7.Location = New System.Drawing.Point(770, 5)
+        Me.pictureBox7.Image = Global.CarWash_La_Lima.My.Resources.Resources.USER
+        Me.pictureBox7.Location = New System.Drawing.Point(664, 4)
         Me.pictureBox7.Name = "pictureBox7"
         Me.pictureBox7.Size = New System.Drawing.Size(65, 65)
         Me.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -220,6 +222,7 @@ Partial Class FrmPrincipal
         Me.panelMenu.AutoScrollMinSize = New System.Drawing.Size(50, 50)
         Me.panelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.panelMenu.Controls.Add(Me.pnlSubMenu)
+        Me.panelMenu.Controls.Add(Me.btnLogout)
         Me.panelMenu.Controls.Add(Me.btnOpciones)
         Me.panelMenu.Controls.Add(Me.btnHistorial)
         Me.panelMenu.Controls.Add(Me.btnEmpleados)
@@ -240,8 +243,7 @@ Partial Class FrmPrincipal
         Me.pnlSubMenu.Controls.Add(Me.btnModelos)
         Me.pnlSubMenu.Controls.Add(Me.btnColor)
         Me.pnlSubMenu.Controls.Add(Me.btnUsuarios)
-        Me.pnlSubMenu.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pnlSubMenu.Location = New System.Drawing.Point(0, 529)
+        Me.pnlSubMenu.Location = New System.Drawing.Point(3, 534)
         Me.pnlSubMenu.Name = "pnlSubMenu"
         Me.pnlSubMenu.Size = New System.Drawing.Size(223, 259)
         Me.pnlSubMenu.TabIndex = 24
@@ -345,6 +347,26 @@ Partial Class FrmPrincipal
         Me.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnUsuarios.UseVisualStyleBackColor = True
+        '
+        'btnLogout
+        '
+        Me.btnLogout.FlatAppearance.BorderSize = 0
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.ForeColor = System.Drawing.Color.Gainsboro
+        Me.btnLogout.IconChar = FontAwesome.Sharp.IconChar.PowerOff
+        Me.btnLogout.IconColor = System.Drawing.Color.Gainsboro
+        Me.btnLogout.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnLogout.IconSize = 32
+        Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogout.Location = New System.Drawing.Point(3, 689)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Padding = New System.Windows.Forms.Padding(10, 0, 18, 0)
+        Me.btnLogout.Size = New System.Drawing.Size(220, 42)
+        Me.btnLogout.TabIndex = 24
+        Me.btnLogout.Text = "CERRAR SESION"
+        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnLogout.UseVisualStyleBackColor = True
         '
         'btnOpciones
         '
@@ -539,9 +561,9 @@ Partial Class FrmPrincipal
     Friend WithEvents btnFacturar As FontAwesome.Sharp.IconButton
     Friend WithEvents PanelDesktop As Panel
     Private WithEvents pictureBox2 As PictureBox
-    Private WithEvents label5 As Label
-    Private WithEvents label4 As Label
-    Private WithEvents label3 As Label
+    Private WithEvents lblCargo As Label
+    Private WithEvents lblUsers As Label
+    Private WithEvents lblName As Label
     Private WithEvents pictureBox7 As PictureBox
     Private WithEvents btnSalir As FontAwesome.Sharp.IconPictureBox
     Private WithEvents btnMaximize As FontAwesome.Sharp.IconPictureBox
@@ -553,4 +575,5 @@ Partial Class FrmPrincipal
     Friend WithEvents btnUsuarios As FontAwesome.Sharp.IconButton
     Friend WithEvents btnOpciones As FontAwesome.Sharp.IconButton
     Friend WithEvents btnMarcas As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnLogout As FontAwesome.Sharp.IconButton
 End Class

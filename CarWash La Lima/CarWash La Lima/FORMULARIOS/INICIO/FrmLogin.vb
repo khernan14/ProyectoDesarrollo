@@ -1,10 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Domain
 
 Public Class FrmLogin
-
-    Private Sub button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-
-    End Sub
 
     Private Sub btnMostrarOcultar_Click(sender As Object, e As EventArgs) Handles btnMostrarOcultar.Click
         Dim text As String = txtPassword.Text
@@ -63,4 +60,47 @@ Public Class FrmLogin
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        Dim userModel As New UserModel()
+
+        If txtUsuario.Text <> "USUARIO" Then
+            If txtPassword.Text <> "CONTRASEÑA" Then
+                Dim validarInicio = userModel.Login(txtUsuario.Text, txtPassword.Text)
+                If validarInicio = True Then
+                    Dim frm As New FrmPrincipal()
+                    frm.Show()
+                    AddHandler frm.FormClosed, AddressOf Me.Logout
+                    Me.Hide()
+                Else
+                    msgError("Usuario o Contraseña incorrectos.")
+                    txtPassword.Text = "CONTRASEÑA"
+                    txtPassword.UseSystemPasswordChar = False
+                    txtPassword.ForeColor = Color.DimGray
+
+                    txtUsuario.Text = "USUARIO"
+                    txtUsuario.ForeColor = Color.DimGray
+                End If
+            Else
+                msgError("Ingrese una contraseña")
+            End If
+        Else
+            msgError("Ingrese nombre de usuario")
+        End If
+
+    End Sub
+
+    Private Sub msgError(ByVal msg As String)
+        btnErrorMessage.Text = " " & msg
+        btnErrorMessage.Visible = True
+    End Sub
+
+    Private Sub Logout(ByVal sender As Object, ByVal e As FormClosedEventArgs)
+        txtPassword.Text = "CONTRASEÑA"
+        txtPassword.UseSystemPasswordChar = False
+        txtUsuario.Text = "USUARIO"
+        btnErrorMessage.Visible = False
+        Me.Show()
+    End Sub
+
 End Class

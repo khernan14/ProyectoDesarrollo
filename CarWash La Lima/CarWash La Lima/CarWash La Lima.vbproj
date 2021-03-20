@@ -898,5 +898,18 @@
   <ItemGroup>
     <None Include="Resources\Close.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.vbproj">
+      <Project>{84edf146-3d8b-4c62-8840-26f0e2dfb9e2}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Support\Support.vbproj">
+      <Project>{866ec807-242b-4a96-9dfb-57d75e4dc979}</Project>
+      <Name>Support</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
