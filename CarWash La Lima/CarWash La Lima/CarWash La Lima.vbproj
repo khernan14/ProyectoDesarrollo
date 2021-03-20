@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FormaPagoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FacturaHDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.Designer.vb">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
     </Compile>
@@ -383,17 +388,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioDataSet1.Designer.vb">
+    <Compile Include="CONEXIONES DATASET%27S\UsuarioDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsuarioDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="VistaFacturasHDataSet1.Designer.vb">
+    <Compile Include="CONEXIONES DATASET%27S\VistaFacturasHDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaFacturasHDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="VistaFacturasHistoricosDataSet1.Designer.vb">
+    <Compile Include="CONEXIONES DATASET%27S\VistaFacturasHistoricosDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaFacturasHistoricosDataSet1.xsd</DependentUpon>
@@ -693,6 +698,17 @@
     <None Include="CONEXIONES DATASET%27S\FormaPagoDataSet1.xss">
       <DependentUpon>FormaPagoDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="FacturaHDataSet1.xsc">
+      <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FacturaHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturaHDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacturaHDataSet1.xss">
+      <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -836,37 +852,37 @@
     <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xss">
       <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="UsuarioDataSet1.xsc">
+    <None Include="CONEXIONES DATASET%27S\UsuarioDataSet1.xsc">
       <DependentUpon>UsuarioDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="UsuarioDataSet1.xsd">
+    <None Include="CONEXIONES DATASET%27S\UsuarioDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>UsuarioDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UsuarioDataSet1.xss">
+    <None Include="CONEXIONES DATASET%27S\UsuarioDataSet1.xss">
       <DependentUpon>UsuarioDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="VistaFacturasHDataSet1.xsc">
+    <None Include="CONEXIONES DATASET%27S\VistaFacturasHDataSet1.xsc">
       <DependentUpon>VistaFacturasHDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="VistaFacturasHDataSet1.xsd">
+    <None Include="CONEXIONES DATASET%27S\VistaFacturasHDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>VistaFacturasHDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="VistaFacturasHDataSet1.xss">
+    <None Include="CONEXIONES DATASET%27S\VistaFacturasHDataSet1.xss">
       <DependentUpon>VistaFacturasHDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="VistaFacturasHistoricosDataSet1.xsc">
+    <None Include="CONEXIONES DATASET%27S\VistaFacturasHistoricosDataSet1.xsc">
       <DependentUpon>VistaFacturasHistoricosDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="VistaFacturasHistoricosDataSet1.xsd">
+    <None Include="CONEXIONES DATASET%27S\VistaFacturasHistoricosDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>VistaFacturasHistoricosDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="VistaFacturasHistoricosDataSet1.xss">
+    <None Include="CONEXIONES DATASET%27S\VistaFacturasHistoricosDataSet1.xss">
       <DependentUpon>VistaFacturasHistoricosDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>

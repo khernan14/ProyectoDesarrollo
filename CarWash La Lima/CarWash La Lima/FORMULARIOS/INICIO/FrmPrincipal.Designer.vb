@@ -148,7 +148,7 @@ Partial Class FrmPrincipal
         Me.lblCargo.AutoSize = True
         Me.lblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCargo.ForeColor = System.Drawing.Color.LightGray
-        Me.lblCargo.Location = New System.Drawing.Point(735, 47)
+        Me.lblCargo.Location = New System.Drawing.Point(218, 10)
         Me.lblCargo.Name = "lblCargo"
         Me.lblCargo.Size = New System.Drawing.Size(45, 16)
         Me.lblCargo.TabIndex = 21
@@ -160,7 +160,7 @@ Partial Class FrmPrincipal
         Me.lblUsers.AutoSize = True
         Me.lblUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsers.ForeColor = System.Drawing.Color.LightGray
-        Me.lblUsers.Location = New System.Drawing.Point(735, 29)
+        Me.lblUsers.Location = New System.Drawing.Point(218, 50)
         Me.lblUsers.Name = "lblUsers"
         Me.lblUsers.Size = New System.Drawing.Size(55, 16)
         Me.lblUsers.TabIndex = 20
@@ -172,7 +172,7 @@ Partial Class FrmPrincipal
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.ForeColor = System.Drawing.Color.LightGray
-        Me.lblName.Location = New System.Drawing.Point(735, 11)
+        Me.lblName.Location = New System.Drawing.Point(218, 30)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(67, 16)
         Me.lblName.TabIndex = 19
@@ -182,7 +182,7 @@ Partial Class FrmPrincipal
         '
         Me.pictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox7.Image = Global.CarWash_La_Lima.My.Resources.Resources.USER
-        Me.pictureBox7.Location = New System.Drawing.Point(664, 4)
+        Me.pictureBox7.Location = New System.Drawing.Point(147, 5)
         Me.pictureBox7.Name = "pictureBox7"
         Me.pictureBox7.Size = New System.Drawing.Size(65, 65)
         Me.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

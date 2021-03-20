@@ -27,34 +27,40 @@ Partial Class FrmHistorialFactura
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgHistoricos = New System.Windows.Forms.DataGridView()
+        Me.VistaFacturasHistoricosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaFacturasHDataSet1 = New CarWash_La_Lima.VistaFacturasHDataSet1()
         Me.VistaFacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaFacturasHistoricosDataSet1 = New CarWash_La_Lima.VistaFacturasHistoricosDataSet1()
         Me.VistaFacturasHistoricosTableAdapter = New CarWash_La_Lima.VistaFacturasHistoricosDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter()
         Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FacturaHistoricosDataSet1 = New CarWash_La_Lima.FacturaHistoricosDataSet1()
         Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHistoricosDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
-        Me.VistaFacturasHDataSet1 = New CarWash_La_Lima.VistaFacturasHDataSet1()
-        Me.VistaFacturasHistoricosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaFacturasHistoricosTableAdapter1 = New CarWash_La_Lima.VistaFacturasHDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter()
+        Me.FacturaHDataSet1 = New CarWash_La_Lima.FacturaHDataSet1()
+        Me.FacturasHistoricosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Facturas_HistoricosTableAdapter1 = New CarWash_La_Lima.FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FacturaIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaDeFacturacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaFacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NumPlacaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EncargadoServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FormaPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ISVDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TotalPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaFacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaFacturasHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaFacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaFacturasHistoricosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaFacturasHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaFacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgHistoricos
@@ -74,8 +80,8 @@ Partial Class FrmHistorialFactura
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgHistoricos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgHistoricos.ColumnHeadersHeight = 30
-        Me.dgHistoricos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.FacturaIDDataGridViewTextBoxColumn, Me.FechaDeFacturacionDataGridViewTextBoxColumn, Me.NombreClienteDataGridViewTextBoxColumn, Me.DescripcionServicioDataGridViewTextBoxColumn, Me.PrecioServicioDataGridViewTextBoxColumn, Me.NumPlacaDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.EncargadoServicioDataGridViewTextBoxColumn, Me.FormaPagoDataGridViewTextBoxColumn, Me.ISVDataGridViewTextBoxColumn, Me.SubTotalDataGridViewTextBoxColumn})
-        Me.dgHistoricos.DataSource = Me.VistaFacturasHistoricosBindingSource1
+        Me.dgHistoricos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.FacturaIDDataGridViewTextBoxColumn, Me.FechaFacturaDataGridViewTextBoxColumn, Me.ClienteDataGridViewTextBoxColumn, Me.ServicioDataGridViewTextBoxColumn, Me.PrecioServicioDataGridViewTextBoxColumn, Me.NumPlacaDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.EmpleadoDataGridViewTextBoxColumn, Me.FormaPagoDataGridViewTextBoxColumn, Me.ISVDataGridViewTextBoxColumn, Me.SubTotalDataGridViewTextBoxColumn, Me.TotalPagoDataGridViewTextBoxColumn})
+        Me.dgHistoricos.DataSource = Me.FacturasHistoricosBindingSource1
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -100,6 +106,16 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgHistoricos.Size = New System.Drawing.Size(821, 377)
         Me.dgHistoricos.TabIndex = 27
+        '
+        'VistaFacturasHistoricosBindingSource1
+        '
+        Me.VistaFacturasHistoricosBindingSource1.DataMember = "VistaFacturasHistoricos"
+        Me.VistaFacturasHistoricosBindingSource1.DataSource = Me.VistaFacturasHDataSet1
+        '
+        'VistaFacturasHDataSet1
+        '
+        Me.VistaFacturasHDataSet1.DataSetName = "VistaFacturasHDataSet1"
+        Me.VistaFacturasHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VistaFacturasHistoricosBindingSource
         '
@@ -129,19 +145,23 @@ Partial Class FrmHistorialFactura
         '
         Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
         '
-        'VistaFacturasHDataSet1
-        '
-        Me.VistaFacturasHDataSet1.DataSetName = "VistaFacturasHDataSet1"
-        Me.VistaFacturasHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaFacturasHistoricosBindingSource1
-        '
-        Me.VistaFacturasHistoricosBindingSource1.DataMember = "VistaFacturasHistoricos"
-        Me.VistaFacturasHistoricosBindingSource1.DataSource = Me.VistaFacturasHDataSet1
-        '
         'VistaFacturasHistoricosTableAdapter1
         '
         Me.VistaFacturasHistoricosTableAdapter1.ClearBeforeFill = True
+        '
+        'FacturaHDataSet1
+        '
+        Me.FacturaHDataSet1.DataSetName = "FacturaHDataSet1"
+        Me.FacturaHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FacturasHistoricosBindingSource1
+        '
+        Me.FacturasHistoricosBindingSource1.DataMember = "Facturas-Historicos"
+        Me.FacturasHistoricosBindingSource1.DataSource = Me.FacturaHDataSet1
+        '
+        'Facturas_HistoricosTableAdapter1
+        '
+        Me.Facturas_HistoricosTableAdapter1.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -157,26 +177,26 @@ Partial Class FrmHistorialFactura
         Me.FacturaIDDataGridViewTextBoxColumn.Name = "FacturaIDDataGridViewTextBoxColumn"
         Me.FacturaIDDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'FechaDeFacturacionDataGridViewTextBoxColumn
+        'FechaFacturaDataGridViewTextBoxColumn
         '
-        Me.FechaDeFacturacionDataGridViewTextBoxColumn.DataPropertyName = "FechaDeFacturacion"
-        Me.FechaDeFacturacionDataGridViewTextBoxColumn.HeaderText = "FechaDeFacturacion"
-        Me.FechaDeFacturacionDataGridViewTextBoxColumn.Name = "FechaDeFacturacionDataGridViewTextBoxColumn"
-        Me.FechaDeFacturacionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaFacturaDataGridViewTextBoxColumn.DataPropertyName = "FechaFactura"
+        Me.FechaFacturaDataGridViewTextBoxColumn.HeaderText = "FechaFactura"
+        Me.FechaFacturaDataGridViewTextBoxColumn.Name = "FechaFacturaDataGridViewTextBoxColumn"
+        Me.FechaFacturaDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'NombreClienteDataGridViewTextBoxColumn
+        'ClienteDataGridViewTextBoxColumn
         '
-        Me.NombreClienteDataGridViewTextBoxColumn.DataPropertyName = "NombreCliente"
-        Me.NombreClienteDataGridViewTextBoxColumn.HeaderText = "NombreCliente"
-        Me.NombreClienteDataGridViewTextBoxColumn.Name = "NombreClienteDataGridViewTextBoxColumn"
-        Me.NombreClienteDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ClienteDataGridViewTextBoxColumn.DataPropertyName = "Cliente"
+        Me.ClienteDataGridViewTextBoxColumn.HeaderText = "Cliente"
+        Me.ClienteDataGridViewTextBoxColumn.Name = "ClienteDataGridViewTextBoxColumn"
+        Me.ClienteDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'DescripcionServicioDataGridViewTextBoxColumn
+        'ServicioDataGridViewTextBoxColumn
         '
-        Me.DescripcionServicioDataGridViewTextBoxColumn.DataPropertyName = "DescripcionServicio"
-        Me.DescripcionServicioDataGridViewTextBoxColumn.HeaderText = "DescripcionServicio"
-        Me.DescripcionServicioDataGridViewTextBoxColumn.Name = "DescripcionServicioDataGridViewTextBoxColumn"
-        Me.DescripcionServicioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ServicioDataGridViewTextBoxColumn.DataPropertyName = "Servicio"
+        Me.ServicioDataGridViewTextBoxColumn.HeaderText = "Servicio"
+        Me.ServicioDataGridViewTextBoxColumn.Name = "ServicioDataGridViewTextBoxColumn"
+        Me.ServicioDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PrecioServicioDataGridViewTextBoxColumn
         '
@@ -199,12 +219,12 @@ Partial Class FrmHistorialFactura
         Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
         Me.UsuarioDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'EncargadoServicioDataGridViewTextBoxColumn
+        'EmpleadoDataGridViewTextBoxColumn
         '
-        Me.EncargadoServicioDataGridViewTextBoxColumn.DataPropertyName = "EncargadoServicio"
-        Me.EncargadoServicioDataGridViewTextBoxColumn.HeaderText = "EncargadoServicio"
-        Me.EncargadoServicioDataGridViewTextBoxColumn.Name = "EncargadoServicioDataGridViewTextBoxColumn"
-        Me.EncargadoServicioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.EmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.HeaderText = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.Name = "EmpleadoDataGridViewTextBoxColumn"
+        Me.EmpleadoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FormaPagoDataGridViewTextBoxColumn
         '
@@ -227,6 +247,13 @@ Partial Class FrmHistorialFactura
         Me.SubTotalDataGridViewTextBoxColumn.Name = "SubTotalDataGridViewTextBoxColumn"
         Me.SubTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'TotalPagoDataGridViewTextBoxColumn
+        '
+        Me.TotalPagoDataGridViewTextBoxColumn.DataPropertyName = "TotalPago"
+        Me.TotalPagoDataGridViewTextBoxColumn.HeaderText = "TotalPago"
+        Me.TotalPagoDataGridViewTextBoxColumn.Name = "TotalPagoDataGridViewTextBoxColumn"
+        Me.TotalPagoDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'FrmHistorialFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -235,14 +262,16 @@ Partial Class FrmHistorialFactura
         Me.ClientSize = New System.Drawing.Size(870, 457)
         Me.Controls.Add(Me.dgHistoricos)
         Me.Name = "FrmHistorialFactura"
-        Me.Text = "HISTORIAL DE LAVADOS"
+        Me.Text = "HISTORIAL"
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaFacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaFacturasHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaFacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaFacturasHistoricosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaFacturasHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaFacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -257,16 +286,20 @@ Partial Class FrmHistorialFactura
     Friend WithEvents VistaFacturasHDataSet1 As VistaFacturasHDataSet1
     Friend WithEvents VistaFacturasHistoricosBindingSource1 As BindingSource
     Friend WithEvents VistaFacturasHistoricosTableAdapter1 As VistaFacturasHDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter
+    Friend WithEvents FacturaHDataSet1 As FacturaHDataSet1
+    Friend WithEvents FacturasHistoricosBindingSource1 As BindingSource
+    Friend WithEvents Facturas_HistoricosTableAdapter1 As FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter
     Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FacturaIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaDeFacturacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreClienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DescripcionServicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaFacturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ClienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ServicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PrecioServicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NumPlacaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EncargadoServicioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FormaPagoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ISVDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SubTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TotalPagoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

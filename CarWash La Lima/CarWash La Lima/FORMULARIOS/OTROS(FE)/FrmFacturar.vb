@@ -50,6 +50,8 @@
         txtSubTotal.Text = subTotal
         total = Val(cmbPrecio.Text) + subTotal
         txtTotal.Text = total
+
+        Me
     End Sub
 
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
@@ -57,7 +59,7 @@
         Dim frm As FrmHistorialFactura = New FrmHistorialFactura
         DateTime2 = New DateTimePicker()
 
-        frm.VistaFacturasHistoricosTableAdapter1.InsertarFacturasH(Val(txtFactura.Text), DateTime2.Value, cmbCliente.Text, cmbServicio.Text,
+        frm.Facturas_HistoricosTableAdapter1.InsertFacturaH(Val(txtFactura.Text), DateTime2.Value, cmbCliente.Text, cmbServicio.Text,
                                                 Val(cmbPrecio.Text), cmbVehiculo.Text, cmbUsuario.Text, cmbEncargadoServicio.Text, cmbPago.Text,
                                                 Val(txtISV.Text), subTotal, Val(txtTotal.Text))
         frm.VistaFacturasHistoricosTableAdapter1.Fill(frm.VistaFacturasHDataSet1.VistaFacturasHistoricos)

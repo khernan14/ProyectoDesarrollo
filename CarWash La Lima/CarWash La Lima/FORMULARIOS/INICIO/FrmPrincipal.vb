@@ -6,9 +6,9 @@ Public Class FrmPrincipal
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultar()
-        'lblName.Text = ActiveUser.NombreEmpleado + ", " + ActiveUser.ApellidoEmpleado
+        lblName.Text = ActiveUser.NombreEmpleado + ", " + ActiveUser.ApellidoEmpleado
         lblUsers.Text = ActiveUser.Usuario
-        'lblCargo.Text = ActiveUser.Puesto
+        lblCargo.Text = ActiveUser.Puesto
     End Sub
 
     'Fields'
