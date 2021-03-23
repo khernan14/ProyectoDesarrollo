@@ -51,7 +51,6 @@
         total = Val(cmbPrecio.Text) + subTotal
         txtTotal.Text = total
 
-        Me
     End Sub
 
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
