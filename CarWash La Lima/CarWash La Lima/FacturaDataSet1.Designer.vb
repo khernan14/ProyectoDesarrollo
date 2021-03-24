@@ -20,12 +20,12 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("FacturaHistoricosDataSet1"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("FacturaDataSet1"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class FacturaHistoricosDataSet1
+Partial Public Class FacturaDataSet1
     Inherits Global.System.Data.DataSet
     
-    Private _tableFacturas_Historicos As _Facturas_HistoricosDataTable
+    Private tableFactura As FacturaDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class FacturaHistoricosDataSet1
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("Facturas-Historicos")) Is Nothing) Then
-                MyBase.Tables.Add(New _Facturas_HistoricosDataTable(ds.Tables("Facturas-Historicos")))
+            If (Not (ds.Tables("Factura")) Is Nothing) Then
+                MyBase.Tables.Add(New FacturaDataTable(ds.Tables("Factura")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class FacturaHistoricosDataSet1
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property _Facturas_Historicos() As _Facturas_HistoricosDataTable
+    Public ReadOnly Property Factura() As FacturaDataTable
         Get
-            Return Me._tableFacturas_Historicos
+            Return Me.tableFactura
         End Get
     End Property
     
@@ -128,7 +128,7 @@ Partial Public Class FacturaHistoricosDataSet1
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As FacturaHistoricosDataSet1 = CType(MyBase.Clone,FacturaHistoricosDataSet1)
+        Dim cln As FacturaDataSet1 = CType(MyBase.Clone,FacturaDataSet1)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -153,8 +153,8 @@ Partial Public Class FacturaHistoricosDataSet1
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("Facturas-Historicos")) Is Nothing) Then
-                MyBase.Tables.Add(New _Facturas_HistoricosDataTable(ds.Tables("Facturas-Historicos")))
+            If (Not (ds.Tables("Factura")) Is Nothing) Then
+                MyBase.Tables.Add(New FacturaDataTable(ds.Tables("Factura")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class FacturaHistoricosDataSet1
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me._tableFacturas_Historicos = CType(MyBase.Tables("Facturas-Historicos"),_Facturas_HistoricosDataTable)
+        Me.tableFactura = CType(MyBase.Tables("Factura"),FacturaDataTable)
         If (initTable = true) Then
-            If (Not (Me._tableFacturas_Historicos) Is Nothing) Then
-                Me._tableFacturas_Historicos.InitVars
+            If (Not (Me.tableFactura) Is Nothing) Then
+                Me.tableFactura.InitVars
             End If
         End If
     End Sub
@@ -199,18 +199,18 @@ Partial Public Class FacturaHistoricosDataSet1
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "FacturaHistoricosDataSet1"
+        Me.DataSetName = "FacturaDataSet1"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/FacturaHistoricosDataSet1.xsd"
+        Me.Namespace = "http://tempuri.org/FacturaDataSet1.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me._tableFacturas_Historicos = New _Facturas_HistoricosDataTable()
-        MyBase.Tables.Add(Me._tableFacturas_Historicos)
+        Me.tableFactura = New FacturaDataTable()
+        MyBase.Tables.Add(Me.tableFactura)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerialize_Facturas_Historicos() As Boolean
+    Private Function ShouldSerializeFactura() As Boolean
         Return false
     End Function
     
@@ -225,7 +225,7 @@ Partial Public Class FacturaHistoricosDataSet1
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As FacturaHistoricosDataSet1 = New FacturaHistoricosDataSet1()
+        Dim ds As FacturaDataSet1 = New FacturaDataSet1()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -273,37 +273,31 @@ Partial Public Class FacturaHistoricosDataSet1
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub _Facturas_HistoricosRowChangeEventHandler(ByVal sender As Object, ByVal e As _Facturas_HistoricosRowChangeEvent)
+    Public Delegate Sub FacturaRowChangeEventHandler(ByVal sender As Object, ByVal e As FacturaRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class _Facturas_HistoricosDataTable
-        Inherits Global.System.Data.TypedTableBase(Of _Facturas_HistoricosRow)
-        
-        Private columnID As Global.System.Data.DataColumn
+    Partial Public Class FacturaDataTable
+        Inherits Global.System.Data.TypedTableBase(Of FacturaRow)
         
         Private columnFacturaID As Global.System.Data.DataColumn
         
-        Private columnFechaFactura As Global.System.Data.DataColumn
+        Private columnFecha As Global.System.Data.DataColumn
         
-        Private columnCliente As Global.System.Data.DataColumn
+        Private columnSubTotal As Global.System.Data.DataColumn
         
-        Private columnServicio As Global.System.Data.DataColumn
+        Private columnISV As Global.System.Data.DataColumn
         
-        Private columnNumPlaca As Global.System.Data.DataColumn
-        
-        Private columnEmpleado As Global.System.Data.DataColumn
-        
-        Private columnTotalPago As Global.System.Data.DataColumn
+        Private columnUsuarioID As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "Facturas-Historicos"
+            Me.TableName = "Factura"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -336,14 +330,6 @@ Partial Public Class FacturaHistoricosDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property FacturaIDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnFacturaID
@@ -352,49 +338,33 @@ Partial Public Class FacturaHistoricosDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property FechaFacturaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property FechaColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnFechaFactura
+                Return Me.columnFecha
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ClienteColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property SubTotalColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCliente
+                Return Me.columnSubTotal
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property ServicioColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property ISVColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnServicio
+                Return Me.columnISV
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property NumPlacaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property UsuarioIDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnNumPlaca
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property EmpleadoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnEmpleado
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property TotalPagoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTotalPago
+                Return Me.columnUsuarioID
             End Get
         End Property
         
@@ -409,50 +379,50 @@ Partial Public Class FacturaHistoricosDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As _Facturas_HistoricosRow
+        Public Default ReadOnly Property Item(ByVal index As Integer) As FacturaRow
             Get
-                Return CType(Me.Rows(index),_Facturas_HistoricosRow)
+                Return CType(Me.Rows(index),FacturaRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event _Facturas_HistoricosRowChanging As _Facturas_HistoricosRowChangeEventHandler
+        Public Event FacturaRowChanging As FacturaRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event _Facturas_HistoricosRowChanged As _Facturas_HistoricosRowChangeEventHandler
+        Public Event FacturaRowChanged As FacturaRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event _Facturas_HistoricosRowDeleting As _Facturas_HistoricosRowChangeEventHandler
+        Public Event FacturaRowDeleting As FacturaRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event _Facturas_HistoricosRowDeleted As _Facturas_HistoricosRowChangeEventHandler
+        Public Event FacturaRowDeleted As FacturaRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub Add_Facturas_HistoricosRow(ByVal row As _Facturas_HistoricosRow)
+        Public Overloads Sub AddFacturaRow(ByVal row As FacturaRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Add_Facturas_HistoricosRow(ByVal ID As Integer, ByVal FacturaID As Integer, ByVal FechaFactura As Date, ByVal Cliente As String, ByVal Servicio As String, ByVal NumPlaca As String, ByVal Empleado As String, ByVal TotalPago As Double) As _Facturas_HistoricosRow
-            Dim row_Facturas_HistoricosRow As _Facturas_HistoricosRow = CType(Me.NewRow,_Facturas_HistoricosRow)
-            Dim columnValuesArray() As Object = New Object() {ID, FacturaID, FechaFactura, Cliente, Servicio, NumPlaca, Empleado, TotalPago}
-            row_Facturas_HistoricosRow.ItemArray = columnValuesArray
-            Me.Rows.Add(row_Facturas_HistoricosRow)
-            Return row_Facturas_HistoricosRow
+        Public Overloads Function AddFacturaRow(ByVal Fecha As Date, ByVal SubTotal As Decimal, ByVal ISV As Decimal, ByVal UsuarioID As Integer) As FacturaRow
+            Dim rowFacturaRow As FacturaRow = CType(Me.NewRow,FacturaRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Fecha, SubTotal, ISV, UsuarioID}
+            rowFacturaRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowFacturaRow)
+            Return rowFacturaRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As _Facturas_HistoricosRow
-            Return CType(Me.Rows.Find(New Object() {ID}),_Facturas_HistoricosRow)
+        Public Function FindByFacturaID(ByVal FacturaID As Integer) As FacturaRow
+            Return CType(Me.Rows.Find(New Object() {FacturaID}),FacturaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As _Facturas_HistoricosDataTable = CType(MyBase.Clone,_Facturas_HistoricosDataTable)
+            Dim cln As FacturaDataTable = CType(MyBase.Clone,FacturaDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -460,76 +430,67 @@ Partial Public Class FacturaHistoricosDataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New _Facturas_HistoricosDataTable()
+            Return New FacturaDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnID = MyBase.Columns("ID")
             Me.columnFacturaID = MyBase.Columns("FacturaID")
-            Me.columnFechaFactura = MyBase.Columns("FechaFactura")
-            Me.columnCliente = MyBase.Columns("Cliente")
-            Me.columnServicio = MyBase.Columns("Servicio")
-            Me.columnNumPlaca = MyBase.Columns("NumPlaca")
-            Me.columnEmpleado = MyBase.Columns("Empleado")
-            Me.columnTotalPago = MyBase.Columns("TotalPago")
+            Me.columnFecha = MyBase.Columns("Fecha")
+            Me.columnSubTotal = MyBase.Columns("SubTotal")
+            Me.columnISV = MyBase.Columns("ISV")
+            Me.columnUsuarioID = MyBase.Columns("UsuarioID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnID)
             Me.columnFacturaID = New Global.System.Data.DataColumn("FacturaID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFacturaID)
-            Me.columnFechaFactura = New Global.System.Data.DataColumn("FechaFactura", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFechaFactura)
-            Me.columnCliente = New Global.System.Data.DataColumn("Cliente", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCliente)
-            Me.columnServicio = New Global.System.Data.DataColumn("Servicio", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnServicio)
-            Me.columnNumPlaca = New Global.System.Data.DataColumn("NumPlaca", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnNumPlaca)
-            Me.columnEmpleado = New Global.System.Data.DataColumn("Empleado", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnEmpleado)
-            Me.columnTotalPago = New Global.System.Data.DataColumn("TotalPago", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTotalPago)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
-            Me.columnID.AllowDBNull = false
-            Me.columnID.Unique = true
-            Me.columnCliente.MaxLength = 100
-            Me.columnServicio.MaxLength = 50
-            Me.columnNumPlaca.MaxLength = 20
-            Me.columnEmpleado.MaxLength = 100
-            Me.ExtendedProperties.Add("Generator_TableVarName", "_tableFacturas_Historicos")
-            Me.ExtendedProperties.Add("Generator_UserTableName", "Facturas-Historicos")
+            Me.columnFecha = New Global.System.Data.DataColumn("Fecha", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFecha)
+            Me.columnSubTotal = New Global.System.Data.DataColumn("SubTotal", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSubTotal)
+            Me.columnISV = New Global.System.Data.DataColumn("ISV", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnISV)
+            Me.columnUsuarioID = New Global.System.Data.DataColumn("UsuarioID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnUsuarioID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnFacturaID}, true))
+            Me.columnFacturaID.AutoIncrement = true
+            Me.columnFacturaID.AutoIncrementSeed = -1
+            Me.columnFacturaID.AutoIncrementStep = -1
+            Me.columnFacturaID.AllowDBNull = false
+            Me.columnFacturaID.ReadOnly = true
+            Me.columnFacturaID.Unique = true
+            Me.columnSubTotal.AllowDBNull = false
+            Me.columnISV.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function New_Facturas_HistoricosRow() As _Facturas_HistoricosRow
-            Return CType(Me.NewRow,_Facturas_HistoricosRow)
+        Public Function NewFacturaRow() As FacturaRow
+            Return CType(Me.NewRow,FacturaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New _Facturas_HistoricosRow(builder)
+            Return New FacturaRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(_Facturas_HistoricosRow)
+            Return GetType(FacturaRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me._Facturas_HistoricosRowChangedEvent) Is Nothing) Then
-                RaiseEvent _Facturas_HistoricosRowChanged(Me, New _Facturas_HistoricosRowChangeEvent(CType(e.Row,_Facturas_HistoricosRow), e.Action))
+            If (Not (Me.FacturaRowChangedEvent) Is Nothing) Then
+                RaiseEvent FacturaRowChanged(Me, New FacturaRowChangeEvent(CType(e.Row,FacturaRow), e.Action))
             End If
         End Sub
         
@@ -537,8 +498,8 @@ Partial Public Class FacturaHistoricosDataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me._Facturas_HistoricosRowChangingEvent) Is Nothing) Then
-                RaiseEvent _Facturas_HistoricosRowChanging(Me, New _Facturas_HistoricosRowChangeEvent(CType(e.Row,_Facturas_HistoricosRow), e.Action))
+            If (Not (Me.FacturaRowChangingEvent) Is Nothing) Then
+                RaiseEvent FacturaRowChanging(Me, New FacturaRowChangeEvent(CType(e.Row,FacturaRow), e.Action))
             End If
         End Sub
         
@@ -546,8 +507,8 @@ Partial Public Class FacturaHistoricosDataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me._Facturas_HistoricosRowDeletedEvent) Is Nothing) Then
-                RaiseEvent _Facturas_HistoricosRowDeleted(Me, New _Facturas_HistoricosRowChangeEvent(CType(e.Row,_Facturas_HistoricosRow), e.Action))
+            If (Not (Me.FacturaRowDeletedEvent) Is Nothing) Then
+                RaiseEvent FacturaRowDeleted(Me, New FacturaRowChangeEvent(CType(e.Row,FacturaRow), e.Action))
             End If
         End Sub
         
@@ -555,14 +516,14 @@ Partial Public Class FacturaHistoricosDataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me._Facturas_HistoricosRowDeletingEvent) Is Nothing) Then
-                RaiseEvent _Facturas_HistoricosRowDeleting(Me, New _Facturas_HistoricosRowChangeEvent(CType(e.Row,_Facturas_HistoricosRow), e.Action))
+            If (Not (Me.FacturaRowDeletingEvent) Is Nothing) Then
+                RaiseEvent FacturaRowDeleting(Me, New FacturaRowChangeEvent(CType(e.Row,FacturaRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Remove_Facturas_HistoricosRow(ByVal row As _Facturas_HistoricosRow)
+        Public Sub RemoveFacturaRow(ByVal row As FacturaRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -571,7 +532,7 @@ Partial Public Class FacturaHistoricosDataSet1
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As FacturaHistoricosDataSet1 = New FacturaHistoricosDataSet1()
+            Dim ds As FacturaDataSet1 = New FacturaDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -589,7 +550,7 @@ Partial Public Class FacturaHistoricosDataSet1
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "_Facturas_HistoricosDataTable"
+            attribute2.FixedValue = "FacturaDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -636,217 +597,103 @@ Partial Public Class FacturaHistoricosDataSet1
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class _Facturas_HistoricosRow
+    Partial Public Class FacturaRow
         Inherits Global.System.Data.DataRow
         
-        Private _tableFacturas_Historicos As _Facturas_HistoricosDataTable
+        Private tableFactura As FacturaDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me._tableFacturas_Historicos = CType(Me.Table,_Facturas_HistoricosDataTable)
+            Me.tableFactura = CType(Me.Table,FacturaDataTable)
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ID() As Integer
-            Get
-                Return CType(Me(Me._tableFacturas_Historicos.IDColumn),Integer)
-            End Get
-            Set
-                Me(Me._tableFacturas_Historicos.IDColumn) = value
-            End Set
-        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property FacturaID() As Integer
             Get
-                Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.FacturaIDColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FacturaID' de la tabla 'Facturas-Historicos' es DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableFactura.FacturaIDColumn),Integer)
             End Get
             Set
-                Me(Me._tableFacturas_Historicos.FacturaIDColumn) = value
+                Me(Me.tableFactura.FacturaIDColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property FechaFactura() As Date
+        Public Property Fecha() As Date
             Get
                 Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.FechaFacturaColumn),Date)
+                    Return CType(Me(Me.tableFactura.FechaColumn),Date)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FechaFactura' de la tabla 'Facturas-Historicos' es DBNull"& _ 
-                            ".", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Fecha' de la tabla 'Factura' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tableFacturas_Historicos.FechaFacturaColumn) = value
+                Me(Me.tableFactura.FechaColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Cliente() As String
+        Public Property SubTotal() As Decimal
+            Get
+                Return CType(Me(Me.tableFactura.SubTotalColumn),Decimal)
+            End Get
+            Set
+                Me(Me.tableFactura.SubTotalColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ISV() As Decimal
+            Get
+                Return CType(Me(Me.tableFactura.ISVColumn),Decimal)
+            End Get
+            Set
+                Me(Me.tableFactura.ISVColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property UsuarioID() As Integer
             Get
                 Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.ClienteColumn),String)
+                    Return CType(Me(Me.tableFactura.UsuarioIDColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Cliente' de la tabla 'Facturas-Historicos' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'UsuarioID' de la tabla 'Factura' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me._tableFacturas_Historicos.ClienteColumn) = value
+                Me(Me.tableFactura.UsuarioIDColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Servicio() As String
-            Get
-                Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.ServicioColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Servicio' de la tabla 'Facturas-Historicos' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me._tableFacturas_Historicos.ServicioColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property NumPlaca() As String
-            Get
-                Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.NumPlacaColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NumPlaca' de la tabla 'Facturas-Historicos' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me._tableFacturas_Historicos.NumPlacaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Empleado() As String
-            Get
-                Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.EmpleadoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Empleado' de la tabla 'Facturas-Historicos' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me._tableFacturas_Historicos.EmpleadoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property TotalPago() As Double
-            Get
-                Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.TotalPagoColumn),Double)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TotalPago' de la tabla 'Facturas-Historicos' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me._tableFacturas_Historicos.TotalPagoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsFacturaIDNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.FacturaIDColumn)
+        Public Function IsFechaNull() As Boolean
+            Return Me.IsNull(Me.tableFactura.FechaColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetFacturaIDNull()
-            Me(Me._tableFacturas_Historicos.FacturaIDColumn) = Global.System.Convert.DBNull
+        Public Sub SetFechaNull()
+            Me(Me.tableFactura.FechaColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsFechaFacturaNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.FechaFacturaColumn)
+        Public Function IsUsuarioIDNull() As Boolean
+            Return Me.IsNull(Me.tableFactura.UsuarioIDColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetFechaFacturaNull()
-            Me(Me._tableFacturas_Historicos.FechaFacturaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsClienteNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.ClienteColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetClienteNull()
-            Me(Me._tableFacturas_Historicos.ClienteColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsServicioNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.ServicioColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetServicioNull()
-            Me(Me._tableFacturas_Historicos.ServicioColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsNumPlacaNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.NumPlacaColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetNumPlacaNull()
-            Me(Me._tableFacturas_Historicos.NumPlacaColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsEmpleadoNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.EmpleadoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetEmpleadoNull()
-            Me(Me._tableFacturas_Historicos.EmpleadoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsTotalPagoNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.TotalPagoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetTotalPagoNull()
-            Me(Me._tableFacturas_Historicos.TotalPagoColumn) = Global.System.Convert.DBNull
+        Public Sub SetUsuarioIDNull()
+            Me(Me.tableFactura.UsuarioIDColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -854,16 +701,16 @@ Partial Public Class FacturaHistoricosDataSet1
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class _Facturas_HistoricosRowChangeEvent
+    Public Class FacturaRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As _Facturas_HistoricosRow
+        Private eventRow As FacturaRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As _Facturas_HistoricosRow, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As FacturaRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -871,7 +718,7 @@ Partial Public Class FacturaHistoricosDataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As _Facturas_HistoricosRow
+        Public ReadOnly Property Row() As FacturaRow
             Get
                 Return Me.eventRow
             End Get
@@ -887,7 +734,7 @@ Partial Public Class FacturaHistoricosDataSet1
     End Class
 End Class
 
-Namespace FacturaHistoricosDataSet1TableAdapters
+Namespace FacturaDataSet1TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -898,7 +745,7 @@ Namespace FacturaHistoricosDataSet1TableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Facturas_HistoricosTableAdapter
+    Partial Public Class FacturaTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -1015,98 +862,59 @@ Namespace FacturaHistoricosDataSet1TableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Facturas-Historicos"
-            tableMapping.ColumnMappings.Add("ID", "ID")
+            tableMapping.DataSetTable = "Factura"
             tableMapping.ColumnMappings.Add("FacturaID", "FacturaID")
-            tableMapping.ColumnMappings.Add("FechaFactura", "FechaFactura")
-            tableMapping.ColumnMappings.Add("Cliente", "Cliente")
-            tableMapping.ColumnMappings.Add("Servicio", "Servicio")
-            tableMapping.ColumnMappings.Add("NumPlaca", "NumPlaca")
-            tableMapping.ColumnMappings.Add("Empleado", "Empleado")
-            tableMapping.ColumnMappings.Add("TotalPago", "TotalPago")
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha")
+            tableMapping.ColumnMappings.Add("SubTotal", "SubTotal")
+            tableMapping.ColumnMappings.Add("ISV", "ISV")
+            tableMapping.ColumnMappings.Add("UsuarioID", "UsuarioID")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Facturas-Historicos] WHERE (([ID] = @Original_ID) AND ((@IsNul"& _ 
-                "l_FacturaID = 1 AND [FacturaID] IS NULL) OR ([FacturaID] = @Original_FacturaID))"& _ 
-                " AND ((@IsNull_FechaFactura = 1 AND [FechaFactura] IS NULL) OR ([FechaFactura] ="& _ 
-                " @Original_FechaFactura)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR (["& _ 
-                "Cliente] = @Original_Cliente)) AND ((@IsNull_Servicio = 1 AND [Servicio] IS NULL"& _ 
-                ") OR ([Servicio] = @Original_Servicio)) AND ((@IsNull_NumPlaca = 1 AND [NumPlaca"& _ 
-                "] IS NULL) OR ([NumPlaca] = @Original_NumPlaca)) AND ((@IsNull_Empleado = 1 AND "& _ 
-                "[Empleado] IS NULL) OR ([Empleado] = @Original_Empleado)) AND ((@IsNull_TotalPag"& _ 
-                "o = 1 AND [TotalPago] IS NULL) OR ([TotalPago] = @Original_TotalPago)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Factura] WHERE (([FacturaID] = @Original_FacturaID) AND ((@IsN"& _ 
+                "ull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ([SubTota"& _ 
+                "l] = @Original_SubTotal) AND ([ISV] = @Original_ISV) AND ((@IsNull_UsuarioID = 1"& _ 
+                " AND [UsuarioID] IS NULL) OR ([UsuarioID] = @Original_UsuarioID)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FechaFactura", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cliente", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Servicio", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Servicio", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Servicio", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Servicio", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_NumPlaca", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NumPlaca", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_NumPlaca", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NumPlaca", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empleado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Empleado", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TotalPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TotalPago", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SubTotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubTotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ISV", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_UsuarioID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UsuarioID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Facturas-Historicos] ([ID], [FacturaID], [FechaFactura], [Clie"& _ 
-                "nte], [Servicio], [NumPlaca], [Empleado], [TotalPago]) VALUES (@ID, @FacturaID, "& _ 
-                "@FechaFactura, @Cliente, @Servicio, @NumPlaca, @Empleado, @TotalPago);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT I"& _ 
-                "D, FacturaID, FechaFactura, Cliente, Servicio, NumPlaca, Empleado, TotalPago FRO"& _ 
-                "M [Facturas-Historicos] WHERE (ID = @ID)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Factura] ([Fecha], [SubTotal], [ISV], [UsuarioID]) VALUES (@Fe"& _ 
+                "cha, @SubTotal, @ISV, @UsuarioID);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT FacturaID, Fecha, SubTotal, ISV, Usua"& _ 
+                "rioID FROM Factura WHERE (FacturaID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Servicio", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Servicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPlaca", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NumPlaca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Empleado", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TotalPago", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubTotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ISV", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UsuarioID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Facturas-Historicos] SET [ID] = @ID, [FacturaID] = @FacturaID, [Fec"& _ 
-                "haFactura] = @FechaFactura, [Cliente] = @Cliente, [Servicio] = @Servicio, [NumPl"& _ 
-                "aca] = @NumPlaca, [Empleado] = @Empleado, [TotalPago] = @TotalPago WHERE (([ID] "& _ 
-                "= @Original_ID) AND ((@IsNull_FacturaID = 1 AND [FacturaID] IS NULL) OR ([Factur"& _ 
-                "aID] = @Original_FacturaID)) AND ((@IsNull_FechaFactura = 1 AND [FechaFactura] I"& _ 
-                "S NULL) OR ([FechaFactura] = @Original_FechaFactura)) AND ((@IsNull_Cliente = 1 "& _ 
-                "AND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_Servici"& _ 
-                "o = 1 AND [Servicio] IS NULL) OR ([Servicio] = @Original_Servicio)) AND ((@IsNul"& _ 
-                "l_NumPlaca = 1 AND [NumPlaca] IS NULL) OR ([NumPlaca] = @Original_NumPlaca)) AND"& _ 
-                " ((@IsNull_Empleado = 1 AND [Empleado] IS NULL) OR ([Empleado] = @Original_Emple"& _ 
-                "ado)) AND ((@IsNull_TotalPago = 1 AND [TotalPago] IS NULL) OR ([TotalPago] = @Or"& _ 
-                "iginal_TotalPago)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, FacturaID, FechaFactura, Cliente, Servicio, Num"& _ 
-                "Placa, Empleado, TotalPago FROM [Facturas-Historicos] WHERE (ID = @ID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Factura] SET [Fecha] = @Fecha, [SubTotal] = @SubTotal, [ISV] = @ISV"& _ 
+                ", [UsuarioID] = @UsuarioID WHERE (([FacturaID] = @Original_FacturaID) AND ((@IsN"& _ 
+                "ull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ([SubTota"& _ 
+                "l] = @Original_SubTotal) AND ([ISV] = @Original_ISV) AND ((@IsNull_UsuarioID = 1"& _ 
+                " AND [UsuarioID] IS NULL) OR ([UsuarioID] = @Original_UsuarioID)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Fact"& _ 
+                "uraID, Fecha, SubTotal, ISV, UsuarioID FROM Factura WHERE (FacturaID = @FacturaI"& _ 
+                "D)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Servicio", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Servicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPlaca", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NumPlaca", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Empleado", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TotalPago", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubTotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ISV", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISV", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UsuarioID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FechaFactura", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Cliente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cliente", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cliente", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Servicio", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Servicio", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Servicio", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Servicio", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_NumPlaca", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NumPlaca", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_NumPlaca", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NumPlaca", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empleado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Empleado", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_TotalPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TotalPago", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SubTotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubTotal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ISV", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISV", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_UsuarioID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_UsuarioID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "UsuarioID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FacturaID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1122,28 +930,24 @@ Namespace FacturaHistoricosDataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, FacturaID, FechaFactura, Cliente, Servicio, NumPlaca, Empleado, TotalP"& _ 
-                "ago FROM dbo.[Facturas-Historicos]"
+            Me._commandCollection(0).CommandText = "SELECT FacturaID, Fecha, SubTotal, ISV, UsuarioID FROM dbo.Factura"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "dbo.InsertarHistorialFacturas"
+            Me._commandCollection(1).CommandText = "dbo.InsertFactura"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FacturaID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFactura", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cliente", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Servicio", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPlaca", Global.System.Data.SqlDbType.NVarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Empleado", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TotalPago", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 53, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubTotal", Global.System.Data.SqlDbType.Money, 8, Global.System.Data.ParameterDirection.Input, 19, 4, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ISV", Global.System.Data.SqlDbType.Money, 8, Global.System.Data.ParameterDirection.Input, 19, 4, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UsuarioID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As FacturaHistoricosDataSet1._Facturas_HistoricosDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As FacturaDataSet1.FacturaDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1156,9 +960,9 @@ Namespace FacturaHistoricosDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As FacturaHistoricosDataSet1._Facturas_HistoricosDataTable
+        Public Overloads Overridable Function GetData() As FacturaDataSet1.FacturaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As FacturaHistoricosDataSet1._Facturas_HistoricosDataTable = New FacturaHistoricosDataSet1._Facturas_HistoricosDataTable()
+            Dim dataTable As FacturaDataSet1.FacturaDataTable = New FacturaDataSet1.FacturaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -1166,15 +970,15 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As FacturaHistoricosDataSet1._Facturas_HistoricosDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As FacturaDataSet1.FacturaDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As FacturaHistoricosDataSet1) As Integer
-            Return Me.Adapter.Update(dataSet, "Facturas-Historicos")
+        Public Overloads Overridable Function Update(ByVal dataSet As FacturaDataSet1) As Integer
+            Return Me.Adapter.Update(dataSet, "Factura")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1195,56 +999,23 @@ Namespace FacturaHistoricosDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_FacturaID As Global.System.Nullable(Of Integer), ByVal Original_FechaFactura As Global.System.Nullable(Of Date), ByVal Original_Cliente As String, ByVal Original_Servicio As String, ByVal Original_NumPlaca As String, ByVal Original_Empleado As String, ByVal Original_TotalPago As Global.System.Nullable(Of Double)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_FacturaID.HasValue = true) Then
+        Public Overloads Overridable Function Delete(ByVal Original_FacturaID As Integer, ByVal Original_Fecha As Global.System.Nullable(Of Date), ByVal Original_SubTotal As Decimal, ByVal Original_ISV As Decimal, ByVal Original_UsuarioID As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_FacturaID,Integer)
+            If (Original_Fecha.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_FacturaID.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Fecha.Value,Date)
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            If (Original_FechaFactura.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_FechaFactura.Value,Date)
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_SubTotal,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_ISV,Decimal)
+            If (Original_UsuarioID.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_UsuarioID.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cliente Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Cliente,String)
-            End If
-            If (Original_Servicio Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Servicio,String)
-            End If
-            If (Original_NumPlaca Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_NumPlaca,String)
-            End If
-            If (Original_Empleado Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Empleado,String)
-            End If
-            If (Original_TotalPago.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_TotalPago.Value,Double)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1265,42 +1036,18 @@ Namespace FacturaHistoricosDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal ID As Integer, ByVal FacturaID As Global.System.Nullable(Of Integer), ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal NumPlaca As String, ByVal Empleado As String, ByVal TotalPago As Global.System.Nullable(Of Double)) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(ID,Integer)
-            If (FacturaID.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(FacturaID.Value,Integer)
+        Public Overloads Overridable Function Insert(ByVal Fecha As Global.System.Nullable(Of Date), ByVal SubTotal As Decimal, ByVal ISV As Decimal, ByVal UsuarioID As Global.System.Nullable(Of Integer)) As Integer
+            If (Fecha.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Fecha.Value,Date)
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (FechaFactura.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(FechaFactura.Value,Date)
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(SubTotal,Decimal)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(ISV,Decimal)
+            If (UsuarioID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(UsuarioID.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Cliente Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Cliente,String)
-            End If
-            If (Servicio Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Servicio,String)
-            End If
-            If (NumPlaca Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(NumPlaca,String)
-            End If
-            If (Empleado Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Empleado,String)
-            End If
-            If (TotalPago.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(TotalPago.Value,Double)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1321,109 +1068,37 @@ Namespace FacturaHistoricosDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal ID As Integer,  _
-                    ByVal FacturaID As Global.System.Nullable(Of Integer),  _
-                    ByVal FechaFactura As Global.System.Nullable(Of Date),  _
-                    ByVal Cliente As String,  _
-                    ByVal Servicio As String,  _
-                    ByVal NumPlaca As String,  _
-                    ByVal Empleado As String,  _
-                    ByVal TotalPago As Global.System.Nullable(Of Double),  _
-                    ByVal Original_ID As Integer,  _
-                    ByVal Original_FacturaID As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_FechaFactura As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Cliente As String,  _
-                    ByVal Original_Servicio As String,  _
-                    ByVal Original_NumPlaca As String,  _
-                    ByVal Original_Empleado As String,  _
-                    ByVal Original_TotalPago As Global.System.Nullable(Of Double)) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(ID,Integer)
-            If (FacturaID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(FacturaID.Value,Integer)
+        Public Overloads Overridable Function Update(ByVal Fecha As Global.System.Nullable(Of Date), ByVal SubTotal As Decimal, ByVal ISV As Decimal, ByVal UsuarioID As Global.System.Nullable(Of Integer), ByVal Original_FacturaID As Integer, ByVal Original_Fecha As Global.System.Nullable(Of Date), ByVal Original_SubTotal As Decimal, ByVal Original_ISV As Decimal, ByVal Original_UsuarioID As Global.System.Nullable(Of Integer), ByVal FacturaID As Integer) As Integer
+            If (Fecha.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Fecha.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (FechaFactura.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(FechaFactura.Value,Date)
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(SubTotal,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(ISV,Decimal)
+            If (UsuarioID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(UsuarioID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (Cliente Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Cliente,String)
             End If
-            If (Servicio Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_FacturaID,Integer)
+            If (Original_Fecha.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Fecha.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Servicio,String)
-            End If
-            If (NumPlaca Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(NumPlaca,String)
-            End If
-            If (Empleado Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Empleado,String)
             End If
-            If (TotalPago.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(TotalPago.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_ID,Integer)
-            If (Original_FacturaID.HasValue = true) Then
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_SubTotal,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_ISV,Decimal)
+            If (Original_UsuarioID.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_FacturaID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_UsuarioID.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            If (Original_FechaFactura.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_FechaFactura.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Cliente Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Cliente,String)
-            End If
-            If (Original_Servicio Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Servicio,String)
-            End If
-            If (Original_NumPlaca Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_NumPlaca,String)
-            End If
-            If (Original_Empleado Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Empleado,String)
-            End If
-            If (Original_TotalPago.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_TotalPago.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(FacturaID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1443,50 +1118,35 @@ Namespace FacturaHistoricosDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal FacturaID As Global.System.Nullable(Of Integer), ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal NumPlaca As String, ByVal Empleado As String, ByVal TotalPago As Global.System.Nullable(Of Double), ByVal Original_ID As Integer, ByVal Original_FacturaID As Global.System.Nullable(Of Integer), ByVal Original_FechaFactura As Global.System.Nullable(Of Date), ByVal Original_Cliente As String, ByVal Original_Servicio As String, ByVal Original_NumPlaca As String, ByVal Original_Empleado As String, ByVal Original_TotalPago As Global.System.Nullable(Of Double)) As Integer
-            Return Me.Update(Original_ID, FacturaID, FechaFactura, Cliente, Servicio, NumPlaca, Empleado, TotalPago, Original_ID, Original_FacturaID, Original_FechaFactura, Original_Cliente, Original_Servicio, Original_NumPlaca, Original_Empleado, Original_TotalPago)
+        Public Overloads Overridable Function Update(ByVal Fecha As Global.System.Nullable(Of Date), ByVal SubTotal As Decimal, ByVal ISV As Decimal, ByVal UsuarioID As Global.System.Nullable(Of Integer), ByVal Original_FacturaID As Integer, ByVal Original_Fecha As Global.System.Nullable(Of Date), ByVal Original_SubTotal As Decimal, ByVal Original_ISV As Decimal, ByVal Original_UsuarioID As Global.System.Nullable(Of Integer)) As Integer
+            Return Me.Update(Fecha, SubTotal, ISV, UsuarioID, Original_FacturaID, Original_Fecha, Original_SubTotal, Original_ISV, Original_UsuarioID, Original_FacturaID)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertarHistorialFacturas(ByVal FacturaID As Global.System.Nullable(Of Integer), ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal NumPlaca As String, ByVal Empleado As String, ByVal TotalPago As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function InsertFactura(ByVal Fecha As Global.System.Nullable(Of Date), ByVal SubTotal As Global.System.Nullable(Of Decimal), ByVal ISV As Global.System.Nullable(Of Decimal), ByVal UsuarioID As Global.System.Nullable(Of Integer)) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            If (FacturaID.HasValue = true) Then
-                command.Parameters(1).Value = CType(FacturaID.Value,Integer)
+            If (Fecha.HasValue = true) Then
+                command.Parameters(1).Value = CType(Fecha.Value,Date)
             Else
                 command.Parameters(1).Value = Global.System.DBNull.Value
             End If
-            If (FechaFactura.HasValue = true) Then
-                command.Parameters(2).Value = CType(FechaFactura.Value,Date)
+            If (SubTotal.HasValue = true) Then
+                command.Parameters(2).Value = CType(SubTotal.Value,Decimal)
             Else
                 command.Parameters(2).Value = Global.System.DBNull.Value
             End If
-            If (Cliente Is Nothing) Then
+            If (ISV.HasValue = true) Then
+                command.Parameters(3).Value = CType(ISV.Value,Decimal)
+            Else
                 command.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(3).Value = CType(Cliente,String)
             End If
-            If (Servicio Is Nothing) Then
+            If (UsuarioID.HasValue = true) Then
+                command.Parameters(4).Value = CType(UsuarioID.Value,Integer)
+            Else
                 command.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(4).Value = CType(Servicio,String)
-            End If
-            If (NumPlaca Is Nothing) Then
-                command.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(5).Value = CType(NumPlaca,String)
-            End If
-            If (Empleado Is Nothing) Then
-                command.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(6).Value = CType(Empleado,String)
-            End If
-            If (TotalPago.HasValue = true) Then
-                command.Parameters(7).Value = CType(TotalPago.Value,Double)
-            Else
-                command.Parameters(7).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1518,7 +1178,7 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _facturas_HistoricosTableAdapter As Facturas_HistoricosTableAdapter
+        Private _facturaTableAdapter As FacturaTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1540,12 +1200,12 @@ Namespace FacturaHistoricosDataSet1TableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Facturas_HistoricosTableAdapter() As Facturas_HistoricosTableAdapter
+        Public Property FacturaTableAdapter() As FacturaTableAdapter
             Get
-                Return Me._facturas_HistoricosTableAdapter
+                Return Me._facturaTableAdapter
             End Get
             Set
-                Me._facturas_HistoricosTableAdapter = value
+                Me._facturaTableAdapter = value
             End Set
         End Property
         
@@ -1568,9 +1228,9 @@ Namespace FacturaHistoricosDataSet1TableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._facturas_HistoricosTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._facturas_HistoricosTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._facturas_HistoricosTableAdapter.Connection
+                If ((Not (Me._facturaTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._facturaTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._facturaTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1585,7 +1245,7 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._facturas_HistoricosTableAdapter) Is Nothing) Then
+                If (Not (Me._facturaTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1597,14 +1257,14 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As FacturaHistoricosDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As FacturaDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._facturas_HistoricosTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet._Facturas_Historicos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._facturaTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Factura.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._facturas_HistoricosTableAdapter.Update(updatedRows))
+                    result = (result + Me._facturaTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1616,13 +1276,13 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As FacturaHistoricosDataSet1, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As FacturaDataSet1, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._facturas_HistoricosTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet._Facturas_Historicos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._facturaTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Factura.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._facturas_HistoricosTableAdapter.Update(addedRows))
+                    result = (result + Me._facturaTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1634,13 +1294,13 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As FacturaHistoricosDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As FacturaDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._facturas_HistoricosTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet._Facturas_Historicos.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._facturaTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Factura.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._facturas_HistoricosTableAdapter.Update(deletedRows))
+                    result = (result + Me._facturaTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1678,15 +1338,15 @@ Namespace FacturaHistoricosDataSet1TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As FacturaHistoricosDataSet1) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As FacturaDataSet1) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._facturas_HistoricosTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._facturas_HistoricosTableAdapter.Connection) = false)) Then
+            If ((Not (Me._facturaTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._facturaTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -1722,13 +1382,13 @@ Namespace FacturaHistoricosDataSet1TableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._facturas_HistoricosTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._facturas_HistoricosTableAdapter, Me._facturas_HistoricosTableAdapter.Connection)
-                    Me._facturas_HistoricosTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._facturas_HistoricosTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._facturas_HistoricosTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._facturas_HistoricosTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._facturas_HistoricosTableAdapter.Adapter)
+                If (Not (Me._facturaTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._facturaTableAdapter, Me._facturaTableAdapter.Connection)
+                    Me._facturaTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._facturaTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._facturaTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._facturaTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._facturaTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1791,9 +1451,9 @@ Namespace FacturaHistoricosDataSet1TableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._facturas_HistoricosTableAdapter) Is Nothing) Then
-                    Me._facturas_HistoricosTableAdapter.Connection = CType(revertConnections(Me._facturas_HistoricosTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._facturas_HistoricosTableAdapter.Transaction = Nothing
+                If (Not (Me._facturaTableAdapter) Is Nothing) Then
+                    Me._facturaTableAdapter.Connection = CType(revertConnections(Me._facturaTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._facturaTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

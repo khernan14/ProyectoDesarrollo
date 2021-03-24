@@ -567,6 +567,7 @@ Partial Public Class FacturaHDataSet1
             Me.columnID.AllowDBNull = false
             Me.columnID.ReadOnly = true
             Me.columnID.Unique = true
+            Me.columnFacturaID.AllowDBNull = false
             Me.columnCliente.MaxLength = 100
             Me.columnServicio.MaxLength = 50
             Me.columnNumPlaca.MaxLength = 20
@@ -734,11 +735,7 @@ Partial Public Class FacturaHDataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property FacturaID() As Integer
             Get
-                Try 
-                    Return CType(Me(Me._tableFacturas_Historicos.FacturaIDColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FacturaID' de la tabla 'Facturas-Historicos' es DBNull.", e)
-                End Try
+                Return CType(Me(Me._tableFacturas_Historicos.FacturaIDColumn),Integer)
             End Get
             Set
                 Me(Me._tableFacturas_Historicos.FacturaIDColumn) = value
@@ -911,18 +908,6 @@ Partial Public Class FacturaHDataSet1
                 Me(Me._tableFacturas_Historicos.TotalPagoColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsFacturaIDNull() As Boolean
-            Return Me.IsNull(Me._tableFacturas_Historicos.FacturaIDColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetFacturaIDNull()
-            Me(Me._tableFacturas_Historicos.FacturaIDColumn) = Global.System.Convert.DBNull
-        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -1239,24 +1224,22 @@ Namespace FacturaHDataSet1TableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Facturas-Historicos] WHERE (([ID] = @Original_ID) AND ((@IsNul"& _ 
-                "l_FacturaID = 1 AND [FacturaID] IS NULL) OR ([FacturaID] = @Original_FacturaID))"& _ 
-                " AND ((@IsNull_FechaFactura = 1 AND [FechaFactura] IS NULL) OR ([FechaFactura] ="& _ 
-                " @Original_FechaFactura)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR (["& _ 
-                "Cliente] = @Original_Cliente)) AND ((@IsNull_Servicio = 1 AND [Servicio] IS NULL"& _ 
-                ") OR ([Servicio] = @Original_Servicio)) AND ((@IsNull_PrecioServicio = 1 AND [Pr"& _ 
-                "ecioServicio] IS NULL) OR ([PrecioServicio] = @Original_PrecioServicio)) AND ((@"& _ 
-                "IsNull_NumPlaca = 1 AND [NumPlaca] IS NULL) OR ([NumPlaca] = @Original_NumPlaca)"& _ 
-                ") AND ((@IsNull_Usuario = 1 AND [Usuario] IS NULL) OR ([Usuario] = @Original_Usu"& _ 
-                "ario)) AND ((@IsNull_Empleado = 1 AND [Empleado] IS NULL) OR ([Empleado] = @Orig"& _ 
-                "inal_Empleado)) AND ((@IsNull_FormaPago = 1 AND [FormaPago] IS NULL) OR ([FormaP"& _ 
-                "ago] = @Original_FormaPago)) AND ((@IsNull_ISV = 1 AND [ISV] IS NULL) OR ([ISV] "& _ 
-                "= @Original_ISV)) AND ((@IsNull_SubTotal = 1 AND [SubTotal] IS NULL) OR ([SubTot"& _ 
-                "al] = @Original_SubTotal)) AND ((@IsNull_TotalPago = 1 AND [TotalPago] IS NULL) "& _ 
-                "OR ([TotalPago] = @Original_TotalPago)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Facturas-Historicos] WHERE (([ID] = @Original_ID) AND ([Factur"& _ 
+                "aID] = @Original_FacturaID) AND ((@IsNull_FechaFactura = 1 AND [FechaFactura] IS"& _ 
+                " NULL) OR ([FechaFactura] = @Original_FechaFactura)) AND ((@IsNull_Cliente = 1 A"& _ 
+                "ND [Cliente] IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_Servicio"& _ 
+                " = 1 AND [Servicio] IS NULL) OR ([Servicio] = @Original_Servicio)) AND ((@IsNull"& _ 
+                "_PrecioServicio = 1 AND [PrecioServicio] IS NULL) OR ([PrecioServicio] = @Origin"& _ 
+                "al_PrecioServicio)) AND ((@IsNull_NumPlaca = 1 AND [NumPlaca] IS NULL) OR ([NumP"& _ 
+                "laca] = @Original_NumPlaca)) AND ((@IsNull_Usuario = 1 AND [Usuario] IS NULL) OR"& _ 
+                " ([Usuario] = @Original_Usuario)) AND ((@IsNull_Empleado = 1 AND [Empleado] IS N"& _ 
+                "ULL) OR ([Empleado] = @Original_Empleado)) AND ((@IsNull_FormaPago = 1 AND [Form"& _ 
+                "aPago] IS NULL) OR ([FormaPago] = @Original_FormaPago)) AND ((@IsNull_ISV = 1 AN"& _ 
+                "D [ISV] IS NULL) OR ([ISV] = @Original_ISV)) AND ((@IsNull_SubTotal = 1 AND [Sub"& _ 
+                "Total] IS NULL) OR ([SubTotal] = @Original_SubTotal)) AND ((@IsNull_TotalPago = "& _ 
+                "1 AND [TotalPago] IS NULL) OR ([TotalPago] = @Original_TotalPago)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FechaFactura", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -1308,23 +1291,22 @@ Namespace FacturaHDataSet1TableAdapters
                 " @FechaFactura, [Cliente] = @Cliente, [Servicio] = @Servicio, [PrecioServicio] ="& _ 
                 " @PrecioServicio, [NumPlaca] = @NumPlaca, [Usuario] = @Usuario, [Empleado] = @Em"& _ 
                 "pleado, [FormaPago] = @FormaPago, [ISV] = @ISV, [SubTotal] = @SubTotal, [TotalPa"& _ 
-                "go] = @TotalPago WHERE (([ID] = @Original_ID) AND ((@IsNull_FacturaID = 1 AND [F"& _ 
-                "acturaID] IS NULL) OR ([FacturaID] = @Original_FacturaID)) AND ((@IsNull_FechaFa"& _ 
-                "ctura = 1 AND [FechaFactura] IS NULL) OR ([FechaFactura] = @Original_FechaFactur"& _ 
-                "a)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) OR ([Cliente] = @Original_C"& _ 
-                "liente)) AND ((@IsNull_Servicio = 1 AND [Servicio] IS NULL) OR ([Servicio] = @Or"& _ 
-                "iginal_Servicio)) AND ((@IsNull_PrecioServicio = 1 AND [PrecioServicio] IS NULL)"& _ 
-                " OR ([PrecioServicio] = @Original_PrecioServicio)) AND ((@IsNull_NumPlaca = 1 AN"& _ 
-                "D [NumPlaca] IS NULL) OR ([NumPlaca] = @Original_NumPlaca)) AND ((@IsNull_Usuari"& _ 
-                "o = 1 AND [Usuario] IS NULL) OR ([Usuario] = @Original_Usuario)) AND ((@IsNull_E"& _ 
-                "mpleado = 1 AND [Empleado] IS NULL) OR ([Empleado] = @Original_Empleado)) AND (("& _ 
-                "@IsNull_FormaPago = 1 AND [FormaPago] IS NULL) OR ([FormaPago] = @Original_Forma"& _ 
-                "Pago)) AND ((@IsNull_ISV = 1 AND [ISV] IS NULL) OR ([ISV] = @Original_ISV)) AND "& _ 
-                "((@IsNull_SubTotal = 1 AND [SubTotal] IS NULL) OR ([SubTotal] = @Original_SubTot"& _ 
-                "al)) AND ((@IsNull_TotalPago = 1 AND [TotalPago] IS NULL) OR ([TotalPago] = @Ori"& _ 
-                "ginal_TotalPago)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, FacturaID, FechaFactura, Cliente, Servicio, Prec"& _ 
-                "ioServicio, NumPlaca, Usuario, Empleado, FormaPago, ISV, SubTotal, TotalPago FRO"& _ 
-                "M [Facturas-Historicos] WHERE (ID = @ID)"
+                "go] = @TotalPago WHERE (([ID] = @Original_ID) AND ([FacturaID] = @Original_Factu"& _ 
+                "raID) AND ((@IsNull_FechaFactura = 1 AND [FechaFactura] IS NULL) OR ([FechaFactu"& _ 
+                "ra] = @Original_FechaFactura)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL) "& _ 
+                "OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_Servicio = 1 AND [Servicio] IS"& _ 
+                " NULL) OR ([Servicio] = @Original_Servicio)) AND ((@IsNull_PrecioServicio = 1 AN"& _ 
+                "D [PrecioServicio] IS NULL) OR ([PrecioServicio] = @Original_PrecioServicio)) AN"& _ 
+                "D ((@IsNull_NumPlaca = 1 AND [NumPlaca] IS NULL) OR ([NumPlaca] = @Original_NumP"& _ 
+                "laca)) AND ((@IsNull_Usuario = 1 AND [Usuario] IS NULL) OR ([Usuario] = @Origina"& _ 
+                "l_Usuario)) AND ((@IsNull_Empleado = 1 AND [Empleado] IS NULL) OR ([Empleado] = "& _ 
+                "@Original_Empleado)) AND ((@IsNull_FormaPago = 1 AND [FormaPago] IS NULL) OR ([F"& _ 
+                "ormaPago] = @Original_FormaPago)) AND ((@IsNull_ISV = 1 AND [ISV] IS NULL) OR (["& _ 
+                "ISV] = @Original_ISV)) AND ((@IsNull_SubTotal = 1 AND [SubTotal] IS NULL) OR ([S"& _ 
+                "ubTotal] = @Original_SubTotal)) AND ((@IsNull_TotalPago = 1 AND [TotalPago] IS N"& _ 
+                "ULL) OR ([TotalPago] = @Original_TotalPago)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT ID, FacturaID, FechaFactu"& _ 
+                "ra, Cliente, Servicio, PrecioServicio, NumPlaca, Usuario, Empleado, FormaPago, I"& _ 
+                "SV, SubTotal, TotalPago FROM [Facturas-Historicos] WHERE (ID = @ID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1339,7 +1321,6 @@ Namespace FacturaHDataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SubTotal", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SubTotal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TotalPago", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TotalPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FacturaID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FacturaID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_FechaFactura", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FechaFactura", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaFactura", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -1385,7 +1366,7 @@ Namespace FacturaHDataSet1TableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "dbo.InsertFacturaH"
+            Me._commandCollection(1).CommandText = "dbo.InsertFacturasH"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FacturaID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -1458,91 +1439,85 @@ Namespace FacturaHDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_FacturaID As Global.System.Nullable(Of Integer), ByVal Original_FechaFactura As Global.System.Nullable(Of Date), ByVal Original_Cliente As String, ByVal Original_Servicio As String, ByVal Original_PrecioServicio As Global.System.Nullable(Of Decimal), ByVal Original_NumPlaca As String, ByVal Original_Usuario As String, ByVal Original_Empleado As String, ByVal Original_FormaPago As String, ByVal Original_ISV As Global.System.Nullable(Of Decimal), ByVal Original_SubTotal As Global.System.Nullable(Of Decimal), ByVal Original_TotalPago As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_FacturaID As Integer, ByVal Original_FechaFactura As Global.System.Nullable(Of Date), ByVal Original_Cliente As String, ByVal Original_Servicio As String, ByVal Original_PrecioServicio As Global.System.Nullable(Of Decimal), ByVal Original_NumPlaca As String, ByVal Original_Usuario As String, ByVal Original_Empleado As String, ByVal Original_FormaPago As String, ByVal Original_ISV As Global.System.Nullable(Of Decimal), ByVal Original_SubTotal As Global.System.Nullable(Of Decimal), ByVal Original_TotalPago As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_FacturaID.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_FacturaID.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_FacturaID,Integer)
             If (Original_FechaFactura.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_FechaFactura.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_FechaFactura.Value,Date)
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Original_Cliente Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Cliente,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Cliente,String)
             End If
             If (Original_Servicio Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Servicio,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Servicio,String)
             End If
             If (Original_PrecioServicio.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_PrecioServicio.Value,Decimal)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_PrecioServicio.Value,Decimal)
             Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
             If (Original_NumPlaca Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_NumPlaca,String)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_NumPlaca,String)
             End If
             If (Original_Usuario Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Usuario,String)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_Usuario,String)
             End If
             If (Original_Empleado Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Empleado,String)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_Empleado,String)
             End If
             If (Original_FormaPago Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_FormaPago,String)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_FormaPago,String)
             End If
             If (Original_ISV.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_ISV.Value,Decimal)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_ISV.Value,Decimal)
             Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
             If (Original_SubTotal.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_SubTotal.Value,Decimal)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_SubTotal.Value,Decimal)
             Else
-                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
             If (Original_TotalPago.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_TotalPago.Value,Double)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_TotalPago.Value,Double)
             Else
-                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(23).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1563,12 +1538,8 @@ Namespace FacturaHDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal FacturaID As Global.System.Nullable(Of Integer), ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal PrecioServicio As Global.System.Nullable(Of Decimal), ByVal NumPlaca As String, ByVal Usuario As String, ByVal Empleado As String, ByVal FormaPago As String, ByVal ISV As Global.System.Nullable(Of Decimal), ByVal SubTotal As Global.System.Nullable(Of Decimal), ByVal TotalPago As Global.System.Nullable(Of Double)) As Integer
-            If (FacturaID.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(FacturaID.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
+        Public Overloads Overridable Function Insert(ByVal FacturaID As Integer, ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal PrecioServicio As Global.System.Nullable(Of Decimal), ByVal NumPlaca As String, ByVal Usuario As String, ByVal Empleado As String, ByVal FormaPago As String, ByVal ISV As Global.System.Nullable(Of Decimal), ByVal SubTotal As Global.System.Nullable(Of Decimal), ByVal TotalPago As Global.System.Nullable(Of Double)) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(FacturaID,Integer)
             If (FechaFactura.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(FechaFactura.Value,Date)
             Else
@@ -1644,7 +1615,7 @@ Namespace FacturaHDataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal FacturaID As Global.System.Nullable(Of Integer),  _
+                    ByVal FacturaID As Integer,  _
                     ByVal FechaFactura As Global.System.Nullable(Of Date),  _
                     ByVal Cliente As String,  _
                     ByVal Servicio As String,  _
@@ -1657,7 +1628,7 @@ Namespace FacturaHDataSet1TableAdapters
                     ByVal SubTotal As Global.System.Nullable(Of Decimal),  _
                     ByVal TotalPago As Global.System.Nullable(Of Double),  _
                     ByVal Original_ID As Integer,  _
-                    ByVal Original_FacturaID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FacturaID As Integer,  _
                     ByVal Original_FechaFactura As Global.System.Nullable(Of Date),  _
                     ByVal Original_Cliente As String,  _
                     ByVal Original_Servicio As String,  _
@@ -1670,11 +1641,7 @@ Namespace FacturaHDataSet1TableAdapters
                     ByVal Original_SubTotal As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_TotalPago As Global.System.Nullable(Of Double),  _
                     ByVal ID As Integer) As Integer
-            If (FacturaID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(FacturaID.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(FacturaID,Integer)
             If (FechaFactura.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(FechaFactura.Value,Date)
             Else
@@ -1731,91 +1698,85 @@ Namespace FacturaHDataSet1TableAdapters
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
             Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_ID,Integer)
-            If (Original_FacturaID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_FacturaID.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            End If
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_FacturaID,Integer)
             If (Original_FechaFactura.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_FechaFactura.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_FechaFactura.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
             If (Original_Cliente Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Cliente,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Cliente,String)
             End If
             If (Original_Servicio Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Servicio,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Servicio,String)
             End If
             If (Original_PrecioServicio.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_PrecioServicio.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_PrecioServicio.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             End If
             If (Original_NumPlaca Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_NumPlaca,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_NumPlaca,String)
             End If
             If (Original_Usuario Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Usuario,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Usuario,String)
             End If
             If (Original_Empleado Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Empleado,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Empleado,String)
             End If
             If (Original_FormaPago Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_FormaPago,String)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_FormaPago,String)
             End If
             If (Original_ISV.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_ISV.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_ISV.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
             If (Original_SubTotal.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_SubTotal.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_SubTotal.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             End If
             If (Original_TotalPago.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_TotalPago.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_TotalPago.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(37).Value = CType(ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(36).Value = CType(ID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -1836,7 +1797,7 @@ Namespace FacturaHDataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal FacturaID As Global.System.Nullable(Of Integer),  _
+                    ByVal FacturaID As Integer,  _
                     ByVal FechaFactura As Global.System.Nullable(Of Date),  _
                     ByVal Cliente As String,  _
                     ByVal Servicio As String,  _
@@ -1849,7 +1810,7 @@ Namespace FacturaHDataSet1TableAdapters
                     ByVal SubTotal As Global.System.Nullable(Of Decimal),  _
                     ByVal TotalPago As Global.System.Nullable(Of Double),  _
                     ByVal Original_ID As Integer,  _
-                    ByVal Original_FacturaID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_FacturaID As Integer,  _
                     ByVal Original_FechaFactura As Global.System.Nullable(Of Date),  _
                     ByVal Original_Cliente As String,  _
                     ByVal Original_Servicio As String,  _
@@ -1868,7 +1829,7 @@ Namespace FacturaHDataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertFacturaH(ByVal FacturaID As Global.System.Nullable(Of Integer), ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal PrecioServicio As Global.System.Nullable(Of Decimal), ByVal NumPlaca As String, ByVal Usuario As String, ByVal Empleado As String, ByVal FormaPago As String, ByVal ISV As Global.System.Nullable(Of Decimal), ByVal SubTotal As Global.System.Nullable(Of Decimal), ByVal TotalPago As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function InsertFacturasH(ByVal FacturaID As Global.System.Nullable(Of Integer), ByVal FechaFactura As Global.System.Nullable(Of Date), ByVal Cliente As String, ByVal Servicio As String, ByVal PrecioServicio As Global.System.Nullable(Of Decimal), ByVal NumPlaca As String, ByVal Usuario As String, ByVal Empleado As String, ByVal FormaPago As String, ByVal ISV As Global.System.Nullable(Of Decimal), ByVal SubTotal As Global.System.Nullable(Of Decimal), ByVal TotalPago As Global.System.Nullable(Of Double)) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
             If (FacturaID.HasValue = true) Then
                 command.Parameters(1).Value = CType(FacturaID.Value,Integer)

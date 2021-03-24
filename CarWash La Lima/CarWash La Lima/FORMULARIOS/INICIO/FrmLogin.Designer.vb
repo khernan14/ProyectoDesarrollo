@@ -85,7 +85,7 @@ Partial Class FrmLogin
         Me.btnLogin.Location = New System.Drawing.Point(46, 552)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(350, 50)
-        Me.btnLogin.TabIndex = 6
+        Me.btnLogin.TabIndex = 0
         Me.btnLogin.Text = "ACCEDER"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
@@ -98,7 +98,7 @@ Partial Class FrmLogin
         Me.txtPassword.Location = New System.Drawing.Point(78, 394)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(238, 20)
-        Me.txtPassword.TabIndex = 8
+        Me.txtPassword.TabIndex = 2
         Me.txtPassword.Text = "CONTRASEÑA"
         '
         'txtUsuario
@@ -110,7 +110,7 @@ Partial Class FrmLogin
         Me.txtUsuario.Location = New System.Drawing.Point(83, 329)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(238, 20)
-        Me.txtUsuario.TabIndex = 7
+        Me.txtUsuario.TabIndex = 1
         Me.txtUsuario.Text = "USUARIO"
         '
         'ShapeContainer1
@@ -164,7 +164,7 @@ Partial Class FrmLogin
         Me.btnMostrarOcultar.Location = New System.Drawing.Point(317, 391)
         Me.btnMostrarOcultar.Name = "btnMostrarOcultar"
         Me.btnMostrarOcultar.Size = New System.Drawing.Size(24, 23)
-        Me.btnMostrarOcultar.TabIndex = 12
+        Me.btnMostrarOcultar.TabIndex = 3
         Me.btnMostrarOcultar.UseVisualStyleBackColor = False
         '
         'btnOcultar

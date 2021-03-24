@@ -1,9 +1,14 @@
 ﻿Public Class FrmFacturar
     Dim impuesto, subTotal, total As Double
+    Dim ultimo As Integer
 
     Private Sub FrmFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'FacturaIDDataSet1.Factura' Puede moverla o quitarla según sea necesario.
+        Me.FacturaTableAdapter.Fill(Me.FacturaIDDataSet1.Factura)
 
         txtISV.Text = 0.15
+        ultimo = cmbID.Items.Count - 1
+        cmbID.SelectedIndex = ultimo
 
         'TODO: esta línea de código carga datos en la tabla 'UsuarioDataSet1.Usuario' Puede moverla o quitarla según sea necesario.
         Me.UsuarioTableAdapter1.Fill(Me.UsuarioDataSet1.Usuario)
@@ -45,23 +50,31 @@
     End Sub
 
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
+        Dim frm As FrmFacturas = New FrmFacturas
+        DateTime2 = New DateTimePicker()
         impuesto = Val(cmbPrecio.Text) * 0.15
         subTotal = impuesto
         txtSubTotal.Text = subTotal
         total = Val(cmbPrecio.Text) + subTotal
         txtTotal.Text = total
 
+        frm.FacturaTableAdapter.InsertFactura(DateTime2.Value, Val(txtSubTotal.Text), Val(txtISV.Text), Val(cmbIDUser.Text))
+        frm.FacturaTableAdapter.Fill(frm.FacturaDataSet1.Factura)
+        frm.DetalleFacturaTableAdapter.InsertDetalleFactura(Val(cmbID.Text), Val(cmbIDCliente.Text), Val(cmbIDServicio.Text), Val(cmbIDPago.Text))
+        frm.DetalleFacturaTableAdapter.Fill(frm.DetalleFacturaDataSet1.DetalleFactura)
+
     End Sub
 
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
 
         Dim frm As FrmHistorialFactura = New FrmHistorialFactura
+        Dim frm2 As FrmFacturas = New FrmFacturas
         DateTime2 = New DateTimePicker()
 
-        frm.Facturas_HistoricosTableAdapter1.InsertFacturaH(Val(txtFactura.Text), DateTime2.Value, cmbCliente.Text, cmbServicio.Text,
-                                                Val(cmbPrecio.Text), cmbVehiculo.Text, cmbUsuario.Text, cmbEncargadoServicio.Text, cmbPago.Text,
-                                                Val(txtISV.Text), subTotal, Val(txtTotal.Text))
-        frm.VistaFacturasHistoricosTableAdapter1.Fill(frm.VistaFacturasHDataSet1.VistaFacturasHistoricos)
+        frm.Facturas_HistoricosTableAdapter.InsertFacturasH(Val(cmbID.Text), DateTime2.Value, cmbCliente.Text,
+                                                            cmbServicio.Text, cmbPrecio.Text, cmbVehiculo.Text, cmbUsuario.Text, cmbEncargadoServicio.Text,
+                                                            cmbPago.Text, Val(txtISV.Text), Val(txtSubTotal.Text), Val(txtTotal.Text))
+        frm.Facturas_HistoricosTableAdapter.Fill(frm.FacturaHDataSet1._Facturas_Historicos)
 
     End Sub
 
@@ -69,9 +82,12 @@
 
         For i = 0 To cmbServicio.SelectedIndex
             For j = 0 To cmbPrecio.SelectedIndex
-                If (cmbServicio.SelectedIndex = i) Then
-                    cmbPrecio.SelectedIndex = j
-                End If
+                For k = 0 To cmbIDServicio.SelectedIndex
+                    If (cmbServicio.SelectedIndex = i) Then
+                        cmbPrecio.SelectedIndex = j
+                        cmbIDServicio.SelectedIndex = k
+                    End If
+                Next
             Next
         Next
 
@@ -99,6 +115,46 @@
         Else
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub cmbCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCliente.SelectedIndexChanged
+        For i = 0 To cmbCliente.SelectedIndex
+            For j = 0 To cmbIDCliente.SelectedIndex
+                If (cmbCliente.SelectedIndex = i) Then
+                    cmbIDCliente.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub cmbEncargadoServicio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEncargadoServicio.SelectedIndexChanged
+        For i = 0 To cmbEncargadoServicio.SelectedIndex
+            For j = 0 To cmbIDEncargado.SelectedIndex
+                If (cmbEncargadoServicio.SelectedIndex = i) Then
+                    cmbIDEncargado.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub cmbPago_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPago.SelectedIndexChanged
+        For i = 0 To cmbPago.SelectedIndex
+            For j = 0 To cmbIDPago.SelectedIndex
+                If (cmbPago.SelectedIndex = i) Then
+                    cmbIDPago.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub cmbUsuario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUsuario.SelectedIndexChanged
+        For i = 0 To cmbUsuario.SelectedIndex
+            For j = 0 To cmbIDUser.SelectedIndex
+                If (cmbUsuario.SelectedIndex = i) Then
+                    cmbIDUser.SelectedIndex = j
+                End If
+            Next
+        Next
     End Sub
 
     Private Sub txtISV_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtISV.KeyPress

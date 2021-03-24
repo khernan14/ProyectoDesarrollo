@@ -27,18 +27,9 @@ Partial Class FrmHistorialFactura
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgHistoricos = New System.Windows.Forms.DataGridView()
-        Me.VistaFacturasHistoricosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaFacturasHDataSet1 = New CarWash_La_Lima.VistaFacturasHDataSet1()
-        Me.VistaFacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaFacturasHistoricosDataSet1 = New CarWash_La_Lima.VistaFacturasHistoricosDataSet1()
-        Me.VistaFacturasHistoricosTableAdapter = New CarWash_La_Lima.VistaFacturasHistoricosDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter()
-        Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FacturaHistoricosDataSet1 = New CarWash_La_Lima.FacturaHistoricosDataSet1()
-        Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHistoricosDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
-        Me.VistaFacturasHistoricosTableAdapter1 = New CarWash_La_Lima.VistaFacturasHDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter()
         Me.FacturaHDataSet1 = New CarWash_La_Lima.FacturaHDataSet1()
-        Me.FacturasHistoricosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Facturas_HistoricosTableAdapter1 = New CarWash_La_Lima.FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
+        Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FacturaIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaFacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,18 +44,13 @@ Partial Class FrmHistorialFactura
         Me.SubTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaFacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaFacturasHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaFacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaFacturasHistoricosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgHistoricos
         '
+        Me.dgHistoricos.AllowUserToOrderColumns = True
         Me.dgHistoricos.AutoGenerateColumns = False
         Me.dgHistoricos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgHistoricos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -81,7 +67,7 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgHistoricos.ColumnHeadersHeight = 30
         Me.dgHistoricos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.FacturaIDDataGridViewTextBoxColumn, Me.FechaFacturaDataGridViewTextBoxColumn, Me.ClienteDataGridViewTextBoxColumn, Me.ServicioDataGridViewTextBoxColumn, Me.PrecioServicioDataGridViewTextBoxColumn, Me.NumPlacaDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn, Me.EmpleadoDataGridViewTextBoxColumn, Me.FormaPagoDataGridViewTextBoxColumn, Me.ISVDataGridViewTextBoxColumn, Me.SubTotalDataGridViewTextBoxColumn, Me.TotalPagoDataGridViewTextBoxColumn})
-        Me.dgHistoricos.DataSource = Me.FacturasHistoricosBindingSource1
+        Me.dgHistoricos.DataSource = Me.FacturasHistoricosBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -107,61 +93,19 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.Size = New System.Drawing.Size(821, 377)
         Me.dgHistoricos.TabIndex = 27
         '
-        'VistaFacturasHistoricosBindingSource1
-        '
-        Me.VistaFacturasHistoricosBindingSource1.DataMember = "VistaFacturasHistoricos"
-        Me.VistaFacturasHistoricosBindingSource1.DataSource = Me.VistaFacturasHDataSet1
-        '
-        'VistaFacturasHDataSet1
-        '
-        Me.VistaFacturasHDataSet1.DataSetName = "VistaFacturasHDataSet1"
-        Me.VistaFacturasHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaFacturasHistoricosBindingSource
-        '
-        Me.VistaFacturasHistoricosBindingSource.DataMember = "VistaFacturasHistoricos"
-        Me.VistaFacturasHistoricosBindingSource.DataSource = Me.VistaFacturasHistoricosDataSet1
-        '
-        'VistaFacturasHistoricosDataSet1
-        '
-        Me.VistaFacturasHistoricosDataSet1.DataSetName = "VistaFacturasHistoricosDataSet1"
-        Me.VistaFacturasHistoricosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaFacturasHistoricosTableAdapter
-        '
-        Me.VistaFacturasHistoricosTableAdapter.ClearBeforeFill = True
-        '
-        'FacturasHistoricosBindingSource
-        '
-        Me.FacturasHistoricosBindingSource.DataMember = "Facturas-Historicos"
-        Me.FacturasHistoricosBindingSource.DataSource = Me.FacturaHistoricosDataSet1
-        '
-        'FacturaHistoricosDataSet1
-        '
-        Me.FacturaHistoricosDataSet1.DataSetName = "FacturaHistoricosDataSet1"
-        Me.FacturaHistoricosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Facturas_HistoricosTableAdapter
-        '
-        Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
-        '
-        'VistaFacturasHistoricosTableAdapter1
-        '
-        Me.VistaFacturasHistoricosTableAdapter1.ClearBeforeFill = True
-        '
         'FacturaHDataSet1
         '
         Me.FacturaHDataSet1.DataSetName = "FacturaHDataSet1"
         Me.FacturaHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'FacturasHistoricosBindingSource1
+        'FacturasHistoricosBindingSource
         '
-        Me.FacturasHistoricosBindingSource1.DataMember = "Facturas-Historicos"
-        Me.FacturasHistoricosBindingSource1.DataSource = Me.FacturaHDataSet1
+        Me.FacturasHistoricosBindingSource.DataMember = "Facturas-Historicos"
+        Me.FacturasHistoricosBindingSource.DataSource = Me.FacturaHDataSet1
         '
-        'Facturas_HistoricosTableAdapter1
+        'Facturas_HistoricosTableAdapter
         '
-        Me.Facturas_HistoricosTableAdapter1.ClearBeforeFill = True
+        Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -264,31 +208,16 @@ Partial Class FrmHistorialFactura
         Me.Name = "FrmHistorialFactura"
         Me.Text = "HISTORIAL"
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaFacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaFacturasHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaFacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaFacturasHistoricosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturaHistoricosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturasHistoricosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Private WithEvents dgHistoricos As DataGridView
-    Friend WithEvents FacturaHistoricosDataSet1 As FacturaHistoricosDataSet1
-    Friend WithEvents FacturasHistoricosBindingSource As BindingSource
-    Friend WithEvents Facturas_HistoricosTableAdapter As FacturaHistoricosDataSet1TableAdapters.Facturas_HistoricosTableAdapter
-    Friend WithEvents VistaFacturasHistoricosDataSet1 As VistaFacturasHistoricosDataSet1
-    Friend WithEvents VistaFacturasHistoricosBindingSource As BindingSource
-    Friend WithEvents VistaFacturasHistoricosTableAdapter As VistaFacturasHistoricosDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter
-    Friend WithEvents VistaFacturasHDataSet1 As VistaFacturasHDataSet1
-    Friend WithEvents VistaFacturasHistoricosBindingSource1 As BindingSource
-    Friend WithEvents VistaFacturasHistoricosTableAdapter1 As VistaFacturasHDataSet1TableAdapters.VistaFacturasHistoricosTableAdapter
     Friend WithEvents FacturaHDataSet1 As FacturaHDataSet1
-    Friend WithEvents FacturasHistoricosBindingSource1 As BindingSource
-    Friend WithEvents Facturas_HistoricosTableAdapter1 As FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter
+    Friend WithEvents FacturasHistoricosBindingSource As BindingSource
+    Friend WithEvents Facturas_HistoricosTableAdapter As FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter
     Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FacturaIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaFacturaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

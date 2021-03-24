@@ -71,6 +71,15 @@ Partial Class FrmFacturar
         Me.UsuarioTableAdapter1 = New CarWash_La_Lima.UsuarioDataSet1TableAdapters.UsuarioTableAdapter()
         Me.cmbPrecio = New System.Windows.Forms.ComboBox()
         Me.btnCalcular = New System.Windows.Forms.Button()
+        Me.cmbIDCliente = New System.Windows.Forms.ComboBox()
+        Me.cmbIDServicio = New System.Windows.Forms.ComboBox()
+        Me.cmbIDEncargado = New System.Windows.Forms.ComboBox()
+        Me.cmbIDPago = New System.Windows.Forms.ComboBox()
+        Me.cmbIDUser = New System.Windows.Forms.ComboBox()
+        Me.cmbID = New System.Windows.Forms.ComboBox()
+        Me.FacturaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FacturaIDDataSet1 = New CarWash_La_Lima.FacturaIDDataSet1()
+        Me.FacturaTableAdapter = New CarWash_La_Lima.FacturaIDDataSet1TableAdapters.FacturaTableAdapter()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +94,8 @@ Partial Class FrmFacturar
         CType(Me.UsuarioDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioFacturaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaIDDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitleChildForm
@@ -185,9 +196,9 @@ Partial Class FrmFacturar
         Me.cmbCliente.DataSource = Me.ClientesBindingSource
         Me.cmbCliente.DisplayMember = "NombreCliente"
         Me.cmbCliente.FormattingEnabled = True
-        Me.cmbCliente.Location = New System.Drawing.Point(241, 157)
+        Me.cmbCliente.Location = New System.Drawing.Point(295, 157)
         Me.cmbCliente.Name = "cmbCliente"
-        Me.cmbCliente.Size = New System.Drawing.Size(244, 21)
+        Me.cmbCliente.Size = New System.Drawing.Size(190, 21)
         Me.cmbCliente.TabIndex = 129
         '
         'ClientesBindingSource
@@ -225,9 +236,9 @@ Partial Class FrmFacturar
         Me.cmbServicio.DataSource = Me.ServicioBindingSource
         Me.cmbServicio.DisplayMember = "DescripcionServicio"
         Me.cmbServicio.FormattingEnabled = True
-        Me.cmbServicio.Location = New System.Drawing.Point(241, 248)
+        Me.cmbServicio.Location = New System.Drawing.Point(295, 248)
         Me.cmbServicio.Name = "cmbServicio"
-        Me.cmbServicio.Size = New System.Drawing.Size(120, 21)
+        Me.cmbServicio.Size = New System.Drawing.Size(106, 21)
         Me.cmbServicio.TabIndex = 132
         '
         'ServicioBindingSource
@@ -245,9 +256,9 @@ Partial Class FrmFacturar
         Me.cmbEncargadoServicio.DataSource = Me.EmpleadoBindingSource
         Me.cmbEncargadoServicio.DisplayMember = "NombreEmpleado"
         Me.cmbEncargadoServicio.FormattingEnabled = True
-        Me.cmbEncargadoServicio.Location = New System.Drawing.Point(241, 292)
+        Me.cmbEncargadoServicio.Location = New System.Drawing.Point(295, 292)
         Me.cmbEncargadoServicio.Name = "cmbEncargadoServicio"
-        Me.cmbEncargadoServicio.Size = New System.Drawing.Size(244, 21)
+        Me.cmbEncargadoServicio.Size = New System.Drawing.Size(190, 21)
         Me.cmbEncargadoServicio.TabIndex = 134
         '
         'EmpleadoBindingSource
@@ -335,9 +346,9 @@ Partial Class FrmFacturar
         Me.cmbUsuario.DataSource = Me.UsuarioBindingSource1
         Me.cmbUsuario.DisplayMember = "Usuario"
         Me.cmbUsuario.FormattingEnabled = True
-        Me.cmbUsuario.Location = New System.Drawing.Point(657, 251)
+        Me.cmbUsuario.Location = New System.Drawing.Point(711, 251)
         Me.cmbUsuario.Name = "cmbUsuario"
-        Me.cmbUsuario.Size = New System.Drawing.Size(244, 21)
+        Me.cmbUsuario.Size = New System.Drawing.Size(190, 21)
         Me.cmbUsuario.TabIndex = 143
         '
         'UsuarioBindingSource1
@@ -422,9 +433,9 @@ Partial Class FrmFacturar
         Me.cmbPago.DataSource = Me.PagoBindingSource
         Me.cmbPago.DisplayMember = "FormaPago"
         Me.cmbPago.FormattingEnabled = True
-        Me.cmbPago.Location = New System.Drawing.Point(241, 335)
+        Me.cmbPago.Location = New System.Drawing.Point(295, 335)
         Me.cmbPago.Name = "cmbPago"
-        Me.cmbPago.Size = New System.Drawing.Size(244, 21)
+        Me.cmbPago.Size = New System.Drawing.Size(190, 21)
         Me.cmbPago.TabIndex = 148
         '
         'Label11
@@ -452,9 +463,9 @@ Partial Class FrmFacturar
         Me.cmbPrecio.DisplayMember = "PrecioServicio"
         Me.cmbPrecio.Enabled = False
         Me.cmbPrecio.FormattingEnabled = True
-        Me.cmbPrecio.Location = New System.Drawing.Point(367, 248)
+        Me.cmbPrecio.Location = New System.Drawing.Point(407, 248)
         Me.cmbPrecio.Name = "cmbPrecio"
-        Me.cmbPrecio.Size = New System.Drawing.Size(118, 21)
+        Me.cmbPrecio.Size = New System.Drawing.Size(78, 21)
         Me.cmbPrecio.TabIndex = 149
         '
         'btnCalcular
@@ -471,12 +482,98 @@ Partial Class FrmFacturar
         Me.btnCalcular.Text = "Calcular"
         Me.btnCalcular.UseVisualStyleBackColor = False
         '
+        'cmbIDCliente
+        '
+        Me.cmbIDCliente.DataSource = Me.ClientesBindingSource
+        Me.cmbIDCliente.DisplayMember = "ClienteID"
+        Me.cmbIDCliente.Enabled = False
+        Me.cmbIDCliente.FormattingEnabled = True
+        Me.cmbIDCliente.Location = New System.Drawing.Point(241, 157)
+        Me.cmbIDCliente.Name = "cmbIDCliente"
+        Me.cmbIDCliente.Size = New System.Drawing.Size(48, 21)
+        Me.cmbIDCliente.TabIndex = 151
+        '
+        'cmbIDServicio
+        '
+        Me.cmbIDServicio.DataSource = Me.ServicioBindingSource
+        Me.cmbIDServicio.DisplayMember = "ServicioID"
+        Me.cmbIDServicio.Enabled = False
+        Me.cmbIDServicio.FormattingEnabled = True
+        Me.cmbIDServicio.Location = New System.Drawing.Point(241, 248)
+        Me.cmbIDServicio.Name = "cmbIDServicio"
+        Me.cmbIDServicio.Size = New System.Drawing.Size(48, 21)
+        Me.cmbIDServicio.TabIndex = 152
+        '
+        'cmbIDEncargado
+        '
+        Me.cmbIDEncargado.DataSource = Me.EmpleadoBindingSource
+        Me.cmbIDEncargado.DisplayMember = "EmpleadoID"
+        Me.cmbIDEncargado.Enabled = False
+        Me.cmbIDEncargado.FormattingEnabled = True
+        Me.cmbIDEncargado.Location = New System.Drawing.Point(241, 292)
+        Me.cmbIDEncargado.Name = "cmbIDEncargado"
+        Me.cmbIDEncargado.Size = New System.Drawing.Size(48, 21)
+        Me.cmbIDEncargado.TabIndex = 153
+        '
+        'cmbIDPago
+        '
+        Me.cmbIDPago.DataSource = Me.PagoBindingSource
+        Me.cmbIDPago.DisplayMember = "PagoID"
+        Me.cmbIDPago.Enabled = False
+        Me.cmbIDPago.FormattingEnabled = True
+        Me.cmbIDPago.Location = New System.Drawing.Point(241, 335)
+        Me.cmbIDPago.Name = "cmbIDPago"
+        Me.cmbIDPago.Size = New System.Drawing.Size(48, 21)
+        Me.cmbIDPago.TabIndex = 154
+        '
+        'cmbIDUser
+        '
+        Me.cmbIDUser.DataSource = Me.UsuarioBindingSource1
+        Me.cmbIDUser.DisplayMember = "UsuarioID"
+        Me.cmbIDUser.Enabled = False
+        Me.cmbIDUser.FormattingEnabled = True
+        Me.cmbIDUser.Location = New System.Drawing.Point(657, 251)
+        Me.cmbIDUser.Name = "cmbIDUser"
+        Me.cmbIDUser.Size = New System.Drawing.Size(48, 21)
+        Me.cmbIDUser.TabIndex = 155
+        '
+        'cmbID
+        '
+        Me.cmbID.DataSource = Me.FacturaBindingSource
+        Me.cmbID.DisplayMember = "FacturaID"
+        Me.cmbID.FormattingEnabled = True
+        Me.cmbID.Location = New System.Drawing.Point(657, 332)
+        Me.cmbID.Name = "cmbID"
+        Me.cmbID.Size = New System.Drawing.Size(48, 21)
+        Me.cmbID.TabIndex = 156
+        Me.cmbID.Visible = False
+        '
+        'FacturaBindingSource
+        '
+        Me.FacturaBindingSource.DataMember = "Factura"
+        Me.FacturaBindingSource.DataSource = Me.FacturaIDDataSet1
+        '
+        'FacturaIDDataSet1
+        '
+        Me.FacturaIDDataSet1.DataSetName = "FacturaIDDataSet1"
+        Me.FacturaIDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FacturaTableAdapter
+        '
+        Me.FacturaTableAdapter.ClearBeforeFill = True
+        '
         'FrmFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(948, 457)
+        Me.Controls.Add(Me.cmbID)
+        Me.Controls.Add(Me.cmbIDUser)
+        Me.Controls.Add(Me.cmbIDPago)
+        Me.Controls.Add(Me.cmbIDEncargado)
+        Me.Controls.Add(Me.cmbIDServicio)
+        Me.Controls.Add(Me.cmbIDCliente)
         Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.cmbPrecio)
         Me.Controls.Add(Me.cmbPago)
@@ -521,6 +618,8 @@ Partial Class FrmFacturar
         CType(Me.UsuarioDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioFacturaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaIDDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -573,4 +672,13 @@ Partial Class FrmFacturar
     Friend WithEvents UsuarioTableAdapter1 As UsuarioDataSet1TableAdapters.UsuarioTableAdapter
     Friend WithEvents cmbPrecio As ComboBox
     Private WithEvents btnCalcular As Button
+    Friend WithEvents cmbIDCliente As ComboBox
+    Friend WithEvents cmbIDServicio As ComboBox
+    Friend WithEvents cmbIDEncargado As ComboBox
+    Friend WithEvents cmbIDPago As ComboBox
+    Friend WithEvents cmbIDUser As ComboBox
+    Friend WithEvents cmbID As ComboBox
+    Friend WithEvents FacturaIDDataSet1 As FacturaIDDataSet1
+    Friend WithEvents FacturaBindingSource As BindingSource
+    Friend WithEvents FacturaTableAdapter As FacturaIDDataSet1TableAdapters.FacturaTableAdapter
 End Class

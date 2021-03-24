@@ -23,6 +23,7 @@ Public Class FrmLogin
         If txtUsuario.Text = "USUARIO" Then
             txtUsuario.Text = ""
             txtUsuario.ForeColor = Color.LightGray
+            btnErrorMessage.Visible = False
         End If
     End Sub
     Private Sub txtUsuario_Leave(sender As Object, e As EventArgs) Handles txtUsuario.Leave
@@ -37,6 +38,7 @@ Public Class FrmLogin
             txtPassword.Text = ""
             txtPassword.ForeColor = Color.LightGray
             txtPassword.UseSystemPasswordChar = True
+            btnErrorMessage.Visible = False
         End If
     End Sub
 
