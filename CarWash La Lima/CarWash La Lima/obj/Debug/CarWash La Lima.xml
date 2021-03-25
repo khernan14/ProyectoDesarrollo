@@ -752,71 +752,6 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1.FacturaDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1.FacturaRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1.FacturaRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.FacturaTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member>
-<member name="M:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(CarWash_La_Lima.FacturaIDDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Update rows in top-down order.
-</summary>
-</member>
-<member name="M:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(CarWash_La_Lima.FacturaIDDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Insert rows in top-down order.
-</summary>
-</member>
-<member name="M:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(CarWash_La_Lima.FacturaIDDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Delete rows in bottom-up order.
-</summary>
-</member>
-<member name="M:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member>
-<member name="M:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.UpdateAll(CarWash_La_Lima.FacturaIDDataSet1)">
-<summary>
-Update all changes to the dataset.
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
-Update Order Option
-</summary>
-</member>
-<member name="T:CarWash_La_Lima.FacturaIDDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member>
 <member name="T:CarWash_La_Lima.MarcaDataSet1">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -1727,6 +1662,71 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1.FacturaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1.FacturaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1.FacturaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.FacturaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(CarWash_La_Lima.IDFacturaDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(CarWash_La_Lima.IDFacturaDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(CarWash_La_Lima.IDFacturaDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.UpdateAll(CarWash_La_Lima.IDFacturaDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.IDFacturaDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:CarWash_La_Lima.VistaVehiculoSet1">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -2568,6 +2568,71 @@ Update Order Option
 </summary>
 </member>
 <member name="T:CarWash_La_Lima.UsuarioDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1.VistaNoRepeatDatosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1.VistaNoRepeatDatosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1.VistaNoRepeatDatosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.VistaNoRepeatDatosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(CarWash_La_Lima.VistaEncargadosServicioDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(CarWash_La_Lima.VistaEncargadosServicioDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(CarWash_La_Lima.VistaEncargadosServicioDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.UpdateAll(CarWash_La_Lima.VistaEncargadosServicioDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

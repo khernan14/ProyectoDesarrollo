@@ -9,6 +9,7 @@ Public Class FrmPrincipal
         lblName.Text = ActiveUser.NombreEmpleado + ", " + ActiveUser.ApellidoEmpleado
         lblUsers.Text = ActiveUser.Usuario
         lblCargo.Text = ActiveUser.Puesto
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     'Fields'

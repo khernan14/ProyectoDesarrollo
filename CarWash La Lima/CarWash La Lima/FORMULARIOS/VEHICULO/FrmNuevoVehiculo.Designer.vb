@@ -35,10 +35,10 @@ Partial Class FrmNuevoVehiculo
         Me.ColorVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ColorDataSet1 = New CarWash_La_Lima.ColorDataSet1()
         Me.cmbModelo = New System.Windows.Forms.ComboBox()
-        Me.ModeloEnCNVBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaModelo1 = New CarWash_La_Lima.VistaModelo1()
         Me.ModeloVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ModeloDataSet1 = New CarWash_La_Lima.ModeloDataSet1()
+        Me.ModeloEnCNVBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaModelo1 = New CarWash_La_Lima.VistaModelo1()
         Me.cmbMarca = New System.Windows.Forms.ComboBox()
         Me.MarcasVehiculosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcaDataSet1 = New CarWash_La_Lima.MarcaDataSet1()
@@ -62,10 +62,10 @@ Partial Class FrmNuevoVehiculo
         CType(Me.TipoVehiculoDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ColorVehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ColorDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ModeloEnCNVBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaModelo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ModeloVehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ModeloDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ModeloEnCNVBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaModelo1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcasVehiculosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MarcaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -185,17 +185,6 @@ Partial Class FrmNuevoVehiculo
         Me.cmbModelo.Name = "cmbModelo"
         Me.cmbModelo.Size = New System.Drawing.Size(244, 21)
         Me.cmbModelo.TabIndex = 155
-        Me.cmbModelo.ValueMember = "ModeloID"
-        '
-        'ModeloEnCNVBindingSource
-        '
-        Me.ModeloEnCNVBindingSource.DataMember = "ModeloEnCNV"
-        Me.ModeloEnCNVBindingSource.DataSource = Me.VistaModelo1
-        '
-        'VistaModelo1
-        '
-        Me.VistaModelo1.DataSetName = "VistaModelo1"
-        Me.VistaModelo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ModeloVehiculoBindingSource
         '
@@ -206,6 +195,16 @@ Partial Class FrmNuevoVehiculo
         '
         Me.ModeloDataSet1.DataSetName = "ModeloDataSet1"
         Me.ModeloDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ModeloEnCNVBindingSource
+        '
+        Me.ModeloEnCNVBindingSource.DataMember = "ModeloEnCNV"
+        Me.ModeloEnCNVBindingSource.DataSource = Me.VistaModelo1
+        '
+        'VistaModelo1
+        '
+        Me.VistaModelo1.DataSetName = "VistaModelo1"
+        Me.VistaModelo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'cmbMarca
         '
@@ -375,10 +374,10 @@ Partial Class FrmNuevoVehiculo
         CType(Me.TipoVehiculoDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ColorVehiculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ColorDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ModeloEnCNVBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaModelo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ModeloVehiculoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ModeloDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ModeloEnCNVBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaModelo1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcasVehiculosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MarcaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

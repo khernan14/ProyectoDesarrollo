@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VistaEncargadosServicioDataSet1" targetNamespace="http://tempuri.org/VistaEncargadosServicioDataSet1.xsd" xmlns:mstns="http://tempuri.org/VistaEncargadosServicioDataSet1.xsd" xmlns="http://tempuri.org/VistaEncargadosServicioDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CarWashLaLimaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarWashLaLimaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CarWash_La_Lima.My.MySettings.GlobalReference.Default.CarWashLaLimaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaNoRepeatDatosTableAdapter" GeneratorDataComponentClassName="VistaNoRepeatDatosTableAdapter" Name="VistaNoRepeatDatos" UserDataComponentName="VistaNoRepeatDatosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CarWashLaLimaConnectionString (MySettings)" DbObjectName="CarWashLaLima.dbo.VistaNoRepeatDatos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EmpleadoID, NombreEmpleado, ApellidoEmpleado FROM dbo.VistaNoRepeatDatos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmpleadoID" DataSetColumn="EmpleadoID" />
+              <Mapping SourceColumn="NombreEmpleado" DataSetColumn="NombreEmpleado" />
+              <Mapping SourceColumn="ApellidoEmpleado" DataSetColumn="ApellidoEmpleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VistaEncargadosServicioDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VistaEncargadosServicioDataSet1" msprop:Generator_UserDSName="VistaEncargadosServicioDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaNoRepeatDatos" msprop:Generator_TableClassName="VistaNoRepeatDatosDataTable" msprop:Generator_TableVarName="tableVistaNoRepeatDatos" msprop:Generator_TablePropName="VistaNoRepeatDatos" msprop:Generator_RowDeletingName="VistaNoRepeatDatosRowDeleting" msprop:Generator_RowChangingName="VistaNoRepeatDatosRowChanging" msprop:Generator_RowEvHandlerName="VistaNoRepeatDatosRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaNoRepeatDatosRowDeleted" msprop:Generator_UserTableName="VistaNoRepeatDatos" msprop:Generator_RowChangedName="VistaNoRepeatDatosRowChanged" msprop:Generator_RowEvArgName="VistaNoRepeatDatosRowChangeEvent" msprop:Generator_RowClassName="VistaNoRepeatDatosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpleadoID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEmpleadoID" msprop:Generator_ColumnPropNameInRow="EmpleadoID" msprop:Generator_ColumnPropNameInTable="EmpleadoIDColumn" msprop:Generator_UserColumnName="EmpleadoID" type="xs:int" />
+              <xs:element name="NombreEmpleado" msprop:Generator_ColumnVarNameInTable="columnNombreEmpleado" msprop:Generator_ColumnPropNameInRow="NombreEmpleado" msprop:Generator_ColumnPropNameInTable="NombreEmpleadoColumn" msprop:Generator_UserColumnName="NombreEmpleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApellidoEmpleado" msprop:Generator_ColumnVarNameInTable="columnApellidoEmpleado" msprop:Generator_ColumnPropNameInRow="ApellidoEmpleado" msprop:Generator_ColumnPropNameInTable="ApellidoEmpleadoColumn" msprop:Generator_UserColumnName="ApellidoEmpleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VistaNoRepeatDatos" />
+      <xs:field xpath="mstns:EmpleadoID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

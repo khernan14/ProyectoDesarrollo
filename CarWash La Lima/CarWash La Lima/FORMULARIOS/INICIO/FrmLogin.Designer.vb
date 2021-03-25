@@ -231,6 +231,7 @@ Partial Class FrmLogin
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmLogin"
         Me.Opacity = 0.9R
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmLogin"
         Me.BarraTitulo.ResumeLayout(False)
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
