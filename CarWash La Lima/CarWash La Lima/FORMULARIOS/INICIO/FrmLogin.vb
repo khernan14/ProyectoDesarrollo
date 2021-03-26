@@ -70,10 +70,12 @@ Public Class FrmLogin
             If txtPassword.Text <> "CONTRASEÑA" Then
                 Dim validarInicio = userModel.Login(txtUsuario.Text, txtPassword.Text)
                 If validarInicio = True Then
+                    Me.Hide()
+                    Dim FrmLoginCargar As New FrmLoginCargar()
+                    FrmLoginCargar.ShowDialog()
                     Dim frm As New FrmPrincipal()
                     frm.Show()
                     AddHandler frm.FormClosed, AddressOf Me.Logout
-                    Me.Hide()
                 Else
                     msgError("Usuario o Contraseña incorrectos.")
                     txtPassword.Text = "CONTRASEÑA"
