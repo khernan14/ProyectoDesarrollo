@@ -23,9 +23,9 @@ Partial Class FrmModelos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.label11 = New System.Windows.Forms.Label()
         Me.label5 = New System.Windows.Forms.Label()
         Me.txtid = New System.Windows.Forms.TextBox()
@@ -47,12 +47,13 @@ Partial Class FrmModelos
         Me.VistaMarcaModeloDataSet1 = New CarWash_La_Lima.VistaMarcaModeloDataSet1()
         Me.ModeloVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ModelosVDataSet1 = New CarWash_La_Lima.ModelosVDataSet1()
-        Me.cmbMarca = New System.Windows.Forms.ComboBox()
+        Me.cmbMarcaID = New System.Windows.Forms.ComboBox()
         Me.MarcasVehiculosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcasDataSet1 = New CarWash_La_Lima.MarcasDataSet1()
         Me.MarcasVehiculosTableAdapter = New CarWash_La_Lima.MarcasDataSet1TableAdapters.MarcasVehiculosTableAdapter()
         Me.ModeloVehiculoTableAdapter = New CarWash_La_Lima.ModelosVDataSet1TableAdapters.ModeloVehiculoTableAdapter()
         Me.VistaMarcaModeloTableAdapter = New CarWash_La_Lima.VistaMarcaModeloDataSet1TableAdapters.VistaMarcaModeloTableAdapter()
+        Me.cmbMarca = New System.Windows.Forms.ComboBox()
         CType(Me.dgModelos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaMarcaModeloBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaMarcaModeloDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,39 +210,39 @@ Partial Class FrmModelos
         Me.dgModelos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgModelos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgModelos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgModelos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgModelos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgModelos.ColumnHeadersHeight = 30
         Me.dgModelos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ModeloIDDataGridViewTextBoxColumn, Me.MarcaDataGridViewTextBoxColumn, Me.ModeloDataGridViewTextBoxColumn, Me.AnioModeloDataGridViewTextBoxColumn})
         Me.dgModelos.DataSource = Me.VistaMarcaModeloBindingSource
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgModelos.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgModelos.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgModelos.EnableHeadersVisualStyles = False
         Me.dgModelos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgModelos.Location = New System.Drawing.Point(57, 57)
         Me.dgModelos.Name = "dgModelos"
         Me.dgModelos.ReadOnly = True
         Me.dgModelos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.PaleVioletRed
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgModelos.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgModelos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgModelos.Size = New System.Drawing.Size(582, 377)
         Me.dgModelos.TabIndex = 189
@@ -294,16 +295,16 @@ Partial Class FrmModelos
         Me.ModelosVDataSet1.DataSetName = "ModelosVDataSet1"
         Me.ModelosVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbMarca
+        'cmbMarcaID
         '
-        Me.cmbMarca.DataSource = Me.MarcasVehiculosBindingSource
-        Me.cmbMarca.DisplayMember = "MarcaID"
-        Me.cmbMarca.FormattingEnabled = True
-        Me.cmbMarca.Location = New System.Drawing.Point(796, 132)
-        Me.cmbMarca.Name = "cmbMarca"
-        Me.cmbMarca.Size = New System.Drawing.Size(244, 21)
-        Me.cmbMarca.TabIndex = 204
-        Me.cmbMarca.ValueMember = "MarcaID"
+        Me.cmbMarcaID.DataSource = Me.MarcasVehiculosBindingSource
+        Me.cmbMarcaID.DisplayMember = "MarcaID"
+        Me.cmbMarcaID.FormattingEnabled = True
+        Me.cmbMarcaID.Location = New System.Drawing.Point(796, 132)
+        Me.cmbMarcaID.Name = "cmbMarcaID"
+        Me.cmbMarcaID.Size = New System.Drawing.Size(49, 21)
+        Me.cmbMarcaID.TabIndex = 204
+        Me.cmbMarcaID.ValueMember = "MarcaID"
         '
         'MarcasVehiculosBindingSource
         '
@@ -327,6 +328,16 @@ Partial Class FrmModelos
         '
         Me.VistaMarcaModeloTableAdapter.ClearBeforeFill = True
         '
+        'cmbMarca
+        '
+        Me.cmbMarca.DataSource = Me.MarcasVehiculosBindingSource
+        Me.cmbMarca.DisplayMember = "Marca"
+        Me.cmbMarca.FormattingEnabled = True
+        Me.cmbMarca.Location = New System.Drawing.Point(796, 132)
+        Me.cmbMarca.Name = "cmbMarca"
+        Me.cmbMarca.Size = New System.Drawing.Size(244, 21)
+        Me.cmbMarca.TabIndex = 205
+        '
         'FrmModelos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -334,6 +345,7 @@ Partial Class FrmModelos
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1092, 450)
         Me.Controls.Add(Me.cmbMarca)
+        Me.Controls.Add(Me.cmbMarcaID)
         Me.Controls.Add(Me.label11)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.txtid)
@@ -374,7 +386,7 @@ Partial Class FrmModelos
     Private WithEvents label1 As Label
     Private WithEvents btnEliminar As Button
     Private WithEvents dgModelos As DataGridView
-    Friend WithEvents cmbMarca As ComboBox
+    Friend WithEvents cmbMarcaID As ComboBox
     Friend WithEvents MarcasDataSet1 As MarcasDataSet1
     Friend WithEvents MarcasVehiculosBindingSource As BindingSource
     Friend WithEvents MarcasVehiculosTableAdapter As MarcasDataSet1TableAdapters.MarcasVehiculosTableAdapter
@@ -388,4 +400,5 @@ Partial Class FrmModelos
     Friend WithEvents MarcaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ModeloDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AnioModeloDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents cmbMarca As ComboBox
 End Class

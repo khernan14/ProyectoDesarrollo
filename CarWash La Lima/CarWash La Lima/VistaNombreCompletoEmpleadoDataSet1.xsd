@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VistaNombreCompletoEmpleadoDataSet1" targetNamespace="http://tempuri.org/VistaNombreCompletoEmpleadoDataSet1.xsd" xmlns:mstns="http://tempuri.org/VistaNombreCompletoEmpleadoDataSet1.xsd" xmlns="http://tempuri.org/VistaNombreCompletoEmpleadoDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CarWashLaLimaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarWashLaLimaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CarWash_La_Lima.My.MySettings.GlobalReference.Default.CarWashLaLimaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaNombreEmpleadoPuestoTableAdapter" GeneratorDataComponentClassName="VistaNombreEmpleadoPuestoTableAdapter" Name="VistaNombreEmpleadoPuesto" UserDataComponentName="VistaNombreEmpleadoPuestoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CarWashLaLimaConnectionString (MySettings)" DbObjectName="CarWashLaLima.dbo.VistaNombreEmpleadoPuesto" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EmpleadoID, NombreCompleto FROM dbo.VistaNombreEmpleadoPuesto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmpleadoID" DataSetColumn="EmpleadoID" />
+              <Mapping SourceColumn="NombreCompleto" DataSetColumn="NombreCompleto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VistaNombreCompletoEmpleadoDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VistaNombreCompletoEmpleadoDataSet1" msprop:Generator_UserDSName="VistaNombreCompletoEmpleadoDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaNombreEmpleadoPuesto" msprop:Generator_TableClassName="VistaNombreEmpleadoPuestoDataTable" msprop:Generator_TableVarName="tableVistaNombreEmpleadoPuesto" msprop:Generator_TablePropName="VistaNombreEmpleadoPuesto" msprop:Generator_RowDeletingName="VistaNombreEmpleadoPuestoRowDeleting" msprop:Generator_RowChangingName="VistaNombreEmpleadoPuestoRowChanging" msprop:Generator_RowEvHandlerName="VistaNombreEmpleadoPuestoRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaNombreEmpleadoPuestoRowDeleted" msprop:Generator_UserTableName="VistaNombreEmpleadoPuesto" msprop:Generator_RowChangedName="VistaNombreEmpleadoPuestoRowChanged" msprop:Generator_RowEvArgName="VistaNombreEmpleadoPuestoRowChangeEvent" msprop:Generator_RowClassName="VistaNombreEmpleadoPuestoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpleadoID" msprop:Generator_ColumnVarNameInTable="columnEmpleadoID" msprop:Generator_ColumnPropNameInRow="EmpleadoID" msprop:Generator_ColumnPropNameInTable="EmpleadoIDColumn" msprop:Generator_UserColumnName="EmpleadoID" type="xs:int" />
+              <xs:element name="NombreCompleto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" msprop:Generator_UserColumnName="NombreCompleto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VistaNombreEmpleadoPuesto" />
+      <xs:field xpath="mstns:EmpleadoID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

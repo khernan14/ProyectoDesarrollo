@@ -2,7 +2,7 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim frm As FrmVehiculo = New FrmVehiculo
 
-        frm.VehiculoTableAdapter.InsertarVehiculo(txtPlaca.Text, Val(cmbModelo.Text), Val(cmbTipoV.Text), Val(cmbColor.Text))
+        frm.VehiculoTableAdapter.InsertarVehiculo(txtPlaca.Text, Val(cmbModeloID.Text), Val(cmbTipoVID.Text), Val(cmbColorID.Text))
         frm.VehiculoTableAdapter.Fill(frm.VehiculosDataSet1.Vehiculo)
         Me.Close()
 
@@ -33,5 +33,47 @@
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
+    End Sub
+
+
+
+    Private Sub cmbModelo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModelo.SelectedIndexChanged
+        For i = 0 To cmbModelo.SelectedIndex
+            For j = 0 To cmbModeloID.SelectedIndex
+                If (cmbModelo.SelectedIndex = i) Then
+                    cmbModeloID.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub cmbMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMarca.SelectedIndexChanged
+        For i = 0 To cmbMarca.SelectedIndex
+            For j = 0 To cmbMarcaID.SelectedIndex
+                If (cmbMarca.SelectedIndex = i) Then
+                    cmbMarcaID.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub cmbColor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbColor.SelectedIndexChanged
+        For i = 0 To cmbColor.SelectedIndex
+            For j = 0 To cmbColorID.SelectedIndex
+                If (cmbColor.SelectedIndex = i) Then
+                    cmbColorID.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Sub cmbTipoV_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbTipoV.SelectedIndexChanged
+        For i = 0 To cmbTipoV.SelectedIndex
+            For j = 0 To cmbTipoVID.SelectedIndex
+                If (cmbTipoV.SelectedIndex = i) Then
+                    cmbTipoVID.SelectedIndex = j
+                End If
+            Next
+        Next
     End Sub
 End Class

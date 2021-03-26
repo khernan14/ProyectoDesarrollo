@@ -28,18 +28,18 @@ Partial Class FrmNuevoVehiculo
         Me.iconCurrentChildForm = New FontAwesome.Sharp.IconPictureBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.cmbTipoV = New System.Windows.Forms.ComboBox()
+        Me.cmbTipoVID = New System.Windows.Forms.ComboBox()
         Me.TipoVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TipoVehiculoDataSet1 = New CarWash_La_Lima.TipoVehiculoDataSet1()
-        Me.cmbColor = New System.Windows.Forms.ComboBox()
+        Me.cmbColorID = New System.Windows.Forms.ComboBox()
         Me.ColorVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ColorDataSet1 = New CarWash_La_Lima.ColorDataSet1()
-        Me.cmbModelo = New System.Windows.Forms.ComboBox()
+        Me.cmbModeloID = New System.Windows.Forms.ComboBox()
         Me.ModeloVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ModeloDataSet1 = New CarWash_La_Lima.ModeloDataSet1()
         Me.ModeloEnCNVBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaModelo1 = New CarWash_La_Lima.VistaModelo1()
-        Me.cmbMarca = New System.Windows.Forms.ComboBox()
+        Me.cmbMarcaID = New System.Windows.Forms.ComboBox()
         Me.MarcasVehiculosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcaDataSet1 = New CarWash_La_Lima.MarcaDataSet1()
         Me.label13 = New System.Windows.Forms.Label()
@@ -56,6 +56,10 @@ Partial Class FrmNuevoVehiculo
         Me.ColorVehiculoTableAdapter = New CarWash_La_Lima.ColorDataSet1TableAdapters.ColorVehiculoTableAdapter()
         Me.TipoVehiculoTableAdapter = New CarWash_La_Lima.TipoVehiculoDataSet1TableAdapters.TipoVehiculoTableAdapter()
         Me.ModeloEnCNVTableAdapter = New CarWash_La_Lima.VistaModelo1TableAdapters.ModeloEnCNVTableAdapter()
+        Me.cmbModelo = New System.Windows.Forms.ComboBox()
+        Me.cmbMarca = New System.Windows.Forms.ComboBox()
+        Me.cmbColor = New System.Windows.Forms.ComboBox()
+        Me.cmbTipoV = New System.Windows.Forms.ComboBox()
         Me.pnlTituleBar.SuspendLayout()
         CType(Me.iconCurrentChildForm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoVehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,17 +137,17 @@ Partial Class FrmNuevoVehiculo
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
-        'cmbTipoV
+        'cmbTipoVID
         '
-        Me.cmbTipoV.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TipoVehiculoBindingSource, "TipoVehiculoID", True))
-        Me.cmbTipoV.DataSource = Me.TipoVehiculoBindingSource
-        Me.cmbTipoV.DisplayMember = "TipoVehiculoID"
-        Me.cmbTipoV.FormattingEnabled = True
-        Me.cmbTipoV.Location = New System.Drawing.Point(585, 242)
-        Me.cmbTipoV.Name = "cmbTipoV"
-        Me.cmbTipoV.Size = New System.Drawing.Size(244, 21)
-        Me.cmbTipoV.TabIndex = 158
-        Me.cmbTipoV.ValueMember = "TipoVehiculoID"
+        Me.cmbTipoVID.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TipoVehiculoBindingSource, "TipoVehiculoID", True))
+        Me.cmbTipoVID.DataSource = Me.TipoVehiculoBindingSource
+        Me.cmbTipoVID.DisplayMember = "TipoVehiculoID"
+        Me.cmbTipoVID.FormattingEnabled = True
+        Me.cmbTipoVID.Location = New System.Drawing.Point(585, 242)
+        Me.cmbTipoVID.Name = "cmbTipoVID"
+        Me.cmbTipoVID.Size = New System.Drawing.Size(50, 21)
+        Me.cmbTipoVID.TabIndex = 158
+        Me.cmbTipoVID.ValueMember = "TipoVehiculoID"
         '
         'TipoVehiculoBindingSource
         '
@@ -155,16 +159,16 @@ Partial Class FrmNuevoVehiculo
         Me.TipoVehiculoDataSet1.DataSetName = "TipoVehiculoDataSet1"
         Me.TipoVehiculoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbColor
+        'cmbColorID
         '
-        Me.cmbColor.DataSource = Me.ColorVehiculoBindingSource
-        Me.cmbColor.DisplayMember = "ColorID"
-        Me.cmbColor.FormattingEnabled = True
-        Me.cmbColor.Location = New System.Drawing.Point(585, 201)
-        Me.cmbColor.Name = "cmbColor"
-        Me.cmbColor.Size = New System.Drawing.Size(244, 21)
-        Me.cmbColor.TabIndex = 157
-        Me.cmbColor.ValueMember = "ColorID"
+        Me.cmbColorID.DataSource = Me.ColorVehiculoBindingSource
+        Me.cmbColorID.DisplayMember = "ColorID"
+        Me.cmbColorID.FormattingEnabled = True
+        Me.cmbColorID.Location = New System.Drawing.Point(585, 201)
+        Me.cmbColorID.Name = "cmbColorID"
+        Me.cmbColorID.Size = New System.Drawing.Size(50, 21)
+        Me.cmbColorID.TabIndex = 157
+        Me.cmbColorID.ValueMember = "ColorID"
         '
         'ColorVehiculoBindingSource
         '
@@ -176,15 +180,15 @@ Partial Class FrmNuevoVehiculo
         Me.ColorDataSet1.DataSetName = "ColorDataSet1"
         Me.ColorDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbModelo
+        'cmbModeloID
         '
-        Me.cmbModelo.DataSource = Me.ModeloVehiculoBindingSource
-        Me.cmbModelo.DisplayMember = "ModeloID"
-        Me.cmbModelo.FormattingEnabled = True
-        Me.cmbModelo.Location = New System.Drawing.Point(172, 203)
-        Me.cmbModelo.Name = "cmbModelo"
-        Me.cmbModelo.Size = New System.Drawing.Size(244, 21)
-        Me.cmbModelo.TabIndex = 155
+        Me.cmbModeloID.DataSource = Me.ModeloVehiculoBindingSource
+        Me.cmbModeloID.DisplayMember = "ModeloID"
+        Me.cmbModeloID.FormattingEnabled = True
+        Me.cmbModeloID.Location = New System.Drawing.Point(172, 203)
+        Me.cmbModeloID.Name = "cmbModeloID"
+        Me.cmbModeloID.Size = New System.Drawing.Size(52, 21)
+        Me.cmbModeloID.TabIndex = 155
         '
         'ModeloVehiculoBindingSource
         '
@@ -206,17 +210,17 @@ Partial Class FrmNuevoVehiculo
         Me.VistaModelo1.DataSetName = "VistaModelo1"
         Me.VistaModelo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbMarca
+        'cmbMarcaID
         '
-        Me.cmbMarca.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MarcasVehiculosBindingSource, "MarcaID", True))
-        Me.cmbMarca.DataSource = Me.MarcasVehiculosBindingSource
-        Me.cmbMarca.DisplayMember = "MarcaID"
-        Me.cmbMarca.FormattingEnabled = True
-        Me.cmbMarca.Location = New System.Drawing.Point(585, 160)
-        Me.cmbMarca.Name = "cmbMarca"
-        Me.cmbMarca.Size = New System.Drawing.Size(244, 21)
-        Me.cmbMarca.TabIndex = 154
-        Me.cmbMarca.ValueMember = "MarcaID"
+        Me.cmbMarcaID.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MarcasVehiculosBindingSource, "MarcaID", True))
+        Me.cmbMarcaID.DataSource = Me.MarcasVehiculosBindingSource
+        Me.cmbMarcaID.DisplayMember = "MarcaID"
+        Me.cmbMarcaID.FormattingEnabled = True
+        Me.cmbMarcaID.Location = New System.Drawing.Point(585, 160)
+        Me.cmbMarcaID.Name = "cmbMarcaID"
+        Me.cmbMarcaID.Size = New System.Drawing.Size(50, 21)
+        Me.cmbMarcaID.TabIndex = 154
+        Me.cmbMarcaID.ValueMember = "MarcaID"
         '
         'MarcasVehiculosBindingSource
         '
@@ -341,17 +345,61 @@ Partial Class FrmNuevoVehiculo
         '
         Me.ModeloEnCNVTableAdapter.ClearBeforeFill = True
         '
+        'cmbModelo
+        '
+        Me.cmbModelo.DataSource = Me.ModeloVehiculoBindingSource
+        Me.cmbModelo.DisplayMember = "Modelo"
+        Me.cmbModelo.FormattingEnabled = True
+        Me.cmbModelo.Location = New System.Drawing.Point(172, 203)
+        Me.cmbModelo.Name = "cmbModelo"
+        Me.cmbModelo.Size = New System.Drawing.Size(244, 21)
+        Me.cmbModelo.TabIndex = 160
+        '
+        'cmbMarca
+        '
+        Me.cmbMarca.DataSource = Me.MarcasVehiculosBindingSource
+        Me.cmbMarca.DisplayMember = "Marca"
+        Me.cmbMarca.FormattingEnabled = True
+        Me.cmbMarca.Location = New System.Drawing.Point(585, 160)
+        Me.cmbMarca.Name = "cmbMarca"
+        Me.cmbMarca.Size = New System.Drawing.Size(244, 21)
+        Me.cmbMarca.TabIndex = 161
+        '
+        'cmbColor
+        '
+        Me.cmbColor.DataSource = Me.ColorVehiculoBindingSource
+        Me.cmbColor.DisplayMember = "DescripcionColor"
+        Me.cmbColor.FormattingEnabled = True
+        Me.cmbColor.Location = New System.Drawing.Point(585, 201)
+        Me.cmbColor.Name = "cmbColor"
+        Me.cmbColor.Size = New System.Drawing.Size(244, 21)
+        Me.cmbColor.TabIndex = 162
+        '
+        'cmbTipoV
+        '
+        Me.cmbTipoV.DataSource = Me.TipoVehiculoBindingSource
+        Me.cmbTipoV.DisplayMember = "Descripcion"
+        Me.cmbTipoV.FormattingEnabled = True
+        Me.cmbTipoV.Location = New System.Drawing.Point(585, 242)
+        Me.cmbTipoV.Name = "cmbTipoV"
+        Me.cmbTipoV.Size = New System.Drawing.Size(244, 21)
+        Me.cmbTipoV.TabIndex = 163
+        '
         'FrmNuevoVehiculo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(870, 457)
-        Me.Controls.Add(Me.txtAnio)
         Me.Controls.Add(Me.cmbTipoV)
         Me.Controls.Add(Me.cmbColor)
-        Me.Controls.Add(Me.cmbModelo)
         Me.Controls.Add(Me.cmbMarca)
+        Me.Controls.Add(Me.cmbModelo)
+        Me.Controls.Add(Me.txtAnio)
+        Me.Controls.Add(Me.cmbTipoVID)
+        Me.Controls.Add(Me.cmbColorID)
+        Me.Controls.Add(Me.cmbModeloID)
+        Me.Controls.Add(Me.cmbMarcaID)
         Me.Controls.Add(Me.label13)
         Me.Controls.Add(Me.label12)
         Me.Controls.Add(Me.label14)
@@ -390,10 +438,10 @@ Partial Class FrmNuevoVehiculo
     Private WithEvents iconCurrentChildForm As FontAwesome.Sharp.IconPictureBox
     Private WithEvents btnGuardar As Button
     Private WithEvents btnCancelar As Button
-    Private WithEvents cmbTipoV As ComboBox
-    Private WithEvents cmbColor As ComboBox
-    Private WithEvents cmbModelo As ComboBox
-    Private WithEvents cmbMarca As ComboBox
+    Private WithEvents cmbTipoVID As ComboBox
+    Private WithEvents cmbColorID As ComboBox
+    Private WithEvents cmbModeloID As ComboBox
+    Private WithEvents cmbMarcaID As ComboBox
     Private WithEvents label13 As Label
     Private WithEvents label12 As Label
     Private WithEvents label14 As Label
@@ -418,4 +466,8 @@ Partial Class FrmNuevoVehiculo
     Friend WithEvents VistaModelo1 As VistaModelo1
     Friend WithEvents ModeloEnCNVBindingSource As BindingSource
     Friend WithEvents ModeloEnCNVTableAdapter As VistaModelo1TableAdapters.ModeloEnCNVTableAdapter
+    Private WithEvents cmbModelo As ComboBox
+    Private WithEvents cmbMarca As ComboBox
+    Private WithEvents cmbColor As ComboBox
+    Private WithEvents cmbTipoV As ComboBox
 End Class

@@ -414,6 +414,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VistaNombreCompletoEmpleadoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmClientes.resx">
@@ -909,6 +914,17 @@
     </None>
     <None Include="CONEXIONES DATASET%27S\VistaEncargadosServicioDataSet1.xss">
       <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VistaNombreCompletoEmpleadoDataSet1.xsc">
+      <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VistaNombreCompletoEmpleadoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaNombreCompletoEmpleadoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VistaNombreCompletoEmpleadoDataSet1.xss">
+      <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

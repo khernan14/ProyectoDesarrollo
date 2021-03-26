@@ -24,7 +24,7 @@
             frm.txtnombre.Text = dgEmpleados.CurrentRow.Cells(1).Value.ToString()
             frm.txtapellido.Text = dgEmpleados.CurrentRow.Cells(2).Value.ToString()
             frm.txttelefono.Text = dgEmpleados.CurrentRow.Cells(3).Value.ToString()
-            frm.cmbPuesto.Text = dgEmpleados.CurrentRow.Cells(4).Value.ToString()
+            frm.cmbPuestoID.Text = dgEmpleados.CurrentRow.Cells(4).Value.ToString()
             frm.ShowDialog()
         Else
             MessageBox.Show("Por favor, Seleccione una fila", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)

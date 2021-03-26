@@ -2,7 +2,7 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         Dim frm As New FrmEmpleado
-        frm.EmpleadoTableAdapter.ActualizarEmpleado(txtnombre.Text, txtapellido.Text, Val(txttelefono.Text), Val(cmbPuesto.Text), Val(txtid.Text))
+        frm.EmpleadoTableAdapter.ActualizarEmpleado(txtnombre.Text, txtapellido.Text, Val(txttelefono.Text), Val(cmbPuestoID.Text), Val(txtid.Text))
         frm.EmpleadoTableAdapter.Fill(frm.EmpleadosDataSet1.Empleado)
         Me.Close()
 
@@ -54,7 +54,7 @@
         End If
     End Sub
 
-    Private Sub cmbPuesto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbPuesto.KeyPress
+    Private Sub cmbPuesto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbPuestoID.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -66,4 +66,13 @@
         End If
     End Sub
 
+    Private Sub cmbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPuesto.SelectedIndexChanged
+        For i = 0 To cmbPuesto.SelectedIndex
+            For j = 0 To cmbPuestoID.SelectedIndex
+                If (cmbPuesto.SelectedIndex = i) Then
+                    cmbPuestoID.SelectedIndex = j
+                End If
+            Next
+        Next
+    End Sub
 End Class

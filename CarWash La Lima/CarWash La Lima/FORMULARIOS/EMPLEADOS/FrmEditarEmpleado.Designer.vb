@@ -23,9 +23,12 @@ Partial Class FrmEditarEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.cmbPuesto = New System.Windows.Forms.ComboBox()
+        Me.cmbPuestoID = New System.Windows.Forms.ComboBox()
+        Me.PuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Puesto2DataSet1 = New CarWash_La_Lima.Puesto2DataSet1()
         Me.pnlTituleBar = New System.Windows.Forms.Panel()
         Me.lblTitleChildForm = New System.Windows.Forms.Label()
+        Me.iconCurrentChildForm = New FontAwesome.Sharp.IconPictureBox()
         Me.label11 = New System.Windows.Forms.Label()
         Me.label5 = New System.Windows.Forms.Label()
         Me.txtid = New System.Windows.Forms.TextBox()
@@ -38,30 +41,38 @@ Partial Class FrmEditarEmpleado
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.txtapellido = New System.Windows.Forms.TextBox()
         Me.txtnombre = New System.Windows.Forms.TextBox()
-        Me.iconCurrentChildForm = New FontAwesome.Sharp.IconPictureBox()
         Me.PuestoDataSet1 = New CarWash_La_Lima.PuestoDataSet1()
         Me.PuestoDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Puesto2DataSet1 = New CarWash_La_Lima.Puesto2DataSet1()
-        Me.PuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PuestoTableAdapter = New CarWash_La_Lima.Puesto2DataSet1TableAdapters.PuestoTableAdapter()
+        Me.cmbPuesto = New System.Windows.Forms.ComboBox()
+        CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Puesto2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTituleBar.SuspendLayout()
         CType(Me.iconCurrentChildForm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PuestoDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PuestoDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Puesto2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'cmbPuesto
+        'cmbPuestoID
         '
-        Me.cmbPuesto.DataSource = Me.PuestoBindingSource
-        Me.cmbPuesto.DisplayMember = "PuestoID"
-        Me.cmbPuesto.FormattingEnabled = True
-        Me.cmbPuesto.Location = New System.Drawing.Point(318, 319)
-        Me.cmbPuesto.Name = "cmbPuesto"
-        Me.cmbPuesto.Size = New System.Drawing.Size(244, 21)
-        Me.cmbPuesto.TabIndex = 158
-        Me.cmbPuesto.ValueMember = "DescripcionPuesto"
+        Me.cmbPuestoID.DataSource = Me.PuestoBindingSource
+        Me.cmbPuestoID.DisplayMember = "PuestoID"
+        Me.cmbPuestoID.FormattingEnabled = True
+        Me.cmbPuestoID.Location = New System.Drawing.Point(318, 319)
+        Me.cmbPuestoID.Name = "cmbPuestoID"
+        Me.cmbPuestoID.Size = New System.Drawing.Size(46, 21)
+        Me.cmbPuestoID.TabIndex = 158
+        Me.cmbPuestoID.ValueMember = "DescripcionPuesto"
+        '
+        'PuestoBindingSource
+        '
+        Me.PuestoBindingSource.DataMember = "Puesto"
+        Me.PuestoBindingSource.DataSource = Me.Puesto2DataSet1
+        '
+        'Puesto2DataSet1
+        '
+        Me.Puesto2DataSet1.DataSetName = "Puesto2DataSet1"
+        Me.Puesto2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'pnlTituleBar
         '
@@ -84,6 +95,19 @@ Partial Class FrmEditarEmpleado
         Me.lblTitleChildForm.Size = New System.Drawing.Size(141, 18)
         Me.lblTitleChildForm.TabIndex = 1
         Me.lblTitleChildForm.Text = "EDITAR EMPLEADO"
+        '
+        'iconCurrentChildForm
+        '
+        Me.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumPurple
+        Me.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.IdCard
+        Me.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple
+        Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.iconCurrentChildForm.Location = New System.Drawing.Point(36, 19)
+        Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
+        Me.iconCurrentChildForm.Size = New System.Drawing.Size(32, 32)
+        Me.iconCurrentChildForm.TabIndex = 0
+        Me.iconCurrentChildForm.TabStop = False
         '
         'label11
         '
@@ -212,19 +236,6 @@ Partial Class FrmEditarEmpleado
         Me.txtnombre.Size = New System.Drawing.Size(244, 23)
         Me.txtnombre.TabIndex = 145
         '
-        'iconCurrentChildForm
-        '
-        Me.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumPurple
-        Me.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.IdCard
-        Me.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple
-        Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.iconCurrentChildForm.Location = New System.Drawing.Point(36, 19)
-        Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
-        Me.iconCurrentChildForm.Size = New System.Drawing.Size(32, 32)
-        Me.iconCurrentChildForm.TabIndex = 0
-        Me.iconCurrentChildForm.TabStop = False
-        '
         'PuestoDataSet1
         '
         Me.PuestoDataSet1.DataSetName = "PuestoDataSet1"
@@ -235,19 +246,19 @@ Partial Class FrmEditarEmpleado
         Me.PuestoDataSet1BindingSource.DataSource = Me.PuestoDataSet1
         Me.PuestoDataSet1BindingSource.Position = 0
         '
-        'Puesto2DataSet1
-        '
-        Me.Puesto2DataSet1.DataSetName = "Puesto2DataSet1"
-        Me.Puesto2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PuestoBindingSource
-        '
-        Me.PuestoBindingSource.DataMember = "Puesto"
-        Me.PuestoBindingSource.DataSource = Me.Puesto2DataSet1
-        '
         'PuestoTableAdapter
         '
         Me.PuestoTableAdapter.ClearBeforeFill = True
+        '
+        'cmbPuesto
+        '
+        Me.cmbPuesto.DataSource = Me.PuestoBindingSource
+        Me.cmbPuesto.DisplayMember = "DescripcionPuesto"
+        Me.cmbPuesto.FormattingEnabled = True
+        Me.cmbPuesto.Location = New System.Drawing.Point(318, 319)
+        Me.cmbPuesto.Name = "cmbPuesto"
+        Me.cmbPuesto.Size = New System.Drawing.Size(244, 21)
+        Me.cmbPuesto.TabIndex = 174
         '
         'FrmEditarEmpleado
         '
@@ -256,6 +267,7 @@ Partial Class FrmEditarEmpleado
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(870, 457)
         Me.Controls.Add(Me.cmbPuesto)
+        Me.Controls.Add(Me.cmbPuestoID)
         Me.Controls.Add(Me.pnlTituleBar)
         Me.Controls.Add(Me.label11)
         Me.Controls.Add(Me.label5)
@@ -273,19 +285,19 @@ Partial Class FrmEditarEmpleado
         Me.Name = "FrmEditarEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmEditarEmpleado"
+        CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Puesto2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTituleBar.ResumeLayout(False)
         Me.pnlTituleBar.PerformLayout()
         CType(Me.iconCurrentChildForm, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PuestoDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PuestoDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Puesto2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents cmbPuesto As ComboBox
+    Friend WithEvents cmbPuestoID As ComboBox
     Private WithEvents pnlTituleBar As Panel
     Private WithEvents lblTitleChildForm As Label
     Private WithEvents iconCurrentChildForm As FontAwesome.Sharp.IconPictureBox
@@ -306,4 +318,5 @@ Partial Class FrmEditarEmpleado
     Friend WithEvents Puesto2DataSet1 As Puesto2DataSet1
     Friend WithEvents PuestoBindingSource As BindingSource
     Friend WithEvents PuestoTableAdapter As Puesto2DataSet1TableAdapters.PuestoTableAdapter
+    Friend WithEvents cmbPuesto As ComboBox
 End Class

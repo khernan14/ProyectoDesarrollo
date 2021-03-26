@@ -10,10 +10,10 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If (txtModelo.Text = "" Or txtAnio.Text = "" Or cmbMarca.Text = "") Then
+        If (txtModelo.Text = "" Or txtAnio.Text = "" Or cmbMarcaID.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Me.ModeloVehiculoTableAdapter.InsertarModelo(Val(cmbMarca.Text), txtModelo.Text, Val(txtAnio.Text))
+            Me.ModeloVehiculoTableAdapter.InsertarModelo(Val(cmbMarcaID.Text), txtModelo.Text, Val(txtAnio.Text))
             Me.VistaMarcaModeloTableAdapter.Fill(Me.VistaMarcaModeloDataSet1.VistaMarcaModelo)
             limpiar()
         End If
@@ -21,10 +21,10 @@
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        If (txtModelo.Text = "" Or txtAnio.Text = "" Or cmbMarca.Text = "") Then
+        If (txtModelo.Text = "" Or txtAnio.Text = "" Or cmbMarcaID.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Me.ModeloVehiculoTableAdapter.ActualizarModelo(Val(cmbMarca.Text), txtModelo.Text, Val(txtAnio.Text), Val(txtid.Text))
+            Me.ModeloVehiculoTableAdapter.ActualizarModelo(Val(cmbMarcaID.Text), txtModelo.Text, Val(txtAnio.Text), Val(txtid.Text))
             Me.VistaMarcaModeloTableAdapter.Fill(Me.VistaMarcaModeloDataSet1.VistaMarcaModelo)
             btnGuardar.Enabled = True
             limpiar()
@@ -47,7 +47,7 @@
 
     Private Sub dgModelos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgModelos.CellDoubleClick
         Me.txtid.Text = dgModelos.CurrentRow.Cells(0).Value.ToString()
-        Me.cmbMarca.Text = dgModelos.CurrentRow.Cells(1).Value.ToString()
+        Me.cmbMarcaID.Text = dgModelos.CurrentRow.Cells(1).Value.ToString()
         Me.txtModelo.Text = dgModelos.CurrentRow.Cells(2).Value.ToString()
         Me.txtAnio.Text = dgModelos.CurrentRow.Cells(3).Value.ToString()
         btnGuardar.Enabled = False
@@ -60,7 +60,7 @@
         txtAnio.Clear()
     End Sub
 
-    Private Sub cmbMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMarca.SelectedIndexChanged
+    Private Sub cmbMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMarcaID.SelectedIndexChanged
 
     End Sub
 
@@ -75,5 +75,15 @@
             e.Handled = True
             MessageBox.Show("Por favor, este campo solo acepta numeros", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub cmbMarca_SelectedIndexChanged_1(sender As Object, e As EventArgs) Handles cmbMarca.SelectedIndexChanged
+        For i = 0 To cmbMarca.SelectedIndex
+            For j = 0 To cmbMarcaID.SelectedIndex
+                If (cmbMarca.SelectedIndex = i) Then
+                    cmbMarcaID.SelectedIndex = j
+                End If
+            Next
+        Next
     End Sub
 End Class

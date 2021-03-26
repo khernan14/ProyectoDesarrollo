@@ -1,5 +1,9 @@
 ﻿Public Class FrmUsuarios
     Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'VistaNombreCompletoEmpleadoDataSet1.VistaNombreEmpleadoPuesto' Puede moverla o quitarla según sea necesario.
+        Me.VistaNombreEmpleadoPuestoTableAdapter.Fill(Me.VistaNombreCompletoEmpleadoDataSet1.VistaNombreEmpleadoPuesto)
+        'TODO: esta línea de código carga datos en la tabla 'VistaNombreCompletoEmpleadoDataSet1.VistaNombreEmpleadoPuesto' Puede moverla o quitarla según sea necesario.
+        Me.VistaNombreEmpleadoPuestoTableAdapter.Fill(Me.VistaNombreCompletoEmpleadoDataSet1.VistaNombreEmpleadoPuesto)
         'TODO: esta línea de código carga datos en la tabla 'VistaUsuariosDataSet1.VistaUsuarios' Puede moverla o quitarla según sea necesario.
         Me.VistaUsuariosTableAdapter.Fill(Me.VistaUsuariosDataSet1.VistaUsuarios)
         'TODO: esta línea de código carga datos en la tabla 'EmpleadosEUDataSet1.Empleado' Puede moverla o quitarla según sea necesario.
@@ -10,21 +14,21 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If (cmbEmpleado.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
+        If (cmbEmpleadoID.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             DateTime1 = New DateTimePicker()
-            Me.UsuarioTableAdapter.InsertarUsuario(Val(cmbEmpleado.Text), txtUsuario.Text, txtContrasenia.Text, txtEstado.Text, DateTime1.Value)
+            Me.UsuarioTableAdapter.InsertarUsuario(Val(cmbEmpleadoID.Text), txtUsuario.Text, txtContrasenia.Text, txtEstado.Text, DateTime1.Value)
             Me.VistaUsuariosTableAdapter.Fill(VistaUsuariosDataSet1.VistaUsuarios)
             limpiar()
         End If
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        If (cmbEmpleado.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
+        If (cmbEmpleadoID.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Me.UsuarioTableAdapter.ActualizarUsuarios(Val(cmbEmpleado.Text), txtUsuario.Text, txtContrasenia.Text, txtEstado.Text, DateTime1.Value, Val(txtid.Text))
+            Me.UsuarioTableAdapter.ActualizarUsuarios(Val(cmbEmpleadoID.Text), txtUsuario.Text, txtContrasenia.Text, txtEstado.Text, DateTime1.Value, Val(txtid.Text))
             Me.VistaUsuariosTableAdapter.Fill(Me.VistaUsuariosDataSet1.VistaUsuarios)
             btnGuardar.Enabled = True
             limpiar()
@@ -47,7 +51,7 @@
 
     Private Sub dgUsuarios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgUsuarios.CellDoubleClick
         Me.txtid.Text = dgUsuarios.CurrentRow.Cells(0).Value.ToString()
-        Me.cmbEmpleado.Text = dgUsuarios.CurrentRow.Cells(1).Value.ToString()
+        Me.cmbEmpleadoID.Text = dgUsuarios.CurrentRow.Cells(1).Value.ToString()
         Me.txtUsuario.Text = dgUsuarios.CurrentRow.Cells(2).Value.ToString()
         Me.txtContrasenia.Text = dgUsuarios.CurrentRow.Cells(3).Value.ToString()
         Me.txtEstado.Text = dgUsuarios.CurrentRow.Cells(4).Value.ToString()
@@ -61,7 +65,7 @@
         txtEstado.Clear()
     End Sub
 
-    Private Sub cmbEmpleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbEmpleado.KeyPress
+    Private Sub cmbEmpleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbEmpleadoID.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -71,5 +75,15 @@
         Else
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub cmbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEmpleado.SelectedIndexChanged
+        For i = 0 To cmbEmpleado.SelectedIndex
+            For j = 0 To cmbEmpleadoID.SelectedIndex
+                If (cmbEmpleado.SelectedIndex = i) Then
+                    cmbEmpleadoID.SelectedIndex = j
+                End If
+            Next
+        Next
     End Sub
 End Class
