@@ -226,12 +226,6 @@
     <Compile Include="FORMULARIOS\FrmFacturas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmLoginCargar.Designer.vb">
-      <DependentUpon>FrmLoginCargar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FORMULARIOS\FrmLoginCargar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmColores.Designer.vb">
       <DependentUpon>FrmColores.vb</DependentUpon>
     </Compile>
@@ -450,9 +444,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FrmFacturas.resx">
       <DependentUpon>FrmFacturas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmLoginCargar.resx">
-      <DependentUpon>FrmLoginCargar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmColores.resx">
       <DependentUpon>FrmColores.vb</DependentUpon>
