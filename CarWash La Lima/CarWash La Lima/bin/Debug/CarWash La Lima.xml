@@ -27,6 +27,11 @@ CarWash La Lima
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:CarWash_La_Lima.My.Resources.Resources.CARWASH">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:CarWash_La_Lima.My.Resources.Resources.Close">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

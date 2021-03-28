@@ -199,6 +199,9 @@ Public Class FrmPrincipal
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         If MessageBox.Show("¿Desea cerrar sesion?", "Advertencia", MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Me.Hide()
+            Dim frm2 As New FrmLogout()
+            frm2.ShowDialog()
             Me.Close()
         End If
     End Sub

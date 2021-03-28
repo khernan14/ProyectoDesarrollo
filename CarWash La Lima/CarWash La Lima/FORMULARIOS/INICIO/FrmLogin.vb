@@ -71,8 +71,8 @@ Public Class FrmLogin
                 Dim validarInicio = userModel.Login(txtUsuario.Text, txtPassword.Text)
                 If validarInicio = True Then
                     Me.Hide()
-                    Dim FrmLoginCargar As New FrmLoginCargar()
-                    FrmLoginCargar.ShowDialog()
+                    Dim frm2 As New FrmWelcome()
+                    frm2.ShowDialog()
                     Dim frm As New FrmPrincipal()
                     frm.Show()
                     AddHandler frm.FormClosed, AddressOf Me.Logout

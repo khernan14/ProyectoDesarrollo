@@ -220,10 +220,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TipoVehiculoDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmFacturas.Designer.vb">
+    <Compile Include="FORMULARIOS\INICIO\FrmLogout.Designer.vb">
+      <DependentUpon>FrmLogout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmLogout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmWelcome.Designer.vb">
+      <DependentUpon>FrmWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturas.Designer.vb">
       <DependentUpon>FrmFacturas.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmFacturas.vb">
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmColores.Designer.vb">
@@ -420,7 +432,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="VistaNombreCompletoEmpleadoDataSet1.Designer.vb">
+    <Compile Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
@@ -442,7 +454,13 @@
     <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmNuevoEmpleado.resx">
       <DependentUpon>FrmNuevoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmFacturas.resx">
+    <EmbeddedResource Include="FORMULARIOS\INICIO\FrmLogout.resx">
+      <DependentUpon>FrmLogout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\INICIO\FrmWelcome.resx">
+      <DependentUpon>FrmWelcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmFacturas.resx">
       <DependentUpon>FrmFacturas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmColores.resx">
@@ -921,15 +939,15 @@
     <None Include="CONEXIONES DATASET%27S\VistaEncargadosServicioDataSet1.xss">
       <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="VistaNombreCompletoEmpleadoDataSet1.xsc">
+    <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xsc">
       <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="VistaNombreCompletoEmpleadoDataSet1.xsd">
+    <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>VistaNombreCompletoEmpleadoDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="VistaNombreCompletoEmpleadoDataSet1.xss">
+    <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xss">
       <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
@@ -973,6 +991,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARWASH1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
