@@ -6,7 +6,7 @@ Public Class FrmPrincipal
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultar()
-        lblName.Text = ActiveUser.NombreEmpleado + ", " + ActiveUser.ApellidoEmpleado
+        lblName.Text = ActiveUser.ApellidoEmpleado + ", " + ActiveUser.NombreEmpleado
         lblUsers.Text = ActiveUser.Usuario
         lblCargo.Text = ActiveUser.Puesto
         Me.WindowState = FormWindowState.Maximized

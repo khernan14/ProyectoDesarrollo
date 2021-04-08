@@ -41,6 +41,8 @@ Partial Class FrmFacturar
         Me.ServicioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ServiciosDataSet1 = New CarWash_La_Lima.ServiciosDataSet1()
         Me.cmbEncargadoServicio = New System.Windows.Forms.ComboBox()
+        Me.VistaNoRepeatDatosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaEncargadosServicioDataSet11 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EncargadoServicioDataSet1 = New CarWash_La_Lima.EncargadoServicioDataSet1()
         Me.PagoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -77,15 +79,12 @@ Partial Class FrmFacturar
         Me.cmbIDPago = New System.Windows.Forms.ComboBox()
         Me.cmbIDUser = New System.Windows.Forms.ComboBox()
         Me.cmbID = New System.Windows.Forms.ComboBox()
+        Me.FacturaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IDFacturaDataSet1 = New CarWash_La_Lima.IDFacturaDataSet1()
         Me.FacturaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        'Me.FacturaIDDataSet1 = New CarWash_La_Lima.FacturaIDDataSet1()
         Me.VistaEmpleadosPuestosDataSet1 = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1()
         Me.VistaEncargadosServicioDataSet1 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
-        Me.VistaEncargadosServicioDataSet11 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
-        Me.VistaNoRepeatDatosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaNoRepeatDatosTableAdapter = New CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.VistaNoRepeatDatosTableAdapter()
-        Me.IDFacturaDataSet1 = New CarWash_La_Lima.IDFacturaDataSet1()
-        Me.FacturaBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.FacturaTableAdapter = New CarWash_La_Lima.IDFacturaDataSet1TableAdapters.FacturaTableAdapter()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +92,8 @@ Partial Class FrmFacturar
         CType(Me.PlacaVDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ServiciosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaNoRepeatDatosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaEncargadosServicioDataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EncargadoServicioDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PagoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,14 +102,11 @@ Partial Class FrmFacturar
         CType(Me.UsuarioDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuarioFacturaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IDFacturaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        'CType(Me.FacturaIDDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEncargadosServicioDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaEncargadosServicioDataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaNoRepeatDatosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IDFacturaDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturaBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitleChildForm
@@ -273,6 +271,16 @@ Partial Class FrmFacturar
         Me.cmbEncargadoServicio.Name = "cmbEncargadoServicio"
         Me.cmbEncargadoServicio.Size = New System.Drawing.Size(244, 21)
         Me.cmbEncargadoServicio.TabIndex = 134
+        '
+        'VistaNoRepeatDatosBindingSource
+        '
+        Me.VistaNoRepeatDatosBindingSource.DataMember = "VistaNoRepeatDatos"
+        Me.VistaNoRepeatDatosBindingSource.DataSource = Me.VistaEncargadosServicioDataSet11
+        '
+        'VistaEncargadosServicioDataSet11
+        '
+        Me.VistaEncargadosServicioDataSet11.DataSetName = "VistaEncargadosServicioDataSet1"
+        Me.VistaEncargadosServicioDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EmpleadoBindingSource
         '
@@ -557,15 +565,19 @@ Partial Class FrmFacturar
         Me.cmbID.TabIndex = 156
         Me.cmbID.Visible = False
         '
+        'FacturaBindingSource1
+        '
+        Me.FacturaBindingSource1.DataMember = "Factura"
+        Me.FacturaBindingSource1.DataSource = Me.IDFacturaDataSet1
+        '
+        'IDFacturaDataSet1
+        '
+        Me.IDFacturaDataSet1.DataSetName = "IDFacturaDataSet1"
+        Me.IDFacturaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FacturaBindingSource
         '
         Me.FacturaBindingSource.DataMember = "Factura"
-        'Me.FacturaBindingSource.DataSource = Me.FacturaIDDataSet1
-        '
-        'FacturaIDDataSet1
-        '
-        'Me.FacturaIDDataSet1.DataSetName = "FacturaIDDataSet1"
-        'Me.FacturaIDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VistaEmpleadosPuestosDataSet1
         '
@@ -577,29 +589,9 @@ Partial Class FrmFacturar
         Me.VistaEncargadosServicioDataSet1.DataSetName = "VistaEncargadosServicioDataSet1"
         Me.VistaEncargadosServicioDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'VistaEncargadosServicioDataSet11
-        '
-        Me.VistaEncargadosServicioDataSet11.DataSetName = "VistaEncargadosServicioDataSet1"
-        Me.VistaEncargadosServicioDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaNoRepeatDatosBindingSource
-        '
-        Me.VistaNoRepeatDatosBindingSource.DataMember = "VistaNoRepeatDatos"
-        Me.VistaNoRepeatDatosBindingSource.DataSource = Me.VistaEncargadosServicioDataSet11
-        '
         'VistaNoRepeatDatosTableAdapter
         '
         Me.VistaNoRepeatDatosTableAdapter.ClearBeforeFill = True
-        '
-        'IDFacturaDataSet1
-        '
-        Me.IDFacturaDataSet1.DataSetName = "IDFacturaDataSet1"
-        Me.IDFacturaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FacturaBindingSource1
-        '
-        Me.FacturaBindingSource1.DataMember = "Factura"
-        Me.FacturaBindingSource1.DataSource = Me.IDFacturaDataSet1
         '
         'FacturaTableAdapter
         '
@@ -653,6 +645,8 @@ Partial Class FrmFacturar
         CType(Me.PlacaVDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ServiciosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaNoRepeatDatosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaEncargadosServicioDataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EncargadoServicioDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PagoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -661,14 +655,11 @@ Partial Class FrmFacturar
         CType(Me.UsuarioDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuarioFacturaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IDFacturaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        'CType(Me.FacturaIDDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaEncargadosServicioDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaEncargadosServicioDataSet11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaNoRepeatDatosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IDFacturaDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturaBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

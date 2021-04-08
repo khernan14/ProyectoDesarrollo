@@ -2,7 +2,7 @@
 
 Public Class FrmWelcome
     Private Sub FrmWelcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblName.Text = ActiveUser.NombreEmpleado & ", " & ActiveUser.ApellidoEmpleado 'Mostramos los datos del usuario'
+        lblName.Text = ActiveUser.NombreEmpleado & " " & ActiveUser.ApellidoEmpleado 'Mostramos los datos del usuario'
         circularBar.Value = 0
         Me.Opacity = 0 'Iniciamos la opacidad en 0'
         timer1.Start() 'Iniciamos el temporizador 1'
