@@ -1,4 +1,8 @@
-﻿Public Class CLIENTES
+﻿Imports System.Data.SqlClient
+
+Public Class CLIENTES
+
+    Dim obj As New Buscar
 
     Private Sub CLIENTES_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'ClientesDataSet1.Clientes' Puede moverla o quitarla según sea necesario.
@@ -50,5 +54,9 @@
             MessageBox.Show("Por favor, Seleccione una fila", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        obj.consultaCliente(txtBuscar.Text, txtBuscar.Text, dgClientes)
     End Sub
 End Class

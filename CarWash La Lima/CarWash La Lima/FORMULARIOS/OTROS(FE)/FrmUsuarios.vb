@@ -1,4 +1,9 @@
-﻿Public Class FrmUsuarios
+﻿
+Imports System.Data.SqlClient
+Public Class FrmUsuarios
+
+    Dim obj As New Buscar
+
     Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'VistaNombreCompletoEmpleadoDataSet1.VistaNombreEmpleadoPuesto' Puede moverla o quitarla según sea necesario.
         Me.VistaNombreEmpleadoPuestoTableAdapter.Fill(Me.VistaNombreCompletoEmpleadoDataSet1.VistaNombreEmpleadoPuesto)
@@ -85,5 +90,9 @@
                 End If
             Next
         Next
+    End Sub
+
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        obj.consultaUsuario(txtBuscar.Text, dgUsuarios)
     End Sub
 End Class

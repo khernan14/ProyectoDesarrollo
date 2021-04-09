@@ -44,6 +44,8 @@ Partial Class FrmEmpleado
         Me.EmpleadosDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New CarWash_La_Lima.EmpleadosDataSet1TableAdapters.EmpleadoTableAdapter()
         Me.VistaEmpleadosPuestosTableAdapter = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1TableAdapters.VistaEmpleadosPuestosTableAdapter()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEmpleadosPuestosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +60,7 @@ Partial Class FrmEmpleado
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.White
-        Me.label1.Location = New System.Drawing.Point(28, 20)
+        Me.label1.Location = New System.Drawing.Point(24, 93)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(209, 20)
         Me.label1.TabIndex = 25
@@ -77,7 +79,7 @@ Partial Class FrmEmpleado
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.Color.Silver
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(742, 76)
+        Me.btnNuevo.Location = New System.Drawing.Point(738, 149)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(100, 30)
         Me.btnNuevo.TabIndex = 24
@@ -98,7 +100,7 @@ Partial Class FrmEmpleado
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(742, 148)
+        Me.btnEliminar.Location = New System.Drawing.Point(738, 221)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(100, 30)
         Me.btnEliminar.TabIndex = 23
@@ -119,7 +121,7 @@ Partial Class FrmEmpleado
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.Silver
         Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditar.Location = New System.Drawing.Point(742, 112)
+        Me.btnEditar.Location = New System.Drawing.Point(738, 185)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(100, 30)
         Me.btnEditar.TabIndex = 22
@@ -156,7 +158,7 @@ Partial Class FrmEmpleado
         Me.dgEmpleados.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgEmpleados.EnableHeadersVisualStyles = False
         Me.dgEmpleados.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.dgEmpleados.Location = New System.Drawing.Point(32, 60)
+        Me.dgEmpleados.Location = New System.Drawing.Point(28, 133)
         Me.dgEmpleados.Name = "dgEmpleados"
         Me.dgEmpleados.ReadOnly = True
         Me.dgEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -245,17 +247,40 @@ Partial Class FrmEmpleado
         '
         Me.VistaEmpleadosPuestosTableAdapter.ClearBeforeFill = True
         '
+        'IconButton1
+        '
+        Me.IconButton1.FlatAppearance.BorderSize = 0
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.IconButton1.IconColor = System.Drawing.Color.DimGray
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 20
+        Me.IconButton1.Location = New System.Drawing.Point(442, 91)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(38, 23)
+        Me.IconButton1.TabIndex = 27
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(480, 93)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(218, 20)
+        Me.txtBuscar.TabIndex = 26
+        '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(870, 457)
+        Me.ClientSize = New System.Drawing.Size(870, 510)
+        Me.Controls.Add(Me.IconButton1)
+        Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.dgEmpleados)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "EMPLEADOS"
@@ -289,4 +314,6 @@ Partial Class FrmEmpleado
     Friend WithEvents ApellidoEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionPuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtBuscar As TextBox
 End Class

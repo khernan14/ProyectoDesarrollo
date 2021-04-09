@@ -1,5 +1,9 @@
-﻿Public Class FrmEmpleado
+﻿
+Imports System.Data.SqlClient
 
+Public Class FrmEmpleado
+
+    Dim obj As New Buscar
     Private Sub FrmEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'VistaEmpleadosPuestosDataSet1.VistaEmpleadosPuestos' Puede moverla o quitarla según sea necesario.
         Me.VistaEmpleadosPuestosTableAdapter.Fill(Me.VistaEmpleadosPuestosDataSet1.VistaEmpleadosPuestos)
@@ -24,7 +28,6 @@
             frm.txtnombre.Text = dgEmpleados.CurrentRow.Cells(1).Value.ToString()
             frm.txtapellido.Text = dgEmpleados.CurrentRow.Cells(2).Value.ToString()
             frm.txttelefono.Text = dgEmpleados.CurrentRow.Cells(3).Value.ToString()
-            frm.cmbPuestoID.Text = dgEmpleados.CurrentRow.Cells(4).Value.ToString()
             frm.ShowDialog()
         Else
             MessageBox.Show("Por favor, Seleccione una fila", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -46,4 +49,7 @@
         End If
     End Sub
 
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        obj.consultaEmpleado(txtBuscar.Text, txtBuscar.Text, dgEmpleados)
+    End Sub
 End Class
