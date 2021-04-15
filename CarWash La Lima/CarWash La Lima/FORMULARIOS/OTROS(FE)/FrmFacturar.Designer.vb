@@ -31,7 +31,6 @@ Partial Class FrmFacturar
         Me.label1 = New System.Windows.Forms.Label()
         Me.label2 = New System.Windows.Forms.Label()
         Me.txtFactura = New System.Windows.Forms.TextBox()
-        Me.cmbCliente = New System.Windows.Forms.ComboBox()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClienteDataSet1 = New CarWash_La_Lima.ClienteDataSet1()
         Me.cmbVehiculo = New System.Windows.Forms.ComboBox()
@@ -73,7 +72,6 @@ Partial Class FrmFacturar
         Me.UsuarioTableAdapter1 = New CarWash_La_Lima.UsuarioDataSet1TableAdapters.UsuarioTableAdapter()
         Me.cmbPrecio = New System.Windows.Forms.ComboBox()
         Me.btnCalcular = New System.Windows.Forms.Button()
-        Me.cmbIDCliente = New System.Windows.Forms.ComboBox()
         Me.cmbIDServicio = New System.Windows.Forms.ComboBox()
         Me.cmbIDEncargado = New System.Windows.Forms.ComboBox()
         Me.cmbIDPago = New System.Windows.Forms.ComboBox()
@@ -86,6 +84,9 @@ Partial Class FrmFacturar
         Me.VistaEncargadosServicioDataSet1 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
         Me.VistaNoRepeatDatosTableAdapter = New CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.VistaNoRepeatDatosTableAdapter()
         Me.FacturaTableAdapter = New CarWash_La_Lima.IDFacturaDataSet1TableAdapters.FacturaTableAdapter()
+        Me.txtCliente = New System.Windows.Forms.TextBox()
+        Me.btnBuscarCliente = New System.Windows.Forms.Button()
+        Me.txtIDCliente = New System.Windows.Forms.TextBox()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,16 +202,6 @@ Partial Class FrmFacturar
         Me.txtFactura.ReadOnly = True
         Me.txtFactura.Size = New System.Drawing.Size(244, 23)
         Me.txtFactura.TabIndex = 127
-        '
-        'cmbCliente
-        '
-        Me.cmbCliente.DataSource = Me.ClientesBindingSource
-        Me.cmbCliente.DisplayMember = "NombreCliente"
-        Me.cmbCliente.FormattingEnabled = True
-        Me.cmbCliente.Location = New System.Drawing.Point(241, 157)
-        Me.cmbCliente.Name = "cmbCliente"
-        Me.cmbCliente.Size = New System.Drawing.Size(244, 21)
-        Me.cmbCliente.TabIndex = 129
         '
         'ClientesBindingSource
         '
@@ -504,16 +495,6 @@ Partial Class FrmFacturar
         Me.btnCalcular.Text = "Calcular"
         Me.btnCalcular.UseVisualStyleBackColor = False
         '
-        'cmbIDCliente
-        '
-        Me.cmbIDCliente.DataSource = Me.ClientesBindingSource
-        Me.cmbIDCliente.DisplayMember = "ClienteID"
-        Me.cmbIDCliente.FormattingEnabled = True
-        Me.cmbIDCliente.Location = New System.Drawing.Point(241, 157)
-        Me.cmbIDCliente.Name = "cmbIDCliente"
-        Me.cmbIDCliente.Size = New System.Drawing.Size(48, 21)
-        Me.cmbIDCliente.TabIndex = 151
-        '
         'cmbIDServicio
         '
         Me.cmbIDServicio.DataSource = Me.ServicioBindingSource
@@ -597,12 +578,44 @@ Partial Class FrmFacturar
         '
         Me.FacturaTableAdapter.ClearBeforeFill = True
         '
+        'txtCliente
+        '
+        Me.txtCliente.Location = New System.Drawing.Point(241, 157)
+        Me.txtCliente.Multiline = True
+        Me.txtCliente.Name = "txtCliente"
+        Me.txtCliente.Size = New System.Drawing.Size(160, 21)
+        Me.txtCliente.TabIndex = 157
+        '
+        'btnBuscarCliente
+        '
+        Me.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.btnBuscarCliente.FlatAppearance.BorderSize = 0
+        Me.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarCliente.ForeColor = System.Drawing.Color.White
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(407, 157)
+        Me.btnBuscarCliente.Name = "btnBuscarCliente"
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(78, 22)
+        Me.btnBuscarCliente.TabIndex = 158
+        Me.btnBuscarCliente.Text = "Buscar"
+        Me.btnBuscarCliente.UseVisualStyleBackColor = False
+        '
+        'txtIDCliente
+        '
+        Me.txtIDCliente.Location = New System.Drawing.Point(241, 157)
+        Me.txtIDCliente.Multiline = True
+        Me.txtIDCliente.Name = "txtIDCliente"
+        Me.txtIDCliente.Size = New System.Drawing.Size(48, 21)
+        Me.txtIDCliente.TabIndex = 159
+        '
         'FrmFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(948, 457)
+        Me.Controls.Add(Me.btnBuscarCliente)
+        Me.Controls.Add(Me.txtCliente)
         Me.Controls.Add(Me.cmbID)
         Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.cmbPrecio)
@@ -623,7 +636,6 @@ Partial Class FrmFacturar
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmbServicio)
         Me.Controls.Add(Me.cmbVehiculo)
-        Me.Controls.Add(Me.cmbCliente)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.txtFactura)
         Me.Controls.Add(Me.label4)
@@ -631,11 +643,11 @@ Partial Class FrmFacturar
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnFacturar)
-        Me.Controls.Add(Me.cmbIDCliente)
         Me.Controls.Add(Me.cmbIDServicio)
         Me.Controls.Add(Me.cmbIDUser)
         Me.Controls.Add(Me.cmbIDPago)
         Me.Controls.Add(Me.cmbIDEncargado)
+        Me.Controls.Add(Me.txtIDCliente)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmFacturar"
         Me.Text = "FACTURAR"
@@ -682,7 +694,6 @@ Partial Class FrmFacturar
     Private WithEvents Label6 As Label
     Friend WithEvents cmbServicio As ComboBox
     Friend WithEvents cmbVehiculo As ComboBox
-    Friend WithEvents cmbCliente As ComboBox
     Public WithEvents txtFactura As TextBox
     Friend WithEvents txtTotal As TextBox
     Private WithEvents Label3 As Label
@@ -712,7 +723,6 @@ Partial Class FrmFacturar
     Friend WithEvents UsuarioTableAdapter1 As UsuarioDataSet1TableAdapters.UsuarioTableAdapter
     Friend WithEvents cmbPrecio As ComboBox
     Private WithEvents btnCalcular As Button
-    Friend WithEvents cmbIDCliente As ComboBox
     Friend WithEvents cmbIDServicio As ComboBox
     Friend WithEvents cmbIDEncargado As ComboBox
     Friend WithEvents cmbIDPago As ComboBox
@@ -728,4 +738,7 @@ Partial Class FrmFacturar
     Friend WithEvents IDFacturaDataSet1 As IDFacturaDataSet1
     Friend WithEvents FacturaBindingSource1 As BindingSource
     Friend WithEvents FacturaTableAdapter As IDFacturaDataSet1TableAdapters.FacturaTableAdapter
+    Private WithEvents btnBuscarCliente As Button
+    Public WithEvents txtCliente As TextBox
+    Public WithEvents txtIDCliente As TextBox
 End Class

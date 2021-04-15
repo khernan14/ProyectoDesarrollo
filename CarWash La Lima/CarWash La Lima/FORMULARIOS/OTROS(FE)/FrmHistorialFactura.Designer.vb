@@ -27,9 +27,6 @@ Partial Class FrmHistorialFactura
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgHistoricos = New System.Windows.Forms.DataGridView()
-        Me.FacturaHDataSet1 = New CarWash_La_Lima.FacturaHDataSet1()
-        Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FacturaIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaFacturaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,9 +40,12 @@ Partial Class FrmHistorialFactura
         Me.ISVDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalPagoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FacturasHistoricosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FacturaHDataSet1 = New CarWash_La_Lima.FacturaHDataSet1()
+        Me.Facturas_HistoricosTableAdapter = New CarWash_La_Lima.FacturaHDataSet1TableAdapters.Facturas_HistoricosTableAdapter()
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgHistoricos
@@ -90,22 +90,9 @@ Partial Class FrmHistorialFactura
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgHistoricos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgHistoricos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgHistoricos.Size = New System.Drawing.Size(821, 377)
         Me.dgHistoricos.TabIndex = 27
-        '
-        'FacturaHDataSet1
-        '
-        Me.FacturaHDataSet1.DataSetName = "FacturaHDataSet1"
-        Me.FacturaHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'FacturasHistoricosBindingSource
-        '
-        Me.FacturasHistoricosBindingSource.DataMember = "Facturas-Historicos"
-        Me.FacturasHistoricosBindingSource.DataSource = Me.FacturaHDataSet1
-        '
-        'Facturas_HistoricosTableAdapter
-        '
-        Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -198,6 +185,20 @@ Partial Class FrmHistorialFactura
         Me.TotalPagoDataGridViewTextBoxColumn.Name = "TotalPagoDataGridViewTextBoxColumn"
         Me.TotalPagoDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'FacturasHistoricosBindingSource
+        '
+        Me.FacturasHistoricosBindingSource.DataMember = "Facturas-Historicos"
+        Me.FacturasHistoricosBindingSource.DataSource = Me.FacturaHDataSet1
+        '
+        'FacturaHDataSet1
+        '
+        Me.FacturaHDataSet1.DataSetName = "FacturaHDataSet1"
+        Me.FacturaHDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Facturas_HistoricosTableAdapter
+        '
+        Me.Facturas_HistoricosTableAdapter.ClearBeforeFill = True
+        '
         'FrmHistorialFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -208,8 +209,8 @@ Partial Class FrmHistorialFactura
         Me.Name = "FrmHistorialFactura"
         Me.Text = "HISTORIAL"
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturasHistoricosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaHDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

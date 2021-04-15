@@ -59,4 +59,12 @@ Public Class CLIENTES
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
         obj.consultaCliente(txtBuscar.Text, txtBuscar.Text, dgClientes)
     End Sub
+
+    Private Sub dgClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgClientes.CellDoubleClick
+        Dim frm As FrmFacturar = CType(Owner, FrmFacturar)
+
+        frm.txtIDCliente.Text = dgClientes.CurrentRow.Cells(0).Value.ToString()
+        frm.txtCliente.Text = dgClientes.CurrentRow.Cells(2).Value.ToString() + " " + dgClientes.CurrentRow.Cells(3).Value.ToString()
+        Me.Close()
+    End Sub
 End Class

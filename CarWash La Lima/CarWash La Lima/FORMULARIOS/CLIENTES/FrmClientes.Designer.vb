@@ -23,9 +23,10 @@ Partial Class CLIENTES
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CLIENTES))
         Me.label1 = New System.Windows.Forms.Label()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -44,6 +45,8 @@ Partial Class CLIENTES
         Me.ClientesTableAdapter = New CarWash_La_Lima.ClientesDataSetTableAdapters.ClientesTableAdapter()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
+        Me.lblMessage = New System.Windows.Forms.Label()
         CType(Me.dgClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,39 +136,39 @@ Partial Class CLIENTES
         Me.dgClientes.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgClientes.ColumnHeadersHeight = 30
         Me.dgClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClienteIDDataGridViewTextBoxColumn, Me.NumPlacaDataGridViewTextBoxColumn, Me.NombreClienteDataGridViewTextBoxColumn, Me.ApellidoClienteDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.dgClientes.DataSource = Me.ClientesBindingSource
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgClientes.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgClientes.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgClientes.EnableHeadersVisualStyles = False
         Me.dgClientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgClientes.Location = New System.Drawing.Point(16, 133)
         Me.dgClientes.Name = "dgClientes"
         Me.dgClientes.ReadOnly = True
         Me.dgClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.PaleVioletRed
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgClientes.Size = New System.Drawing.Size(670, 377)
         Me.dgClientes.TabIndex = 16
@@ -238,9 +241,10 @@ Partial Class CLIENTES
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(471, 92)
+        Me.txtBuscar.Location = New System.Drawing.Point(471, 90)
+        Me.txtBuscar.Multiline = True
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(218, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(218, 22)
         Me.txtBuscar.TabIndex = 21
         '
         'IconButton1
@@ -256,6 +260,32 @@ Partial Class CLIENTES
         Me.IconButton1.TabIndex = 22
         Me.IconButton1.UseVisualStyleBackColor = True
         '
+        'MzButtonWindows1
+        '
+        Me.MzButtonWindows1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MzButtonWindows1.BackgroundImage = CType(resources.GetObject("MzButtonWindows1.BackgroundImage"), System.Drawing.Image)
+        Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
+        Me.MzButtonWindows1.Location = New System.Drawing.Point(830, 0)
+        Me.MzButtonWindows1.Name = "MzButtonWindows1"
+        Me.MzButtonWindows1.ParentControl = Me
+        Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
+        Me.MzButtonWindows1.TabIndex = 23
+        Me.MzButtonWindows1.TipoButton = BWCMM.MZButtonWindows.ModeButton.Close
+        '
+        'lblMessage
+        '
+        Me.lblMessage.AutoSize = True
+        Me.lblMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMessage.ForeColor = System.Drawing.Color.White
+        Me.lblMessage.Location = New System.Drawing.Point(28, 110)
+        Me.lblMessage.Name = "lblMessage"
+        Me.lblMessage.Size = New System.Drawing.Size(318, 16)
+        Me.lblMessage.TabIndex = 24
+        Me.lblMessage.Text = "Doble click en una celda para seleccionar un cliente"
+        Me.lblMessage.Visible = False
+        '
         'CLIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,6 +293,8 @@ Partial Class CLIENTES
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(870, 528)
+        Me.Controls.Add(Me.lblMessage)
+        Me.Controls.Add(Me.MzButtonWindows1)
         Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.label1)
@@ -303,4 +335,6 @@ Partial Class CLIENTES
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents MzButtonWindows1 As BWCMM.MZButtonWindows
+    Public WithEvents lblMessage As Label
 End Class

@@ -76,10 +76,10 @@ Public Class FrmFacturar
 
         frm.FacturaTableAdapter.InsertFactura(DateTime2.Value, Val(txtSubTotal.Text), Val(txtISV.Text), Val(cmbIDUser.Text))
         frm.FacturaTableAdapter.Fill(frm.FacturaDataSet1.Factura)
-        frm.DetalleFacturaTableAdapter.InsertDetalleFactura(Val(cmbID.Text), Val(cmbIDCliente.Text), Val(cmbIDServicio.Text), Val(cmbIDPago.Text))
+        frm.DetalleFacturaTableAdapter.InsertDetalleFactura(Val(cmbID.Text), Val(txtIDCliente.Text), Val(cmbIDServicio.Text), Val(cmbIDPago.Text))
         frm.DetalleFacturaTableAdapter.Fill(frm.DetalleFacturaDataSet1.DetalleFactura)
 
-        frm2.Facturas_HistoricosTableAdapter.InsertFacturasH(Val(cmbID.Text), DateTime2.Value, cmbCliente.Text,
+        frm2.Facturas_HistoricosTableAdapter.InsertFacturasH(Val(cmbID.Text), DateTime2.Value, txtCliente.Text,
                                                             cmbServicio.Text, cmbPrecio.Text, cmbVehiculo.Text, cmbUsuario.Text, cmbEncargadoServicio.Text,
                                                             cmbPago.Text, Val(txtISV.Text), Val(txtSubTotal.Text), Val(txtTotal.Text))
         frm2.Facturas_HistoricosTableAdapter.Fill(frm2.FacturaHDataSet1._Facturas_Historicos)
@@ -103,7 +103,7 @@ Public Class FrmFacturar
 
     End Sub
 
-    Private Sub cmbCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbCliente.KeyPress
+    Private Sub cmbCliente_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -127,15 +127,15 @@ Public Class FrmFacturar
         End If
     End Sub
 
-    Private Sub cmbCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCliente.SelectedIndexChanged
-        For i = 0 To cmbCliente.SelectedIndex
-            For j = 0 To cmbIDCliente.SelectedIndex
-                If (cmbCliente.SelectedIndex = i) Then
-                    cmbIDCliente.SelectedIndex = j
-                End If
-            Next
-        Next
-    End Sub
+    'Private Sub cmbCliente_SelectedIndexChanged(sender As Object, e As EventArgs)
+    '    For i = 0 To cmbCliente.SelectedIndex
+    '        For j = 0 To cmbIDCliente.SelectedIndex
+    '            If (cmbCliente.SelectedIndex = i) Then
+    '                cmbIDCliente.SelectedIndex = j
+    '            End If
+    '        Next
+    '    Next
+    'End Sub
 
     Private Sub cmbEncargadoServicio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEncargadoServicio.SelectedIndexChanged
         For i = 0 To cmbEncargadoServicio.SelectedIndex
@@ -165,6 +165,13 @@ Public Class FrmFacturar
                 End If
             Next
         Next
+    End Sub
+
+    Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
+        Dim frm As New CLIENTES
+        frm.lblMessage.Visible = True
+        AddOwnedForm(frm) ' Esto es para indicar que este formularios sera propietario del formulario Clientes
+        frm.ShowDialog()
     End Sub
 
     Private Sub txtISV_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtISV.KeyPress

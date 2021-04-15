@@ -17,9 +17,9 @@ Public Class Buscar
     End Sub
 
     Sub consultaCliente(ByVal nombre As String, ByVal apellido As String, ByVal dgClientes As DataGridView)
-
+        ' El simbolo de % se le llama comodín.
         Try
-            adaptador = New SqlDataAdapter("Select * From Clientes Where NombreCliente like '" & "%" + nombre + "%" & "' or ApellidoCliente like '" & "%" + apellido + "%" & "'", cnn)
+            adaptador = New SqlDataAdapter("Select * From Clientes Where NombreCliente like '" & "%" + nombre + "%" & "'or ApellidoCliente like '" & "%" + apellido + "%" & "'", cnn)
             dt = New DataTable
             adaptador.Fill(dt)
             dgClientes.DataSource = dt
