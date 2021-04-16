@@ -313,9 +313,6 @@ Partial Class CLIENTES
         Me.txtBuscar.TabIndex = 25
         Me.txtBuscar.Visible = False
         '
-        'tmrRigth
-        '
-        '
         'CLIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -349,9 +346,6 @@ Partial Class CLIENTES
     End Sub
 
     Private WithEvents label1 As Label
-    Private WithEvents btnNuevo As Button
-    Private WithEvents btnEliminar As Button
-    Private WithEvents btnEditar As Button
     Private WithEvents dgClientes As DataGridView
     Friend WithEvents ClientesDataSet As ClientesDataSet
     Friend WithEvents ClientesBindingSource As BindingSource
@@ -371,4 +365,7 @@ Partial Class CLIENTES
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents tmrRigth As Timer
     Friend WithEvents tmLeft As Timer
+    Public WithEvents btnNuevo As Button
+    Public WithEvents btnEliminar As Button
+    Public WithEvents btnEditar As Button
 End Class

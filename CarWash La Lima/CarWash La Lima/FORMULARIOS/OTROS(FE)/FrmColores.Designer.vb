@@ -257,11 +257,8 @@ Partial Class FrmColores
     Private WithEvents label11 As Label
     Private WithEvents label5 As Label
     Public WithEvents txtid As TextBox
-    Private WithEvents btnEditar As Button
-    Private WithEvents btnGuardar As Button
     Private WithEvents Label6 As Label
     Private WithEvents label1 As Label
-    Private WithEvents btnEliminar As Button
     Private WithEvents dgColores As DataGridView
     Public WithEvents txtDescripcion As TextBox
     Friend WithEvents ColorVDataSet1 As ColorVDataSet1
@@ -269,4 +266,7 @@ Partial Class FrmColores
     Friend WithEvents ColorVehiculoTableAdapter As ColorVDataSet1TableAdapters.ColorVehiculoTableAdapter
     Friend WithEvents ColorIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionColorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Public WithEvents btnEditar As Button
+    Public WithEvents btnGuardar As Button
+    Public WithEvents btnEliminar As Button
 End Class

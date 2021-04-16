@@ -39,20 +39,30 @@ Public Class UserDao
         End Using
     End Function
 
-    '    Public Function Login2() As Boolean
-    '        Using connection = GetConnection()
-    '            connection.Open()
-    '            Using command = New SqlCommand()
-    '                command.Connection = connection
-    '                command.CommandText = "SELECT * FROM Empleado"
-    '                command.CommandType = CommandType.Text
-    '                Dim reader = command.ExecuteReader()
-    '                If reader.HasRows Then
-    '                    Return True
-    '                Else
-    '                    Return False
-    '                End If
-    '            End Using
-    '        End Using
-    '    End Function
+    Public Function existsUser(id As Integer) As Boolean
+        Using connection = GetConnection()
+            connection.Open()
+            Using command = New SqlCommand()
+                command.Connection = connection
+                command.CommandText = "SELECT *
+                                        FROM [dbo].[Usuario]
+                                        WHERE Usuario = @user"
+                command.Parameters.AddWithValue("@user", id)
+                command.CommandType = CommandType.Text
+                Dim reader = command.ExecuteReader()
+                If reader.HasRows Then
+                    reader.Dispose()
+                    Return True
+                Else
+                    Return False
+                End If
+            End Using
+        End Using
+    End Function
+
+    Public Sub CargoAdmin()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            'Code
+        End If
+    End Sub
 End Class

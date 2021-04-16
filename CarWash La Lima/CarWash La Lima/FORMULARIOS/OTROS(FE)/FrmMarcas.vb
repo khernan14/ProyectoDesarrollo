@@ -1,10 +1,16 @@
-﻿Public Class FrmMarcas
+﻿Imports Support
+
+Public Class FrmMarcas
     Private Sub FrmMarcas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'MarcasVDataSet1.MarcasVehiculos' Puede moverla o quitarla según sea necesario.
         Me.MarcasVehiculosTableAdapter.Fill(Me.MarcasVDataSet1.MarcasVehiculos)
-
+        permisos()
     End Sub
-
+    Private Sub permisos()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            btnEliminar.Enabled = False
+        End If
+    End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If (txtMarca.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)

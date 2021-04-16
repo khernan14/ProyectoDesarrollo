@@ -1,10 +1,16 @@
-﻿Public Class FrmTipo
+﻿Imports Support
+
+Public Class FrmTipo
     Private Sub FrmTipo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'TipoDataSet1.TipoVehiculo' Puede moverla o quitarla según sea necesario.
         Me.TipoVehiculoTableAdapter.Fill(Me.TipoDataSet1.TipoVehiculo)
-
+        permisos()
     End Sub
-
+    Private Sub permisos()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            btnEliminar.Enabled = False
+        End If
+    End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         If (txtDescripcion.Text = "") Then

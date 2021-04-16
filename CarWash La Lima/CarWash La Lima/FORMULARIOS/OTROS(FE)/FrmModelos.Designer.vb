@@ -376,15 +376,12 @@ Partial Class FrmModelos
     Private WithEvents label11 As Label
     Private WithEvents label5 As Label
     Public WithEvents txtid As TextBox
-    Private WithEvents btnEditar As Button
-    Private WithEvents btnGuardar As Button
     Private WithEvents label4 As Label
     Private WithEvents Label2 As Label
     Private WithEvents Label6 As Label
     Public WithEvents txtAnio As TextBox
     Public WithEvents txtModelo As TextBox
     Private WithEvents label1 As Label
-    Private WithEvents btnEliminar As Button
     Private WithEvents dgModelos As DataGridView
     Friend WithEvents cmbMarcaID As ComboBox
     Friend WithEvents MarcasDataSet1 As MarcasDataSet1
@@ -401,4 +398,7 @@ Partial Class FrmModelos
     Friend WithEvents ModeloDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AnioModeloDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents cmbMarca As ComboBox
+    Public WithEvents btnEditar As Button
+    Public WithEvents btnGuardar As Button
+    Public WithEvents btnEliminar As Button
 End Class

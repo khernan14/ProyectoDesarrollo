@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports Support
 
 Public Class CLIENTES
 
@@ -7,10 +8,14 @@ Public Class CLIENTES
     Private Sub CLIENTES_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'ClientesDataSet1.Clientes' Puede moverla o quitarla según sea necesario.
         Me.ClientesTableAdapter.Fill(Me.ClientesDataSet.Clientes)
+        permisos()
     End Sub
 
-    Private currentChildForm As Form
-
+    Private Sub permisos()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            btnEliminar.Enabled = False
+        End If
+    End Sub
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         'dgClientes.Rows.Add(1, "Kevin Daniel", "Hernandez Martinez", 95183510, "Colonia Montecarlo, Choluteca Honduras", "Toyota"
         SurroundingSub()

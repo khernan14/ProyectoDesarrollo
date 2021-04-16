@@ -1,8 +1,15 @@
-﻿Public Class FrmColores
+﻿Imports Support
+
+Public Class FrmColores
     Private Sub FrmColores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'ColorVDataSet1.ColorVehiculo' Puede moverla o quitarla según sea necesario.
         Me.ColorVehiculoTableAdapter.Fill(Me.ColorVDataSet1.ColorVehiculo)
-
+        permisos()
+    End Sub
+    Private Sub permisos()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            btnEliminar.Enabled = False
+        End If
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click

@@ -1,5 +1,7 @@
 ﻿
 Imports System.Data.SqlClient
+Imports Support
+
 Public Class FrmUsuarios
 
     Dim obj As New Buscar
@@ -15,9 +17,13 @@ Public Class FrmUsuarios
         Me.EmpleadoTableAdapter.Fill(Me.EmpleadosEUDataSet1.Empleado)
         'TODO: esta línea de código carga datos en la tabla 'UsuariosDataSet1.Usuario' Puede moverla o quitarla según sea necesario.
         Me.UsuarioTableAdapter.Fill(Me.UsuariosDataSet1.Usuario)
-
+        permisos()
     End Sub
-
+    Private Sub permisos()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            btnEliminar.Enabled = False
+        End If
+    End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If (cmbEmpleadoID.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)

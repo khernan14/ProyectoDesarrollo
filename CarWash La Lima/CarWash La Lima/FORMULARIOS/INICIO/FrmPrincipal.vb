@@ -1,15 +1,39 @@
 ﻿Imports System.Runtime.InteropServices
 Imports FontAwesome.Sharp
 Imports Support
+Imports Domain
 
 Public Class FrmPrincipal
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultar()
+        'seguridad()
+        loadUser()
+        Permisos()
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub seguridad()
+        Dim user As New UserModel()
+
+        If ActiveUser.UsuarioID = Nothing OrElse ActiveUser.UsuarioID = 0 Then
+            MessageBox.Show("Error en el sistema, usted intenta ingresar de forma remota", "Danger", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Close()
+        Else
+            Me.ShowDialog()
+        End If
+    End Sub
+    Private Sub loadUser()
         lblName.Text = ActiveUser.ApellidoEmpleado + ", " + ActiveUser.NombreEmpleado
         lblUsers.Text = ActiveUser.Usuario
         lblCargo.Text = ActiveUser.Puesto
-        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub Permisos()
+        If ActiveUser.Puesto = Cargos.facturador Then
+            btnUsuarios.Enabled = False
+            btnEmpleados.Enabled = False
+        End If
     End Sub
 
     'Fields'

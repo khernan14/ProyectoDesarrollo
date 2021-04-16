@@ -256,16 +256,16 @@ Partial Class FrmTipo
     Private WithEvents label11 As Label
     Private WithEvents label5 As Label
     Public WithEvents txtid As TextBox
-    Private WithEvents btnEditar As Button
-    Private WithEvents btnGuardar As Button
     Private WithEvents Label6 As Label
     Public WithEvents txtDescripcion As TextBox
     Private WithEvents label1 As Label
-    Private WithEvents btnEliminar As Button
     Private WithEvents dgTipoV As DataGridView
     Friend WithEvents TipoDataSet1 As TipoDataSet1
     Friend WithEvents TipoVehiculoBindingSource As BindingSource
     Friend WithEvents TipoVehiculoTableAdapter As TipoDataSet1TableAdapters.TipoVehiculoTableAdapter
     Friend WithEvents TipoVehiculoIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Public WithEvents btnEditar As Button
+    Public WithEvents btnGuardar As Button
+    Public WithEvents btnEliminar As Button
 End Class

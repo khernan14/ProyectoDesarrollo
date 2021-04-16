@@ -263,9 +263,6 @@ Partial Class FrmVehiculo
     End Sub
 
     Private WithEvents label1 As Label
-    Private WithEvents btnNuevo As Button
-    Private WithEvents btnEliminar As Button
-    Private WithEvents btnEditar As Button
     Private WithEvents dgVehiculos As DataGridView
     Friend WithEvents VistaVehiculoSet1 As VistaVehiculoSet1
     Friend WithEvents VistaVehiculoBindingSource As BindingSource
@@ -279,4 +276,7 @@ Partial Class FrmVehiculo
     Friend WithEvents MarcaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ColorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TipovehiculoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Public WithEvents btnNuevo As Button
+    Public WithEvents btnEliminar As Button
+    Public WithEvents btnEditar As Button
 End Class

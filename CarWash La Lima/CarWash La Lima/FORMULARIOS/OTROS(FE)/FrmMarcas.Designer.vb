@@ -258,16 +258,16 @@ Partial Class FrmMarcas
     Private WithEvents label11 As Label
     Private WithEvents label5 As Label
     Public WithEvents txtid As TextBox
-    Private WithEvents btnEditar As Button
-    Private WithEvents btnGuardar As Button
     Private WithEvents Label6 As Label
     Public WithEvents txtMarca As TextBox
     Private WithEvents label1 As Label
-    Private WithEvents btnEliminar As Button
     Private WithEvents dgMarcas As DataGridView
     Friend WithEvents MarcasVDataSet1 As MarcasVDataSet1
     Friend WithEvents MarcasVehiculosBindingSource As BindingSource
     Friend WithEvents MarcasVehiculosTableAdapter As MarcasVDataSet1TableAdapters.MarcasVehiculosTableAdapter
     Friend WithEvents MarcaIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MarcaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Public WithEvents btnEditar As Button
+    Public WithEvents btnGuardar As Button
+    Public WithEvents btnEliminar As Button
 End Class
