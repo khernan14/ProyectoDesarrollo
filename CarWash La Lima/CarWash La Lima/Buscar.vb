@@ -29,19 +29,6 @@ Public Class Buscar
 
     End Sub
 
-    Sub consultaClienteComboBox(ByVal nombre As String, ByVal apellido As String, ByVal cmbClientes As ComboBox)
-
-        Try
-            adaptador = New SqlDataAdapter("Select * From Clientes Where NombreCliente like '" & "%" + nombre + "%" & "' or ApellidoCliente like '" & "%" + apellido + "%" & "'", cnn)
-            dt = New DataTable
-            adaptador.Fill(dt)
-            cmbClientes.DataSource = dt
-        Catch ex As Exception
-            MessageBox.Show("Error al realizar la consulta", ex.ToString)
-        End Try
-
-    End Sub
-
     ' Buscar Empleados
     Sub consultaEmpleado(ByVal nombre As String, ByVal apellido As String, ByVal dgEmpleados As DataGridView)
 
