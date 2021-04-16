@@ -56,15 +56,30 @@ Public Class CLIENTES
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
-        obj.consultaCliente(txtBuscar.Text, txtBuscar.Text, dgClientes)
-    End Sub
-
     Private Sub dgClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgClientes.CellDoubleClick
         Dim frm As FrmFacturar = CType(Owner, FrmFacturar)
 
         frm.txtIDCliente.Text = dgClientes.CurrentRow.Cells(0).Value.ToString()
         frm.txtCliente.Text = dgClientes.CurrentRow.Cells(2).Value.ToString() + " " + dgClientes.CurrentRow.Cells(3).Value.ToString()
         Me.Close()
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        txtBuscar.Visible = True
+        txtBuscar.Focus()
+        txtBus.Visible = True
+        txtBuscar.BackColor = Color.FromArgb(26, 25, 62)
+        txtBus.BackColor = Color.FromArgb(26, 25, 62)
+        btnBuscar.BackColor = Color.FromArgb(26, 25, 62)
+    End Sub
+
+    Private Sub CLIENTES_Click(sender As Object, e As EventArgs) Handles MyBase.Click
+        txtBuscar.Visible = False
+        txtBus.Visible = False
+        btnBuscar.BackColor = Color.FromArgb(34, 33, 74)
+    End Sub
+
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        obj.consultaCliente(txtBuscar.Text, txtBuscar.Text, dgClientes)
     End Sub
 End Class

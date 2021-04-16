@@ -43,10 +43,13 @@ Partial Class CLIENTES
         Me.ClientesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesDataSet1 = New CarWash_La_Lima.ClientesDataSet()
         Me.ClientesTableAdapter = New CarWash_La_Lima.ClientesDataSetTableAdapters.ClientesTableAdapter()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.txtBus = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New FontAwesome.Sharp.IconButton()
         Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
         Me.lblMessage = New System.Windows.Forms.Label()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.tmrRigth = New System.Windows.Forms.Timer(Me.components)
+        Me.tmLeft = New System.Windows.Forms.Timer(Me.components)
         CType(Me.dgClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,26 +242,37 @@ Partial Class CLIENTES
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
         '
-        'txtBuscar
+        'txtBus
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(471, 90)
-        Me.txtBuscar.Multiline = True
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(218, 22)
-        Me.txtBuscar.TabIndex = 21
+        Me.txtBus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtBus.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.txtBus.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBus.Enabled = False
+        Me.txtBus.ForeColor = System.Drawing.Color.White
+        Me.txtBus.Location = New System.Drawing.Point(360, 90)
+        Me.txtBus.Multiline = True
+        Me.txtBus.Name = "txtBus"
+        Me.txtBus.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBus.Size = New System.Drawing.Size(280, 34)
+        Me.txtBus.TabIndex = 21
+        Me.txtBus.Visible = False
         '
-        'IconButton1
+        'btnBuscar
         '
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.IconButton1.IconColor = System.Drawing.Color.DimGray
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 20
-        Me.IconButton1.Location = New System.Drawing.Point(433, 90)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(38, 23)
-        Me.IconButton1.TabIndex = 22
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.btnBuscar.IconColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnBuscar.IconSize = 20
+        Me.btnBuscar.Location = New System.Drawing.Point(640, 90)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(46, 34)
+        Me.btnBuscar.TabIndex = 22
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'MzButtonWindows1
         '
@@ -286,6 +300,22 @@ Partial Class CLIENTES
         Me.lblMessage.Text = "Doble click en una celda para seleccionar un cliente"
         Me.lblMessage.Visible = False
         '
+        'txtBuscar
+        '
+        Me.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBuscar.ForeColor = System.Drawing.Color.White
+        Me.txtBuscar.Location = New System.Drawing.Point(369, 99)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBuscar.Size = New System.Drawing.Size(261, 13)
+        Me.txtBuscar.TabIndex = 25
+        Me.txtBuscar.Visible = False
+        '
+        'tmrRigth
+        '
+        '
         'CLIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -293,10 +323,11 @@ Partial Class CLIENTES
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(870, 528)
+        Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.MzButtonWindows1)
-        Me.Controls.Add(Me.IconButton1)
-        Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.txtBus)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEliminar)
@@ -333,8 +364,11 @@ Partial Class CLIENTES
     Friend WithEvents ApellidoClienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents txtBuscar As TextBox
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtBus As TextBox
+    Friend WithEvents btnBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents MzButtonWindows1 As BWCMM.MZButtonWindows
     Public WithEvents lblMessage As Label
+    Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents tmrRigth As Timer
+    Friend WithEvents tmLeft As Timer
 End Class

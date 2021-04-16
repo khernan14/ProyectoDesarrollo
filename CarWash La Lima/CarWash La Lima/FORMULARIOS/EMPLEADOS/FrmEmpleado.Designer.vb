@@ -23,9 +23,9 @@ Partial Class FrmEmpleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.label1 = New System.Windows.Forms.Label()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -44,8 +44,9 @@ Partial Class FrmEmpleado
         Me.EmpleadosDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New CarWash_La_Lima.EmpleadosDataSet1TableAdapters.EmpleadoTableAdapter()
         Me.VistaEmpleadosPuestosTableAdapter = New CarWash_La_Lima.VistaEmpleadosPuestosDataSet1TableAdapters.VistaEmpleadosPuestosTableAdapter()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New FontAwesome.Sharp.IconButton()
+        Me.txtBus = New System.Windows.Forms.TextBox()
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEmpleadosPuestosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEmpleadosPuestosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,39 +138,39 @@ Partial Class FrmEmpleado
         Me.dgEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgEmpleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgEmpleados.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgEmpleados.ColumnHeadersHeight = 30
         Me.dgEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmpleadoIDDataGridViewTextBoxColumn, Me.NombreEmpleadoDataGridViewTextBoxColumn, Me.ApellidoEmpleadoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DescripcionPuestoDataGridViewTextBoxColumn})
         Me.dgEmpleados.DataSource = Me.VistaEmpleadosPuestosBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgEmpleados.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgEmpleados.DefaultCellStyle = DataGridViewCellStyle8
         Me.dgEmpleados.EnableHeadersVisualStyles = False
         Me.dgEmpleados.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgEmpleados.Location = New System.Drawing.Point(28, 133)
         Me.dgEmpleados.Name = "dgEmpleados"
         Me.dgEmpleados.ReadOnly = True
         Me.dgEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleVioletRed
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.PaleVioletRed
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgEmpleados.Size = New System.Drawing.Size(670, 377)
         Me.dgEmpleados.TabIndex = 21
@@ -247,25 +248,50 @@ Partial Class FrmEmpleado
         '
         Me.VistaEmpleadosPuestosTableAdapter.ClearBeforeFill = True
         '
-        'IconButton1
-        '
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.IconButton1.IconColor = System.Drawing.Color.DimGray
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 20
-        Me.IconButton1.Location = New System.Drawing.Point(442, 91)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(38, 23)
-        Me.IconButton1.TabIndex = 27
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(480, 93)
+        Me.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBuscar.ForeColor = System.Drawing.Color.White
+        Me.txtBuscar.Location = New System.Drawing.Point(381, 96)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(218, 20)
-        Me.txtBuscar.TabIndex = 26
+        Me.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBuscar.Size = New System.Drawing.Size(261, 13)
+        Me.txtBuscar.TabIndex = 30
+        Me.txtBuscar.Visible = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.btnBuscar.IconColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnBuscar.IconSize = 20
+        Me.btnBuscar.Location = New System.Drawing.Point(652, 87)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(46, 34)
+        Me.btnBuscar.TabIndex = 29
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'txtBus
+        '
+        Me.txtBus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtBus.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.txtBus.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBus.Enabled = False
+        Me.txtBus.ForeColor = System.Drawing.Color.White
+        Me.txtBus.Location = New System.Drawing.Point(372, 87)
+        Me.txtBus.Multiline = True
+        Me.txtBus.Name = "txtBus"
+        Me.txtBus.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBus.Size = New System.Drawing.Size(280, 34)
+        Me.txtBus.TabIndex = 28
+        Me.txtBus.Visible = False
         '
         'FrmEmpleado
         '
@@ -273,8 +299,9 @@ Partial Class FrmEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(870, 510)
-        Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.txtBus)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEliminar)
@@ -314,6 +341,7 @@ Partial Class FrmEmpleado
     Friend WithEvents ApellidoEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionPuestoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents btnBuscar As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtBus As TextBox
 End Class

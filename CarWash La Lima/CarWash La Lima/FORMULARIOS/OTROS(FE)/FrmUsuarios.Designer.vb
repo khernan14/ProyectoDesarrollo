@@ -63,8 +63,9 @@ Partial Class FrmUsuarios
         Me.VistaUsuariosTableAdapter = New CarWash_La_Lima.VistaUsuariosDataSet1TableAdapters.VistaUsuariosTableAdapter()
         Me.cmbEmpleado = New System.Windows.Forms.ComboBox()
         Me.VistaNombreEmpleadoPuestoTableAdapter = New CarWash_La_Lima.VistaNombreCompletoEmpleadoDataSet1TableAdapters.VistaNombreEmpleadoPuestoTableAdapter()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New FontAwesome.Sharp.IconButton()
+        Me.txtBus = New System.Windows.Forms.TextBox()
         CType(Me.dgUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaUsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaUsuariosDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -415,25 +416,50 @@ Partial Class FrmUsuarios
         '
         Me.VistaNombreEmpleadoPuestoTableAdapter.ClearBeforeFill = True
         '
-        'IconButton1
-        '
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.IconButton1.IconColor = System.Drawing.Color.DimGray
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 20
-        Me.IconButton1.Location = New System.Drawing.Point(357, 107)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(38, 23)
-        Me.IconButton1.TabIndex = 192
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(395, 109)
+        Me.txtBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBuscar.ForeColor = System.Drawing.Color.White
+        Me.txtBuscar.Location = New System.Drawing.Point(296, 112)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(218, 20)
-        Me.txtBuscar.TabIndex = 191
+        Me.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBuscar.Size = New System.Drawing.Size(261, 13)
+        Me.txtBuscar.TabIndex = 193
+        Me.txtBuscar.Visible = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.btnBuscar.IconColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnBuscar.IconSize = 20
+        Me.btnBuscar.Location = New System.Drawing.Point(567, 103)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(46, 34)
+        Me.btnBuscar.TabIndex = 192
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'txtBus
+        '
+        Me.txtBus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtBus.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.txtBus.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBus.Enabled = False
+        Me.txtBus.ForeColor = System.Drawing.Color.White
+        Me.txtBus.Location = New System.Drawing.Point(287, 103)
+        Me.txtBus.Multiline = True
+        Me.txtBus.Name = "txtBus"
+        Me.txtBus.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBus.Size = New System.Drawing.Size(280, 34)
+        Me.txtBus.TabIndex = 191
+        Me.txtBus.Visible = False
         '
         'FrmUsuarios
         '
@@ -441,8 +467,9 @@ Partial Class FrmUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1042, 551)
-        Me.Controls.Add(Me.IconButton1)
         Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.txtBus)
         Me.Controls.Add(Me.cmbEmpleado)
         Me.Controls.Add(Me.DateTime1)
         Me.Controls.Add(Me.cmbEmpleadoID)
@@ -517,6 +544,7 @@ Partial Class FrmUsuarios
     Friend WithEvents VistaNombreCompletoEmpleadoDataSet1 As VistaNombreCompletoEmpleadoDataSet1
     Friend WithEvents VistaNombreEmpleadoPuestoBindingSource As BindingSource
     Friend WithEvents VistaNombreEmpleadoPuestoTableAdapter As VistaNombreCompletoEmpleadoDataSet1TableAdapters.VistaNombreEmpleadoPuestoTableAdapter
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents btnBuscar As FontAwesome.Sharp.IconButton
+    Friend WithEvents txtBus As TextBox
 End Class

@@ -104,3 +104,4 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La 
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CircularProgressBar.xml
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmWelcome.resources
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogout.resources
+C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmReporte1.resources

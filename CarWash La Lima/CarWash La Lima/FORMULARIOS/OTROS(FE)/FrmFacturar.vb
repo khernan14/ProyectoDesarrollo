@@ -1,9 +1,9 @@
-﻿Imports Support
+﻿Imports FontAwesome.Sharp
+Imports Support
 
 Public Class FrmFacturar
     Dim impuesto, subTotal, total As Double
     Dim ultimo As Integer
-
     Private Sub FrmFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'IDFacturaDataSet1.Factura' Puede moverla o quitarla según sea necesario.
         Me.FacturaTableAdapter.Fill(Me.IDFacturaDataSet1.Factura)
@@ -174,6 +174,10 @@ Public Class FrmFacturar
         frm.ShowDialog()
     End Sub
 
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
+    End Sub
+
     Private Sub txtISV_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtISV.KeyPress
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
@@ -197,4 +201,5 @@ Public Class FrmFacturar
             e.Handled = True
         End If
     End Sub
+
 End Class
