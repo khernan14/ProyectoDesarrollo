@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Public MustInherit Class ConnectionToSql
     Private connectionString As String
     Protected Sub New()
-        connectionString = "Data Source=LAPTOP-A12HMMNR\SQLEXPRESS01;Initial Catalog=CarWashLaLima;Integrated Security=True"
+        connectionString = "Data Source=LAPTOP-5ILJ3V6O;Initial Catalog=CarWashLaLima;Integrated Security=True"
     End Sub
     Protected Function GetConnection() As SqlConnection
         Return New SqlConnection(connectionString)

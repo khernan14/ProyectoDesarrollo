@@ -78,7 +78,8 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgHistoricos.EnableHeadersVisualStyles = False
         Me.dgHistoricos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.dgHistoricos.Location = New System.Drawing.Point(27, 54)
+        Me.dgHistoricos.Location = New System.Drawing.Point(37, 162)
+        Me.dgHistoricos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgHistoricos.Name = "dgHistoricos"
         Me.dgHistoricos.ReadOnly = True
         Me.dgHistoricos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -90,14 +91,16 @@ Partial Class FrmHistorialFactura
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgHistoricos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgHistoricos.RowHeadersWidth = 51
         Me.dgHistoricos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.dgHistoricos.Size = New System.Drawing.Size(821, 377)
+        Me.dgHistoricos.Size = New System.Drawing.Size(1095, 464)
         Me.dgHistoricos.TabIndex = 27
         '
         'IDDataGridViewTextBoxColumn
         '
         Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
         Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
         Me.IDDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -105,6 +108,7 @@ Partial Class FrmHistorialFactura
         '
         Me.FacturaIDDataGridViewTextBoxColumn.DataPropertyName = "FacturaID"
         Me.FacturaIDDataGridViewTextBoxColumn.HeaderText = "FacturaID"
+        Me.FacturaIDDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.FacturaIDDataGridViewTextBoxColumn.Name = "FacturaIDDataGridViewTextBoxColumn"
         Me.FacturaIDDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -112,6 +116,7 @@ Partial Class FrmHistorialFactura
         '
         Me.FechaFacturaDataGridViewTextBoxColumn.DataPropertyName = "FechaFactura"
         Me.FechaFacturaDataGridViewTextBoxColumn.HeaderText = "FechaFactura"
+        Me.FechaFacturaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.FechaFacturaDataGridViewTextBoxColumn.Name = "FechaFacturaDataGridViewTextBoxColumn"
         Me.FechaFacturaDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -119,6 +124,7 @@ Partial Class FrmHistorialFactura
         '
         Me.ClienteDataGridViewTextBoxColumn.DataPropertyName = "Cliente"
         Me.ClienteDataGridViewTextBoxColumn.HeaderText = "Cliente"
+        Me.ClienteDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ClienteDataGridViewTextBoxColumn.Name = "ClienteDataGridViewTextBoxColumn"
         Me.ClienteDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -126,6 +132,7 @@ Partial Class FrmHistorialFactura
         '
         Me.ServicioDataGridViewTextBoxColumn.DataPropertyName = "Servicio"
         Me.ServicioDataGridViewTextBoxColumn.HeaderText = "Servicio"
+        Me.ServicioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ServicioDataGridViewTextBoxColumn.Name = "ServicioDataGridViewTextBoxColumn"
         Me.ServicioDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -133,6 +140,7 @@ Partial Class FrmHistorialFactura
         '
         Me.PrecioServicioDataGridViewTextBoxColumn.DataPropertyName = "PrecioServicio"
         Me.PrecioServicioDataGridViewTextBoxColumn.HeaderText = "PrecioServicio"
+        Me.PrecioServicioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.PrecioServicioDataGridViewTextBoxColumn.Name = "PrecioServicioDataGridViewTextBoxColumn"
         Me.PrecioServicioDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -140,6 +148,7 @@ Partial Class FrmHistorialFactura
         '
         Me.NumPlacaDataGridViewTextBoxColumn.DataPropertyName = "NumPlaca"
         Me.NumPlacaDataGridViewTextBoxColumn.HeaderText = "NumPlaca"
+        Me.NumPlacaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NumPlacaDataGridViewTextBoxColumn.Name = "NumPlacaDataGridViewTextBoxColumn"
         Me.NumPlacaDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -147,6 +156,7 @@ Partial Class FrmHistorialFactura
         '
         Me.UsuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario"
         Me.UsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
+        Me.UsuarioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
         Me.UsuarioDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -154,6 +164,7 @@ Partial Class FrmHistorialFactura
         '
         Me.EmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado"
         Me.EmpleadoDataGridViewTextBoxColumn.HeaderText = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.EmpleadoDataGridViewTextBoxColumn.Name = "EmpleadoDataGridViewTextBoxColumn"
         Me.EmpleadoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -161,6 +172,7 @@ Partial Class FrmHistorialFactura
         '
         Me.FormaPagoDataGridViewTextBoxColumn.DataPropertyName = "FormaPago"
         Me.FormaPagoDataGridViewTextBoxColumn.HeaderText = "FormaPago"
+        Me.FormaPagoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.FormaPagoDataGridViewTextBoxColumn.Name = "FormaPagoDataGridViewTextBoxColumn"
         Me.FormaPagoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -168,6 +180,7 @@ Partial Class FrmHistorialFactura
         '
         Me.ISVDataGridViewTextBoxColumn.DataPropertyName = "ISV"
         Me.ISVDataGridViewTextBoxColumn.HeaderText = "ISV"
+        Me.ISVDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ISVDataGridViewTextBoxColumn.Name = "ISVDataGridViewTextBoxColumn"
         Me.ISVDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -175,6 +188,7 @@ Partial Class FrmHistorialFactura
         '
         Me.SubTotalDataGridViewTextBoxColumn.DataPropertyName = "SubTotal"
         Me.SubTotalDataGridViewTextBoxColumn.HeaderText = "SubTotal"
+        Me.SubTotalDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.SubTotalDataGridViewTextBoxColumn.Name = "SubTotalDataGridViewTextBoxColumn"
         Me.SubTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -182,6 +196,7 @@ Partial Class FrmHistorialFactura
         '
         Me.TotalPagoDataGridViewTextBoxColumn.DataPropertyName = "TotalPago"
         Me.TotalPagoDataGridViewTextBoxColumn.HeaderText = "TotalPago"
+        Me.TotalPagoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TotalPagoDataGridViewTextBoxColumn.Name = "TotalPagoDataGridViewTextBoxColumn"
         Me.TotalPagoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -201,11 +216,12 @@ Partial Class FrmHistorialFactura
         '
         'FrmHistorialFactura
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(870, 457)
+        Me.ClientSize = New System.Drawing.Size(1160, 697)
         Me.Controls.Add(Me.dgHistoricos)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmHistorialFactura"
         Me.Text = "HISTORIAL"
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).EndInit()

@@ -69,9 +69,10 @@ Partial Class FrmPrincipal
         Me.lblFormTitle.AutoSize = True
         Me.lblFormTitle.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFormTitle.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblFormTitle.Location = New System.Drawing.Point(74, 27)
+        Me.lblFormTitle.Location = New System.Drawing.Point(99, 33)
+        Me.lblFormTitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFormTitle.Name = "lblFormTitle"
-        Me.lblFormTitle.Size = New System.Drawing.Size(56, 18)
+        Me.lblFormTitle.Size = New System.Drawing.Size(70, 23)
         Me.lblFormTitle.TabIndex = 1
         Me.lblFormTitle.Text = "INICIO"
         '
@@ -89,9 +90,10 @@ Partial Class FrmPrincipal
         Me.panelTitleBar.Controls.Add(Me.lblFormTitle)
         Me.panelTitleBar.Controls.Add(Me.iconCurrentForm)
         Me.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelTitleBar.Location = New System.Drawing.Point(223, 0)
+        Me.panelTitleBar.Location = New System.Drawing.Point(297, 0)
+        Me.panelTitleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelTitleBar.Name = "panelTitleBar"
-        Me.panelTitleBar.Size = New System.Drawing.Size(1077, 76)
+        Me.panelTitleBar.Size = New System.Drawing.Size(1436, 94)
         Me.panelTitleBar.TabIndex = 2
         '
         'btnMinimize
@@ -103,10 +105,10 @@ Partial Class FrmPrincipal
         Me.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize
         Me.btnMinimize.IconColor = System.Drawing.Color.DimGray
         Me.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnMinimize.IconSize = 26
-        Me.btnMinimize.Location = New System.Drawing.Point(968, 17)
+        Me.btnMinimize.Location = New System.Drawing.Point(1291, 21)
+        Me.btnMinimize.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMinimize.Name = "btnMinimize"
-        Me.btnMinimize.Size = New System.Drawing.Size(32, 26)
+        Me.btnMinimize.Size = New System.Drawing.Size(43, 32)
         Me.btnMinimize.TabIndex = 24
         Me.btnMinimize.TabStop = False
         '
@@ -119,10 +121,10 @@ Partial Class FrmPrincipal
         Me.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize
         Me.btnMaximize.IconColor = System.Drawing.Color.DimGray
         Me.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnMaximize.IconSize = 26
-        Me.btnMaximize.Location = New System.Drawing.Point(1000, 17)
+        Me.btnMaximize.Location = New System.Drawing.Point(1333, 21)
+        Me.btnMaximize.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMaximize.Name = "btnMaximize"
-        Me.btnMaximize.Size = New System.Drawing.Size(32, 26)
+        Me.btnMaximize.Size = New System.Drawing.Size(43, 32)
         Me.btnMaximize.TabIndex = 23
         Me.btnMaximize.TabStop = False
         '
@@ -135,10 +137,10 @@ Partial Class FrmPrincipal
         Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
         Me.btnSalir.IconColor = System.Drawing.Color.Red
         Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSalir.IconSize = 26
-        Me.btnSalir.Location = New System.Drawing.Point(1033, 17)
+        Me.btnSalir.Location = New System.Drawing.Point(1377, 21)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(32, 26)
+        Me.btnSalir.Size = New System.Drawing.Size(43, 32)
         Me.btnSalir.TabIndex = 22
         Me.btnSalir.TabStop = False
         '
@@ -148,9 +150,10 @@ Partial Class FrmPrincipal
         Me.lblCargo.AutoSize = True
         Me.lblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCargo.ForeColor = System.Drawing.Color.LightGray
-        Me.lblCargo.Location = New System.Drawing.Point(243, 10)
+        Me.lblCargo.Location = New System.Drawing.Point(324, 12)
+        Me.lblCargo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCargo.Name = "lblCargo"
-        Me.lblCargo.Size = New System.Drawing.Size(45, 16)
+        Me.lblCargo.Size = New System.Drawing.Size(54, 20)
         Me.lblCargo.TabIndex = 21
         Me.lblCargo.Text = "Cargo"
         '
@@ -160,9 +163,10 @@ Partial Class FrmPrincipal
         Me.lblUsers.AutoSize = True
         Me.lblUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsers.ForeColor = System.Drawing.Color.LightGray
-        Me.lblUsers.Location = New System.Drawing.Point(243, 50)
+        Me.lblUsers.Location = New System.Drawing.Point(324, 62)
+        Me.lblUsers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUsers.Name = "lblUsers"
-        Me.lblUsers.Size = New System.Drawing.Size(55, 16)
+        Me.lblUsers.Size = New System.Drawing.Size(67, 20)
         Me.lblUsers.TabIndex = 20
         Me.lblUsers.Text = "Usuario"
         '
@@ -172,9 +176,10 @@ Partial Class FrmPrincipal
         Me.lblName.AutoSize = True
         Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblName.ForeColor = System.Drawing.Color.LightGray
-        Me.lblName.Location = New System.Drawing.Point(243, 30)
+        Me.lblName.Location = New System.Drawing.Point(324, 37)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(67, 16)
+        Me.lblName.Size = New System.Drawing.Size(82, 20)
         Me.lblName.TabIndex = 19
         Me.lblName.Text = "Nombres "
         '
@@ -182,9 +187,10 @@ Partial Class FrmPrincipal
         '
         Me.pictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox7.Image = Global.CarWash_La_Lima.My.Resources.Resources.USER
-        Me.pictureBox7.Location = New System.Drawing.Point(172, 5)
+        Me.pictureBox7.Location = New System.Drawing.Point(229, 6)
+        Me.pictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pictureBox7.Name = "pictureBox7"
-        Me.pictureBox7.Size = New System.Drawing.Size(65, 65)
+        Me.pictureBox7.Size = New System.Drawing.Size(87, 80)
         Me.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pictureBox7.TabIndex = 18
         Me.pictureBox7.TabStop = False
@@ -196,7 +202,8 @@ Partial Class FrmPrincipal
         Me.mzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.mzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.mzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.mzButtonWindows2.Location = New System.Drawing.Point(1257, 0)
+        Me.mzButtonWindows2.Location = New System.Drawing.Point(1676, 0)
+        Me.mzButtonWindows2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.mzButtonWindows2.Name = "mzButtonWindows2"
         Me.mzButtonWindows2.ParentControl = Me
         Me.mzButtonWindows2.Size = New System.Drawing.Size(40, 24)
@@ -210,9 +217,11 @@ Partial Class FrmPrincipal
         Me.iconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Home
         Me.iconCurrentForm.IconColor = System.Drawing.Color.MediumPurple
         Me.iconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.iconCurrentForm.Location = New System.Drawing.Point(36, 21)
+        Me.iconCurrentForm.IconSize = 39
+        Me.iconCurrentForm.Location = New System.Drawing.Point(48, 26)
+        Me.iconCurrentForm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.iconCurrentForm.Name = "iconCurrentForm"
-        Me.iconCurrentForm.Size = New System.Drawing.Size(32, 32)
+        Me.iconCurrentForm.Size = New System.Drawing.Size(43, 39)
         Me.iconCurrentForm.TabIndex = 0
         Me.iconCurrentForm.TabStop = False
         '
@@ -232,8 +241,9 @@ Partial Class FrmPrincipal
         Me.panelMenu.Controls.Add(Me.imgHome)
         Me.panelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelMenu.Location = New System.Drawing.Point(0, 0)
+        Me.panelMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelMenu.Name = "panelMenu"
-        Me.panelMenu.Size = New System.Drawing.Size(223, 788)
+        Me.panelMenu.Size = New System.Drawing.Size(297, 970)
         Me.panelMenu.TabIndex = 1
         '
         'pnlSubMenu
@@ -243,9 +253,10 @@ Partial Class FrmPrincipal
         Me.pnlSubMenu.Controls.Add(Me.btnModelos)
         Me.pnlSubMenu.Controls.Add(Me.btnColor)
         Me.pnlSubMenu.Controls.Add(Me.btnUsuarios)
-        Me.pnlSubMenu.Location = New System.Drawing.Point(3, 534)
+        Me.pnlSubMenu.Location = New System.Drawing.Point(4, 657)
+        Me.pnlSubMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlSubMenu.Name = "pnlSubMenu"
-        Me.pnlSubMenu.Size = New System.Drawing.Size(223, 259)
+        Me.pnlSubMenu.Size = New System.Drawing.Size(297, 319)
         Me.pnlSubMenu.TabIndex = 24
         '
         'btnMarcas
@@ -258,10 +269,11 @@ Partial Class FrmPrincipal
         Me.btnMarcas.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnMarcas.IconSize = 32
         Me.btnMarcas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnMarcas.Location = New System.Drawing.Point(3, 195)
+        Me.btnMarcas.Location = New System.Drawing.Point(4, 240)
+        Me.btnMarcas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMarcas.Name = "btnMarcas"
-        Me.btnMarcas.Padding = New System.Windows.Forms.Padding(35, 0, 20, 0)
-        Me.btnMarcas.Size = New System.Drawing.Size(220, 42)
+        Me.btnMarcas.Padding = New System.Windows.Forms.Padding(47, 0, 27, 0)
+        Me.btnMarcas.Size = New System.Drawing.Size(293, 52)
         Me.btnMarcas.TabIndex = 23
         Me.btnMarcas.Text = "MARCAS"
         Me.btnMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -278,10 +290,11 @@ Partial Class FrmPrincipal
         Me.btnTipoV.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnTipoV.IconSize = 32
         Me.btnTipoV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTipoV.Location = New System.Drawing.Point(3, 147)
+        Me.btnTipoV.Location = New System.Drawing.Point(4, 181)
+        Me.btnTipoV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTipoV.Name = "btnTipoV"
-        Me.btnTipoV.Padding = New System.Windows.Forms.Padding(35, 0, 20, 0)
-        Me.btnTipoV.Size = New System.Drawing.Size(220, 42)
+        Me.btnTipoV.Padding = New System.Windows.Forms.Padding(47, 0, 27, 0)
+        Me.btnTipoV.Size = New System.Drawing.Size(293, 52)
         Me.btnTipoV.TabIndex = 22
         Me.btnTipoV.Text = "TIPO DE VEHICULOS"
         Me.btnTipoV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -298,10 +311,11 @@ Partial Class FrmPrincipal
         Me.btnModelos.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnModelos.IconSize = 32
         Me.btnModelos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModelos.Location = New System.Drawing.Point(3, 51)
+        Me.btnModelos.Location = New System.Drawing.Point(4, 63)
+        Me.btnModelos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnModelos.Name = "btnModelos"
-        Me.btnModelos.Padding = New System.Windows.Forms.Padding(35, 0, 20, 0)
-        Me.btnModelos.Size = New System.Drawing.Size(220, 42)
+        Me.btnModelos.Padding = New System.Windows.Forms.Padding(47, 0, 27, 0)
+        Me.btnModelos.Size = New System.Drawing.Size(293, 52)
         Me.btnModelos.TabIndex = 21
         Me.btnModelos.Text = "MODELOS"
         Me.btnModelos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -318,10 +332,11 @@ Partial Class FrmPrincipal
         Me.btnColor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnColor.IconSize = 32
         Me.btnColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnColor.Location = New System.Drawing.Point(3, 99)
+        Me.btnColor.Location = New System.Drawing.Point(4, 122)
+        Me.btnColor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnColor.Name = "btnColor"
-        Me.btnColor.Padding = New System.Windows.Forms.Padding(35, 0, 20, 0)
-        Me.btnColor.Size = New System.Drawing.Size(220, 42)
+        Me.btnColor.Padding = New System.Windows.Forms.Padding(47, 0, 27, 0)
+        Me.btnColor.Size = New System.Drawing.Size(293, 52)
         Me.btnColor.TabIndex = 20
         Me.btnColor.Text = "COLORES VEHICULOS"
         Me.btnColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -338,10 +353,11 @@ Partial Class FrmPrincipal
         Me.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnUsuarios.IconSize = 32
         Me.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUsuarios.Location = New System.Drawing.Point(3, 3)
+        Me.btnUsuarios.Location = New System.Drawing.Point(4, 4)
+        Me.btnUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnUsuarios.Name = "btnUsuarios"
-        Me.btnUsuarios.Padding = New System.Windows.Forms.Padding(35, 0, 20, 0)
-        Me.btnUsuarios.Size = New System.Drawing.Size(220, 42)
+        Me.btnUsuarios.Padding = New System.Windows.Forms.Padding(47, 0, 27, 0)
+        Me.btnUsuarios.Size = New System.Drawing.Size(293, 52)
         Me.btnUsuarios.TabIndex = 19
         Me.btnUsuarios.Text = "USUARIOS"
         Me.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -358,10 +374,11 @@ Partial Class FrmPrincipal
         Me.btnLogout.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnLogout.IconSize = 32
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogout.Location = New System.Drawing.Point(3, 689)
+        Me.btnLogout.Location = New System.Drawing.Point(4, 848)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Padding = New System.Windows.Forms.Padding(10, 0, 18, 0)
-        Me.btnLogout.Size = New System.Drawing.Size(220, 42)
+        Me.btnLogout.Padding = New System.Windows.Forms.Padding(13, 0, 24, 0)
+        Me.btnLogout.Size = New System.Drawing.Size(293, 52)
         Me.btnLogout.TabIndex = 24
         Me.btnLogout.Text = "CERRAR SESION"
         Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -378,10 +395,11 @@ Partial Class FrmPrincipal
         Me.btnOpciones.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnOpciones.IconSize = 32
         Me.btnOpciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOpciones.Location = New System.Drawing.Point(3, 486)
+        Me.btnOpciones.Location = New System.Drawing.Point(4, 598)
+        Me.btnOpciones.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOpciones.Name = "btnOpciones"
-        Me.btnOpciones.Padding = New System.Windows.Forms.Padding(10, 0, 18, 0)
-        Me.btnOpciones.Size = New System.Drawing.Size(220, 42)
+        Me.btnOpciones.Padding = New System.Windows.Forms.Padding(13, 0, 24, 0)
+        Me.btnOpciones.Size = New System.Drawing.Size(293, 52)
         Me.btnOpciones.TabIndex = 23
         Me.btnOpciones.Text = "OTRAS OPCIONES"
         Me.btnOpciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -398,10 +416,11 @@ Partial Class FrmPrincipal
         Me.btnHistorial.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnHistorial.IconSize = 32
         Me.btnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHistorial.Location = New System.Drawing.Point(3, 420)
+        Me.btnHistorial.Location = New System.Drawing.Point(4, 517)
+        Me.btnHistorial.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnHistorial.Name = "btnHistorial"
-        Me.btnHistorial.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
-        Me.btnHistorial.Size = New System.Drawing.Size(220, 60)
+        Me.btnHistorial.Padding = New System.Windows.Forms.Padding(13, 0, 27, 0)
+        Me.btnHistorial.Size = New System.Drawing.Size(293, 74)
         Me.btnHistorial.TabIndex = 22
         Me.btnHistorial.Text = "HISTORIAL"
         Me.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -418,10 +437,11 @@ Partial Class FrmPrincipal
         Me.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnEmpleados.IconSize = 32
         Me.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEmpleados.Location = New System.Drawing.Point(3, 354)
+        Me.btnEmpleados.Location = New System.Drawing.Point(4, 436)
+        Me.btnEmpleados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEmpleados.Name = "btnEmpleados"
-        Me.btnEmpleados.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
-        Me.btnEmpleados.Size = New System.Drawing.Size(220, 60)
+        Me.btnEmpleados.Padding = New System.Windows.Forms.Padding(13, 0, 27, 0)
+        Me.btnEmpleados.Size = New System.Drawing.Size(293, 74)
         Me.btnEmpleados.TabIndex = 21
         Me.btnEmpleados.Text = "EMPLEADOS"
         Me.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -438,10 +458,11 @@ Partial Class FrmPrincipal
         Me.btnVehiculos.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnVehiculos.IconSize = 32
         Me.btnVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnVehiculos.Location = New System.Drawing.Point(3, 288)
+        Me.btnVehiculos.Location = New System.Drawing.Point(4, 354)
+        Me.btnVehiculos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVehiculos.Name = "btnVehiculos"
-        Me.btnVehiculos.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
-        Me.btnVehiculos.Size = New System.Drawing.Size(220, 60)
+        Me.btnVehiculos.Padding = New System.Windows.Forms.Padding(13, 0, 27, 0)
+        Me.btnVehiculos.Size = New System.Drawing.Size(293, 74)
         Me.btnVehiculos.TabIndex = 20
         Me.btnVehiculos.Text = "VEHICULOS"
         Me.btnVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -458,10 +479,11 @@ Partial Class FrmPrincipal
         Me.btnClientes.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnClientes.IconSize = 32
         Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClientes.Location = New System.Drawing.Point(3, 222)
+        Me.btnClientes.Location = New System.Drawing.Point(4, 273)
+        Me.btnClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnClientes.Name = "btnClientes"
-        Me.btnClientes.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
-        Me.btnClientes.Size = New System.Drawing.Size(220, 60)
+        Me.btnClientes.Padding = New System.Windows.Forms.Padding(13, 0, 27, 0)
+        Me.btnClientes.Size = New System.Drawing.Size(293, 74)
         Me.btnClientes.TabIndex = 19
         Me.btnClientes.Text = "CLIENTES"
         Me.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -478,10 +500,11 @@ Partial Class FrmPrincipal
         Me.btnFacturar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnFacturar.IconSize = 32
         Me.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFacturar.Location = New System.Drawing.Point(3, 156)
+        Me.btnFacturar.Location = New System.Drawing.Point(4, 192)
+        Me.btnFacturar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnFacturar.Name = "btnFacturar"
-        Me.btnFacturar.Padding = New System.Windows.Forms.Padding(10, 0, 20, 0)
-        Me.btnFacturar.Size = New System.Drawing.Size(220, 60)
+        Me.btnFacturar.Padding = New System.Windows.Forms.Padding(13, 0, 27, 0)
+        Me.btnFacturar.Size = New System.Drawing.Size(293, 74)
         Me.btnFacturar.TabIndex = 18
         Me.btnFacturar.Text = "FACTURAR"
         Me.btnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -491,9 +514,10 @@ Partial Class FrmPrincipal
         'imgHome
         '
         Me.imgHome.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
-        Me.imgHome.Location = New System.Drawing.Point(12, 27)
+        Me.imgHome.Location = New System.Drawing.Point(16, 33)
+        Me.imgHome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.imgHome.Name = "imgHome"
-        Me.imgHome.Size = New System.Drawing.Size(176, 104)
+        Me.imgHome.Size = New System.Drawing.Size(235, 128)
         Me.imgHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imgHome.TabIndex = 6
         Me.imgHome.TabStop = False
@@ -502,33 +526,36 @@ Partial Class FrmPrincipal
         '
         Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.PanelDesktop.Controls.Add(Me.pictureBox2)
-        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelDesktop.Location = New System.Drawing.Point(223, 76)
+        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelDesktop.Location = New System.Drawing.Point(297, 0)
+        Me.PanelDesktop.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PanelDesktop.Name = "PanelDesktop"
-        Me.PanelDesktop.Size = New System.Drawing.Size(1077, 712)
+        Me.PanelDesktop.Size = New System.Drawing.Size(1436, 970)
         Me.PanelDesktop.TabIndex = 3
         '
         'pictureBox2
         '
         Me.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.pictureBox2.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
-        Me.pictureBox2.Location = New System.Drawing.Point(333, 215)
+        Me.pictureBox2.Location = New System.Drawing.Point(444, 312)
+        Me.pictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pictureBox2.Name = "pictureBox2"
-        Me.pictureBox2.Size = New System.Drawing.Size(438, 231)
+        Me.pictureBox2.Size = New System.Drawing.Size(584, 284)
         Me.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pictureBox2.TabIndex = 8
         Me.pictureBox2.TabStop = False
         '
         'FrmPrincipal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1300, 788)
+        Me.ClientSize = New System.Drawing.Size(1733, 970)
         Me.Controls.Add(Me.panelTitleBar)
         Me.Controls.Add(Me.PanelDesktop)
         Me.Controls.Add(Me.panelMenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MinimumSize = New System.Drawing.Size(950, 600)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinimumSize = New System.Drawing.Size(1267, 738)
         Me.Name = "FrmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmPrincipal"

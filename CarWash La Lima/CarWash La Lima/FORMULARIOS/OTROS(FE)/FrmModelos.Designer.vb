@@ -68,9 +68,10 @@ Partial Class FrmModelos
         Me.label11.AutoSize = True
         Me.label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label11.ForeColor = System.Drawing.Color.White
-        Me.label11.Location = New System.Drawing.Point(856, 45)
+        Me.label11.Location = New System.Drawing.Point(1137, 179)
+        Me.label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(64, 20)
+        Me.label11.Size = New System.Drawing.Size(83, 25)
         Me.label11.TabIndex = 203
         Me.label11.Text = "DATOS"
         '
@@ -79,9 +80,10 @@ Partial Class FrmModelos
         Me.label5.AutoSize = True
         Me.label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label5.Location = New System.Drawing.Point(659, 92)
+        Me.label5.Location = New System.Drawing.Point(875, 237)
+        Me.label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(25, 17)
+        Me.label5.Size = New System.Drawing.Size(31, 20)
         Me.label5.TabIndex = 202
         Me.label5.Text = "ID:"
         '
@@ -89,10 +91,11 @@ Partial Class FrmModelos
         '
         Me.txtid.Enabled = False
         Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(796, 89)
+        Me.txtid.Location = New System.Drawing.Point(1057, 234)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(244, 23)
+        Me.txtid.Size = New System.Drawing.Size(324, 26)
         Me.txtid.TabIndex = 201
         '
         'btnEditar
@@ -102,9 +105,10 @@ Partial Class FrmModelos
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.White
-        Me.btnEditar.Location = New System.Drawing.Point(820, 392)
+        Me.btnEditar.Location = New System.Drawing.Point(1089, 606)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(100, 30)
+        Me.btnEditar.Size = New System.Drawing.Size(133, 37)
         Me.btnEditar.TabIndex = 200
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
@@ -116,9 +120,10 @@ Partial Class FrmModelos
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Location = New System.Drawing.Point(705, 392)
+        Me.btnGuardar.Location = New System.Drawing.Point(936, 606)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 30)
+        Me.btnGuardar.Size = New System.Drawing.Size(133, 37)
         Me.btnGuardar.TabIndex = 199
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -128,9 +133,10 @@ Partial Class FrmModelos
         Me.label4.AutoSize = True
         Me.label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label4.Location = New System.Drawing.Point(659, 224)
+        Me.label4.Location = New System.Drawing.Point(875, 400)
+        Me.label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(37, 17)
+        Me.label4.Size = New System.Drawing.Size(43, 20)
         Me.label4.TabIndex = 198
         Me.label4.Text = "Año:"
         '
@@ -139,9 +145,10 @@ Partial Class FrmModelos
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label2.Location = New System.Drawing.Point(659, 178)
+        Me.Label2.Location = New System.Drawing.Point(875, 343)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 17)
+        Me.Label2.Size = New System.Drawing.Size(68, 20)
         Me.Label2.TabIndex = 196
         Me.Label2.Text = "Modelo:"
         '
@@ -150,26 +157,29 @@ Partial Class FrmModelos
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label6.Location = New System.Drawing.Point(659, 133)
+        Me.Label6.Location = New System.Drawing.Point(875, 288)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 17)
+        Me.Label6.Size = New System.Drawing.Size(61, 20)
         Me.Label6.TabIndex = 195
         Me.Label6.Text = "Marca:"
         '
         'txtAnio
         '
         Me.txtAnio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAnio.Location = New System.Drawing.Point(796, 221)
+        Me.txtAnio.Location = New System.Drawing.Point(1057, 396)
+        Me.txtAnio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAnio.Name = "txtAnio"
-        Me.txtAnio.Size = New System.Drawing.Size(244, 23)
+        Me.txtAnio.Size = New System.Drawing.Size(324, 26)
         Me.txtAnio.TabIndex = 194
         '
         'txtModelo
         '
         Me.txtModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModelo.Location = New System.Drawing.Point(796, 175)
+        Me.txtModelo.Location = New System.Drawing.Point(1057, 339)
+        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(244, 23)
+        Me.txtModelo.Size = New System.Drawing.Size(324, 26)
         Me.txtModelo.TabIndex = 193
         '
         'label1
@@ -177,9 +187,10 @@ Partial Class FrmModelos
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.White
-        Me.label1.Location = New System.Drawing.Point(53, 17)
+        Me.label1.Location = New System.Drawing.Point(67, 145)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(89, 20)
+        Me.label1.Size = New System.Drawing.Size(113, 25)
         Me.label1.TabIndex = 191
         Me.label1.Text = "MODELOS"
         '
@@ -194,9 +205,10 @@ Partial Class FrmModelos
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(937, 392)
+        Me.btnEliminar.Location = New System.Drawing.Point(1245, 606)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(100, 30)
+        Me.btnEliminar.Size = New System.Drawing.Size(133, 37)
         Me.btnEliminar.TabIndex = 190
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -231,7 +243,8 @@ Partial Class FrmModelos
         Me.dgModelos.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgModelos.EnableHeadersVisualStyles = False
         Me.dgModelos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.dgModelos.Location = New System.Drawing.Point(57, 57)
+        Me.dgModelos.Location = New System.Drawing.Point(72, 194)
+        Me.dgModelos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgModelos.Name = "dgModelos"
         Me.dgModelos.ReadOnly = True
         Me.dgModelos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -243,14 +256,16 @@ Partial Class FrmModelos
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgModelos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgModelos.RowHeadersWidth = 51
         Me.dgModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgModelos.Size = New System.Drawing.Size(582, 377)
+        Me.dgModelos.Size = New System.Drawing.Size(776, 464)
         Me.dgModelos.TabIndex = 189
         '
         'ModeloIDDataGridViewTextBoxColumn
         '
         Me.ModeloIDDataGridViewTextBoxColumn.DataPropertyName = "ModeloID"
         Me.ModeloIDDataGridViewTextBoxColumn.HeaderText = "ModeloID"
+        Me.ModeloIDDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ModeloIDDataGridViewTextBoxColumn.Name = "ModeloIDDataGridViewTextBoxColumn"
         Me.ModeloIDDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -258,6 +273,7 @@ Partial Class FrmModelos
         '
         Me.MarcaDataGridViewTextBoxColumn.DataPropertyName = "Marca"
         Me.MarcaDataGridViewTextBoxColumn.HeaderText = "Marca"
+        Me.MarcaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.MarcaDataGridViewTextBoxColumn.Name = "MarcaDataGridViewTextBoxColumn"
         Me.MarcaDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -265,6 +281,7 @@ Partial Class FrmModelos
         '
         Me.ModeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo"
         Me.ModeloDataGridViewTextBoxColumn.HeaderText = "Modelo"
+        Me.ModeloDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ModeloDataGridViewTextBoxColumn.Name = "ModeloDataGridViewTextBoxColumn"
         Me.ModeloDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -272,6 +289,7 @@ Partial Class FrmModelos
         '
         Me.AnioModeloDataGridViewTextBoxColumn.DataPropertyName = "AnioModelo"
         Me.AnioModeloDataGridViewTextBoxColumn.HeaderText = "AnioModelo"
+        Me.AnioModeloDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.AnioModeloDataGridViewTextBoxColumn.Name = "AnioModeloDataGridViewTextBoxColumn"
         Me.AnioModeloDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -300,9 +318,10 @@ Partial Class FrmModelos
         Me.cmbMarcaID.DataSource = Me.MarcasVehiculosBindingSource
         Me.cmbMarcaID.DisplayMember = "MarcaID"
         Me.cmbMarcaID.FormattingEnabled = True
-        Me.cmbMarcaID.Location = New System.Drawing.Point(796, 132)
+        Me.cmbMarcaID.Location = New System.Drawing.Point(1057, 286)
+        Me.cmbMarcaID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbMarcaID.Name = "cmbMarcaID"
-        Me.cmbMarcaID.Size = New System.Drawing.Size(49, 21)
+        Me.cmbMarcaID.Size = New System.Drawing.Size(64, 24)
         Me.cmbMarcaID.TabIndex = 204
         Me.cmbMarcaID.ValueMember = "MarcaID"
         '
@@ -333,17 +352,18 @@ Partial Class FrmModelos
         Me.cmbMarca.DataSource = Me.MarcasVehiculosBindingSource
         Me.cmbMarca.DisplayMember = "Marca"
         Me.cmbMarca.FormattingEnabled = True
-        Me.cmbMarca.Location = New System.Drawing.Point(796, 132)
+        Me.cmbMarca.Location = New System.Drawing.Point(1057, 286)
+        Me.cmbMarca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbMarca.Name = "cmbMarca"
-        Me.cmbMarca.Size = New System.Drawing.Size(244, 21)
+        Me.cmbMarca.Size = New System.Drawing.Size(324, 24)
         Me.cmbMarca.TabIndex = 205
         '
         'FrmModelos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1092, 450)
+        Me.ClientSize = New System.Drawing.Size(1456, 724)
         Me.Controls.Add(Me.cmbMarca)
         Me.Controls.Add(Me.cmbMarcaID)
         Me.Controls.Add(Me.label11)
@@ -359,6 +379,7 @@ Partial Class FrmModelos
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgModelos)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmModelos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "MODELOS"

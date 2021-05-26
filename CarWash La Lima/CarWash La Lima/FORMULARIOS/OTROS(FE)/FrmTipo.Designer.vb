@@ -51,9 +51,10 @@ Partial Class FrmTipo
         Me.label11.AutoSize = True
         Me.label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label11.ForeColor = System.Drawing.Color.White
-        Me.label11.Location = New System.Drawing.Point(847, 45)
+        Me.label11.Location = New System.Drawing.Point(1136, 170)
+        Me.label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(64, 20)
+        Me.label11.Size = New System.Drawing.Size(83, 25)
         Me.label11.TabIndex = 203
         Me.label11.Text = "DATOS"
         '
@@ -62,9 +63,10 @@ Partial Class FrmTipo
         Me.label5.AutoSize = True
         Me.label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label5.Location = New System.Drawing.Point(650, 92)
+        Me.label5.Location = New System.Drawing.Point(874, 228)
+        Me.label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(25, 17)
+        Me.label5.Size = New System.Drawing.Size(31, 20)
         Me.label5.TabIndex = 202
         Me.label5.Text = "ID:"
         '
@@ -72,10 +74,11 @@ Partial Class FrmTipo
         '
         Me.txtid.Enabled = False
         Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(787, 89)
+        Me.txtid.Location = New System.Drawing.Point(1056, 225)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(244, 23)
+        Me.txtid.Size = New System.Drawing.Size(324, 26)
         Me.txtid.TabIndex = 201
         '
         'btnEditar
@@ -85,9 +88,10 @@ Partial Class FrmTipo
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.White
-        Me.btnEditar.Location = New System.Drawing.Point(829, 393)
+        Me.btnEditar.Location = New System.Drawing.Point(1112, 599)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(100, 30)
+        Me.btnEditar.Size = New System.Drawing.Size(133, 37)
         Me.btnEditar.TabIndex = 200
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
@@ -99,9 +103,10 @@ Partial Class FrmTipo
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Location = New System.Drawing.Point(714, 393)
+        Me.btnGuardar.Location = New System.Drawing.Point(959, 599)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 30)
+        Me.btnGuardar.Size = New System.Drawing.Size(133, 37)
         Me.btnGuardar.TabIndex = 199
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -111,18 +116,20 @@ Partial Class FrmTipo
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label6.Location = New System.Drawing.Point(650, 133)
+        Me.Label6.Location = New System.Drawing.Point(874, 279)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(86, 17)
+        Me.Label6.Size = New System.Drawing.Size(104, 20)
         Me.Label6.TabIndex = 195
         Me.Label6.Text = "Descripcion:"
         '
         'txtDescripcion
         '
         Me.txtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(787, 130)
+        Me.txtDescripcion.Location = New System.Drawing.Point(1056, 275)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(244, 23)
+        Me.txtDescripcion.Size = New System.Drawing.Size(324, 26)
         Me.txtDescripcion.TabIndex = 193
         '
         'label1
@@ -130,9 +137,10 @@ Partial Class FrmTipo
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.White
-        Me.label1.Location = New System.Drawing.Point(44, 17)
+        Me.label1.Location = New System.Drawing.Point(66, 136)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(170, 20)
+        Me.label1.Size = New System.Drawing.Size(212, 25)
         Me.label1.TabIndex = 191
         Me.label1.Text = "TIPO DE VEHICULOS"
         '
@@ -147,9 +155,10 @@ Partial Class FrmTipo
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(945, 393)
+        Me.btnEliminar.Location = New System.Drawing.Point(1267, 599)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(100, 30)
+        Me.btnEliminar.Size = New System.Drawing.Size(133, 37)
         Me.btnEliminar.TabIndex = 190
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -184,7 +193,8 @@ Partial Class FrmTipo
         Me.dgTipoV.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgTipoV.EnableHeadersVisualStyles = False
         Me.dgTipoV.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.dgTipoV.Location = New System.Drawing.Point(48, 57)
+        Me.dgTipoV.Location = New System.Drawing.Point(71, 185)
+        Me.dgTipoV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgTipoV.Name = "dgTipoV"
         Me.dgTipoV.ReadOnly = True
         Me.dgTipoV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -196,14 +206,16 @@ Partial Class FrmTipo
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgTipoV.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgTipoV.RowHeadersWidth = 51
         Me.dgTipoV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgTipoV.Size = New System.Drawing.Size(582, 377)
+        Me.dgTipoV.Size = New System.Drawing.Size(776, 464)
         Me.dgTipoV.TabIndex = 189
         '
         'TipoVehiculoIDDataGridViewTextBoxColumn
         '
         Me.TipoVehiculoIDDataGridViewTextBoxColumn.DataPropertyName = "TipoVehiculoID"
         Me.TipoVehiculoIDDataGridViewTextBoxColumn.HeaderText = "TipoVehiculoID"
+        Me.TipoVehiculoIDDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TipoVehiculoIDDataGridViewTextBoxColumn.Name = "TipoVehiculoIDDataGridViewTextBoxColumn"
         Me.TipoVehiculoIDDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -211,6 +223,7 @@ Partial Class FrmTipo
         '
         Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion"
         Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
         Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -230,10 +243,10 @@ Partial Class FrmTipo
         '
         'FrmTipo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1075, 450)
+        Me.ClientSize = New System.Drawing.Size(1433, 700)
         Me.Controls.Add(Me.label11)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.txtid)
@@ -244,6 +257,7 @@ Partial Class FrmTipo
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgTipoV)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmTipo"
         Me.Text = "TIPO DE VEHICULO"
         CType(Me.dgTipoV, System.ComponentModel.ISupportInitialize).EndInit()

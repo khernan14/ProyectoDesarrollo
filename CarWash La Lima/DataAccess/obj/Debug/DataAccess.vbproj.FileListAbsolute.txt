@@ -12,3 +12,17 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\DataAccess\
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\DataAccess\bin\Debug\Support.pdb
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\DataAccess\bin\Debug\Support.xml
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\DataAccess\obj\Debug\DataAccess.vbproj.CopyComplete
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\bin\Debug\DataAccess.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\bin\Debug\DataAccess.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\bin\Debug\DataAccess.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\bin\Debug\Support.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\bin\Debug\Support.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\bin\Debug\Support.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.vbprojAssemblyReference.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.Resources.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.vbproj.GenerateResource.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.vbproj.CoreCompileInputs.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.vbproj.CopyComplete
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\DataAccess\obj\Debug\DataAccess.pdb

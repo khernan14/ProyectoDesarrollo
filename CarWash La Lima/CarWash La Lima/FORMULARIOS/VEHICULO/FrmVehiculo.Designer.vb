@@ -55,9 +55,10 @@ Partial Class FrmVehiculo
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.White
-        Me.label1.Location = New System.Drawing.Point(28, 20)
+        Me.label1.Location = New System.Drawing.Point(44, 136)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(203, 20)
+        Me.label1.Size = New System.Drawing.Size(252, 25)
         Me.label1.TabIndex = 30
         Me.label1.Text = "LISTADO DE VEHICULOS"
         '
@@ -74,9 +75,10 @@ Partial Class FrmVehiculo
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.ForeColor = System.Drawing.Color.Silver
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(742, 76)
+        Me.btnNuevo.Location = New System.Drawing.Point(996, 205)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(100, 30)
+        Me.btnNuevo.Size = New System.Drawing.Size(133, 37)
         Me.btnNuevo.TabIndex = 29
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -95,9 +97,10 @@ Partial Class FrmVehiculo
         Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(742, 148)
+        Me.btnEliminar.Location = New System.Drawing.Point(996, 293)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(100, 30)
+        Me.btnEliminar.Size = New System.Drawing.Size(133, 37)
         Me.btnEliminar.TabIndex = 28
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -116,9 +119,10 @@ Partial Class FrmVehiculo
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.Silver
         Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditar.Location = New System.Drawing.Point(742, 112)
+        Me.btnEditar.Location = New System.Drawing.Point(996, 249)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(100, 30)
+        Me.btnEditar.Size = New System.Drawing.Size(133, 37)
         Me.btnEditar.TabIndex = 27
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -153,7 +157,8 @@ Partial Class FrmVehiculo
         Me.dgVehiculos.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgVehiculos.EnableHeadersVisualStyles = False
         Me.dgVehiculos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.dgVehiculos.Location = New System.Drawing.Point(32, 60)
+        Me.dgVehiculos.Location = New System.Drawing.Point(50, 185)
+        Me.dgVehiculos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgVehiculos.Name = "dgVehiculos"
         Me.dgVehiculos.ReadOnly = True
         Me.dgVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -165,13 +170,15 @@ Partial Class FrmVehiculo
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgVehiculos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgVehiculos.Size = New System.Drawing.Size(670, 377)
+        Me.dgVehiculos.RowHeadersWidth = 51
+        Me.dgVehiculos.Size = New System.Drawing.Size(893, 464)
         Me.dgVehiculos.TabIndex = 26
         '
         'NumPlacaDataGridViewTextBoxColumn
         '
         Me.NumPlacaDataGridViewTextBoxColumn.DataPropertyName = "NumPlaca"
         Me.NumPlacaDataGridViewTextBoxColumn.HeaderText = "NumPlaca"
+        Me.NumPlacaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.NumPlacaDataGridViewTextBoxColumn.Name = "NumPlacaDataGridViewTextBoxColumn"
         Me.NumPlacaDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -179,6 +186,7 @@ Partial Class FrmVehiculo
         '
         Me.ModeloDataGridViewTextBoxColumn.DataPropertyName = "modelo"
         Me.ModeloDataGridViewTextBoxColumn.HeaderText = "modelo"
+        Me.ModeloDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ModeloDataGridViewTextBoxColumn.Name = "ModeloDataGridViewTextBoxColumn"
         Me.ModeloDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -186,6 +194,7 @@ Partial Class FrmVehiculo
         '
         Me.AnioDataGridViewTextBoxColumn.DataPropertyName = "anio"
         Me.AnioDataGridViewTextBoxColumn.HeaderText = "anio"
+        Me.AnioDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.AnioDataGridViewTextBoxColumn.Name = "AnioDataGridViewTextBoxColumn"
         Me.AnioDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -193,6 +202,7 @@ Partial Class FrmVehiculo
         '
         Me.MarcaDataGridViewTextBoxColumn.DataPropertyName = "marca"
         Me.MarcaDataGridViewTextBoxColumn.HeaderText = "marca"
+        Me.MarcaDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.MarcaDataGridViewTextBoxColumn.Name = "MarcaDataGridViewTextBoxColumn"
         Me.MarcaDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -200,6 +210,7 @@ Partial Class FrmVehiculo
         '
         Me.ColorDataGridViewTextBoxColumn.DataPropertyName = "color"
         Me.ColorDataGridViewTextBoxColumn.HeaderText = "color"
+        Me.ColorDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.ColorDataGridViewTextBoxColumn.Name = "ColorDataGridViewTextBoxColumn"
         Me.ColorDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -207,6 +218,7 @@ Partial Class FrmVehiculo
         '
         Me.TipovehiculoDataGridViewTextBoxColumn.DataPropertyName = "tipovehiculo"
         Me.TipovehiculoDataGridViewTextBoxColumn.HeaderText = "tipovehiculo"
+        Me.TipovehiculoDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.TipovehiculoDataGridViewTextBoxColumn.Name = "TipovehiculoDataGridViewTextBoxColumn"
         Me.TipovehiculoDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -240,15 +252,16 @@ Partial Class FrmVehiculo
         '
         'FrmVehiculo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(870, 457)
+        Me.ClientSize = New System.Drawing.Size(1160, 710)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.dgVehiculos)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "VEHICULOS"

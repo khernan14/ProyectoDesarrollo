@@ -15,3 +15,20 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Domain\obj\
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Support.dll
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Support.pdb
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Support.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\Domain.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\Domain.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\Domain.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\DataAccess.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\Support.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\DataAccess.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\DataAccess.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\Support.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\bin\Debug\Support.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.vbprojAssemblyReference.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.Resources.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.GenerateResource.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.CoreCompileInputs.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.CopyComplete
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.pdb

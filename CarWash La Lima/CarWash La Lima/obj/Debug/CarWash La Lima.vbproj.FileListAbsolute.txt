@@ -111,3 +111,52 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La 
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\RdlCompile.cache
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\RdlCompile.compiled
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.exe.config
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.exe
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\CircularProgressBar.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\FontAwesome.Sharp.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Support.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\WinFormAnimation.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Support.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Support.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\CircularProgressBar.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbprojAssemblyReference.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.CLIENTES.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarCliente.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarEmpleado.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEmpleado.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoEmpleado.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogout.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmWelcome.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmFacturas.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmColores.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmMarcas.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmModelos.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmTipo.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmUsuarios.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarVehiculo.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoVehiculo.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmHistorialFactura.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmFacturar.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogin.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoCliente.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmPrincipal.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.Resources.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmVehiculo.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.GenerateResource.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.CoreCompileInputs.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.CopyComplete
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.exe
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb

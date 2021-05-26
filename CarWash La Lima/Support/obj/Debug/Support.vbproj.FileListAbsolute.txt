@@ -8,3 +8,13 @@ C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Support\obj
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.dll
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.xml
 C:\Users\Kevin M\Documents\GitHub\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\bin\Debug\Support.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\bin\Debug\Support.pdb
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\bin\Debug\Support.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.vbprojAssemblyReference.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.Resources.resources
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.vbproj.GenerateResource.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.vbproj.CoreCompileInputs.cache
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.dll
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.xml
+D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.pdb

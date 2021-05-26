@@ -193,6 +193,7 @@ Public Class FrmPrincipal
 
     Private Sub btnOpciones_Click(sender As Object, e As EventArgs) Handles btnOpciones.Click
         mostrar(pnlSubMenu)
+        Reset()
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
