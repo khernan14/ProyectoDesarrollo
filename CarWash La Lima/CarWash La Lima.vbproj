@@ -1,0 +1,1012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AFEE313-DD59-4DDF-AA2E-BF904D8AEFE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CarWash_La_Lima.My.MyApplication</StartupObject>
+    <RootNamespace>CarWash_La_Lima</RootNamespace>
+    <AssemblyName>CarWash La Lima</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CarWash La Lima.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CarWash La Lima.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BWCMM">
+      <HintPath>..\..\..\..\..\Downloads\ARCHIVOS\BWCMM.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buscar.vb" />
+    <Compile Include="CONEXIONES DATASET%27S\ClienteDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClienteDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ColorEditarDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorEditarDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ColorVDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ColorDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColorDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\EmpleadosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\EmpleadosEUDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosEUDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\EncargadoServicioDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EncargadoServicioDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\FormaPagoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormaPagoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\DetalleFacturaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetalleFacturaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\FacturaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\FacturaHDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.Designer.vb">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmNuevoEmpleado.Designer.vb">
+      <DependentUpon>FrmNuevoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmNuevoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\MarcaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarcaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ModeloDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\PlacaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlacaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\Puesto2DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puesto2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\PuestoDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PuestoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ClientesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ClientesDataSet.vb">
+      <DependentUpon>ClientesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmClientes.Designer.vb">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmEditarCliente.Designer.vb">
+      <DependentUpon>FrmEditarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmEditarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\EmpleadosDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEditarEmpleado.Designer.vb">
+      <DependentUpon>FrmEditarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEditarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\PuestoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PuestoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\TipoVehiculoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoVehiculoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmLogout.Designer.vb">
+      <DependentUpon>FrmLogout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmLogout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmWelcome.Designer.vb">
+      <DependentUpon>FrmWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturas.Designer.vb">
+      <DependentUpon>FrmFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmColores.Designer.vb">
+      <DependentUpon>FrmColores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmColores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmMarcas.Designer.vb">
+      <DependentUpon>FrmMarcas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmMarcas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.Designer.vb">
+      <DependentUpon>FrmModelos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmTipo.Designer.vb">
+      <DependentUpon>FrmTipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmTipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmUsuarios.Designer.vb">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\VEHICULO\FrmEditarVehiculo.Designer.vb">
+      <DependentUpon>FrmEditarVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\VEHICULO\FrmEditarVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\VEHICULO\FrmNuevoVehiculo.Designer.vb">
+      <DependentUpon>FrmNuevoVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\VEHICULO\FrmNuevoVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmHistorialFactura.Designer.vb">
+      <DependentUpon>FrmHistorialFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmHistorialFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturar.Designer.vb">
+      <DependentUpon>FrmFacturar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmFacturar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmNuevoCliente.Designer.vb">
+      <DependentUpon>FrmNuevoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmNuevoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\INICIO\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\MarcasDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarcasDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\MarcasEditarDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarcasEditarDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\MarcasVDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarcasVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ModeloEditarDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEditarDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ModelosVDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelosVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\IDFacturaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IDFacturaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FORMULARIOS\VEHICULO\FrmVehiculo.Designer.vb">
+      <DependentUpon>FrmVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\VEHICULO\FrmVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaVehiculoSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaVehiculoSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\TipoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\TipoEditorDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoEditorDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\UsuariosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuariosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VehiculosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehiculosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\PlacaVDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlacaVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\ServiciosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiciosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\UsuarioFacturaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuarioFacturaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaEmpleadosPuestosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaEmpleadosPuestosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaMarcaModeloDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaMarcaModeloDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaModelo1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaModelo1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\UsuarioDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsuarioDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaEncargadosServicioDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmClientes.resx">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmEditarCliente.resx">
+      <DependentUpon>FrmEditarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEditarEmpleado.resx">
+      <DependentUpon>FrmEditarEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmNuevoEmpleado.resx">
+      <DependentUpon>FrmNuevoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\INICIO\FrmLogout.resx">
+      <DependentUpon>FrmLogout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\INICIO\FrmWelcome.resx">
+      <DependentUpon>FrmWelcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmFacturas.resx">
+      <DependentUpon>FrmFacturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmColores.resx">
+      <DependentUpon>FrmColores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmMarcas.resx">
+      <DependentUpon>FrmMarcas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.resx">
+      <DependentUpon>FrmModelos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmTipo.resx">
+      <DependentUpon>FrmTipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\VEHICULO\FrmEditarVehiculo.resx">
+      <DependentUpon>FrmEditarVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\VEHICULO\FrmNuevoVehiculo.resx">
+      <DependentUpon>FrmNuevoVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmHistorialFactura.resx">
+      <DependentUpon>FrmHistorialFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmFacturar.resx">
+      <DependentUpon>FrmFacturar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\INICIO\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmNuevoCliente.resx">
+      <DependentUpon>FrmNuevoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\INICIO\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\VEHICULO\FrmVehiculo.resx">
+      <DependentUpon>FrmVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CONEXIONES DATASET%27S\ClienteDataSet1.xsc">
+      <DependentUpon>ClienteDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ClienteDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClienteDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ClienteDataSet1.xss">
+      <DependentUpon>ClienteDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorEditarDataSet1.xsc">
+      <DependentUpon>ColorEditarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorEditarDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColorEditarDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorEditarDataSet1.xss">
+      <DependentUpon>ColorEditarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorVDataSet1.xsc">
+      <DependentUpon>ColorVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColorVDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorVDataSet1.xss">
+      <DependentUpon>ColorVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorDataSet1.xsc">
+      <DependentUpon>ColorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColorDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ColorDataSet1.xss">
+      <DependentUpon>ColorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosDataSet1.xsc">
+      <DependentUpon>EmpleadosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpleadosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosDataSet1.xss">
+      <DependentUpon>EmpleadosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcaDataSet1.xsc">
+      <DependentUpon>MarcaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarcaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcaDataSet1.xss">
+      <DependentUpon>MarcaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModeloDataSet1.xsc">
+      <DependentUpon>ModeloDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModeloDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ModeloDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModeloDataSet1.xss">
+      <DependentUpon>ModeloDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PlacaDataSet.xsc">
+      <DependentUpon>PlacaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PlacaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlacaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PlacaDataSet.xss">
+      <DependentUpon>PlacaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\Puesto2DataSet1.xsc">
+      <DependentUpon>Puesto2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\Puesto2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puesto2DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\Puesto2DataSet1.xss">
+      <DependentUpon>Puesto2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PuestoDataSet.xsc">
+      <DependentUpon>PuestoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PuestoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PuestoDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PuestoDataSet.xss">
+      <DependentUpon>PuestoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ClientesDataSet.xsc">
+      <DependentUpon>ClientesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ClientesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClientesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ClientesDataSet.xss">
+      <DependentUpon>ClientesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosDataSet.xsc">
+      <DependentUpon>EmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpleadosDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosDataSet.xss">
+      <DependentUpon>EmpleadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosEUDataSet1.xsc">
+      <DependentUpon>EmpleadosEUDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosEUDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmpleadosEUDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EmpleadosEUDataSet1.xss">
+      <DependentUpon>EmpleadosEUDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasDataSet1.xsc">
+      <DependentUpon>MarcasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarcasDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasDataSet1.xss">
+      <DependentUpon>MarcasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasEditarDataSet1.xsc">
+      <DependentUpon>MarcasEditarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasEditarDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarcasEditarDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasEditarDataSet1.xss">
+      <DependentUpon>MarcasEditarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasVDataSet1.xsc">
+      <DependentUpon>MarcasVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarcasVDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\MarcasVDataSet1.xss">
+      <DependentUpon>MarcasVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModeloEditarDataSet1.xsc">
+      <DependentUpon>ModeloEditarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModeloEditarDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ModeloEditarDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModeloEditarDataSet1.xss">
+      <DependentUpon>ModeloEditarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModelosVDataSet1.xsc">
+      <DependentUpon>ModelosVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModelosVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ModelosVDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ModelosVDataSet1.xss">
+      <DependentUpon>ModelosVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EncargadoServicioDataSet1.xsc">
+      <DependentUpon>EncargadoServicioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EncargadoServicioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EncargadoServicioDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\EncargadoServicioDataSet1.xss">
+      <DependentUpon>EncargadoServicioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FormaPagoDataSet1.xsc">
+      <DependentUpon>FormaPagoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FormaPagoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FormaPagoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FormaPagoDataSet1.xss">
+      <DependentUpon>FormaPagoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\DetalleFacturaDataSet1.xsc">
+      <DependentUpon>DetalleFacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\DetalleFacturaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DetalleFacturaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\DetalleFacturaDataSet1.xss">
+      <DependentUpon>DetalleFacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FacturaDataSet1.xsc">
+      <DependentUpon>FacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FacturaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FacturaDataSet1.xss">
+      <DependentUpon>FacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FacturaHDataSet1.xsc">
+      <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FacturaHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturaHDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\FacturaHDataSet1.xss">
+      <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\IDFacturaDataSet1.xsc">
+      <DependentUpon>IDFacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\IDFacturaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IDFacturaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\IDFacturaDataSet1.xss">
+      <DependentUpon>IDFacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="CONEXIONES DATASET%27S\TipoVehiculoDataSet1.xsc">
+      <DependentUpon>TipoVehiculoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoVehiculoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoVehiculoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoVehiculoDataSet1.xss">
+      <DependentUpon>TipoVehiculoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaVehiculoSet1.xsc">
+      <DependentUpon>VistaVehiculoSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaVehiculoSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaVehiculoSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaVehiculoSet1.xss">
+      <DependentUpon>VistaVehiculoSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoDataSet1.xsc">
+      <DependentUpon>TipoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoDataSet1.xss">
+      <DependentUpon>TipoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoEditorDataSet1.xsc">
+      <DependentUpon>TipoEditorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoEditorDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoEditorDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\TipoEditorDataSet1.xss">
+      <DependentUpon>TipoEditorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuariosDataSet1.xsc">
+      <DependentUpon>UsuariosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuariosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuariosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuariosDataSet1.xss">
+      <DependentUpon>UsuariosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VehiculosDataSet1.xsc">
+      <DependentUpon>VehiculosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VehiculosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehiculosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VehiculosDataSet1.xss">
+      <DependentUpon>VehiculosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ServiciosDataSet1.xsc">
+      <DependentUpon>ServiciosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ServiciosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiciosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\ServiciosDataSet1.xss">
+      <DependentUpon>ServiciosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuarioFacturaDataSet1.xsc">
+      <DependentUpon>UsuarioFacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuarioFacturaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuarioFacturaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuarioFacturaDataSet1.xss">
+      <DependentUpon>UsuarioFacturaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaEmpleadosPuestosDataSet1.xsc">
+      <DependentUpon>VistaEmpleadosPuestosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaEmpleadosPuestosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaEmpleadosPuestosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaEmpleadosPuestosDataSet1.xss">
+      <DependentUpon>VistaEmpleadosPuestosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaMarcaModeloDataSet1.xsc">
+      <DependentUpon>VistaMarcaModeloDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaMarcaModeloDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaMarcaModeloDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaMarcaModeloDataSet1.xss">
+      <DependentUpon>VistaMarcaModeloDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaModelo1.xsc">
+      <DependentUpon>VistaModelo1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaModelo1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaModelo1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaModelo1.xss">
+      <DependentUpon>VistaModelo1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xsc">
+      <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaUsuariosDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaUsuariosDataSet1.xss">
+      <DependentUpon>VistaUsuariosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuarioDataSet1.xsc">
+      <DependentUpon>UsuarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuarioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsuarioDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\UsuarioDataSet1.xss">
+      <DependentUpon>UsuarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaEncargadosServicioDataSet1.xsc">
+      <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaEncargadosServicioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaEncargadosServicioDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaEncargadosServicioDataSet1.xss">
+      <DependentUpon>VistaEncargadosServicioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xsc">
+      <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaNombreCompletoEmpleadoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xss">
+      <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CONEXIONES DATASET%27S\PuestoDataSet1.xsc">
+      <DependentUpon>PuestoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PuestoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PuestoDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PuestoDataSet1.xss">
+      <DependentUpon>PuestoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PlacaVDataSet1.xsc">
+      <DependentUpon>PlacaVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PlacaVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlacaVDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CONEXIONES DATASET%27S\PlacaVDataSet1.xss">
+      <DependentUpon>PlacaVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\23667483.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.vbproj">
+      <Project>{84edf146-3d8b-4c62-8840-26f0e2dfb9e2}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Support\Support.vbproj">
+      <Project>{866ec807-242b-4a96-9dfb-57d75e4dc979}</Project>
+      <Name>Support</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARWASH1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

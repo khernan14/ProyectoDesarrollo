@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VistaModelo1" targetNamespace="http://tempuri.org/VistaModelo1.xsd" xmlns:mstns="http://tempuri.org/VistaModelo1.xsd" xmlns="http://tempuri.org/VistaModelo1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CarWashLaLimaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarWashLaLimaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CarWash_La_Lima.My.MySettings.GlobalReference.Default.CarWashLaLimaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ModeloEnCNVTableAdapter" GeneratorDataComponentClassName="ModeloEnCNVTableAdapter" Name="ModeloEnCNV" UserDataComponentName="ModeloEnCNVTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CarWashLaLimaConnectionString (MySettings)" DbObjectName="CarWashLaLima.dbo.ModeloEnCNV" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Modelo FROM dbo.ModeloEnCNV</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VistaModelo1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VistaModelo1" msprop:Generator_UserDSName="VistaModelo1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ModeloEnCNV" msprop:Generator_TableClassName="ModeloEnCNVDataTable" msprop:Generator_TableVarName="tableModeloEnCNV" msprop:Generator_TablePropName="ModeloEnCNV" msprop:Generator_RowDeletingName="ModeloEnCNVRowDeleting" msprop:Generator_RowChangingName="ModeloEnCNVRowChanging" msprop:Generator_RowEvHandlerName="ModeloEnCNVRowChangeEventHandler" msprop:Generator_RowDeletedName="ModeloEnCNVRowDeleted" msprop:Generator_UserTableName="ModeloEnCNV" msprop:Generator_RowChangedName="ModeloEnCNVRowChanged" msprop:Generator_RowEvArgName="ModeloEnCNVRowChangeEvent" msprop:Generator_RowClassName="ModeloEnCNVRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
