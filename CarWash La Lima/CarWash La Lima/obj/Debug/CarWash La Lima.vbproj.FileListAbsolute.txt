@@ -160,3 +160,55 @@ D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\Proyecto
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.exe
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.xml
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.exe.config
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.exe
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CarWash La Lima.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CircularProgressBar.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Support.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\WinFormAnimation.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Domain.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Support.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Support.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\CircularProgressBar.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\bin\Debug\DataAccess.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.AssemblyReference.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.CLIENTES.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarCliente.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarEmpleado.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEmpleado.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoEmpleado.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogout.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmWelcome.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmFacturas.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmColores.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmMarcas.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmModelos.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmServicios.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmTipo.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmUsuarios.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEditarVehiculo.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoVehiculo.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmHistorialFactura.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmFacturar.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmLogin.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmNuevoCliente.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmPrincipal.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.Resources.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmVehiculo.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.GenerateResource.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.CoreCompileInputs.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.vbproj.CopyComplete
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.exe
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmServiciosFactura.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEncargado.resources

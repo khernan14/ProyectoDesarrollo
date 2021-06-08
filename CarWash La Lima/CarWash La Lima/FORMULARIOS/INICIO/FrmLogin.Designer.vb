@@ -47,8 +47,9 @@ Partial Class FrmLogin
         Me.BarraTitulo.Controls.Add(Me.MzButtonWindows1)
         Me.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.BarraTitulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BarraTitulo.Name = "BarraTitulo"
-        Me.BarraTitulo.Size = New System.Drawing.Size(430, 40)
+        Me.BarraTitulo.Size = New System.Drawing.Size(573, 49)
         Me.BarraTitulo.TabIndex = 0
         '
         'MzButtonWindows1
@@ -58,7 +59,8 @@ Partial Class FrmLogin
         Me.MzButtonWindows1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.MzButtonWindows1.Location = New System.Drawing.Point(390, 0)
+        Me.MzButtonWindows1.Location = New System.Drawing.Point(533, 0)
+        Me.MzButtonWindows1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MzButtonWindows1.Name = "MzButtonWindows1"
         Me.MzButtonWindows1.ParentControl = Me
         Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
@@ -69,9 +71,10 @@ Partial Class FrmLogin
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 665)
+        Me.Panel1.Location = New System.Drawing.Point(0, 819)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(430, 15)
+        Me.Panel1.Size = New System.Drawing.Size(573, 18)
         Me.Panel1.TabIndex = 1
         '
         'btnLogin
@@ -82,9 +85,10 @@ Partial Class FrmLogin
         Me.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.ForeColor = System.Drawing.Color.LightGray
-        Me.btnLogin.Location = New System.Drawing.Point(46, 552)
+        Me.btnLogin.Location = New System.Drawing.Point(61, 679)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(350, 50)
+        Me.btnLogin.Size = New System.Drawing.Size(467, 62)
         Me.btnLogin.TabIndex = 0
         Me.btnLogin.Text = "ACCEDER"
         Me.btnLogin.UseVisualStyleBackColor = False
@@ -95,9 +99,10 @@ Partial Class FrmLogin
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
-        Me.txtPassword.Location = New System.Drawing.Point(78, 394)
+        Me.txtPassword.Location = New System.Drawing.Point(104, 485)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(238, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(317, 25)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.Text = "CONTRASEÑA"
         '
@@ -107,9 +112,10 @@ Partial Class FrmLogin
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.ForeColor = System.Drawing.Color.DimGray
-        Me.txtUsuario.Location = New System.Drawing.Point(83, 329)
+        Me.txtUsuario.Location = New System.Drawing.Point(111, 405)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(238, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(317, 25)
         Me.txtUsuario.TabIndex = 1
         Me.txtUsuario.Text = "USUARIO"
         '
@@ -119,7 +125,7 @@ Partial Class FrmLogin
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(430, 680)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(573, 837)
         Me.ShapeContainer1.TabIndex = 9
         Me.ShapeContainer1.TabStop = False
         '
@@ -146,9 +152,10 @@ Partial Class FrmLogin
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.DimGray
-        Me.label1.Location = New System.Drawing.Point(172, 67)
+        Me.label1.Location = New System.Drawing.Point(229, 82)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(101, 32)
+        Me.label1.Size = New System.Drawing.Size(125, 40)
         Me.label1.TabIndex = 10
         Me.label1.Text = "LOGIN"
         '
@@ -161,9 +168,10 @@ Partial Class FrmLogin
         Me.btnMostrarOcultar.IconColor = System.Drawing.Color.Gainsboro
         Me.btnMostrarOcultar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnMostrarOcultar.IconSize = 26
-        Me.btnMostrarOcultar.Location = New System.Drawing.Point(317, 391)
+        Me.btnMostrarOcultar.Location = New System.Drawing.Point(423, 481)
+        Me.btnMostrarOcultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMostrarOcultar.Name = "btnMostrarOcultar"
-        Me.btnMostrarOcultar.Size = New System.Drawing.Size(24, 23)
+        Me.btnMostrarOcultar.Size = New System.Drawing.Size(32, 28)
         Me.btnMostrarOcultar.TabIndex = 3
         Me.btnMostrarOcultar.UseVisualStyleBackColor = False
         '
@@ -176,9 +184,10 @@ Partial Class FrmLogin
         Me.btnOcultar.IconColor = System.Drawing.Color.Gainsboro
         Me.btnOcultar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnOcultar.IconSize = 26
-        Me.btnOcultar.Location = New System.Drawing.Point(317, 391)
+        Me.btnOcultar.Location = New System.Drawing.Point(423, 481)
+        Me.btnOcultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOcultar.Name = "btnOcultar"
-        Me.btnOcultar.Size = New System.Drawing.Size(24, 23)
+        Me.btnOcultar.Size = New System.Drawing.Size(32, 28)
         Me.btnOcultar.TabIndex = 13
         Me.btnOcultar.UseVisualStyleBackColor = False
         '
@@ -193,9 +202,10 @@ Partial Class FrmLogin
         Me.btnErrorMessage.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnErrorMessage.IconSize = 22
         Me.btnErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnErrorMessage.Location = New System.Drawing.Point(77, 432)
+        Me.btnErrorMessage.Location = New System.Drawing.Point(103, 532)
+        Me.btnErrorMessage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnErrorMessage.Name = "btnErrorMessage"
-        Me.btnErrorMessage.Size = New System.Drawing.Size(278, 30)
+        Me.btnErrorMessage.Size = New System.Drawing.Size(371, 37)
         Me.btnErrorMessage.TabIndex = 16
         Me.btnErrorMessage.Text = "Error Message"
         Me.btnErrorMessage.UseVisualStyleBackColor = True
@@ -204,19 +214,21 @@ Partial Class FrmLogin
         'pictureBox1
         '
         Me.pictureBox1.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
-        Me.pictureBox1.Location = New System.Drawing.Point(111, 113)
+        Me.pictureBox1.Location = New System.Drawing.Point(148, 139)
+        Me.pictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pictureBox1.Name = "pictureBox1"
-        Me.pictureBox1.Size = New System.Drawing.Size(210, 164)
+        Me.pictureBox1.Size = New System.Drawing.Size(280, 202)
         Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pictureBox1.TabIndex = 17
         Me.pictureBox1.TabStop = False
         '
         'FrmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AcceptButton = Me.btnLogin
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(430, 680)
+        Me.ClientSize = New System.Drawing.Size(573, 837)
         Me.Controls.Add(Me.btnMostrarOcultar)
         Me.Controls.Add(Me.pictureBox1)
         Me.Controls.Add(Me.btnErrorMessage)
@@ -229,6 +241,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.BarraTitulo)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmLogin"
         Me.Opacity = 0.9R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

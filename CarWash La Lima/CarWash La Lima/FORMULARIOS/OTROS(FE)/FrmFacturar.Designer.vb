@@ -33,13 +33,10 @@ Partial Class FrmFacturar
         Me.txtFactura = New System.Windows.Forms.TextBox()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClienteDataSet1 = New CarWash_La_Lima.ClienteDataSet1()
-        Me.cmbVehiculo = New System.Windows.Forms.ComboBox()
         Me.VehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlacaVDataSet1 = New CarWash_La_Lima.PlacaVDataSet1()
-        Me.cmbServicio = New System.Windows.Forms.ComboBox()
         Me.ServicioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ServiciosDataSet1 = New CarWash_La_Lima.ServiciosDataSet1()
-        Me.cmbEncargadoServicio = New System.Windows.Forms.ComboBox()
         Me.VistaNoRepeatDatosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaEncargadosServicioDataSet11 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -70,10 +67,7 @@ Partial Class FrmFacturar
         Me.Label11 = New System.Windows.Forms.Label()
         Me.EmpleadoTableAdapter = New CarWash_La_Lima.EncargadoServicioDataSet1TableAdapters.EmpleadoTableAdapter()
         Me.UsuarioTableAdapter1 = New CarWash_La_Lima.UsuarioDataSet1TableAdapters.UsuarioTableAdapter()
-        Me.cmbPrecio = New System.Windows.Forms.ComboBox()
         Me.btnCalcular = New System.Windows.Forms.Button()
-        Me.cmbIDServicio = New System.Windows.Forms.ComboBox()
-        Me.cmbIDEncargado = New System.Windows.Forms.ComboBox()
         Me.cmbIDPago = New System.Windows.Forms.ComboBox()
         Me.cmbIDUser = New System.Windows.Forms.ComboBox()
         Me.cmbID = New System.Windows.Forms.ComboBox()
@@ -87,6 +81,14 @@ Partial Class FrmFacturar
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.btnBuscarCliente = New System.Windows.Forms.Button()
         Me.txtIDCliente = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtVehiculo = New System.Windows.Forms.TextBox()
+        Me.txtIDServicio = New System.Windows.Forms.TextBox()
+        Me.txtServicio = New System.Windows.Forms.TextBox()
+        Me.txtPrecioServicio = New System.Windows.Forms.TextBox()
+        Me.txtEncargadoServicio = New System.Windows.Forms.TextBox()
+        Me.txtIDEncargado = New System.Windows.Forms.TextBox()
+        Me.btnBuscarEncargado = New System.Windows.Forms.Button()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,7 +132,7 @@ Partial Class FrmFacturar
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
         Me.btnCancelar.Location = New System.Drawing.Point(655, 481)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(133, 43)
         Me.btnCancelar.TabIndex = 87
@@ -145,7 +147,7 @@ Partial Class FrmFacturar
         Me.btnFacturar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFacturar.ForeColor = System.Drawing.Color.White
         Me.btnFacturar.Location = New System.Drawing.Point(489, 481)
-        Me.btnFacturar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnFacturar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFacturar.Name = "btnFacturar"
         Me.btnFacturar.Size = New System.Drawing.Size(133, 43)
         Me.btnFacturar.TabIndex = 86
@@ -205,7 +207,7 @@ Partial Class FrmFacturar
         Me.txtFactura.Enabled = False
         Me.txtFactura.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFactura.Location = New System.Drawing.Point(321, 140)
-        Me.txtFactura.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtFactura.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFactura.Name = "txtFactura"
         Me.txtFactura.ReadOnly = True
         Me.txtFactura.Size = New System.Drawing.Size(324, 26)
@@ -221,17 +223,6 @@ Partial Class FrmFacturar
         Me.ClienteDataSet1.DataSetName = "ClienteDataSet1"
         Me.ClienteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbVehiculo
-        '
-        Me.cmbVehiculo.DataSource = Me.VehiculoBindingSource
-        Me.cmbVehiculo.DisplayMember = "NumPlaca"
-        Me.cmbVehiculo.FormattingEnabled = True
-        Me.cmbVehiculo.Location = New System.Drawing.Point(321, 249)
-        Me.cmbVehiculo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbVehiculo.Name = "cmbVehiculo"
-        Me.cmbVehiculo.Size = New System.Drawing.Size(324, 24)
-        Me.cmbVehiculo.TabIndex = 130
-        '
         'VehiculoBindingSource
         '
         Me.VehiculoBindingSource.DataMember = "Vehiculo"
@@ -242,17 +233,6 @@ Partial Class FrmFacturar
         Me.PlacaVDataSet1.DataSetName = "PlacaVDataSet1"
         Me.PlacaVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbServicio
-        '
-        Me.cmbServicio.DataSource = Me.ServicioBindingSource
-        Me.cmbServicio.DisplayMember = "DescripcionServicio"
-        Me.cmbServicio.FormattingEnabled = True
-        Me.cmbServicio.Location = New System.Drawing.Point(321, 305)
-        Me.cmbServicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbServicio.Name = "cmbServicio"
-        Me.cmbServicio.Size = New System.Drawing.Size(212, 24)
-        Me.cmbServicio.TabIndex = 132
-        '
         'ServicioBindingSource
         '
         Me.ServicioBindingSource.DataMember = "Servicio"
@@ -262,17 +242,6 @@ Partial Class FrmFacturar
         '
         Me.ServiciosDataSet1.DataSetName = "ServiciosDataSet1"
         Me.ServiciosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'cmbEncargadoServicio
-        '
-        Me.cmbEncargadoServicio.DataSource = Me.VistaNoRepeatDatosBindingSource
-        Me.cmbEncargadoServicio.DisplayMember = "NombreEmpleado"
-        Me.cmbEncargadoServicio.FormattingEnabled = True
-        Me.cmbEncargadoServicio.Location = New System.Drawing.Point(321, 359)
-        Me.cmbEncargadoServicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbEncargadoServicio.Name = "cmbEncargadoServicio"
-        Me.cmbEncargadoServicio.Size = New System.Drawing.Size(324, 24)
-        Me.cmbEncargadoServicio.TabIndex = 134
         '
         'VistaNoRepeatDatosBindingSource
         '
@@ -321,7 +290,7 @@ Partial Class FrmFacturar
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label7.Location = New System.Drawing.Point(677, 144)
+        Me.Label7.Location = New System.Drawing.Point(815, 144)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(66, 20)
@@ -333,7 +302,7 @@ Partial Class FrmFacturar
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label8.Location = New System.Drawing.Point(677, 199)
+        Me.Label8.Location = New System.Drawing.Point(815, 199)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(103, 20)
@@ -343,8 +312,8 @@ Partial Class FrmFacturar
         'txtSubTotal
         '
         Me.txtSubTotal.Enabled = False
-        Me.txtSubTotal.Location = New System.Drawing.Point(876, 198)
-        Me.txtSubTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSubTotal.Location = New System.Drawing.Point(1014, 198)
+        Me.txtSubTotal.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSubTotal.Name = "txtSubTotal"
         Me.txtSubTotal.Size = New System.Drawing.Size(324, 22)
         Me.txtSubTotal.TabIndex = 138
@@ -352,8 +321,8 @@ Partial Class FrmFacturar
         'txtISV
         '
         Me.txtISV.Enabled = False
-        Me.txtISV.Location = New System.Drawing.Point(876, 254)
-        Me.txtISV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtISV.Location = New System.Drawing.Point(1014, 254)
+        Me.txtISV.Margin = New System.Windows.Forms.Padding(4)
         Me.txtISV.Name = "txtISV"
         Me.txtISV.Size = New System.Drawing.Size(324, 22)
         Me.txtISV.TabIndex = 140
@@ -363,7 +332,7 @@ Partial Class FrmFacturar
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label9.Location = New System.Drawing.Point(677, 255)
+        Me.Label9.Location = New System.Drawing.Point(815, 255)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(35, 20)
@@ -376,8 +345,8 @@ Partial Class FrmFacturar
         Me.cmbUsuario.DisplayMember = "Usuario"
         Me.cmbUsuario.Enabled = False
         Me.cmbUsuario.FormattingEnabled = True
-        Me.cmbUsuario.Location = New System.Drawing.Point(876, 309)
-        Me.cmbUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbUsuario.Location = New System.Drawing.Point(1014, 309)
+        Me.cmbUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbUsuario.Name = "cmbUsuario"
         Me.cmbUsuario.Size = New System.Drawing.Size(324, 24)
         Me.cmbUsuario.TabIndex = 143
@@ -407,7 +376,7 @@ Partial Class FrmFacturar
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label10.Location = New System.Drawing.Point(677, 309)
+        Me.Label10.Location = New System.Drawing.Point(815, 309)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(84, 20)
@@ -417,8 +386,8 @@ Partial Class FrmFacturar
         'txtTotal
         '
         Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(876, 361)
-        Me.txtTotal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTotal.Location = New System.Drawing.Point(1014, 361)
+        Me.txtTotal.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(324, 22)
         Me.txtTotal.TabIndex = 145
@@ -428,7 +397,7 @@ Partial Class FrmFacturar
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.Label3.Location = New System.Drawing.Point(677, 362)
+        Me.Label3.Location = New System.Drawing.Point(815, 362)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 20)
@@ -457,11 +426,14 @@ Partial Class FrmFacturar
         '
         'DateTime2
         '
-        Me.DateTime2.Location = New System.Drawing.Point(876, 139)
-        Me.DateTime2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTime2.Enabled = False
+        Me.DateTime2.Location = New System.Drawing.Point(1014, 139)
+        Me.DateTime2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DateTime2.MinDate = New Date(2021, 6, 24, 23, 59, 59, 0)
         Me.DateTime2.Name = "DateTime2"
         Me.DateTime2.Size = New System.Drawing.Size(324, 22)
         Me.DateTime2.TabIndex = 146
+        Me.DateTime2.Value = New Date(2021, 6, 24, 23, 59, 59, 0)
         '
         'cmbPago
         '
@@ -469,7 +441,7 @@ Partial Class FrmFacturar
         Me.cmbPago.DisplayMember = "FormaPago"
         Me.cmbPago.FormattingEnabled = True
         Me.cmbPago.Location = New System.Drawing.Point(321, 412)
-        Me.cmbPago.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbPago.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbPago.Name = "cmbPago"
         Me.cmbPago.Size = New System.Drawing.Size(324, 24)
         Me.cmbPago.TabIndex = 148
@@ -494,18 +466,6 @@ Partial Class FrmFacturar
         '
         Me.UsuarioTableAdapter1.ClearBeforeFill = True
         '
-        'cmbPrecio
-        '
-        Me.cmbPrecio.DataSource = Me.ServicioBindingSource
-        Me.cmbPrecio.DisplayMember = "PrecioServicio"
-        Me.cmbPrecio.Enabled = False
-        Me.cmbPrecio.FormattingEnabled = True
-        Me.cmbPrecio.Location = New System.Drawing.Point(543, 305)
-        Me.cmbPrecio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbPrecio.Name = "cmbPrecio"
-        Me.cmbPrecio.Size = New System.Drawing.Size(103, 24)
-        Me.cmbPrecio.TabIndex = 149
-        '
         'btnCalcular
         '
         Me.btnCalcular.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
@@ -514,34 +474,12 @@ Partial Class FrmFacturar
         Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCalcular.ForeColor = System.Drawing.Color.White
         Me.btnCalcular.Location = New System.Drawing.Point(321, 481)
-        Me.btnCalcular.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCalcular.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCalcular.Name = "btnCalcular"
         Me.btnCalcular.Size = New System.Drawing.Size(133, 43)
         Me.btnCalcular.TabIndex = 150
         Me.btnCalcular.Text = "Calcular"
         Me.btnCalcular.UseVisualStyleBackColor = False
-        '
-        'cmbIDServicio
-        '
-        Me.cmbIDServicio.DataSource = Me.ServicioBindingSource
-        Me.cmbIDServicio.DisplayMember = "ServicioID"
-        Me.cmbIDServicio.FormattingEnabled = True
-        Me.cmbIDServicio.Location = New System.Drawing.Point(321, 305)
-        Me.cmbIDServicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbIDServicio.Name = "cmbIDServicio"
-        Me.cmbIDServicio.Size = New System.Drawing.Size(63, 24)
-        Me.cmbIDServicio.TabIndex = 152
-        '
-        'cmbIDEncargado
-        '
-        Me.cmbIDEncargado.DataSource = Me.VistaNoRepeatDatosBindingSource
-        Me.cmbIDEncargado.DisplayMember = "EmpleadoID"
-        Me.cmbIDEncargado.FormattingEnabled = True
-        Me.cmbIDEncargado.Location = New System.Drawing.Point(321, 359)
-        Me.cmbIDEncargado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbIDEncargado.Name = "cmbIDEncargado"
-        Me.cmbIDEncargado.Size = New System.Drawing.Size(63, 24)
-        Me.cmbIDEncargado.TabIndex = 153
         '
         'cmbIDPago
         '
@@ -549,7 +487,7 @@ Partial Class FrmFacturar
         Me.cmbIDPago.DisplayMember = "PagoID"
         Me.cmbIDPago.FormattingEnabled = True
         Me.cmbIDPago.Location = New System.Drawing.Point(321, 412)
-        Me.cmbIDPago.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbIDPago.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbIDPago.Name = "cmbIDPago"
         Me.cmbIDPago.Size = New System.Drawing.Size(63, 24)
         Me.cmbIDPago.TabIndex = 154
@@ -558,9 +496,10 @@ Partial Class FrmFacturar
         '
         Me.cmbIDUser.DataSource = Me.UsuarioBindingSource1
         Me.cmbIDUser.DisplayMember = "UsuarioID"
+        Me.cmbIDUser.Enabled = False
         Me.cmbIDUser.FormattingEnabled = True
-        Me.cmbIDUser.Location = New System.Drawing.Point(876, 309)
-        Me.cmbIDUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbIDUser.Location = New System.Drawing.Point(1014, 309)
+        Me.cmbIDUser.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbIDUser.Name = "cmbIDUser"
         Me.cmbIDUser.Size = New System.Drawing.Size(63, 24)
         Me.cmbIDUser.TabIndex = 155
@@ -570,8 +509,8 @@ Partial Class FrmFacturar
         Me.cmbID.DataSource = Me.FacturaBindingSource1
         Me.cmbID.DisplayMember = "FacturaID"
         Me.cmbID.FormattingEnabled = True
-        Me.cmbID.Location = New System.Drawing.Point(876, 409)
-        Me.cmbID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbID.Location = New System.Drawing.Point(1014, 409)
+        Me.cmbID.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbID.Name = "cmbID"
         Me.cmbID.Size = New System.Drawing.Size(63, 24)
         Me.cmbID.TabIndex = 156
@@ -612,47 +551,145 @@ Partial Class FrmFacturar
         'txtCliente
         '
         Me.txtCliente.Location = New System.Drawing.Point(321, 193)
-        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCliente.Multiline = True
         Me.txtCliente.Name = "txtCliente"
-        Me.txtCliente.Size = New System.Drawing.Size(212, 25)
+        Me.txtCliente.ReadOnly = True
+        Me.txtCliente.Size = New System.Drawing.Size(324, 25)
         Me.txtCliente.TabIndex = 157
         '
         'btnBuscarCliente
         '
-        Me.btnBuscarCliente.BackColor = System.Drawing.Color.Red
+        Me.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnBuscarCliente.FlatAppearance.BorderSize = 0
         Me.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarCliente.ForeColor = System.Drawing.Color.White
-        Me.btnBuscarCliente.Location = New System.Drawing.Point(543, 193)
-        Me.btnBuscarCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(655, 194)
+        Me.btnBuscarCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscarCliente.Name = "btnBuscarCliente"
-        Me.btnBuscarCliente.Size = New System.Drawing.Size(104, 27)
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(50, 24)
         Me.btnBuscarCliente.TabIndex = 158
-        Me.btnBuscarCliente.Text = "..."
+        Me.btnBuscarCliente.Text = "•••"
         Me.btnBuscarCliente.UseVisualStyleBackColor = False
         '
         'txtIDCliente
         '
         Me.txtIDCliente.Location = New System.Drawing.Point(321, 193)
-        Me.txtIDCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIDCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIDCliente.Multiline = True
         Me.txtIDCliente.Name = "txtIDCliente"
         Me.txtIDCliente.Size = New System.Drawing.Size(63, 25)
         Me.txtIDCliente.TabIndex = 159
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(655, 303)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(50, 24)
+        Me.Button1.TabIndex = 160
+        Me.Button1.Text = "•••"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'txtVehiculo
+        '
+        Me.txtVehiculo.Location = New System.Drawing.Point(321, 249)
+        Me.txtVehiculo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtVehiculo.Multiline = True
+        Me.txtVehiculo.Name = "txtVehiculo"
+        Me.txtVehiculo.ReadOnly = True
+        Me.txtVehiculo.Size = New System.Drawing.Size(324, 25)
+        Me.txtVehiculo.TabIndex = 161
+        '
+        'txtIDServicio
+        '
+        Me.txtIDServicio.Location = New System.Drawing.Point(321, 301)
+        Me.txtIDServicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIDServicio.Multiline = True
+        Me.txtIDServicio.Name = "txtIDServicio"
+        Me.txtIDServicio.ReadOnly = True
+        Me.txtIDServicio.Size = New System.Drawing.Size(63, 25)
+        Me.txtIDServicio.TabIndex = 162
+        '
+        'txtServicio
+        '
+        Me.txtServicio.Location = New System.Drawing.Point(321, 301)
+        Me.txtServicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtServicio.Multiline = True
+        Me.txtServicio.Name = "txtServicio"
+        Me.txtServicio.ReadOnly = True
+        Me.txtServicio.Size = New System.Drawing.Size(221, 25)
+        Me.txtServicio.TabIndex = 163
+        '
+        'txtPrecioServicio
+        '
+        Me.txtPrecioServicio.Location = New System.Drawing.Point(550, 301)
+        Me.txtPrecioServicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPrecioServicio.Multiline = True
+        Me.txtPrecioServicio.Name = "txtPrecioServicio"
+        Me.txtPrecioServicio.ReadOnly = True
+        Me.txtPrecioServicio.Size = New System.Drawing.Size(97, 25)
+        Me.txtPrecioServicio.TabIndex = 164
+        '
+        'txtEncargadoServicio
+        '
+        Me.txtEncargadoServicio.Location = New System.Drawing.Point(321, 356)
+        Me.txtEncargadoServicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtEncargadoServicio.Multiline = True
+        Me.txtEncargadoServicio.Name = "txtEncargadoServicio"
+        Me.txtEncargadoServicio.ReadOnly = True
+        Me.txtEncargadoServicio.Size = New System.Drawing.Size(326, 25)
+        Me.txtEncargadoServicio.TabIndex = 166
+        '
+        'txtIDEncargado
+        '
+        Me.txtIDEncargado.Location = New System.Drawing.Point(321, 356)
+        Me.txtIDEncargado.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtIDEncargado.Multiline = True
+        Me.txtIDEncargado.Name = "txtIDEncargado"
+        Me.txtIDEncargado.ReadOnly = True
+        Me.txtIDEncargado.Size = New System.Drawing.Size(63, 25)
+        Me.txtIDEncargado.TabIndex = 165
+        '
+        'btnBuscarEncargado
+        '
+        Me.btnBuscarEncargado.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.btnBuscarEncargado.FlatAppearance.BorderSize = 0
+        Me.btnBuscarEncargado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarEncargado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarEncargado.ForeColor = System.Drawing.Color.White
+        Me.btnBuscarEncargado.Location = New System.Drawing.Point(655, 357)
+        Me.btnBuscarEncargado.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscarEncargado.Name = "btnBuscarEncargado"
+        Me.btnBuscarEncargado.Size = New System.Drawing.Size(50, 24)
+        Me.btnBuscarEncargado.TabIndex = 167
+        Me.btnBuscarEncargado.Text = "•••"
+        Me.btnBuscarEncargado.UseVisualStyleBackColor = False
         '
         'FrmFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 562)
+        Me.ClientSize = New System.Drawing.Size(1357, 566)
+        Me.Controls.Add(Me.btnBuscarEncargado)
+        Me.Controls.Add(Me.txtEncargadoServicio)
+        Me.Controls.Add(Me.txtIDEncargado)
+        Me.Controls.Add(Me.txtPrecioServicio)
+        Me.Controls.Add(Me.txtServicio)
+        Me.Controls.Add(Me.txtIDServicio)
+        Me.Controls.Add(Me.txtVehiculo)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnBuscarCliente)
         Me.Controls.Add(Me.txtCliente)
         Me.Controls.Add(Me.cmbID)
         Me.Controls.Add(Me.btnCalcular)
-        Me.Controls.Add(Me.cmbPrecio)
         Me.Controls.Add(Me.cmbPago)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.DateTime2)
@@ -666,10 +703,7 @@ Partial Class FrmFacturar
         Me.Controls.Add(Me.txtSubTotal)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.cmbEncargadoServicio)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.cmbServicio)
-        Me.Controls.Add(Me.cmbVehiculo)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.txtFactura)
         Me.Controls.Add(Me.label4)
@@ -677,13 +711,11 @@ Partial Class FrmFacturar
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnFacturar)
-        Me.Controls.Add(Me.cmbIDServicio)
         Me.Controls.Add(Me.cmbIDUser)
         Me.Controls.Add(Me.cmbIDPago)
-        Me.Controls.Add(Me.cmbIDEncargado)
         Me.Controls.Add(Me.txtIDCliente)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmFacturar"
         Me.Text = "FACTURAR"
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -725,10 +757,7 @@ Partial Class FrmFacturar
     Friend WithEvents txtSubTotal As TextBox
     Private WithEvents Label8 As Label
     Private WithEvents Label7 As Label
-    Friend WithEvents cmbEncargadoServicio As ComboBox
     Private WithEvents Label6 As Label
-    Friend WithEvents cmbServicio As ComboBox
-    Friend WithEvents cmbVehiculo As ComboBox
     Public WithEvents txtFactura As TextBox
     Friend WithEvents txtTotal As TextBox
     Private WithEvents Label3 As Label
@@ -756,10 +785,7 @@ Partial Class FrmFacturar
     Friend WithEvents UsuarioDataSet1 As UsuarioDataSet1
     Friend WithEvents UsuarioBindingSource1 As BindingSource
     Friend WithEvents UsuarioTableAdapter1 As UsuarioDataSet1TableAdapters.UsuarioTableAdapter
-    Friend WithEvents cmbPrecio As ComboBox
     Private WithEvents btnCalcular As Button
-    Friend WithEvents cmbIDServicio As ComboBox
-    Friend WithEvents cmbIDEncargado As ComboBox
     Friend WithEvents cmbIDPago As ComboBox
     Friend WithEvents cmbIDUser As ComboBox
     Friend WithEvents cmbID As ComboBox
@@ -776,4 +802,12 @@ Partial Class FrmFacturar
     Private WithEvents btnBuscarCliente As Button
     Public WithEvents txtCliente As TextBox
     Public WithEvents txtIDCliente As TextBox
+    Private WithEvents Button1 As Button
+    Public WithEvents txtVehiculo As TextBox
+    Public WithEvents txtIDServicio As TextBox
+    Public WithEvents txtServicio As TextBox
+    Public WithEvents txtPrecioServicio As TextBox
+    Public WithEvents txtEncargadoServicio As TextBox
+    Public WithEvents txtIDEncargado As TextBox
+    Private WithEvents btnBuscarEncargado As Button
 End Class

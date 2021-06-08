@@ -66,6 +66,7 @@ Public Class CLIENTES
 
         frm.txtIDCliente.Text = dgClientes.CurrentRow.Cells(0).Value.ToString()
         frm.txtCliente.Text = dgClientes.CurrentRow.Cells(2).Value.ToString() + " " + dgClientes.CurrentRow.Cells(3).Value.ToString()
+        frm.txtVehiculo.Text = dgClientes.CurrentRow.Cells(1).Value.ToString()
         Me.Close()
     End Sub
 

@@ -160,6 +160,12 @@
     <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEncargado.Designer.vb">
+      <DependentUpon>FrmEncargado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEncargado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\EMPLEADOS\FrmNuevoEmpleado.Designer.vb">
       <DependentUpon>FrmNuevoEmpleado.vb</DependentUpon>
     </Compile>
@@ -266,6 +272,18 @@
       <DependentUpon>FrmModelos.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmServicios.Designer.vb">
+      <DependentUpon>FrmServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmServiciosFactura.Designer.vb">
+      <DependentUpon>FrmServiciosFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmServiciosFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmTipo.Designer.vb">
@@ -449,6 +467,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ServiciosVDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiciosVDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmClientes.resx">
@@ -462,6 +485,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEncargado.resx">
+      <DependentUpon>FrmEncargado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmNuevoEmpleado.resx">
       <DependentUpon>FrmNuevoEmpleado.vb</DependentUpon>
@@ -483,6 +509,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.resx">
       <DependentUpon>FrmModelos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmServicios.resx">
+      <DependentUpon>FrmServicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmServiciosFactura.resx">
+      <DependentUpon>FrmServiciosFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmTipo.resx">
       <DependentUpon>FrmTipo.vb</DependentUpon>
@@ -962,6 +994,17 @@
     </None>
     <None Include="CONEXIONES DATASET%27S\VistaNombreCompletoEmpleadoDataSet1.xss">
       <DependentUpon>VistaNombreCompletoEmpleadoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiciosVDataSet1.xsc">
+      <DependentUpon>ServiciosVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServiciosVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiciosVDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServiciosVDataSet1.xss">
+      <DependentUpon>ServiciosVDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

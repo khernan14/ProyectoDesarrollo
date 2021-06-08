@@ -32,3 +32,20 @@ D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\Proyecto
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.dll
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.xml
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Domain\obj\Debug\Domain.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Domain.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Domain.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Domain.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\DataAccess.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Support.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\DataAccess.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\DataAccess.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Support.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\bin\Debug\Support.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.AssemblyReference.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.Resources.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.GenerateResource.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.CoreCompileInputs.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.vbproj.CopyComplete
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Domain\obj\Debug\Domain.pdb

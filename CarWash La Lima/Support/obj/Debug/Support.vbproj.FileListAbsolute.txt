@@ -18,3 +18,13 @@ D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\Proyecto
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.dll
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.xml
 D:\ESTE EQUIPO\DOCUMENTOS\UNICAH\IMPLEMENTACION DE SISTEMAS DE SOFTWARE\ProyectoCarWashLaLima\CarWash La Lima\Support\obj\Debug\Support.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\bin\Debug\Support.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\bin\Debug\Support.pdb
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\bin\Debug\Support.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.vbproj.AssemblyReference.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.Resources.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.vbproj.GenerateResource.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.vbproj.CoreCompileInputs.cache
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.dll
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.xml
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\Support\obj\Debug\Support.pdb
