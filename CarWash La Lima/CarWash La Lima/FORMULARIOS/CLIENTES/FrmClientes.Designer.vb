@@ -71,8 +71,6 @@ Partial Class CLIENTES
         '
         'btnNuevo
         '
-        Me.btnNuevo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -93,8 +91,6 @@ Partial Class CLIENTES
         '
         'btnEliminar
         '
-        Me.btnEliminar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -115,8 +111,6 @@ Partial Class CLIENTES
         '
         'btnEditar
         '
-        Me.btnEditar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnEditar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -166,6 +160,7 @@ Partial Class CLIENTES
         Me.dgClientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgClientes.Location = New System.Drawing.Point(21, 164)
         Me.dgClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgClientes.MultiSelect = False
         Me.dgClientes.Name = "dgClientes"
         Me.dgClientes.ReadOnly = True
         Me.dgClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]

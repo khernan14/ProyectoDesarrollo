@@ -81,6 +81,7 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgHistoricos.Location = New System.Drawing.Point(37, 162)
         Me.dgHistoricos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgHistoricos.MultiSelect = False
         Me.dgHistoricos.Name = "dgHistoricos"
         Me.dgHistoricos.ReadOnly = True
         Me.dgHistoricos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -93,7 +94,6 @@ Partial Class FrmHistorialFactura
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgHistoricos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgHistoricos.RowHeadersWidth = 51
-        Me.dgHistoricos.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgHistoricos.Size = New System.Drawing.Size(1095, 464)
         Me.dgHistoricos.TabIndex = 27
         '

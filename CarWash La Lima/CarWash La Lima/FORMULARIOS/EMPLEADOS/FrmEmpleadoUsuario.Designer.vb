@@ -30,18 +30,18 @@ Partial Class FrmEmpleadoUsuario
         Me.txtBus = New System.Windows.Forms.TextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.dgEmpleados = New System.Windows.Forms.DataGridView()
-        Me.btnBuscar = New FontAwesome.Sharp.IconButton()
-        Me.VistaEmpleadosPuestoUsuario = New CarWash_La_Lima.VistaEmpleadosPuestoUsuario()
-        Me.VistaEmpleadosPuestoUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaEmpleadosPuestoUsuarioTableAdapter = New CarWash_La_Lima.VistaEmpleadosPuestoUsuarioTableAdapters.VistaEmpleadosPuestoUsuarioTableAdapter()
         Me.EmpleadoIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidoEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionPuestoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VistaEmpleadosPuestoUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaEmpleadosPuestoUsuario = New CarWash_La_Lima.VistaEmpleadosPuestoUsuario()
+        Me.btnBuscar = New FontAwesome.Sharp.IconButton()
+        Me.VistaEmpleadosPuestoUsuarioTableAdapter = New CarWash_La_Lima.VistaEmpleadosPuestoUsuarioTableAdapters.VistaEmpleadosPuestoUsuarioTableAdapter()
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaEmpleadosPuestoUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaEmpleadosPuestoUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaEmpleadosPuestoUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtBuscar
@@ -117,6 +117,7 @@ Partial Class FrmEmpleadoUsuario
         Me.dgEmpleados.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgEmpleados.Location = New System.Drawing.Point(146, 147)
         Me.dgEmpleados.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgEmpleados.MultiSelect = False
         Me.dgEmpleados.Name = "dgEmpleados"
         Me.dgEmpleados.ReadOnly = True
         Me.dgEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -129,41 +130,9 @@ Partial Class FrmEmpleadoUsuario
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgEmpleados.RowHeadersWidth = 51
-        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgEmpleados.Size = New System.Drawing.Size(893, 464)
         Me.dgEmpleados.TabIndex = 31
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnBuscar.FlatAppearance.BorderSize = 0
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.btnBuscar.IconColor = System.Drawing.Color.DimGray
-        Me.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnBuscar.IconSize = 20
-        Me.btnBuscar.Location = New System.Drawing.Point(978, 90)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(61, 42)
-        Me.btnBuscar.TabIndex = 34
-        Me.btnBuscar.UseVisualStyleBackColor = False
-        '
-        'VistaEmpleadosPuestoUsuario
-        '
-        Me.VistaEmpleadosPuestoUsuario.DataSetName = "VistaEmpleadosPuestoUsuario"
-        Me.VistaEmpleadosPuestoUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaEmpleadosPuestoUsuarioBindingSource
-        '
-        Me.VistaEmpleadosPuestoUsuarioBindingSource.DataMember = "VistaEmpleadosPuestoUsuario"
-        Me.VistaEmpleadosPuestoUsuarioBindingSource.DataSource = Me.VistaEmpleadosPuestoUsuario
-        '
-        'VistaEmpleadosPuestoUsuarioTableAdapter
-        '
-        Me.VistaEmpleadosPuestoUsuarioTableAdapter.ClearBeforeFill = True
         '
         'EmpleadoIDDataGridViewTextBoxColumn
         '
@@ -205,6 +174,38 @@ Partial Class FrmEmpleadoUsuario
         Me.DescripcionPuestoDataGridViewTextBoxColumn.Name = "DescripcionPuestoDataGridViewTextBoxColumn"
         Me.DescripcionPuestoDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'VistaEmpleadosPuestoUsuarioBindingSource
+        '
+        Me.VistaEmpleadosPuestoUsuarioBindingSource.DataMember = "VistaEmpleadosPuestoUsuario"
+        Me.VistaEmpleadosPuestoUsuarioBindingSource.DataSource = Me.VistaEmpleadosPuestoUsuario
+        '
+        'VistaEmpleadosPuestoUsuario
+        '
+        Me.VistaEmpleadosPuestoUsuario.DataSetName = "VistaEmpleadosPuestoUsuario"
+        Me.VistaEmpleadosPuestoUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.btnBuscar.IconColor = System.Drawing.Color.DimGray
+        Me.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnBuscar.IconSize = 20
+        Me.btnBuscar.Location = New System.Drawing.Point(978, 90)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(61, 42)
+        Me.btnBuscar.TabIndex = 34
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'VistaEmpleadosPuestoUsuarioTableAdapter
+        '
+        Me.VistaEmpleadosPuestoUsuarioTableAdapter.ClearBeforeFill = True
+        '
         'FrmEmpleadoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -220,8 +221,8 @@ Partial Class FrmEmpleadoUsuario
         Me.Name = "FrmEmpleadoUsuario"
         Me.Text = "FrmEmpleadoUsuario"
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaEmpleadosPuestoUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaEmpleadosPuestoUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaEmpleadosPuestoUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

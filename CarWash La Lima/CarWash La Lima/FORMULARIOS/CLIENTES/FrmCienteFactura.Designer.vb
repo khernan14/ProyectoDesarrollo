@@ -134,6 +134,7 @@ Partial Class FrmCienteFactura
         Me.dgClientes.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgClientes.Location = New System.Drawing.Point(117, 156)
         Me.dgClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgClientes.MultiSelect = False
         Me.dgClientes.Name = "dgClientes"
         Me.dgClientes.ReadOnly = True
         Me.dgClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]

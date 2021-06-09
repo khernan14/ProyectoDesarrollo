@@ -64,8 +64,6 @@ Partial Class FrmVehiculo
         '
         'btnNuevo
         '
-        Me.btnNuevo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -86,8 +84,6 @@ Partial Class FrmVehiculo
         '
         'btnEliminar
         '
-        Me.btnEliminar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -108,8 +104,6 @@ Partial Class FrmVehiculo
         '
         'btnEditar
         '
-        Me.btnEditar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnEditar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -159,6 +153,7 @@ Partial Class FrmVehiculo
         Me.dgVehiculos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgVehiculos.Location = New System.Drawing.Point(50, 185)
         Me.dgVehiculos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgVehiculos.MultiSelect = False
         Me.dgVehiculos.Name = "dgVehiculos"
         Me.dgVehiculos.ReadOnly = True
         Me.dgVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -171,6 +166,7 @@ Partial Class FrmVehiculo
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgVehiculos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgVehiculos.RowHeadersWidth = 51
+        Me.dgVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgVehiculos.Size = New System.Drawing.Size(893, 464)
         Me.dgVehiculos.TabIndex = 26
         '

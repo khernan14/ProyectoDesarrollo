@@ -27,19 +27,19 @@ Partial Class FrmEncargado
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgEmpleados = New System.Windows.Forms.DataGridView()
-        Me.label1 = New System.Windows.Forms.Label()
-        Me.lblMessage = New System.Windows.Forms.Label()
-        Me.VistaEncargadosServicioDataSet1 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
-        Me.VistaEncargadosServicioDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaNoRepeatDatosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VistaNoRepeatDatosTableAdapter = New CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.VistaNoRepeatDatosTableAdapter()
         Me.EmpleadoIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidoEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VistaNoRepeatDatosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaEncargadosServicioDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VistaEncargadosServicioDataSet1 = New CarWash_La_Lima.VistaEncargadosServicioDataSet1()
+        Me.label1 = New System.Windows.Forms.Label()
+        Me.lblMessage = New System.Windows.Forms.Label()
+        Me.VistaNoRepeatDatosTableAdapter = New CarWash_La_Lima.VistaEncargadosServicioDataSet1TableAdapters.VistaNoRepeatDatosTableAdapter()
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaEncargadosServicioDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VistaEncargadosServicioDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VistaNoRepeatDatosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaEncargadosServicioDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VistaEncargadosServicioDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgEmpleados
@@ -73,6 +73,7 @@ Partial Class FrmEncargado
         Me.dgEmpleados.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgEmpleados.Location = New System.Drawing.Point(93, 130)
         Me.dgEmpleados.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgEmpleados.MultiSelect = False
         Me.dgEmpleados.Name = "dgEmpleados"
         Me.dgEmpleados.ReadOnly = True
         Me.dgEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -85,9 +86,48 @@ Partial Class FrmEncargado
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgEmpleados.RowHeadersWidth = 51
-        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgEmpleados.Size = New System.Drawing.Size(893, 464)
         Me.dgEmpleados.TabIndex = 22
+        '
+        'EmpleadoIDDataGridViewTextBoxColumn
+        '
+        Me.EmpleadoIDDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoID"
+        Me.EmpleadoIDDataGridViewTextBoxColumn.HeaderText = "EmpleadoID"
+        Me.EmpleadoIDDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EmpleadoIDDataGridViewTextBoxColumn.Name = "EmpleadoIDDataGridViewTextBoxColumn"
+        Me.EmpleadoIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "NombreEmpleado"
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.HeaderText = "NombreEmpleado"
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.Name = "NombreEmpleadoDataGridViewTextBoxColumn"
+        Me.NombreEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ApellidoEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoEmpleado"
+        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.HeaderText = "ApellidoEmpleado"
+        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.Name = "ApellidoEmpleadoDataGridViewTextBoxColumn"
+        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VistaNoRepeatDatosBindingSource
+        '
+        Me.VistaNoRepeatDatosBindingSource.DataMember = "VistaNoRepeatDatos"
+        Me.VistaNoRepeatDatosBindingSource.DataSource = Me.VistaEncargadosServicioDataSet1BindingSource
+        '
+        'VistaEncargadosServicioDataSet1BindingSource
+        '
+        Me.VistaEncargadosServicioDataSet1BindingSource.DataSource = Me.VistaEncargadosServicioDataSet1
+        Me.VistaEncargadosServicioDataSet1BindingSource.Position = 0
+        '
+        'VistaEncargadosServicioDataSet1
+        '
+        Me.VistaEncargadosServicioDataSet1.DataSetName = "VistaEncargadosServicioDataSet1"
+        Me.VistaEncargadosServicioDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'label1
         '
@@ -114,48 +154,9 @@ Partial Class FrmEncargado
         Me.lblMessage.Text = "Doble click en una celda para seleccionar un cliente"
         Me.lblMessage.Visible = False
         '
-        'VistaEncargadosServicioDataSet1
-        '
-        Me.VistaEncargadosServicioDataSet1.DataSetName = "VistaEncargadosServicioDataSet1"
-        Me.VistaEncargadosServicioDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'VistaEncargadosServicioDataSet1BindingSource
-        '
-        Me.VistaEncargadosServicioDataSet1BindingSource.DataSource = Me.VistaEncargadosServicioDataSet1
-        Me.VistaEncargadosServicioDataSet1BindingSource.Position = 0
-        '
-        'VistaNoRepeatDatosBindingSource
-        '
-        Me.VistaNoRepeatDatosBindingSource.DataMember = "VistaNoRepeatDatos"
-        Me.VistaNoRepeatDatosBindingSource.DataSource = Me.VistaEncargadosServicioDataSet1BindingSource
-        '
         'VistaNoRepeatDatosTableAdapter
         '
         Me.VistaNoRepeatDatosTableAdapter.ClearBeforeFill = True
-        '
-        'EmpleadoIDDataGridViewTextBoxColumn
-        '
-        Me.EmpleadoIDDataGridViewTextBoxColumn.DataPropertyName = "EmpleadoID"
-        Me.EmpleadoIDDataGridViewTextBoxColumn.HeaderText = "EmpleadoID"
-        Me.EmpleadoIDDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.EmpleadoIDDataGridViewTextBoxColumn.Name = "EmpleadoIDDataGridViewTextBoxColumn"
-        Me.EmpleadoIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreEmpleadoDataGridViewTextBoxColumn
-        '
-        Me.NombreEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "NombreEmpleado"
-        Me.NombreEmpleadoDataGridViewTextBoxColumn.HeaderText = "NombreEmpleado"
-        Me.NombreEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombreEmpleadoDataGridViewTextBoxColumn.Name = "NombreEmpleadoDataGridViewTextBoxColumn"
-        Me.NombreEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ApellidoEmpleadoDataGridViewTextBoxColumn
-        '
-        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "ApellidoEmpleado"
-        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.HeaderText = "ApellidoEmpleado"
-        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.Name = "ApellidoEmpleadoDataGridViewTextBoxColumn"
-        Me.ApellidoEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FrmEncargado
         '
@@ -170,9 +171,9 @@ Partial Class FrmEncargado
         Me.Name = "FrmEncargado"
         Me.Text = "FrmEncargado"
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaEncargadosServicioDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VistaEncargadosServicioDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VistaNoRepeatDatosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaEncargadosServicioDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VistaEncargadosServicioDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -70,8 +70,6 @@ Partial Class FrmEmpleado
         '
         'btnNuevo
         '
-        Me.btnNuevo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnNuevo.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -92,8 +90,6 @@ Partial Class FrmEmpleado
         '
         'btnEliminar
         '
-        Me.btnEliminar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -114,8 +110,6 @@ Partial Class FrmEmpleado
         '
         'btnEditar
         '
-        Me.btnEditar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
         Me.btnEditar.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
@@ -165,6 +159,7 @@ Partial Class FrmEmpleado
         Me.dgEmpleados.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgEmpleados.Location = New System.Drawing.Point(37, 164)
         Me.dgEmpleados.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgEmpleados.MultiSelect = False
         Me.dgEmpleados.Name = "dgEmpleados"
         Me.dgEmpleados.ReadOnly = True
         Me.dgEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -177,7 +172,7 @@ Partial Class FrmEmpleado
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgEmpleados.RowHeadersWidth = 51
-        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgEmpleados.Size = New System.Drawing.Size(893, 464)
         Me.dgEmpleados.TabIndex = 21
         '
