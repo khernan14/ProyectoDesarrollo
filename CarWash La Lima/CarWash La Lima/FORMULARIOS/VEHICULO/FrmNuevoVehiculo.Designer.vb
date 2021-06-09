@@ -34,12 +34,10 @@ Partial Class FrmNuevoVehiculo
         Me.cmbColorID = New System.Windows.Forms.ComboBox()
         Me.ColorVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ColorDataSet1 = New CarWash_La_Lima.ColorDataSet1()
-        Me.cmbModeloID = New System.Windows.Forms.ComboBox()
         Me.ModeloVehiculoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ModeloDataSet1 = New CarWash_La_Lima.ModeloDataSet1()
         Me.ModeloEnCNVBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VistaModelo1 = New CarWash_La_Lima.VistaModelo1()
-        Me.cmbMarcaID = New System.Windows.Forms.ComboBox()
         Me.MarcasVehiculosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MarcaDataSet1 = New CarWash_La_Lima.MarcaDataSet1()
         Me.label13 = New System.Windows.Forms.Label()
@@ -56,10 +54,13 @@ Partial Class FrmNuevoVehiculo
         Me.ColorVehiculoTableAdapter = New CarWash_La_Lima.ColorDataSet1TableAdapters.ColorVehiculoTableAdapter()
         Me.TipoVehiculoTableAdapter = New CarWash_La_Lima.TipoVehiculoDataSet1TableAdapters.TipoVehiculoTableAdapter()
         Me.ModeloEnCNVTableAdapter = New CarWash_La_Lima.VistaModelo1TableAdapters.ModeloEnCNVTableAdapter()
-        Me.cmbModelo = New System.Windows.Forms.ComboBox()
-        Me.cmbMarca = New System.Windows.Forms.ComboBox()
         Me.cmbColor = New System.Windows.Forms.ComboBox()
         Me.cmbTipoV = New System.Windows.Forms.ComboBox()
+        Me.btnBuscarModelo = New System.Windows.Forms.Button()
+        Me.txtModelo = New System.Windows.Forms.TextBox()
+        Me.txtModeloID = New System.Windows.Forms.TextBox()
+        Me.txtMarca = New System.Windows.Forms.TextBox()
+        Me.txtMarcaID = New System.Windows.Forms.TextBox()
         Me.pnlTituleBar.SuspendLayout()
         CType(Me.iconCurrentChildForm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TipoVehiculoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,8 +82,9 @@ Partial Class FrmNuevoVehiculo
         Me.pnlTituleBar.Controls.Add(Me.iconCurrentChildForm)
         Me.pnlTituleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTituleBar.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTituleBar.Name = "pnlTituleBar"
-        Me.pnlTituleBar.Size = New System.Drawing.Size(870, 51)
+        Me.pnlTituleBar.Size = New System.Drawing.Size(1443, 63)
         Me.pnlTituleBar.TabIndex = 143
         '
         'lblTitleChildForm
@@ -90,9 +92,10 @@ Partial Class FrmNuevoVehiculo
         Me.lblTitleChildForm.AutoSize = True
         Me.lblTitleChildForm.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblTitleChildForm.Location = New System.Drawing.Point(74, 25)
+        Me.lblTitleChildForm.Location = New System.Drawing.Point(99, 31)
+        Me.lblTitleChildForm.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitleChildForm.Name = "lblTitleChildForm"
-        Me.lblTitleChildForm.Size = New System.Drawing.Size(140, 18)
+        Me.lblTitleChildForm.Size = New System.Drawing.Size(174, 23)
         Me.lblTitleChildForm.TabIndex = 1
         Me.lblTitleChildForm.Text = "NUEVO VEHICULO"
         '
@@ -103,9 +106,11 @@ Partial Class FrmNuevoVehiculo
         Me.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.CarSide
         Me.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple
         Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.iconCurrentChildForm.Location = New System.Drawing.Point(36, 19)
+        Me.iconCurrentChildForm.IconSize = 39
+        Me.iconCurrentChildForm.Location = New System.Drawing.Point(48, 23)
+        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
-        Me.iconCurrentChildForm.Size = New System.Drawing.Size(32, 32)
+        Me.iconCurrentChildForm.Size = New System.Drawing.Size(43, 39)
         Me.iconCurrentChildForm.TabIndex = 0
         Me.iconCurrentChildForm.TabStop = False
         '
@@ -116,9 +121,10 @@ Partial Class FrmNuevoVehiculo
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Location = New System.Drawing.Point(319, 399)
+        Me.btnGuardar.Location = New System.Drawing.Point(527, 471)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 35)
+        Me.btnGuardar.Size = New System.Drawing.Size(133, 43)
         Me.btnGuardar.TabIndex = 138
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -130,9 +136,10 @@ Partial Class FrmNuevoVehiculo
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(447, 399)
+        Me.btnCancelar.Location = New System.Drawing.Point(698, 471)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 35)
+        Me.btnCancelar.Size = New System.Drawing.Size(133, 43)
         Me.btnCancelar.TabIndex = 139
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -143,9 +150,10 @@ Partial Class FrmNuevoVehiculo
         Me.cmbTipoVID.DataSource = Me.TipoVehiculoBindingSource
         Me.cmbTipoVID.DisplayMember = "TipoVehiculoID"
         Me.cmbTipoVID.FormattingEnabled = True
-        Me.cmbTipoVID.Location = New System.Drawing.Point(585, 242)
+        Me.cmbTipoVID.Location = New System.Drawing.Point(896, 300)
+        Me.cmbTipoVID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbTipoVID.Name = "cmbTipoVID"
-        Me.cmbTipoVID.Size = New System.Drawing.Size(50, 21)
+        Me.cmbTipoVID.Size = New System.Drawing.Size(65, 24)
         Me.cmbTipoVID.TabIndex = 158
         Me.cmbTipoVID.ValueMember = "TipoVehiculoID"
         '
@@ -164,9 +172,10 @@ Partial Class FrmNuevoVehiculo
         Me.cmbColorID.DataSource = Me.ColorVehiculoBindingSource
         Me.cmbColorID.DisplayMember = "ColorID"
         Me.cmbColorID.FormattingEnabled = True
-        Me.cmbColorID.Location = New System.Drawing.Point(585, 201)
+        Me.cmbColorID.Location = New System.Drawing.Point(896, 249)
+        Me.cmbColorID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbColorID.Name = "cmbColorID"
-        Me.cmbColorID.Size = New System.Drawing.Size(50, 21)
+        Me.cmbColorID.Size = New System.Drawing.Size(65, 24)
         Me.cmbColorID.TabIndex = 157
         Me.cmbColorID.ValueMember = "ColorID"
         '
@@ -179,16 +188,6 @@ Partial Class FrmNuevoVehiculo
         '
         Me.ColorDataSet1.DataSetName = "ColorDataSet1"
         Me.ColorDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'cmbModeloID
-        '
-        Me.cmbModeloID.DataSource = Me.ModeloVehiculoBindingSource
-        Me.cmbModeloID.DisplayMember = "ModeloID"
-        Me.cmbModeloID.FormattingEnabled = True
-        Me.cmbModeloID.Location = New System.Drawing.Point(172, 203)
-        Me.cmbModeloID.Name = "cmbModeloID"
-        Me.cmbModeloID.Size = New System.Drawing.Size(52, 21)
-        Me.cmbModeloID.TabIndex = 155
         '
         'ModeloVehiculoBindingSource
         '
@@ -210,18 +209,6 @@ Partial Class FrmNuevoVehiculo
         Me.VistaModelo1.DataSetName = "VistaModelo1"
         Me.VistaModelo1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'cmbMarcaID
-        '
-        Me.cmbMarcaID.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MarcasVehiculosBindingSource, "MarcaID", True))
-        Me.cmbMarcaID.DataSource = Me.MarcasVehiculosBindingSource
-        Me.cmbMarcaID.DisplayMember = "MarcaID"
-        Me.cmbMarcaID.FormattingEnabled = True
-        Me.cmbMarcaID.Location = New System.Drawing.Point(585, 160)
-        Me.cmbMarcaID.Name = "cmbMarcaID"
-        Me.cmbMarcaID.Size = New System.Drawing.Size(50, 21)
-        Me.cmbMarcaID.TabIndex = 154
-        Me.cmbMarcaID.ValueMember = "MarcaID"
-        '
         'MarcasVehiculosBindingSource
         '
         Me.MarcasVehiculosBindingSource.DataMember = "MarcasVehiculos"
@@ -237,9 +224,10 @@ Partial Class FrmNuevoVehiculo
         Me.label13.AutoSize = True
         Me.label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label13.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label13.Location = New System.Drawing.Point(38, 244)
+        Me.label13.Location = New System.Drawing.Point(51, 300)
+        Me.label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label13.Name = "label13"
-        Me.label13.Size = New System.Drawing.Size(37, 17)
+        Me.label13.Size = New System.Drawing.Size(43, 20)
         Me.label13.TabIndex = 153
         Me.label13.Text = "Año:"
         '
@@ -248,9 +236,10 @@ Partial Class FrmNuevoVehiculo
         Me.label12.AutoSize = True
         Me.label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label12.ForeColor = System.Drawing.Color.White
-        Me.label12.Location = New System.Drawing.Point(358, 82)
+        Me.label12.Location = New System.Drawing.Point(544, 103)
+        Me.label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label12.Name = "label12"
-        Me.label12.Size = New System.Drawing.Size(187, 20)
+        Me.label12.Size = New System.Drawing.Size(233, 25)
         Me.label12.TabIndex = 152
         Me.label12.Text = "DATOS DEL VEHICULO"
         '
@@ -259,9 +248,10 @@ Partial Class FrmNuevoVehiculo
         Me.label14.AutoSize = True
         Me.label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label14.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label14.Location = New System.Drawing.Point(451, 205)
+        Me.label14.Location = New System.Drawing.Point(717, 254)
+        Me.label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label14.Name = "label14"
-        Me.label14.Size = New System.Drawing.Size(45, 17)
+        Me.label14.Size = New System.Drawing.Size(54, 20)
         Me.label14.TabIndex = 151
         Me.label14.Text = "Color:"
         '
@@ -270,9 +260,10 @@ Partial Class FrmNuevoVehiculo
         Me.label7.AutoSize = True
         Me.label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label7.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label7.Location = New System.Drawing.Point(451, 246)
+        Me.label7.Location = New System.Drawing.Point(717, 305)
+        Me.label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label7.Name = "label7"
-        Me.label7.Size = New System.Drawing.Size(116, 17)
+        Me.label7.Size = New System.Drawing.Size(135, 20)
         Me.label7.TabIndex = 148
         Me.label7.Text = "Tipo de vehículo:"
         '
@@ -281,9 +272,10 @@ Partial Class FrmNuevoVehiculo
         Me.label8.AutoSize = True
         Me.label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label8.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label8.Location = New System.Drawing.Point(38, 207)
+        Me.label8.Location = New System.Drawing.Point(51, 255)
+        Me.label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label8.Name = "label8"
-        Me.label8.Size = New System.Drawing.Size(58, 17)
+        Me.label8.Size = New System.Drawing.Size(68, 20)
         Me.label8.TabIndex = 147
         Me.label8.Text = "Modelo:"
         '
@@ -292,9 +284,10 @@ Partial Class FrmNuevoVehiculo
         Me.label9.AutoSize = True
         Me.label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label9.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label9.Location = New System.Drawing.Point(451, 164)
+        Me.label9.Location = New System.Drawing.Point(717, 204)
+        Me.label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label9.Name = "label9"
-        Me.label9.Size = New System.Drawing.Size(51, 17)
+        Me.label9.Size = New System.Drawing.Size(61, 20)
         Me.label9.TabIndex = 146
         Me.label9.Text = "Marca:"
         '
@@ -303,26 +296,31 @@ Partial Class FrmNuevoVehiculo
         Me.label10.AutoSize = True
         Me.label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label10.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label10.Location = New System.Drawing.Point(38, 166)
+        Me.label10.Location = New System.Drawing.Point(51, 204)
+        Me.label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label10.Name = "label10"
-        Me.label10.Size = New System.Drawing.Size(121, 17)
+        Me.label10.Size = New System.Drawing.Size(143, 20)
         Me.label10.TabIndex = 145
         Me.label10.Text = "Numero de Placa:"
         '
         'txtPlaca
         '
         Me.txtPlaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPlaca.Location = New System.Drawing.Point(172, 160)
+        Me.txtPlaca.Location = New System.Drawing.Point(296, 199)
+        Me.txtPlaca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPlaca.MaxLength = 20
         Me.txtPlaca.Name = "txtPlaca"
-        Me.txtPlaca.Size = New System.Drawing.Size(244, 23)
+        Me.txtPlaca.Size = New System.Drawing.Size(324, 26)
         Me.txtPlaca.TabIndex = 144
         '
         'txtAnio
         '
         Me.txtAnio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAnio.Location = New System.Drawing.Point(172, 239)
+        Me.txtAnio.Location = New System.Drawing.Point(296, 296)
+        Me.txtAnio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAnio.MaxLength = 4
         Me.txtAnio.Name = "txtAnio"
-        Me.txtAnio.Size = New System.Drawing.Size(244, 23)
+        Me.txtAnio.Size = New System.Drawing.Size(324, 26)
         Me.txtAnio.TabIndex = 159
         '
         'ModeloVehiculoTableAdapter
@@ -345,34 +343,15 @@ Partial Class FrmNuevoVehiculo
         '
         Me.ModeloEnCNVTableAdapter.ClearBeforeFill = True
         '
-        'cmbModelo
-        '
-        Me.cmbModelo.DataSource = Me.ModeloVehiculoBindingSource
-        Me.cmbModelo.DisplayMember = "Modelo"
-        Me.cmbModelo.FormattingEnabled = True
-        Me.cmbModelo.Location = New System.Drawing.Point(172, 203)
-        Me.cmbModelo.Name = "cmbModelo"
-        Me.cmbModelo.Size = New System.Drawing.Size(244, 21)
-        Me.cmbModelo.TabIndex = 160
-        '
-        'cmbMarca
-        '
-        Me.cmbMarca.DataSource = Me.MarcasVehiculosBindingSource
-        Me.cmbMarca.DisplayMember = "Marca"
-        Me.cmbMarca.FormattingEnabled = True
-        Me.cmbMarca.Location = New System.Drawing.Point(585, 160)
-        Me.cmbMarca.Name = "cmbMarca"
-        Me.cmbMarca.Size = New System.Drawing.Size(244, 21)
-        Me.cmbMarca.TabIndex = 161
-        '
         'cmbColor
         '
         Me.cmbColor.DataSource = Me.ColorVehiculoBindingSource
         Me.cmbColor.DisplayMember = "DescripcionColor"
         Me.cmbColor.FormattingEnabled = True
-        Me.cmbColor.Location = New System.Drawing.Point(585, 201)
+        Me.cmbColor.Location = New System.Drawing.Point(896, 249)
+        Me.cmbColor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbColor.Name = "cmbColor"
-        Me.cmbColor.Size = New System.Drawing.Size(244, 21)
+        Me.cmbColor.Size = New System.Drawing.Size(324, 24)
         Me.cmbColor.TabIndex = 162
         '
         'cmbTipoV
@@ -380,26 +359,82 @@ Partial Class FrmNuevoVehiculo
         Me.cmbTipoV.DataSource = Me.TipoVehiculoBindingSource
         Me.cmbTipoV.DisplayMember = "Descripcion"
         Me.cmbTipoV.FormattingEnabled = True
-        Me.cmbTipoV.Location = New System.Drawing.Point(585, 242)
+        Me.cmbTipoV.Location = New System.Drawing.Point(896, 300)
+        Me.cmbTipoV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbTipoV.Name = "cmbTipoV"
-        Me.cmbTipoV.Size = New System.Drawing.Size(244, 21)
+        Me.cmbTipoV.Size = New System.Drawing.Size(324, 24)
         Me.cmbTipoV.TabIndex = 163
+        '
+        'btnBuscarModelo
+        '
+        Me.btnBuscarModelo.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.btnBuscarModelo.FlatAppearance.BorderSize = 0
+        Me.btnBuscarModelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscarModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarModelo.ForeColor = System.Drawing.Color.White
+        Me.btnBuscarModelo.Location = New System.Drawing.Point(628, 253)
+        Me.btnBuscarModelo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscarModelo.Name = "btnBuscarModelo"
+        Me.btnBuscarModelo.Size = New System.Drawing.Size(50, 24)
+        Me.btnBuscarModelo.TabIndex = 164
+        Me.btnBuscarModelo.Text = "•••"
+        Me.btnBuscarModelo.UseVisualStyleBackColor = False
+        '
+        'txtModelo
+        '
+        Me.txtModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModelo.Location = New System.Drawing.Point(297, 253)
+        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtModelo.MaxLength = 20
+        Me.txtModelo.Name = "txtModelo"
+        Me.txtModelo.Size = New System.Drawing.Size(323, 26)
+        Me.txtModelo.TabIndex = 165
+        '
+        'txtModeloID
+        '
+        Me.txtModeloID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModeloID.Location = New System.Drawing.Point(297, 253)
+        Me.txtModeloID.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtModeloID.MaxLength = 20
+        Me.txtModeloID.Name = "txtModeloID"
+        Me.txtModeloID.Size = New System.Drawing.Size(64, 26)
+        Me.txtModeloID.TabIndex = 166
+        '
+        'txtMarca
+        '
+        Me.txtMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMarca.Location = New System.Drawing.Point(896, 198)
+        Me.txtMarca.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMarca.MaxLength = 20
+        Me.txtMarca.Name = "txtMarca"
+        Me.txtMarca.Size = New System.Drawing.Size(323, 26)
+        Me.txtMarca.TabIndex = 167
+        '
+        'txtMarcaID
+        '
+        Me.txtMarcaID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMarcaID.Location = New System.Drawing.Point(896, 198)
+        Me.txtMarcaID.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtMarcaID.MaxLength = 20
+        Me.txtMarcaID.Name = "txtMarcaID"
+        Me.txtMarcaID.Size = New System.Drawing.Size(64, 26)
+        Me.txtMarcaID.TabIndex = 168
         '
         'FrmNuevoVehiculo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(870, 457)
+        Me.ClientSize = New System.Drawing.Size(1443, 562)
+        Me.Controls.Add(Me.txtMarca)
+        Me.Controls.Add(Me.txtMarcaID)
+        Me.Controls.Add(Me.txtModelo)
+        Me.Controls.Add(Me.btnBuscarModelo)
         Me.Controls.Add(Me.cmbTipoV)
         Me.Controls.Add(Me.cmbColor)
-        Me.Controls.Add(Me.cmbMarca)
-        Me.Controls.Add(Me.cmbModelo)
         Me.Controls.Add(Me.txtAnio)
         Me.Controls.Add(Me.cmbTipoVID)
         Me.Controls.Add(Me.cmbColorID)
-        Me.Controls.Add(Me.cmbModeloID)
-        Me.Controls.Add(Me.cmbMarcaID)
         Me.Controls.Add(Me.label13)
         Me.Controls.Add(Me.label12)
         Me.Controls.Add(Me.label14)
@@ -411,7 +446,9 @@ Partial Class FrmNuevoVehiculo
         Me.Controls.Add(Me.pnlTituleBar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.txtModeloID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmNuevoVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmNuevoVehiculo"
@@ -440,8 +477,6 @@ Partial Class FrmNuevoVehiculo
     Private WithEvents btnCancelar As Button
     Private WithEvents cmbTipoVID As ComboBox
     Private WithEvents cmbColorID As ComboBox
-    Private WithEvents cmbModeloID As ComboBox
-    Private WithEvents cmbMarcaID As ComboBox
     Private WithEvents label13 As Label
     Private WithEvents label12 As Label
     Private WithEvents label14 As Label
@@ -466,8 +501,11 @@ Partial Class FrmNuevoVehiculo
     Friend WithEvents VistaModelo1 As VistaModelo1
     Friend WithEvents ModeloEnCNVBindingSource As BindingSource
     Friend WithEvents ModeloEnCNVTableAdapter As VistaModelo1TableAdapters.ModeloEnCNVTableAdapter
-    Private WithEvents cmbModelo As ComboBox
-    Private WithEvents cmbMarca As ComboBox
     Private WithEvents cmbColor As ComboBox
     Private WithEvents cmbTipoV As ComboBox
+    Private WithEvents btnBuscarModelo As Button
+    Public WithEvents txtModelo As TextBox
+    Public WithEvents txtModeloID As TextBox
+    Public WithEvents txtMarca As TextBox
+    Public WithEvents txtMarcaID As TextBox
 End Class

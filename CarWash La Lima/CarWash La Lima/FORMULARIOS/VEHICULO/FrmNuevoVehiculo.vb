@@ -1,10 +1,19 @@
 ﻿Public Class FrmNuevoVehiculo
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim frm As FrmVehiculo = New FrmVehiculo
 
-        frm.VehiculoTableAdapter.InsertarVehiculo(txtPlaca.Text, Val(cmbModeloID.Text), Val(cmbTipoVID.Text), Val(cmbColorID.Text))
-        frm.VehiculoTableAdapter.Fill(frm.VehiculosDataSet1.Vehiculo)
-        Me.Close()
+        Try
+            If (txtPlaca.Text = "" Or txtModelo.Text = "" Or txtMarca.Text = "" Or txtAnio.Text = "") Then
+                MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                Dim frm As FrmVehiculo = New FrmVehiculo
+
+                frm.VehiculoTableAdapter.InsertarVehiculo(txtPlaca.Text, Val(txtModeloID.Text), Val(cmbTipoVID.Text), Val(cmbColorID.Text))
+                frm.VehiculoTableAdapter.Fill(frm.VehiculosDataSet1.Vehiculo)
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 
@@ -20,6 +29,8 @@
         'TODO: esta línea de código carga datos en la tabla 'ModeloDataSet1.ModeloVehiculo' Puede moverla o quitarla según sea necesario.
         Me.ModeloVehiculoTableAdapter.Fill(Me.ModeloDataSet1.ModeloVehiculo)
 
+        cmbColor.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbTipoV.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -37,25 +48,25 @@
 
 
 
-    Private Sub cmbModelo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModelo.SelectedIndexChanged
-        For i = 0 To cmbModelo.SelectedIndex
-            For j = 0 To cmbModeloID.SelectedIndex
-                If (cmbModelo.SelectedIndex = i) Then
-                    cmbModeloID.SelectedIndex = j
-                End If
-            Next
-        Next
-    End Sub
+    'Private Sub cmbModelo_SelectedIndexChanged(sender As Object, e As EventArgs)
+    '    For i = 0 To cmbModelo.SelectedIndex
+    '        For j = 0 To cmbModeloID.SelectedIndex
+    '            If (cmbModelo.SelectedIndex = i) Then
+    '                cmbModeloID.SelectedIndex = j
+    '            End If
+    '        Next
+    '    Next
+    'End Sub
 
-    Private Sub cmbMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMarca.SelectedIndexChanged
-        For i = 0 To cmbMarca.SelectedIndex
-            For j = 0 To cmbMarcaID.SelectedIndex
-                If (cmbMarca.SelectedIndex = i) Then
-                    cmbMarcaID.SelectedIndex = j
-                End If
-            Next
-        Next
-    End Sub
+    'Private Sub cmbMarca_SelectedIndexChanged(sender As Object, e As EventArgs)
+    '    For i = 0 To cmbMarca.SelectedIndex
+    '        For j = 0 To cmbMarcaID.SelectedIndex
+    '            If (cmbMarca.SelectedIndex = i) Then
+    '                cmbMarcaID.SelectedIndex = j
+    '            End If
+    '        Next
+    '    Next
+    'End Sub
 
     Private Sub cmbColor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbColor.SelectedIndexChanged
         For i = 0 To cmbColor.SelectedIndex
@@ -75,5 +86,11 @@
                 End If
             Next
         Next
+    End Sub
+
+    Private Sub btnBuscarModelo_Click(sender As Object, e As EventArgs) Handles btnBuscarModelo.Click
+        Dim frm As New FrmModelos
+        AddOwnedForm(frm) ' Esto es para indicar que este formularios sera propietario del formulario Clientes
+        frm.ShowDialog()
     End Sub
 End Class

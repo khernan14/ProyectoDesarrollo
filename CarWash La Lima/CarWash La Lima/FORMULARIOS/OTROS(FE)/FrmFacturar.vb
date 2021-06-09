@@ -72,27 +72,31 @@ Public Class FrmFacturar
 
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
 
-        If (txtCliente.Text = "" Or txtVehiculo.Text = "" Or txtServicio.Text = "" Or txtEncargadoServicio.Text = "") Then
-            MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            btnFacturar.Enabled = False
-        Else
-            Dim frm2 As FrmHistorialFactura = New FrmHistorialFactura
-            Dim frm As FrmFacturas = New FrmFacturas
-            DateTime2 = New DateTimePicker()
+        Try
+            If (txtCliente.Text = "" Or txtVehiculo.Text = "" Or txtServicio.Text = "" Or txtEncargadoServicio.Text = "") Then
+                MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                btnFacturar.Enabled = False
+            Else
+                Dim frm2 As FrmHistorialFactura = New FrmHistorialFactura
+                Dim frm As FrmFacturas = New FrmFacturas
+                DateTime2 = New DateTimePicker()
 
-            frm.FacturaTableAdapter.InsertFactura(DateTime2.Value, Val(txtSubTotal.Text), Val(txtISV.Text), Val(cmbIDUser.Text))
-            frm.FacturaTableAdapter.Fill(frm.FacturaDataSet1.Factura)
-            frm.DetalleFacturaTableAdapter.InsertDetalleFactura(Val(cmbID.Text), Val(txtIDCliente.Text), Val(txtIDServicio.Text), Val(cmbIDPago.Text))
-            frm.DetalleFacturaTableAdapter.Fill(frm.DetalleFacturaDataSet1.DetalleFactura)
+                frm.FacturaTableAdapter.InsertFactura(DateTime2.Value, Val(txtSubTotal.Text), Val(txtISV.Text), Val(cmbIDUser.Text))
+                frm.FacturaTableAdapter.Fill(frm.FacturaDataSet1.Factura)
+                frm.DetalleFacturaTableAdapter.InsertDetalleFactura(Val(cmbID.Text), Val(txtIDCliente.Text), Val(txtIDServicio.Text), Val(cmbIDPago.Text))
+                frm.DetalleFacturaTableAdapter.Fill(frm.DetalleFacturaDataSet1.DetalleFactura)
 
-            frm2.Facturas_HistoricosTableAdapter.InsertFacturasH(Val(cmbID.Text), DateTime2.Value, txtCliente.Text,
-                                                                txtServicio.Text, txtPrecioServicio.Text, txtVehiculo.Text, cmbUsuario.Text, txtEncargadoServicio.Text,
-                                                                cmbPago.Text, Val(txtISV.Text), Val(txtSubTotal.Text), Val(txtTotal.Text))
-            frm2.Facturas_HistoricosTableAdapter.Fill(frm2.FacturaHDataSet1._Facturas_Historicos)
+                frm2.Facturas_HistoricosTableAdapter.InsertFacturasH(Val(cmbID.Text), DateTime2.Value, txtCliente.Text,
+                                                                    txtServicio.Text, txtPrecioServicio.Text, txtVehiculo.Text, cmbUsuario.Text, txtEncargadoServicio.Text,
+                                                                    cmbPago.Text, Val(txtISV.Text), Val(txtSubTotal.Text), Val(txtTotal.Text))
+                frm2.Facturas_HistoricosTableAdapter.Fill(frm2.FacturaHDataSet1._Facturas_Historicos)
 
-            MessageBox.Show("Factura realizada con exito, gracias por utilizar nuestros servicios", "PAGO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            limpiar()
-        End If
+                MessageBox.Show("Factura realizada con exito, gracias por utilizar nuestros servicios", "PAGO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                limpiar()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Error Garrafal", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 
@@ -151,15 +155,19 @@ Public Class FrmFacturar
     End Sub
 
     Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
-        Dim frm As New CLIENTES
+        Dim frm As New FrmCienteFactura
         frm.lblMessage.Visible = True
         AddOwnedForm(frm) ' Esto es para indicar que este formularios sera propietario del formulario Clientes
         frm.ShowDialog()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        limpiar()
-        btnFacturar.Enabled = False
+
+        If MessageBox.Show("¿Esta seguro que desea cerrar la aplicacion?", "Advertencia", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) = DialogResult.Yes Then
+            limpiar()
+            btnFacturar.Enabled = False
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -214,8 +222,8 @@ Public Class FrmFacturar
         txtPrecioServicio.Clear()
         txtIDEncargado.Clear()
         txtEncargadoServicio.Clear()
-        txtISV.Clear()
         txtTotal.Clear()
+        txtSubTotal.Clear()
     End Sub
 
 End Class

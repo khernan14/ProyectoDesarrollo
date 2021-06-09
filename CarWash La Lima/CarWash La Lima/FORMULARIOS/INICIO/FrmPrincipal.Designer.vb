@@ -25,19 +25,17 @@ Partial Class FrmPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.lblFormTitle = New System.Windows.Forms.Label()
         Me.panelTitleBar = New System.Windows.Forms.Panel()
-        Me.lblCargo = New System.Windows.Forms.Label()
-        Me.lblUsers = New System.Windows.Forms.Label()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.panelMenu = New System.Windows.Forms.Panel()
-        Me.pnlSubMenu = New System.Windows.Forms.Panel()
-        Me.PanelDesktop = New System.Windows.Forms.Panel()
         Me.btnMinimize = New FontAwesome.Sharp.IconPictureBox()
         Me.btnMaximize = New FontAwesome.Sharp.IconPictureBox()
         Me.btnSalir = New FontAwesome.Sharp.IconPictureBox()
+        Me.lblCargo = New System.Windows.Forms.Label()
+        Me.lblUsers = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.pictureBox7 = New System.Windows.Forms.PictureBox()
         Me.mzButtonWindows2 = New BWCMM.MZButtonWindows()
         Me.iconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
-        Me.pictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.panelMenu = New System.Windows.Forms.Panel()
+        Me.pnlSubMenu = New System.Windows.Forms.Panel()
         Me.btnMarcas = New FontAwesome.Sharp.IconButton()
         Me.btnTipoV = New FontAwesome.Sharp.IconButton()
         Me.btnModelos = New FontAwesome.Sharp.IconButton()
@@ -51,17 +49,19 @@ Partial Class FrmPrincipal
         Me.btnClientes = New FontAwesome.Sharp.IconButton()
         Me.btnFacturar = New FontAwesome.Sharp.IconButton()
         Me.imgHome = New System.Windows.Forms.PictureBox()
+        Me.PanelDesktop = New System.Windows.Forms.Panel()
+        Me.pictureBox2 = New System.Windows.Forms.PictureBox()
         Me.panelTitleBar.SuspendLayout()
-        Me.panelMenu.SuspendLayout()
-        Me.pnlSubMenu.SuspendLayout()
-        Me.PanelDesktop.SuspendLayout()
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.iconCurrentForm, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panelMenu.SuspendLayout()
+        Me.pnlSubMenu.SuspendLayout()
         CType(Me.imgHome, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelDesktop.SuspendLayout()
+        CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblFormTitle
@@ -95,90 +95,6 @@ Partial Class FrmPrincipal
         Me.panelTitleBar.Name = "panelTitleBar"
         Me.panelTitleBar.Size = New System.Drawing.Size(1436, 94)
         Me.panelTitleBar.TabIndex = 2
-        '
-        'lblCargo
-        '
-        Me.lblCargo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblCargo.AutoSize = True
-        Me.lblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCargo.ForeColor = System.Drawing.Color.LightGray
-        Me.lblCargo.Location = New System.Drawing.Point(324, 12)
-        Me.lblCargo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblCargo.Name = "lblCargo"
-        Me.lblCargo.Size = New System.Drawing.Size(54, 20)
-        Me.lblCargo.TabIndex = 21
-        Me.lblCargo.Text = "Cargo"
-        '
-        'lblUsers
-        '
-        Me.lblUsers.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblUsers.AutoSize = True
-        Me.lblUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsers.ForeColor = System.Drawing.Color.LightGray
-        Me.lblUsers.Location = New System.Drawing.Point(324, 62)
-        Me.lblUsers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblUsers.Name = "lblUsers"
-        Me.lblUsers.Size = New System.Drawing.Size(67, 20)
-        Me.lblUsers.TabIndex = 20
-        Me.lblUsers.Text = "Usuario"
-        '
-        'lblName
-        '
-        Me.lblName.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblName.AutoSize = True
-        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.ForeColor = System.Drawing.Color.LightGray
-        Me.lblName.Location = New System.Drawing.Point(324, 37)
-        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(82, 20)
-        Me.lblName.TabIndex = 19
-        Me.lblName.Text = "Nombres "
-        '
-        'panelMenu
-        '
-        Me.panelMenu.AutoScroll = True
-        Me.panelMenu.AutoScrollMinSize = New System.Drawing.Size(50, 50)
-        Me.panelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.panelMenu.Controls.Add(Me.pnlSubMenu)
-        Me.panelMenu.Controls.Add(Me.btnLogout)
-        Me.panelMenu.Controls.Add(Me.btnOpciones)
-        Me.panelMenu.Controls.Add(Me.btnHistorial)
-        Me.panelMenu.Controls.Add(Me.btnEmpleados)
-        Me.panelMenu.Controls.Add(Me.btnVehiculos)
-        Me.panelMenu.Controls.Add(Me.btnClientes)
-        Me.panelMenu.Controls.Add(Me.btnFacturar)
-        Me.panelMenu.Controls.Add(Me.imgHome)
-        Me.panelMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.panelMenu.Location = New System.Drawing.Point(0, 0)
-        Me.panelMenu.Margin = New System.Windows.Forms.Padding(4)
-        Me.panelMenu.Name = "panelMenu"
-        Me.panelMenu.Size = New System.Drawing.Size(297, 970)
-        Me.panelMenu.TabIndex = 1
-        '
-        'pnlSubMenu
-        '
-        Me.pnlSubMenu.Controls.Add(Me.btnMarcas)
-        Me.pnlSubMenu.Controls.Add(Me.btnTipoV)
-        Me.pnlSubMenu.Controls.Add(Me.btnModelos)
-        Me.pnlSubMenu.Controls.Add(Me.btnColor)
-        Me.pnlSubMenu.Controls.Add(Me.btnUsuarios)
-        Me.pnlSubMenu.Location = New System.Drawing.Point(0, 658)
-        Me.pnlSubMenu.Margin = New System.Windows.Forms.Padding(4)
-        Me.pnlSubMenu.Name = "pnlSubMenu"
-        Me.pnlSubMenu.Size = New System.Drawing.Size(297, 319)
-        Me.pnlSubMenu.TabIndex = 24
-        '
-        'PanelDesktop
-        '
-        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.PanelDesktop.Controls.Add(Me.pictureBox2)
-        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelDesktop.Location = New System.Drawing.Point(297, 0)
-        Me.PanelDesktop.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelDesktop.Name = "PanelDesktop"
-        Me.PanelDesktop.Size = New System.Drawing.Size(1436, 970)
-        Me.PanelDesktop.TabIndex = 3
         '
         'btnMinimize
         '
@@ -228,11 +144,46 @@ Partial Class FrmPrincipal
         Me.btnSalir.TabIndex = 22
         Me.btnSalir.TabStop = False
         '
+        'lblCargo
+        '
+        Me.lblCargo.AutoSize = True
+        Me.lblCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCargo.ForeColor = System.Drawing.Color.LightGray
+        Me.lblCargo.Location = New System.Drawing.Point(352, 10)
+        Me.lblCargo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCargo.Name = "lblCargo"
+        Me.lblCargo.Size = New System.Drawing.Size(54, 20)
+        Me.lblCargo.TabIndex = 21
+        Me.lblCargo.Text = "Cargo"
+        '
+        'lblUsers
+        '
+        Me.lblUsers.AutoSize = True
+        Me.lblUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsers.ForeColor = System.Drawing.Color.LightGray
+        Me.lblUsers.Location = New System.Drawing.Point(352, 60)
+        Me.lblUsers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUsers.Name = "lblUsers"
+        Me.lblUsers.Size = New System.Drawing.Size(67, 20)
+        Me.lblUsers.TabIndex = 20
+        Me.lblUsers.Text = "Usuario"
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.LightGray
+        Me.lblName.Location = New System.Drawing.Point(352, 35)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(82, 20)
+        Me.lblName.TabIndex = 19
+        Me.lblName.Text = "Nombres "
+        '
         'pictureBox7
         '
-        Me.pictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pictureBox7.Image = Global.CarWash_La_Lima.My.Resources.Resources.USER
-        Me.pictureBox7.Location = New System.Drawing.Point(229, 6)
+        Me.pictureBox7.Location = New System.Drawing.Point(257, 4)
         Me.pictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.pictureBox7.Name = "pictureBox7"
         Me.pictureBox7.Size = New System.Drawing.Size(87, 80)
@@ -270,17 +221,39 @@ Partial Class FrmPrincipal
         Me.iconCurrentForm.TabIndex = 0
         Me.iconCurrentForm.TabStop = False
         '
-        'pictureBox2
+        'panelMenu
         '
-        Me.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pictureBox2.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
-        Me.pictureBox2.Location = New System.Drawing.Point(444, 312)
-        Me.pictureBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.pictureBox2.Name = "pictureBox2"
-        Me.pictureBox2.Size = New System.Drawing.Size(584, 284)
-        Me.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureBox2.TabIndex = 8
-        Me.pictureBox2.TabStop = False
+        Me.panelMenu.AutoScroll = True
+        Me.panelMenu.AutoScrollMinSize = New System.Drawing.Size(50, 50)
+        Me.panelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.panelMenu.Controls.Add(Me.pnlSubMenu)
+        Me.panelMenu.Controls.Add(Me.btnLogout)
+        Me.panelMenu.Controls.Add(Me.btnOpciones)
+        Me.panelMenu.Controls.Add(Me.btnHistorial)
+        Me.panelMenu.Controls.Add(Me.btnEmpleados)
+        Me.panelMenu.Controls.Add(Me.btnVehiculos)
+        Me.panelMenu.Controls.Add(Me.btnClientes)
+        Me.panelMenu.Controls.Add(Me.btnFacturar)
+        Me.panelMenu.Controls.Add(Me.imgHome)
+        Me.panelMenu.Dock = System.Windows.Forms.DockStyle.Left
+        Me.panelMenu.Location = New System.Drawing.Point(0, 0)
+        Me.panelMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.panelMenu.Name = "panelMenu"
+        Me.panelMenu.Size = New System.Drawing.Size(297, 970)
+        Me.panelMenu.TabIndex = 1
+        '
+        'pnlSubMenu
+        '
+        Me.pnlSubMenu.Controls.Add(Me.btnMarcas)
+        Me.pnlSubMenu.Controls.Add(Me.btnTipoV)
+        Me.pnlSubMenu.Controls.Add(Me.btnModelos)
+        Me.pnlSubMenu.Controls.Add(Me.btnColor)
+        Me.pnlSubMenu.Controls.Add(Me.btnUsuarios)
+        Me.pnlSubMenu.Location = New System.Drawing.Point(0, 651)
+        Me.pnlSubMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlSubMenu.Name = "pnlSubMenu"
+        Me.pnlSubMenu.Size = New System.Drawing.Size(297, 319)
+        Me.pnlSubMenu.TabIndex = 24
         '
         'btnMarcas
         '
@@ -389,6 +362,7 @@ Partial Class FrmPrincipal
         '
         'btnLogout
         '
+        Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.ForeColor = System.Drawing.Color.Gainsboro
@@ -397,7 +371,7 @@ Partial Class FrmPrincipal
         Me.btnLogout.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnLogout.IconSize = 32
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogout.Location = New System.Drawing.Point(4, 848)
+        Me.btnLogout.Location = New System.Drawing.Point(0, 914)
         Me.btnLogout.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Padding = New System.Windows.Forms.Padding(13, 0, 24, 0)
@@ -545,6 +519,29 @@ Partial Class FrmPrincipal
         Me.imgHome.TabIndex = 6
         Me.imgHome.TabStop = False
         '
+        'PanelDesktop
+        '
+        Me.PanelDesktop.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.PanelDesktop.Controls.Add(Me.pictureBox2)
+        Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelDesktop.Location = New System.Drawing.Point(297, 0)
+        Me.PanelDesktop.Margin = New System.Windows.Forms.Padding(4)
+        Me.PanelDesktop.Name = "PanelDesktop"
+        Me.PanelDesktop.Size = New System.Drawing.Size(1436, 970)
+        Me.PanelDesktop.TabIndex = 3
+        '
+        'pictureBox2
+        '
+        Me.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pictureBox2.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
+        Me.pictureBox2.Location = New System.Drawing.Point(444, 312)
+        Me.pictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.pictureBox2.Name = "pictureBox2"
+        Me.pictureBox2.Size = New System.Drawing.Size(584, 284)
+        Me.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pictureBox2.TabIndex = 8
+        Me.pictureBox2.TabStop = False
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -561,16 +558,16 @@ Partial Class FrmPrincipal
         Me.Text = "FrmPrincipal"
         Me.panelTitleBar.ResumeLayout(False)
         Me.panelTitleBar.PerformLayout()
-        Me.panelMenu.ResumeLayout(False)
-        Me.pnlSubMenu.ResumeLayout(False)
-        Me.PanelDesktop.ResumeLayout(False)
         CType(Me.btnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnMaximize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSalir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.iconCurrentForm, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panelMenu.ResumeLayout(False)
+        Me.pnlSubMenu.ResumeLayout(False)
         CType(Me.imgHome, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelDesktop.ResumeLayout(False)
+        CType(Me.pictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

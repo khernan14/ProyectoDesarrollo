@@ -197,26 +197,31 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
+        ActivateButton(sender, RGBColors.color1)
         OpenChildForm(New FrmUsuarios)
         ocultar()
     End Sub
 
     Private Sub btnModelos_Click(sender As Object, e As EventArgs) Handles btnModelos.Click
+        ActivateButton(sender, RGBColors.color2)
         OpenChildForm(New FrmModelos)
         ocultar()
     End Sub
 
     Private Sub btnColor_Click(sender As Object, e As EventArgs) Handles btnColor.Click
+        ActivateButton(sender, RGBColors.color3)
         OpenChildForm(New FrmColores)
         ocultar()
     End Sub
 
     Private Sub btnTipoV_Click(sender As Object, e As EventArgs) Handles btnTipoV.Click
+        ActivateButton(sender, RGBColors.color4)
         OpenChildForm(New FrmTipo)
         ocultar()
     End Sub
 
     Private Sub btnMarcas_Click(sender As Object, e As EventArgs) Handles btnMarcas.Click
+        ActivateButton(sender, RGBColors.color5)
         OpenChildForm(New FrmMarcas)
         ocultar()
     End Sub

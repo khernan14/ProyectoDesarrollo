@@ -14,10 +14,18 @@ Public Class FrmNuevoCliente
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim frm As New CLIENTES
-        frm.ClientesTableAdapter.InsertQuery(txtPlaca.Text, txtnombre.Text, txtapellido.Text, Val(txttelefono.Text), txtdireccion.Text)
-        frm.ClientesTableAdapter.Fill(frm.ClientesDataSet.Clientes)
-        Me.Close()
+        Try
+            If (txtPlaca.Text = "" Or txtnombre.Text Or txtapellido.Text = "" Or txttelefono.Text = "") Then
+                MessageBox.Show("No puede dejar campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                Dim frm As New CLIENTES
+                frm.ClientesTableAdapter.InsertQuery(txtPlaca.Text, txtnombre.Text, txtapellido.Text, Val(txttelefono.Text), txtdireccion.Text)
+                frm.ClientesTableAdapter.Fill(frm.ClientesDataSet.Clientes)
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString(), "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -57,16 +65,20 @@ Public Class FrmNuevoCliente
     Private Sub txttelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txttelefono.KeyPress
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
-            MessageBox.Show("Este campo solo acepta numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf Char.IsControl(e.KeyChar) Then
             e.Handled = False
-            MessageBox.Show("Este campo solo acepta numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf Char.IsSeparator(e.KeyChar) Then
             e.Handled = False
-            MessageBox.Show("Este campo solo acepta numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             e.Handled = True
         End If
     End Sub
 
+    Private Sub btnBuscarCliente_Click(sender As Object, e As EventArgs) Handles btnBuscarCliente.Click
+        Dim frm As New FrmVehiculo
+        AddOwnedForm(frm) ' Esto es para indicar que este formularios sera propietario del formulario Clientes
+        frm.ShowDialog()
+        frm.btnEditar.Visible = False
+        frm.btnEliminar.Visible = False
+    End Sub
 End Class

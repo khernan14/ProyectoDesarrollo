@@ -53,6 +53,7 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.AllowUserToOrderColumns = True
         Me.dgHistoricos.AutoGenerateColumns = False
         Me.dgHistoricos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgHistoricos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgHistoricos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.dgHistoricos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgHistoricos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
@@ -79,7 +80,7 @@ Partial Class FrmHistorialFactura
         Me.dgHistoricos.EnableHeadersVisualStyles = False
         Me.dgHistoricos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgHistoricos.Location = New System.Drawing.Point(37, 162)
-        Me.dgHistoricos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgHistoricos.Margin = New System.Windows.Forms.Padding(4)
         Me.dgHistoricos.Name = "dgHistoricos"
         Me.dgHistoricos.ReadOnly = True
         Me.dgHistoricos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -221,7 +222,7 @@ Partial Class FrmHistorialFactura
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1160, 697)
         Me.Controls.Add(Me.dgHistoricos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmHistorialFactura"
         Me.Text = "HISTORIAL"
         CType(Me.dgHistoricos, System.ComponentModel.ISupportInitialize).EndInit()

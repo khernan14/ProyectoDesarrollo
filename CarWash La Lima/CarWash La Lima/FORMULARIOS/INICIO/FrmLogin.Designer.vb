@@ -22,6 +22,7 @@ Partial Class FrmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.BarraTitulo = New System.Windows.Forms.Panel()
         Me.MzButtonWindows1 = New BWCMM.MZButtonWindows()
@@ -37,6 +38,7 @@ Partial Class FrmLogin
         Me.btnOcultar = New FontAwesome.Sharp.IconButton()
         Me.btnErrorMessage = New FontAwesome.Sharp.IconButton()
         Me.pictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.BarraTitulo.SuspendLayout()
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +49,7 @@ Partial Class FrmLogin
         Me.BarraTitulo.Controls.Add(Me.MzButtonWindows1)
         Me.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarraTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.BarraTitulo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BarraTitulo.Margin = New System.Windows.Forms.Padding(4)
         Me.BarraTitulo.Name = "BarraTitulo"
         Me.BarraTitulo.Size = New System.Drawing.Size(573, 49)
         Me.BarraTitulo.TabIndex = 0
@@ -60,7 +62,7 @@ Partial Class FrmLogin
         Me.MzButtonWindows1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MzButtonWindows1.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
         Me.MzButtonWindows1.Location = New System.Drawing.Point(533, 0)
-        Me.MzButtonWindows1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MzButtonWindows1.Margin = New System.Windows.Forms.Padding(4)
         Me.MzButtonWindows1.Name = "MzButtonWindows1"
         Me.MzButtonWindows1.ParentControl = Me
         Me.MzButtonWindows1.Size = New System.Drawing.Size(40, 24)
@@ -72,7 +74,7 @@ Partial Class FrmLogin
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 819)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(573, 18)
         Me.Panel1.TabIndex = 1
@@ -86,7 +88,7 @@ Partial Class FrmLogin
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.ForeColor = System.Drawing.Color.LightGray
         Me.btnLogin.Location = New System.Drawing.Point(61, 679)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(467, 62)
         Me.btnLogin.TabIndex = 0
@@ -100,11 +102,13 @@ Partial Class FrmLogin
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
         Me.txtPassword.Location = New System.Drawing.Point(104, 485)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPassword.MaxLength = 50
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(317, 25)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.Text = "CONTRASEÑA"
+        Me.ToolTip1.SetToolTip(Me.txtPassword, "Ingrese su contraseña")
         '
         'txtUsuario
         '
@@ -113,11 +117,13 @@ Partial Class FrmLogin
         Me.txtUsuario.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.ForeColor = System.Drawing.Color.DimGray
         Me.txtUsuario.Location = New System.Drawing.Point(111, 405)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUsuario.MaxLength = 50
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(317, 25)
         Me.txtUsuario.TabIndex = 1
         Me.txtUsuario.Text = "USUARIO"
+        Me.ToolTip1.SetToolTip(Me.txtUsuario, "Ingrese su usuario")
         '
         'ShapeContainer1
         '
@@ -169,7 +175,7 @@ Partial Class FrmLogin
         Me.btnMostrarOcultar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnMostrarOcultar.IconSize = 26
         Me.btnMostrarOcultar.Location = New System.Drawing.Point(423, 481)
-        Me.btnMostrarOcultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnMostrarOcultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnMostrarOcultar.Name = "btnMostrarOcultar"
         Me.btnMostrarOcultar.Size = New System.Drawing.Size(32, 28)
         Me.btnMostrarOcultar.TabIndex = 3
@@ -185,7 +191,7 @@ Partial Class FrmLogin
         Me.btnOcultar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnOcultar.IconSize = 26
         Me.btnOcultar.Location = New System.Drawing.Point(423, 481)
-        Me.btnOcultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOcultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOcultar.Name = "btnOcultar"
         Me.btnOcultar.Size = New System.Drawing.Size(32, 28)
         Me.btnOcultar.TabIndex = 13
@@ -203,7 +209,7 @@ Partial Class FrmLogin
         Me.btnErrorMessage.IconSize = 22
         Me.btnErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnErrorMessage.Location = New System.Drawing.Point(103, 532)
-        Me.btnErrorMessage.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnErrorMessage.Margin = New System.Windows.Forms.Padding(4)
         Me.btnErrorMessage.Name = "btnErrorMessage"
         Me.btnErrorMessage.Size = New System.Drawing.Size(371, 37)
         Me.btnErrorMessage.TabIndex = 16
@@ -215,7 +221,7 @@ Partial Class FrmLogin
         '
         Me.pictureBox1.Image = Global.CarWash_La_Lima.My.Resources.Resources._23667483
         Me.pictureBox1.Location = New System.Drawing.Point(148, 139)
-        Me.pictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.pictureBox1.Name = "pictureBox1"
         Me.pictureBox1.Size = New System.Drawing.Size(280, 202)
         Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -241,7 +247,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.BarraTitulo)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmLogin"
         Me.Opacity = 0.9R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -267,4 +273,5 @@ Partial Class FrmLogin
     Private WithEvents btnMostrarOcultar As FontAwesome.Sharp.IconButton
     Private WithEvents btnErrorMessage As FontAwesome.Sharp.IconButton
     Private WithEvents pictureBox1 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

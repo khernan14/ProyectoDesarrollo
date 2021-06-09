@@ -1,5 +1,4 @@
-﻿
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Imports Support
 
 Public Class FrmUsuarios
@@ -18,6 +17,7 @@ Public Class FrmUsuarios
         'TODO: esta línea de código carga datos en la tabla 'UsuariosDataSet1.Usuario' Puede moverla o quitarla según sea necesario.
         Me.UsuarioTableAdapter.Fill(Me.UsuariosDataSet1.Usuario)
         permisos()
+        cmbEstado.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
     Private Sub permisos()
         If ActiveUser.Puesto = Cargos.facturador Then
@@ -25,24 +25,25 @@ Public Class FrmUsuarios
         End If
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If (cmbEmpleadoID.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
+        If (txtEmpleado.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or cmbEstado.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             DateTime1 = New DateTimePicker()
-            Me.UsuarioTableAdapter.InsertarUsuario(Val(cmbEmpleadoID.Text), txtUsuario.Text, txtContrasenia.Text, txtEstado.Text, DateTime1.Value)
+            Me.UsuarioTableAdapter.InsertarUsuario(Val(txtEmpleadoID.Text), txtUsuario.Text, txtContrasenia.Text, cmbEstado.Text, DateTime1.Value)
             Me.VistaUsuariosTableAdapter.Fill(VistaUsuariosDataSet1.VistaUsuarios)
             limpiar()
         End If
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        If (cmbEmpleadoID.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or txtEstado.Text = "") Then
+        If (txtEmpleado.Text = "" Or txtUsuario.Text = "" Or txtContrasenia.Text = "" Or cmbEstado.Text = "") Then
             MessageBox.Show("Por favor, no puede dejar los campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Me.UsuarioTableAdapter.ActualizarUsuarios(Val(cmbEmpleadoID.Text), txtUsuario.Text, txtContrasenia.Text, txtEstado.Text, DateTime1.Value, Val(txtid.Text))
+            Me.UsuarioTableAdapter.ActualizarUsuarios(Val(txtid.Text), txtUsuario.Text, txtContrasenia.Text, cmbEstado.Text, DateTime1.Value, Val(txtid.Text))
             Me.VistaUsuariosTableAdapter.Fill(Me.VistaUsuariosDataSet1.VistaUsuarios)
             btnGuardar.Enabled = True
             limpiar()
+            btnBuscarEmpleado.Enabled = True
         End If
     End Sub
 
@@ -62,21 +63,23 @@ Public Class FrmUsuarios
 
     Private Sub dgUsuarios_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgUsuarios.CellDoubleClick
         Me.txtid.Text = dgUsuarios.CurrentRow.Cells(0).Value.ToString()
-        Me.cmbEmpleadoID.Text = dgUsuarios.CurrentRow.Cells(1).Value.ToString()
+        Me.txtEmpleado.Text = dgUsuarios.CurrentRow.Cells(1).Value.ToString()
         Me.txtUsuario.Text = dgUsuarios.CurrentRow.Cells(2).Value.ToString()
         Me.txtContrasenia.Text = dgUsuarios.CurrentRow.Cells(3).Value.ToString()
-        Me.txtEstado.Text = dgUsuarios.CurrentRow.Cells(4).Value.ToString()
+        Me.cmbEstado.Text = dgUsuarios.CurrentRow.Cells(4).Value.ToString()
         btnGuardar.Enabled = False
+        btnBuscarEmpleado.Enabled = False
     End Sub
 
     Private Sub limpiar()
+        txtEmpleado.Clear()
         txtid.Clear()
         txtUsuario.Clear()
         txtContrasenia.Clear()
-        txtEstado.Clear()
+        cmbEstado.Text = ""
     End Sub
 
-    Private Sub cmbEmpleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmbEmpleadoID.KeyPress
+    Private Sub cmbEmpleado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContrasenia.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
@@ -86,16 +89,6 @@ Public Class FrmUsuarios
         Else
             e.Handled = True
         End If
-    End Sub
-
-    Private Sub cmbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbEmpleado.SelectedIndexChanged
-        For i = 0 To cmbEmpleado.SelectedIndex
-            For j = 0 To cmbEmpleadoID.SelectedIndex
-                If (cmbEmpleado.SelectedIndex = i) Then
-                    cmbEmpleadoID.SelectedIndex = j
-                End If
-            Next
-        Next
     End Sub
 
     Private Sub txtBuscar_TextChanged_1(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
@@ -115,5 +108,11 @@ Public Class FrmUsuarios
         txtBuscar.Visible = False
         txtBus.Visible = False
         btnBuscar.BackColor = Color.FromArgb(34, 33, 74)
+    End Sub
+
+    Private Sub btnBuscarEmpleado_Click(sender As Object, e As EventArgs) Handles btnBuscarEmpleado.Click
+        Dim frm As New FrmEmpleadoUsuario
+        AddOwnedForm(frm)
+        frm.ShowDialog()
     End Sub
 End Class

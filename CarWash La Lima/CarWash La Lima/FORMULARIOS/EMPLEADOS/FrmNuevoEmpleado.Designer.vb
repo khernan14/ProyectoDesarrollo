@@ -54,9 +54,10 @@ Partial Class FrmNuevoEmpleado
         Me.cmbPuestoID.DataSource = Me.PuestoBindingSource
         Me.cmbPuestoID.DisplayMember = "PuestoID"
         Me.cmbPuestoID.FormattingEnabled = True
-        Me.cmbPuestoID.Location = New System.Drawing.Point(318, 318)
+        Me.cmbPuestoID.Location = New System.Drawing.Point(424, 391)
+        Me.cmbPuestoID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbPuestoID.Name = "cmbPuestoID"
-        Me.cmbPuestoID.Size = New System.Drawing.Size(58, 21)
+        Me.cmbPuestoID.Size = New System.Drawing.Size(76, 24)
         Me.cmbPuestoID.TabIndex = 172
         Me.cmbPuestoID.ValueMember = "DescripcionPuesto"
         '
@@ -77,8 +78,9 @@ Partial Class FrmNuevoEmpleado
         Me.pnlTituleBar.Controls.Add(Me.iconCurrentChildForm)
         Me.pnlTituleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTituleBar.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTituleBar.Name = "pnlTituleBar"
-        Me.pnlTituleBar.Size = New System.Drawing.Size(800, 51)
+        Me.pnlTituleBar.Size = New System.Drawing.Size(1067, 63)
         Me.pnlTituleBar.TabIndex = 171
         '
         'lblTitleChildForm
@@ -86,9 +88,10 @@ Partial Class FrmNuevoEmpleado
         Me.lblTitleChildForm.AutoSize = True
         Me.lblTitleChildForm.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblTitleChildForm.Location = New System.Drawing.Point(74, 25)
+        Me.lblTitleChildForm.Location = New System.Drawing.Point(99, 31)
+        Me.lblTitleChildForm.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitleChildForm.Name = "lblTitleChildForm"
-        Me.lblTitleChildForm.Size = New System.Drawing.Size(145, 18)
+        Me.lblTitleChildForm.Size = New System.Drawing.Size(180, 23)
         Me.lblTitleChildForm.TabIndex = 1
         Me.lblTitleChildForm.Text = "NUEVO EMPLEADO"
         '
@@ -99,9 +102,11 @@ Partial Class FrmNuevoEmpleado
         Me.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.IdCard
         Me.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple
         Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.iconCurrentChildForm.Location = New System.Drawing.Point(36, 19)
+        Me.iconCurrentChildForm.IconSize = 39
+        Me.iconCurrentChildForm.Location = New System.Drawing.Point(48, 23)
+        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
-        Me.iconCurrentChildForm.Size = New System.Drawing.Size(32, 32)
+        Me.iconCurrentChildForm.Size = New System.Drawing.Size(43, 39)
         Me.iconCurrentChildForm.TabIndex = 0
         Me.iconCurrentChildForm.TabStop = False
         '
@@ -110,9 +115,10 @@ Partial Class FrmNuevoEmpleado
         Me.label11.AutoSize = True
         Me.label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label11.ForeColor = System.Drawing.Color.White
-        Me.label11.Location = New System.Drawing.Point(337, 91)
+        Me.label11.Location = New System.Drawing.Point(449, 112)
+        Me.label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(193, 20)
+        Me.label11.Size = New System.Drawing.Size(242, 25)
         Me.label11.TabIndex = 170
         Me.label11.Text = "DATOS DEL EMPLEADO"
         '
@@ -121,19 +127,21 @@ Partial Class FrmNuevoEmpleado
         Me.label5.AutoSize = True
         Me.label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label5.Location = New System.Drawing.Point(226, 142)
+        Me.label5.Location = New System.Drawing.Point(301, 175)
+        Me.label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(25, 17)
+        Me.label5.Size = New System.Drawing.Size(31, 20)
         Me.label5.TabIndex = 169
         Me.label5.Text = "ID:"
         '
         'txtid
         '
         Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(318, 139)
+        Me.txtid.Location = New System.Drawing.Point(424, 171)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(244, 23)
+        Me.txtid.Size = New System.Drawing.Size(324, 26)
         Me.txtid.TabIndex = 168
         '
         'btnCancelar
@@ -143,9 +151,10 @@ Partial Class FrmNuevoEmpleado
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(447, 382)
+        Me.btnCancelar.Location = New System.Drawing.Point(596, 470)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 35)
+        Me.btnCancelar.Size = New System.Drawing.Size(133, 43)
         Me.btnCancelar.TabIndex = 167
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -157,9 +166,10 @@ Partial Class FrmNuevoEmpleado
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Location = New System.Drawing.Point(319, 382)
+        Me.btnGuardar.Location = New System.Drawing.Point(425, 470)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(100, 35)
+        Me.btnGuardar.Size = New System.Drawing.Size(133, 43)
         Me.btnGuardar.TabIndex = 166
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -169,9 +179,10 @@ Partial Class FrmNuevoEmpleado
         Me.label4.AutoSize = True
         Me.label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label4.Location = New System.Drawing.Point(226, 274)
+        Me.label4.Location = New System.Drawing.Point(301, 337)
+        Me.label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(68, 17)
+        Me.label4.Size = New System.Drawing.Size(78, 20)
         Me.label4.TabIndex = 165
         Me.label4.Text = "Teléfono:"
         '
@@ -180,9 +191,10 @@ Partial Class FrmNuevoEmpleado
         Me.label3.AutoSize = True
         Me.label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label3.Location = New System.Drawing.Point(226, 319)
+        Me.label3.Location = New System.Drawing.Point(301, 393)
+        Me.label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(52, 17)
+        Me.label3.Size = New System.Drawing.Size(61, 20)
         Me.label3.TabIndex = 164
         Me.label3.Text = "Puesto"
         '
@@ -191,9 +203,10 @@ Partial Class FrmNuevoEmpleado
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label1.Location = New System.Drawing.Point(226, 228)
+        Me.label1.Location = New System.Drawing.Point(301, 281)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(69, 17)
+        Me.label1.Size = New System.Drawing.Size(82, 20)
         Me.label1.TabIndex = 163
         Me.label1.Text = "Apellidos:"
         '
@@ -202,34 +215,41 @@ Partial Class FrmNuevoEmpleado
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label2.Location = New System.Drawing.Point(226, 183)
+        Me.label2.Location = New System.Drawing.Point(301, 225)
+        Me.label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(69, 17)
+        Me.label2.Size = New System.Drawing.Size(82, 20)
         Me.label2.TabIndex = 162
         Me.label2.Text = "Nombres:"
         '
         'txttelefono
         '
         Me.txttelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttelefono.Location = New System.Drawing.Point(318, 271)
+        Me.txttelefono.Location = New System.Drawing.Point(424, 334)
+        Me.txttelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txttelefono.MaxLength = 8
         Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(244, 23)
+        Me.txttelefono.Size = New System.Drawing.Size(324, 26)
         Me.txttelefono.TabIndex = 161
         '
         'txtapellido
         '
         Me.txtapellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtapellido.Location = New System.Drawing.Point(318, 225)
+        Me.txtapellido.Location = New System.Drawing.Point(424, 277)
+        Me.txtapellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtapellido.MaxLength = 50
         Me.txtapellido.Name = "txtapellido"
-        Me.txtapellido.Size = New System.Drawing.Size(244, 23)
+        Me.txtapellido.Size = New System.Drawing.Size(324, 26)
         Me.txtapellido.TabIndex = 160
         '
         'txtnombre
         '
         Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnombre.Location = New System.Drawing.Point(318, 180)
+        Me.txtnombre.Location = New System.Drawing.Point(424, 222)
+        Me.txtnombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtnombre.MaxLength = 50
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(244, 23)
+        Me.txtnombre.Size = New System.Drawing.Size(324, 26)
         Me.txtnombre.TabIndex = 159
         '
         'PuestoTableAdapter
@@ -241,17 +261,18 @@ Partial Class FrmNuevoEmpleado
         Me.cmbPuesto.DataSource = Me.PuestoBindingSource
         Me.cmbPuesto.DisplayMember = "DescripcionPuesto"
         Me.cmbPuesto.FormattingEnabled = True
-        Me.cmbPuesto.Location = New System.Drawing.Point(318, 318)
+        Me.cmbPuesto.Location = New System.Drawing.Point(424, 391)
+        Me.cmbPuesto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbPuesto.Name = "cmbPuesto"
-        Me.cmbPuesto.Size = New System.Drawing.Size(244, 21)
+        Me.cmbPuesto.Size = New System.Drawing.Size(324, 24)
         Me.cmbPuesto.TabIndex = 173
         '
         'FrmNuevoEmpleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.cmbPuesto)
         Me.Controls.Add(Me.cmbPuestoID)
         Me.Controls.Add(Me.pnlTituleBar)
@@ -268,6 +289,7 @@ Partial Class FrmNuevoEmpleado
         Me.Controls.Add(Me.txtapellido)
         Me.Controls.Add(Me.txtnombre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmNuevoEmpleado"
         Me.Text = "FrmNuevoEmpleado"
         CType(Me.PuestoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

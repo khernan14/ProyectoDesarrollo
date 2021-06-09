@@ -154,10 +154,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FacturaHDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmCienteFactura.Designer.vb">
+      <DependentUpon>FrmCienteFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CLIENTES\FrmCienteFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.Designer.vb">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleadoUsuario.Designer.vb">
+      <DependentUpon>FrmEmpleadoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\EMPLEADOS\FrmEmpleadoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\EMPLEADOS\FrmEncargado.Designer.vb">
@@ -472,6 +484,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ServiciosVDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VistaEmpleadosPuestoUsuario.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaEmpleadosPuestoUsuario.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmClientes.resx">
@@ -480,11 +497,17 @@
     <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmEditarCliente.resx">
       <DependentUpon>FrmEditarCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\CLIENTES\FrmCienteFactura.resx">
+      <DependentUpon>FrmCienteFactura.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEditarEmpleado.resx">
       <DependentUpon>FrmEditarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEmpleadoUsuario.resx">
+      <DependentUpon>FrmEmpleadoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\EMPLEADOS\FrmEncargado.resx">
       <DependentUpon>FrmEncargado.vb</DependentUpon>
@@ -1005,6 +1028,17 @@
     </None>
     <None Include="ServiciosVDataSet1.xss">
       <DependentUpon>ServiciosVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VistaEmpleadosPuestoUsuario.xsc">
+      <DependentUpon>VistaEmpleadosPuestoUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="VistaEmpleadosPuestoUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaEmpleadosPuestoUsuario.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VistaEmpleadosPuestoUsuario.xss">
+      <DependentUpon>VistaEmpleadosPuestoUsuario.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

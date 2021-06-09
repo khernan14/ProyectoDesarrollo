@@ -76,7 +76,7 @@ Partial Class FrmVehiculo
         Me.btnNuevo.ForeColor = System.Drawing.Color.Silver
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(996, 205)
-        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(133, 37)
         Me.btnNuevo.TabIndex = 29
@@ -98,7 +98,7 @@ Partial Class FrmVehiculo
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.Location = New System.Drawing.Point(996, 293)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(133, 37)
         Me.btnEliminar.TabIndex = 28
@@ -120,7 +120,7 @@ Partial Class FrmVehiculo
         Me.btnEditar.ForeColor = System.Drawing.Color.Silver
         Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEditar.Location = New System.Drawing.Point(996, 249)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(133, 37)
         Me.btnEditar.TabIndex = 27
@@ -158,7 +158,7 @@ Partial Class FrmVehiculo
         Me.dgVehiculos.EnableHeadersVisualStyles = False
         Me.dgVehiculos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgVehiculos.Location = New System.Drawing.Point(50, 185)
-        Me.dgVehiculos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgVehiculos.Margin = New System.Windows.Forms.Padding(4)
         Me.dgVehiculos.Name = "dgVehiculos"
         Me.dgVehiculos.ReadOnly = True
         Me.dgVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -261,7 +261,7 @@ Partial Class FrmVehiculo
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.dgVehiculos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "VEHICULOS"

@@ -17,11 +17,12 @@
         If (dgVehiculos.SelectedRows.Count > 0) Then
 
             Dim frm As New FrmEditarVehiculo
+            Dim frm2 As New FrmModelos
             frm.txtPlaca.Text = dgVehiculos.CurrentRow.Cells(0).Value.ToString()
-            frm.ModeloEditarDataSet1.DataSetName = dgVehiculos.CurrentRow.Cells(1).Value.ToString()
+            frm.txtModelo.Text = dgVehiculos.CurrentRow.Cells(1).Value.ToString()
             'frm.ModeloVehiculoBindingSource.DataSource = dgVehiculos.CurrentRow.Cells(2).Value.ToString()
-            frm.ColorEditarDataSet1.DataSetName = dgVehiculos.CurrentRow.Cells(2).Value.ToString()
-            frm.TipoEditorDataSet1.DataSetName = dgVehiculos.CurrentRow.Cells(3).Value.ToString()
+            frm.txtAnio.Text = dgVehiculos.CurrentRow.Cells(2).Value.ToString()
+            frm.txtMarca.Text = dgVehiculos.CurrentRow.Cells(3).Value.ToString()
             frm.ShowDialog()
         Else
             MessageBox.Show("Por favor, Seleccione una fila", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -42,6 +43,17 @@
         Else
             MessageBox.Show("Por favor, Seleccione una fila", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+
+    End Sub
+
+    Private Sub dgVehiculos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgVehiculos.CellDoubleClick
+        Dim frm As FrmNuevoCliente = CType(Owner, FrmNuevoCliente)
+
+        frm.txtPlaca.Text = dgVehiculos.CurrentRow.Cells(0).Value.ToString()
+        Me.Close()
+    End Sub
+
+    Private Sub dgVehiculos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgVehiculos.CellContentClick
 
     End Sub
 End Class

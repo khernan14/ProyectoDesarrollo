@@ -212,3 +212,5 @@ C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La
 C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash La Lima.pdb
 C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmServiciosFactura.resources
 C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEncargado.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmCienteFactura.resources
+C:\Users\ASUS TUF Gaming\Documents\github\Proyecto\ProyectoDesarrollo\CarWash La Lima\CarWash La Lima\obj\Debug\CarWash_La_Lima.FrmEmpleadoUsuario.resources
