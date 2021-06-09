@@ -172,7 +172,6 @@ Partial Class FrmEmpleado
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgEmpleados.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgEmpleados.RowHeadersWidth = 51
-        Me.dgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgEmpleados.Size = New System.Drawing.Size(893, 464)
         Me.dgEmpleados.TabIndex = 21
         '

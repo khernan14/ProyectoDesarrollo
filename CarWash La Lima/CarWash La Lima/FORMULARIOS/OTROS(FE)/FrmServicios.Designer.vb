@@ -33,22 +33,20 @@ Partial Class FrmServicios
         Me.txtServicio = New System.Windows.Forms.TextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.dgServicio = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ServicioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ServiciosVDataSet1 = New CarWash_La_Lima.ServiciosVDataSet1()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.ServiciosVDataSet1 = New CarWash_La_Lima.ServiciosVDataSet1()
-        Me.ServicioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ServicioTableAdapter1 = New CarWash_La_Lima.ServiciosVDataSet1TableAdapters.ServicioTableAdapter()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        'Me.ServicioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dgServicio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ServicioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        'CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label11
@@ -150,6 +148,7 @@ Partial Class FrmServicios
         Me.dgServicio.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgServicio.Location = New System.Drawing.Point(77, 132)
         Me.dgServicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgServicio.MultiSelect = False
         Me.dgServicio.Name = "dgServicio"
         Me.dgServicio.ReadOnly = True
         Me.dgServicio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -162,9 +161,42 @@ Partial Class FrmServicios
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgServicio.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgServicio.RowHeadersWidth = 51
-        Me.dgServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgServicio.Size = New System.Drawing.Size(776, 464)
         Me.dgServicio.TabIndex = 214
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ServicioID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ServicioID"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "DescripcionServicio"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "DescripcionServicio"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "PrecioServicio"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "PrecioServicio"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'ServicioBindingSource1
+        '
+        Me.ServicioBindingSource1.DataMember = "Servicio"
+        Me.ServicioBindingSource1.DataSource = Me.ServiciosVDataSet1
+        '
+        'ServiciosVDataSet1
+        '
+        Me.ServiciosVDataSet1.DataSetName = "ServiciosVDataSet1"
+        Me.ServiciosVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label2
         '
@@ -237,47 +269,9 @@ Partial Class FrmServicios
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
-        'ServiciosVDataSet1
-        '
-        Me.ServiciosVDataSet1.DataSetName = "ServiciosVDataSet1"
-        Me.ServiciosVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ServicioBindingSource1
-        '
-        Me.ServicioBindingSource1.DataMember = "Servicio"
-        Me.ServicioBindingSource1.DataSource = Me.ServiciosVDataSet1
-        '
         'ServicioTableAdapter1
         '
         Me.ServicioTableAdapter1.ClearBeforeFill = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "ServicioID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ServicioID"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "DescripcionServicio"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "DescripcionServicio"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "PrecioServicio"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "PrecioServicio"
-        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'ServicioBindingSource
-        '
-        'Me.ServicioBindingSource.DataMember = "Servicio"
         '
         'FrmServicios
         '
@@ -300,9 +294,8 @@ Partial Class FrmServicios
         Me.Name = "FrmServicios"
         Me.Text = "FrmServicios"
         CType(Me.dgServicio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ServicioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        'CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

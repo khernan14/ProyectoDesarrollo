@@ -28,18 +28,18 @@ Partial Class FrmServiciosFactura
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.label1 = New System.Windows.Forms.Label()
         Me.dgServicio = New System.Windows.Forms.DataGridView()
-        Me.lblMessage = New System.Windows.Forms.Label()
-        Me.ServiciosVDataSet1 = New CarWash_La_Lima.ServiciosVDataSet1()
-        Me.ServiciosVDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ServicioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ServicioTableAdapter = New CarWash_La_Lima.ServiciosVDataSet1TableAdapters.ServicioTableAdapter()
         Me.ServicioIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioServicioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ServicioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ServiciosVDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ServiciosVDataSet1 = New CarWash_La_Lima.ServiciosVDataSet1()
+        Me.lblMessage = New System.Windows.Forms.Label()
+        Me.ServicioTableAdapter = New CarWash_La_Lima.ServiciosVDataSet1TableAdapters.ServicioTableAdapter()
         CType(Me.dgServicio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ServiciosVDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ServiciosVDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -85,6 +85,7 @@ Partial Class FrmServiciosFactura
         Me.dgServicio.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgServicio.Location = New System.Drawing.Point(137, 150)
         Me.dgServicio.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgServicio.MultiSelect = False
         Me.dgServicio.Name = "dgServicio"
         Me.dgServicio.ReadOnly = True
         Me.dgServicio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -97,41 +98,8 @@ Partial Class FrmServiciosFactura
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgServicio.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgServicio.RowHeadersWidth = 51
-        Me.dgServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgServicio.Size = New System.Drawing.Size(776, 464)
         Me.dgServicio.TabIndex = 217
-        '
-        'lblMessage
-        '
-        Me.lblMessage.AutoSize = True
-        Me.lblMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMessage.ForeColor = System.Drawing.Color.White
-        Me.lblMessage.Location = New System.Drawing.Point(133, 126)
-        Me.lblMessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblMessage.Name = "lblMessage"
-        Me.lblMessage.Size = New System.Drawing.Size(398, 20)
-        Me.lblMessage.TabIndex = 219
-        Me.lblMessage.Text = "Doble click en una celda para seleccionar un cliente"
-        Me.lblMessage.Visible = False
-        '
-        'ServiciosVDataSet1
-        '
-        Me.ServiciosVDataSet1.DataSetName = "ServiciosVDataSet1"
-        Me.ServiciosVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ServiciosVDataSet1BindingSource
-        '
-        Me.ServiciosVDataSet1BindingSource.DataSource = Me.ServiciosVDataSet1
-        Me.ServiciosVDataSet1BindingSource.Position = 0
-        '
-        'ServicioBindingSource
-        '
-        Me.ServicioBindingSource.DataMember = "Servicio"
-        Me.ServicioBindingSource.DataSource = Me.ServiciosVDataSet1BindingSource
-        '
-        'ServicioTableAdapter
-        '
-        Me.ServicioTableAdapter.ClearBeforeFill = True
         '
         'ServicioIDDataGridViewTextBoxColumn
         '
@@ -157,6 +125,38 @@ Partial Class FrmServiciosFactura
         Me.PrecioServicioDataGridViewTextBoxColumn.Name = "PrecioServicioDataGridViewTextBoxColumn"
         Me.PrecioServicioDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'ServicioBindingSource
+        '
+        Me.ServicioBindingSource.DataMember = "Servicio"
+        Me.ServicioBindingSource.DataSource = Me.ServiciosVDataSet1BindingSource
+        '
+        'ServiciosVDataSet1BindingSource
+        '
+        Me.ServiciosVDataSet1BindingSource.DataSource = Me.ServiciosVDataSet1
+        Me.ServiciosVDataSet1BindingSource.Position = 0
+        '
+        'ServiciosVDataSet1
+        '
+        Me.ServiciosVDataSet1.DataSetName = "ServiciosVDataSet1"
+        Me.ServiciosVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'lblMessage
+        '
+        Me.lblMessage.AutoSize = True
+        Me.lblMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMessage.ForeColor = System.Drawing.Color.White
+        Me.lblMessage.Location = New System.Drawing.Point(133, 126)
+        Me.lblMessage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblMessage.Name = "lblMessage"
+        Me.lblMessage.Size = New System.Drawing.Size(398, 20)
+        Me.lblMessage.TabIndex = 219
+        Me.lblMessage.Text = "Doble click en una celda para seleccionar un cliente"
+        Me.lblMessage.Visible = False
+        '
+        'ServicioTableAdapter
+        '
+        Me.ServicioTableAdapter.ClearBeforeFill = True
+        '
         'FrmServiciosFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -170,9 +170,9 @@ Partial Class FrmServiciosFactura
         Me.Name = "FrmServiciosFactura"
         Me.Text = "FrmServiciosFactura"
         CType(Me.dgServicio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ServiciosVDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ServicioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ServiciosVDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ServiciosVDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

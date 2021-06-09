@@ -247,6 +247,7 @@ Partial Class FrmModelos
         Me.dgModelos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgModelos.Location = New System.Drawing.Point(72, 194)
         Me.dgModelos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgModelos.MultiSelect = False
         Me.dgModelos.Name = "dgModelos"
         Me.dgModelos.ReadOnly = True
         Me.dgModelos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -259,7 +260,6 @@ Partial Class FrmModelos
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgModelos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgModelos.RowHeadersWidth = 51
-        Me.dgModelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgModelos.Size = New System.Drawing.Size(776, 464)
         Me.dgModelos.TabIndex = 189
         '

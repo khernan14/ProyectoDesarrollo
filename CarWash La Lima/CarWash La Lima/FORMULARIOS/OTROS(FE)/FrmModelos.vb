@@ -53,17 +53,11 @@ Public Class FrmModelos
     End Sub
 
     Private Sub dgModelos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgModelos.CellDoubleClick
-        Try
-            Dim frm As FrmNuevoVehiculo = CType(Owner, FrmNuevoVehiculo)
-
-            frm.txtModeloID.Text = dgModelos.CurrentRow.Cells(0).Value.ToString()
-            frm.txtModelo.Text = dgModelos.CurrentRow.Cells(2).Value.ToString()
-            frm.txtAnio.Text = dgModelos.CurrentRow.Cells(3).Value.ToString()
-            frm.txtMarca.Text = dgModelos.CurrentRow.Cells(1).Value.ToString()
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString(), "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
+        Me.txtid.Text = dgModelos.CurrentRow.Cells(0).Value.ToString()
+        Me.cmbMarcaID.Text = dgModelos.CurrentRow.Cells(1).Value.ToString()
+        Me.txtModelo.Text = dgModelos.CurrentRow.Cells(2).Value.ToString()
+        Me.txtAnio.Text = dgModelos.CurrentRow.Cells(3).Value.ToString()
+        btnGuardar.Enabled = False
     End Sub
 
     Private Sub limpiar()
@@ -101,14 +95,6 @@ Public Class FrmModelos
     End Sub
 
     Private Sub dgModelos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgModelos.CellContentClick
-        Me.txtid.Text = dgModelos.CurrentRow.Cells(0).Value.ToString()
-        Me.cmbMarcaID.Text = dgModelos.CurrentRow.Cells(1).Value.ToString()
-        Me.txtModelo.Text = dgModelos.CurrentRow.Cells(2).Value.ToString()
-        Me.txtAnio.Text = dgModelos.CurrentRow.Cells(3).Value.ToString()
-        btnGuardar.Enabled = False
-    End Sub
-
-    Private Sub dgModelos_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgModelos.CellMouseClick
         Try
             Dim frm As FrmEditarVehiculo = CType(Owner, FrmEditarVehiculo)
 

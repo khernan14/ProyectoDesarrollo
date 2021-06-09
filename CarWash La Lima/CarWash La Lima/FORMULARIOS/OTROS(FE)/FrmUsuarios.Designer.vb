@@ -141,6 +141,7 @@ Partial Class FrmUsuarios
         Me.dgUsuarios.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgUsuarios.Location = New System.Drawing.Point(41, 183)
         Me.dgUsuarios.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgUsuarios.MultiSelect = False
         Me.dgUsuarios.Name = "dgUsuarios"
         Me.dgUsuarios.ReadOnly = True
         Me.dgUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -153,7 +154,6 @@ Partial Class FrmUsuarios
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgUsuarios.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgUsuarios.RowHeadersWidth = 51
-        Me.dgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgUsuarios.Size = New System.Drawing.Size(776, 464)
         Me.dgUsuarios.TabIndex = 26
         '

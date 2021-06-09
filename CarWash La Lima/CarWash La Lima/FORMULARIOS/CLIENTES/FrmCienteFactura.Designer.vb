@@ -148,7 +148,6 @@ Partial Class FrmCienteFactura
         Me.dgClientes.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgClientes.RowHeadersWidth = 51
         Me.dgClientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgClientes.Size = New System.Drawing.Size(893, 464)
         Me.dgClientes.TabIndex = 26
         '

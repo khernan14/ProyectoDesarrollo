@@ -199,6 +199,7 @@ Public Class FrmPrincipal
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
         ActivateButton(sender, RGBColors.color1)
         OpenChildForm(New FrmUsuarios)
+        DisableButton()
         ocultar()
     End Sub
 

@@ -75,7 +75,7 @@ Partial Class FrmTipo
         Me.txtid.Enabled = False
         Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtid.Location = New System.Drawing.Point(1056, 225)
-        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
         Me.txtid.Size = New System.Drawing.Size(324, 26)
@@ -89,7 +89,7 @@ Partial Class FrmTipo
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.White
         Me.btnEditar.Location = New System.Drawing.Point(1112, 599)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(133, 37)
         Me.btnEditar.TabIndex = 200
@@ -104,7 +104,7 @@ Partial Class FrmTipo
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
         Me.btnGuardar.Location = New System.Drawing.Point(959, 599)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(133, 37)
         Me.btnGuardar.TabIndex = 199
@@ -127,7 +127,7 @@ Partial Class FrmTipo
         '
         Me.txtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDescripcion.Location = New System.Drawing.Point(1056, 275)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(324, 26)
         Me.txtDescripcion.TabIndex = 193
@@ -156,7 +156,7 @@ Partial Class FrmTipo
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.Location = New System.Drawing.Point(1267, 599)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(133, 37)
         Me.btnEliminar.TabIndex = 190
@@ -194,7 +194,8 @@ Partial Class FrmTipo
         Me.dgTipoV.EnableHeadersVisualStyles = False
         Me.dgTipoV.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgTipoV.Location = New System.Drawing.Point(71, 185)
-        Me.dgTipoV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgTipoV.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgTipoV.MultiSelect = False
         Me.dgTipoV.Name = "dgTipoV"
         Me.dgTipoV.ReadOnly = True
         Me.dgTipoV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -207,7 +208,6 @@ Partial Class FrmTipo
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgTipoV.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgTipoV.RowHeadersWidth = 51
-        Me.dgTipoV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgTipoV.Size = New System.Drawing.Size(776, 464)
         Me.dgTipoV.TabIndex = 189
         '
@@ -257,7 +257,7 @@ Partial Class FrmTipo
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgTipoV)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmTipo"
         Me.Text = "TIPO DE VEHICULO"
         CType(Me.dgTipoV, System.ComponentModel.ISupportInitialize).EndInit()

@@ -75,7 +75,7 @@ Partial Class FrmMarcas
         Me.txtid.Enabled = False
         Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtid.Location = New System.Drawing.Point(1045, 188)
-        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
         Me.txtid.Size = New System.Drawing.Size(324, 26)
@@ -89,7 +89,7 @@ Partial Class FrmMarcas
         Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEditar.ForeColor = System.Drawing.Color.White
         Me.btnEditar.Location = New System.Drawing.Point(1083, 560)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(133, 37)
         Me.btnEditar.TabIndex = 210
@@ -104,7 +104,7 @@ Partial Class FrmMarcas
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
         Me.btnGuardar.Location = New System.Drawing.Point(923, 560)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(133, 37)
         Me.btnGuardar.TabIndex = 209
@@ -127,7 +127,7 @@ Partial Class FrmMarcas
         '
         Me.txtMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMarca.Location = New System.Drawing.Point(1045, 238)
-        Me.txtMarca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMarca.Name = "txtMarca"
         Me.txtMarca.Size = New System.Drawing.Size(324, 26)
         Me.txtMarca.TabIndex = 207
@@ -156,7 +156,7 @@ Partial Class FrmMarcas
         Me.btnEliminar.ForeColor = System.Drawing.Color.Silver
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.Location = New System.Drawing.Point(1237, 560)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(133, 37)
         Me.btnEliminar.TabIndex = 205
@@ -194,7 +194,8 @@ Partial Class FrmMarcas
         Me.dgMarcas.EnableHeadersVisualStyles = False
         Me.dgMarcas.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgMarcas.Location = New System.Drawing.Point(59, 148)
-        Me.dgMarcas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgMarcas.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgMarcas.MultiSelect = False
         Me.dgMarcas.Name = "dgMarcas"
         Me.dgMarcas.ReadOnly = True
         Me.dgMarcas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -207,7 +208,6 @@ Partial Class FrmMarcas
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgMarcas.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgMarcas.RowHeadersWidth = 51
-        Me.dgMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgMarcas.Size = New System.Drawing.Size(776, 464)
         Me.dgMarcas.TabIndex = 204
         '
@@ -257,7 +257,7 @@ Partial Class FrmMarcas
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgMarcas)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmMarcas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "MARCAS"

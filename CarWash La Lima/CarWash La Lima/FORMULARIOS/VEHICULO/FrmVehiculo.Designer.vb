@@ -153,7 +153,6 @@ Partial Class FrmVehiculo
         Me.dgVehiculos.GridColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.dgVehiculos.Location = New System.Drawing.Point(50, 185)
         Me.dgVehiculos.Margin = New System.Windows.Forms.Padding(4)
-        Me.dgVehiculos.MultiSelect = False
         Me.dgVehiculos.Name = "dgVehiculos"
         Me.dgVehiculos.ReadOnly = True
         Me.dgVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]

@@ -89,7 +89,7 @@
     End Sub
 
     Private Sub btnBuscarModelo_Click(sender As Object, e As EventArgs) Handles btnBuscarModelo.Click
-        Dim frm As New FrmModelos
+        Dim frm As New FrmModelosNv
         AddOwnedForm(frm) ' Esto es para indicar que este formularios sera propietario del formulario Clientes
         frm.ShowDialog()
     End Sub

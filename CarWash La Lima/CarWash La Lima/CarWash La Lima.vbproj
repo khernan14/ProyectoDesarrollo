@@ -286,6 +286,12 @@
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmModelosNv.Designer.vb">
+      <DependentUpon>FrmModelosNv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmModelosNv.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\OTROS%28FE%29\FrmServicios.Designer.vb">
       <DependentUpon>FrmServicios.vb</DependentUpon>
     </Compile>
@@ -532,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmModelos.resx">
       <DependentUpon>FrmModelos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmModelosNv.resx">
+      <DependentUpon>FrmModelosNv.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\OTROS%28FE%29\FrmServicios.resx">
       <DependentUpon>FrmServicios.vb</DependentUpon>
