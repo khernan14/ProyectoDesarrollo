@@ -333,7 +333,6 @@ Partial Class FrmEmpleado
     End Sub
 
     Private WithEvents label1 As Label
-    Private WithEvents dgEmpleados As DataGridView
     Friend WithEvents EmpleadosDataSet As EmpleadosDataSet
     Friend WithEvents EmpleadosDataSetBindingSource As BindingSource
     Friend WithEvents EmpleadosDataSet1 As EmpleadosDataSet1
@@ -353,4 +352,5 @@ Partial Class FrmEmpleado
     Public WithEvents btnNuevo As Button
     Public WithEvents btnEliminar As Button
     Public WithEvents btnEditar As Button
+    Public WithEvents dgEmpleados As DataGridView
 End Class

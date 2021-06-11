@@ -52,8 +52,9 @@ Partial Class FrmEditarCliente
         Me.pnlTituleBar.Controls.Add(Me.iconCurrentChildForm)
         Me.pnlTituleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTituleBar.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTituleBar.Name = "pnlTituleBar"
-        Me.pnlTituleBar.Size = New System.Drawing.Size(870, 51)
+        Me.pnlTituleBar.Size = New System.Drawing.Size(1160, 63)
         Me.pnlTituleBar.TabIndex = 106
         '
         'mzButtonWindows2
@@ -63,7 +64,8 @@ Partial Class FrmEditarCliente
         Me.mzButtonWindows2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.mzButtonWindows2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.mzButtonWindows2.EstiloButton = BWCMM.MZButtonWindows.EstiloDeButton.Windows
-        Me.mzButtonWindows2.Location = New System.Drawing.Point(1050, 0)
+        Me.mzButtonWindows2.Location = New System.Drawing.Point(1400, 0)
+        Me.mzButtonWindows2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.mzButtonWindows2.Name = "mzButtonWindows2"
         Me.mzButtonWindows2.ParentControl = Me
         Me.mzButtonWindows2.Size = New System.Drawing.Size(40, 24)
@@ -75,9 +77,10 @@ Partial Class FrmEditarCliente
         Me.lblTitleChildForm.AutoSize = True
         Me.lblTitleChildForm.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro
-        Me.lblTitleChildForm.Location = New System.Drawing.Point(74, 25)
+        Me.lblTitleChildForm.Location = New System.Drawing.Point(99, 31)
+        Me.lblTitleChildForm.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitleChildForm.Name = "lblTitleChildForm"
-        Me.lblTitleChildForm.Size = New System.Drawing.Size(125, 18)
+        Me.lblTitleChildForm.Size = New System.Drawing.Size(156, 23)
         Me.lblTitleChildForm.TabIndex = 1
         Me.lblTitleChildForm.Text = "EDITAR CLIENTES"
         '
@@ -88,9 +91,11 @@ Partial Class FrmEditarCliente
         Me.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.UserEdit
         Me.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple
         Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.iconCurrentChildForm.Location = New System.Drawing.Point(36, 19)
+        Me.iconCurrentChildForm.IconSize = 39
+        Me.iconCurrentChildForm.Location = New System.Drawing.Point(48, 23)
+        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
-        Me.iconCurrentChildForm.Size = New System.Drawing.Size(32, 32)
+        Me.iconCurrentChildForm.Size = New System.Drawing.Size(43, 39)
         Me.iconCurrentChildForm.TabIndex = 0
         Me.iconCurrentChildForm.TabStop = False
         '
@@ -99,9 +104,10 @@ Partial Class FrmEditarCliente
         Me.label11.AutoSize = True
         Me.label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label11.ForeColor = System.Drawing.Color.White
-        Me.label11.Location = New System.Drawing.Point(337, 92)
+        Me.label11.Location = New System.Drawing.Point(449, 113)
+        Me.label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(171, 20)
+        Me.label11.Size = New System.Drawing.Size(215, 25)
         Me.label11.TabIndex = 140
         Me.label11.Text = "DATOS DEL CLIENTE"
         '
@@ -110,19 +116,21 @@ Partial Class FrmEditarCliente
         Me.label5.AutoSize = True
         Me.label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label5.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label5.Location = New System.Drawing.Point(226, 143)
+        Me.label5.Location = New System.Drawing.Point(301, 176)
+        Me.label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(25, 17)
+        Me.label5.Size = New System.Drawing.Size(31, 20)
         Me.label5.TabIndex = 139
         Me.label5.Text = "ID:"
         '
         'txtid
         '
         Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(318, 140)
+        Me.txtid.Location = New System.Drawing.Point(424, 172)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(244, 23)
+        Me.txtid.Size = New System.Drawing.Size(324, 26)
         Me.txtid.TabIndex = 138
         '
         'btnCancelar
@@ -132,9 +140,10 @@ Partial Class FrmEditarCliente
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(447, 383)
+        Me.btnCancelar.Location = New System.Drawing.Point(596, 471)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(100, 35)
+        Me.btnCancelar.Size = New System.Drawing.Size(133, 43)
         Me.btnCancelar.TabIndex = 137
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -146,9 +155,10 @@ Partial Class FrmEditarCliente
         Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button1.ForeColor = System.Drawing.Color.White
-        Me.button1.Location = New System.Drawing.Point(319, 383)
+        Me.button1.Location = New System.Drawing.Point(425, 471)
+        Me.button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(100, 35)
+        Me.button1.Size = New System.Drawing.Size(133, 43)
         Me.button1.TabIndex = 136
         Me.button1.Text = "Guardar"
         Me.button1.UseVisualStyleBackColor = False
@@ -158,9 +168,10 @@ Partial Class FrmEditarCliente
         Me.label4.AutoSize = True
         Me.label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label4.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label4.Location = New System.Drawing.Point(226, 319)
+        Me.label4.Location = New System.Drawing.Point(301, 393)
+        Me.label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(68, 17)
+        Me.label4.Size = New System.Drawing.Size(78, 20)
         Me.label4.TabIndex = 135
         Me.label4.Text = "Teléfono:"
         '
@@ -169,9 +180,10 @@ Partial Class FrmEditarCliente
         Me.label3.AutoSize = True
         Me.label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label3.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label3.Location = New System.Drawing.Point(226, 274)
+        Me.label3.Location = New System.Drawing.Point(301, 337)
+        Me.label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(71, 17)
+        Me.label3.Size = New System.Drawing.Size(86, 20)
         Me.label3.TabIndex = 134
         Me.label3.Text = "Direccion:"
         '
@@ -180,9 +192,10 @@ Partial Class FrmEditarCliente
         Me.label1.AutoSize = True
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label1.Location = New System.Drawing.Point(226, 229)
+        Me.label1.Location = New System.Drawing.Point(301, 282)
+        Me.label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(69, 17)
+        Me.label1.Size = New System.Drawing.Size(82, 20)
         Me.label1.TabIndex = 133
         Me.label1.Text = "Apellidos:"
         '
@@ -191,50 +204,59 @@ Partial Class FrmEditarCliente
         Me.label2.AutoSize = True
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label2.ForeColor = System.Drawing.Color.Gainsboro
-        Me.label2.Location = New System.Drawing.Point(226, 184)
+        Me.label2.Location = New System.Drawing.Point(301, 226)
+        Me.label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(69, 17)
+        Me.label2.Size = New System.Drawing.Size(82, 20)
         Me.label2.TabIndex = 132
         Me.label2.Text = "Nombres:"
         '
         'txttelefono
         '
         Me.txttelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttelefono.Location = New System.Drawing.Point(318, 316)
+        Me.txttelefono.Location = New System.Drawing.Point(424, 389)
+        Me.txttelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txttelefono.MaxLength = 8
         Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(244, 23)
+        Me.txttelefono.Size = New System.Drawing.Size(324, 26)
         Me.txttelefono.TabIndex = 131
         '
         'txtdireccion
         '
         Me.txtdireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdireccion.Location = New System.Drawing.Point(318, 271)
+        Me.txtdireccion.Location = New System.Drawing.Point(424, 334)
+        Me.txtdireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtdireccion.MaxLength = 70
         Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(244, 23)
+        Me.txtdireccion.Size = New System.Drawing.Size(324, 26)
         Me.txtdireccion.TabIndex = 130
         '
         'txtapellido
         '
         Me.txtapellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtapellido.Location = New System.Drawing.Point(318, 226)
+        Me.txtapellido.Location = New System.Drawing.Point(424, 278)
+        Me.txtapellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtapellido.MaxLength = 30
         Me.txtapellido.Name = "txtapellido"
-        Me.txtapellido.Size = New System.Drawing.Size(244, 23)
+        Me.txtapellido.Size = New System.Drawing.Size(324, 26)
         Me.txtapellido.TabIndex = 129
         '
         'txtnombre
         '
         Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnombre.Location = New System.Drawing.Point(318, 181)
+        Me.txtnombre.Location = New System.Drawing.Point(424, 223)
+        Me.txtnombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtnombre.MaxLength = 30
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(244, 23)
+        Me.txtnombre.Size = New System.Drawing.Size(324, 26)
         Me.txtnombre.TabIndex = 128
         '
         'FrmEditarCliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(870, 457)
+        Me.ClientSize = New System.Drawing.Size(1160, 562)
         Me.Controls.Add(Me.label11)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.txtid)
@@ -250,6 +272,7 @@ Partial Class FrmEditarCliente
         Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.pnlTituleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmEditarCliente"
         Me.Text = "FrmEditarCliente"
         Me.pnlTituleBar.ResumeLayout(False)

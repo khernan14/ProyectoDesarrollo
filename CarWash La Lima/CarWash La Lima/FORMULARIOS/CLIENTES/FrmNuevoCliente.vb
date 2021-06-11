@@ -15,7 +15,7 @@ Public Class FrmNuevoCliente
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            If (txtPlaca.Text = "" Or txtnombre.Text Or txtapellido.Text = "" Or txttelefono.Text = "") Then
+            If (txtPlaca.Text = "" Or txtnombre.Text = "" Or txtapellido.Text = "" Or txttelefono.Text = "") Then
                 MessageBox.Show("No puede dejar campos vacios", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 Dim frm As New CLIENTES

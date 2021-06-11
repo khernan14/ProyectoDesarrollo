@@ -165,7 +165,6 @@ Partial Class FrmVehiculo
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgVehiculos.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgVehiculos.RowHeadersWidth = 51
-        Me.dgVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgVehiculos.Size = New System.Drawing.Size(893, 464)
         Me.dgVehiculos.TabIndex = 26
         '

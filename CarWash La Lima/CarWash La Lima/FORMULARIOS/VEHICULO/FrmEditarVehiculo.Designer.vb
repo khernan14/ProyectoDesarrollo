@@ -77,7 +77,7 @@ Partial Class FrmEditarVehiculo
         Me.pnlTituleBar.Controls.Add(Me.iconCurrentChildForm)
         Me.pnlTituleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTituleBar.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlTituleBar.Name = "pnlTituleBar"
         Me.pnlTituleBar.Size = New System.Drawing.Size(1272, 63)
         Me.pnlTituleBar.TabIndex = 162
@@ -103,7 +103,7 @@ Partial Class FrmEditarVehiculo
         Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.iconCurrentChildForm.IconSize = 39
         Me.iconCurrentChildForm.Location = New System.Drawing.Point(48, 23)
-        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4)
         Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
         Me.iconCurrentChildForm.Size = New System.Drawing.Size(43, 39)
         Me.iconCurrentChildForm.TabIndex = 0
@@ -117,7 +117,7 @@ Partial Class FrmEditarVehiculo
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
         Me.btnCancelar.Location = New System.Drawing.Point(703, 401)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(133, 43)
         Me.btnCancelar.TabIndex = 161
@@ -132,7 +132,7 @@ Partial Class FrmEditarVehiculo
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
         Me.btnGuardar.Location = New System.Drawing.Point(532, 401)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(133, 43)
         Me.btnGuardar.TabIndex = 160
@@ -202,6 +202,7 @@ Partial Class FrmEditarVehiculo
         Me.txtMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMarca.MaxLength = 20
         Me.txtMarca.Name = "txtMarca"
+        Me.txtMarca.ReadOnly = True
         Me.txtMarca.Size = New System.Drawing.Size(323, 26)
         Me.txtMarca.TabIndex = 185
         '
@@ -222,6 +223,7 @@ Partial Class FrmEditarVehiculo
         Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtModelo.MaxLength = 20
         Me.txtModelo.Name = "txtModelo"
+        Me.txtModelo.ReadOnly = True
         Me.txtModelo.Size = New System.Drawing.Size(324, 26)
         Me.txtModelo.TabIndex = 183
         '
@@ -269,6 +271,7 @@ Partial Class FrmEditarVehiculo
         Me.txtAnio.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAnio.MaxLength = 4
         Me.txtAnio.Name = "txtAnio"
+        Me.txtAnio.ReadOnly = True
         Me.txtAnio.Size = New System.Drawing.Size(324, 26)
         Me.txtAnio.TabIndex = 179
         '
@@ -429,7 +432,7 @@ Partial Class FrmEditarVehiculo
         Me.Controls.Add(Me.label12)
         Me.Controls.Add(Me.label14)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmEditarVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmEditarVehiculo"

@@ -18,7 +18,7 @@ Public Class UserDao
                                         a.EmpleadoID = b.EmpleadoID join [dbo].[Puesto] c
                                         on
                                         b.PuestoId = c.PuestoID 
-                                        WHERE a.Usuario = @user and a.Contraseña = @password"
+                                        WHERE a.Usuario = @user COLLATE SQL_Latin1_General_CP1_CS_AS and a.Contraseña = @password COLLATE SQL_Latin1_General_CP1_CS_AS"
                 command.Parameters.AddWithValue("@user", user)
                 command.Parameters.AddWithValue("@password", password)
                 command.CommandType = CommandType.Text

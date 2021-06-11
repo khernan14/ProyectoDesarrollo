@@ -9,6 +9,9 @@
         'TODO: esta línea de código carga datos en la tabla 'ModeloEditarDataSet1.ModeloVehiculo' Puede moverla o quitarla según sea necesario.
         Me.ModeloVehiculoTableAdapter.Fill(Me.ModeloEditarDataSet1.ModeloVehiculo)
 
+        cmbColor.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbTipoV.DropDownStyle = ComboBoxStyle.DropDownList
+
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click

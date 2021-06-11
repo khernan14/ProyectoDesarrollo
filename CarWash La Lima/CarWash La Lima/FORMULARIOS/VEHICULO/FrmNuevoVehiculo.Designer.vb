@@ -82,7 +82,7 @@ Partial Class FrmNuevoVehiculo
         Me.pnlTituleBar.Controls.Add(Me.iconCurrentChildForm)
         Me.pnlTituleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTituleBar.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlTituleBar.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlTituleBar.Name = "pnlTituleBar"
         Me.pnlTituleBar.Size = New System.Drawing.Size(1443, 63)
         Me.pnlTituleBar.TabIndex = 143
@@ -108,7 +108,7 @@ Partial Class FrmNuevoVehiculo
         Me.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.iconCurrentChildForm.IconSize = 39
         Me.iconCurrentChildForm.Location = New System.Drawing.Point(48, 23)
-        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.iconCurrentChildForm.Margin = New System.Windows.Forms.Padding(4)
         Me.iconCurrentChildForm.Name = "iconCurrentChildForm"
         Me.iconCurrentChildForm.Size = New System.Drawing.Size(43, 39)
         Me.iconCurrentChildForm.TabIndex = 0
@@ -122,7 +122,7 @@ Partial Class FrmNuevoVehiculo
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
         Me.btnGuardar.Location = New System.Drawing.Point(527, 471)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(133, 43)
         Me.btnGuardar.TabIndex = 138
@@ -137,7 +137,7 @@ Partial Class FrmNuevoVehiculo
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
         Me.btnCancelar.Location = New System.Drawing.Point(698, 471)
-        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(133, 43)
         Me.btnCancelar.TabIndex = 139
@@ -151,7 +151,7 @@ Partial Class FrmNuevoVehiculo
         Me.cmbTipoVID.DisplayMember = "TipoVehiculoID"
         Me.cmbTipoVID.FormattingEnabled = True
         Me.cmbTipoVID.Location = New System.Drawing.Point(896, 300)
-        Me.cmbTipoVID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbTipoVID.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbTipoVID.Name = "cmbTipoVID"
         Me.cmbTipoVID.Size = New System.Drawing.Size(65, 24)
         Me.cmbTipoVID.TabIndex = 158
@@ -173,7 +173,7 @@ Partial Class FrmNuevoVehiculo
         Me.cmbColorID.DisplayMember = "ColorID"
         Me.cmbColorID.FormattingEnabled = True
         Me.cmbColorID.Location = New System.Drawing.Point(896, 249)
-        Me.cmbColorID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbColorID.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbColorID.Name = "cmbColorID"
         Me.cmbColorID.Size = New System.Drawing.Size(65, 24)
         Me.cmbColorID.TabIndex = 157
@@ -307,7 +307,7 @@ Partial Class FrmNuevoVehiculo
         '
         Me.txtPlaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPlaca.Location = New System.Drawing.Point(296, 199)
-        Me.txtPlaca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPlaca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPlaca.MaxLength = 20
         Me.txtPlaca.Name = "txtPlaca"
         Me.txtPlaca.Size = New System.Drawing.Size(324, 26)
@@ -317,9 +317,10 @@ Partial Class FrmNuevoVehiculo
         '
         Me.txtAnio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAnio.Location = New System.Drawing.Point(296, 296)
-        Me.txtAnio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAnio.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAnio.MaxLength = 4
         Me.txtAnio.Name = "txtAnio"
+        Me.txtAnio.ReadOnly = True
         Me.txtAnio.Size = New System.Drawing.Size(324, 26)
         Me.txtAnio.TabIndex = 159
         '
@@ -349,7 +350,7 @@ Partial Class FrmNuevoVehiculo
         Me.cmbColor.DisplayMember = "DescripcionColor"
         Me.cmbColor.FormattingEnabled = True
         Me.cmbColor.Location = New System.Drawing.Point(896, 249)
-        Me.cmbColor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbColor.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbColor.Name = "cmbColor"
         Me.cmbColor.Size = New System.Drawing.Size(324, 24)
         Me.cmbColor.TabIndex = 162
@@ -360,7 +361,7 @@ Partial Class FrmNuevoVehiculo
         Me.cmbTipoV.DisplayMember = "Descripcion"
         Me.cmbTipoV.FormattingEnabled = True
         Me.cmbTipoV.Location = New System.Drawing.Point(896, 300)
-        Me.cmbTipoV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmbTipoV.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbTipoV.Name = "cmbTipoV"
         Me.cmbTipoV.Size = New System.Drawing.Size(324, 24)
         Me.cmbTipoV.TabIndex = 163
@@ -387,6 +388,7 @@ Partial Class FrmNuevoVehiculo
         Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtModelo.MaxLength = 20
         Me.txtModelo.Name = "txtModelo"
+        Me.txtModelo.ReadOnly = True
         Me.txtModelo.Size = New System.Drawing.Size(323, 26)
         Me.txtModelo.TabIndex = 165
         '
@@ -407,6 +409,7 @@ Partial Class FrmNuevoVehiculo
         Me.txtMarca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMarca.MaxLength = 20
         Me.txtMarca.Name = "txtMarca"
+        Me.txtMarca.ReadOnly = True
         Me.txtMarca.Size = New System.Drawing.Size(323, 26)
         Me.txtMarca.TabIndex = 167
         '
@@ -448,7 +451,7 @@ Partial Class FrmNuevoVehiculo
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtModeloID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmNuevoVehiculo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmNuevoVehiculo"

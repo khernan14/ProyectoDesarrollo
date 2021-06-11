@@ -16,6 +16,8 @@
         'TODO: esta línea de código carga datos en la tabla 'PuestoDataSet1.Puesto' Puede moverla o quitarla según sea necesario.
         Me.PuestoTableAdapter.Fill(Me.PuestoDataSet1.Puesto)
 
+        cmbPuesto.DropDownStyle = ComboBoxStyle.DropDownList
+
     End Sub
 
     Private Sub txtnombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnombre.KeyPress
